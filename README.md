@@ -7,4 +7,13 @@ This SIG was accepted by the TAC on [September 20, 2023](../meetings/2023/2023-0
 ## Participating
 This SIG is an open group. Anyone in the OpenWallet Foundation community can join and participate. There is no formal sign up process. Just show up and participate.
 
-If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/openwalletfoundation) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.com/channels/1022962884864643214/1154111877077532814) channel.
+If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/openwalletfoundation) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.com/channels/1022962884864643214/1154111877077532814) channel. 
+
+Upcoming meetings:
+- November 16th, 7:00 AM PT / 16:00 CET
+- November 30th, 7:00 AM PT / 16:00 CET
+- December 14th, 7:00 AM PT / 16:00 CET
+
+## Target Audience
+
+## Scoping
