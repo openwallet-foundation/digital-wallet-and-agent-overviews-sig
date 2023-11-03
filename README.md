@@ -15,5 +15,9 @@ Upcoming meetings:
 - December 14th, 7:00 AM PT / 16:00 CET
 
 ## Target Audience
+This overview should be usable by persons and organisations. Anyone willing to use digital wallets or agents for digital credential purposes should be able to objectively compare the characteristics of wallets/agents and create a short-list of candidates for their use case. It can also serve as resource for market awareness and visibiility of wallets/agents for wallet/agent vendors.
 
 ## Scoping
+We use the terminilogy on digital credentials, wallets and agets as described in the ToIP glossary.
+
+Included in the overview are holder agents+wallets, issuer agents and verifier agents. Initially, we will only include wallets and agents that at least have the functionality to store and exchange digital credentials.
