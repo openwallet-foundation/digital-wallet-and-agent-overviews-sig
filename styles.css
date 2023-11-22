@@ -1,0 +1,203 @@
+*{
+	margin: 5px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	/* min-height: 100vh; */
+	height: calc(100vh - 30px);
+	color: #555555;
+}
+
+h1{
+    text-align:center;
+	color: #555555;
+}
+table{
+	width:  1100px;
+	/* width: auto; */
+	margin: 30px auto;
+	table-layout: auto;
+}
+
+table th{
+	padding: 10px 15px;
+	background-color: #a4cdea;
+	border:  thin solid #d4d4d4;
+	color: #373535;
+	margin: 0;
+}
+
+table td{
+	padding: 10px;
+	border:  thin solid #d4d4d4;
+	width: 100%;
+	text-align: center;
+	/* background-color: #fff; */
+}
+
+tr:nth-child(even) td {
+	background-color: rgb(224, 232, 232);
+}
+
+tr:nth-child(odd) td {
+	background-color: white;
+}
+
+table {
+	margin-top: 0;
+	overflow-x: clip;
+}
+
+table img{
+	width:  100%;
+	margin: 0;
+}
+
+table tr#table-headers{
+	position: relative;
+}
+
+table tr#top-headers th::before,
+table tr#table-headers th::before {
+	content:'';
+	position:absolute;
+	left: 0;
+	top: -1px;
+	width:100%;
+	border-top: 2px solid #ccc;
+}
+
+table tr#table-headers th {
+	white-space: nowrap;
+	z-index: 2;
+}
+
+table tr#table-headers th:nth-child(2), table tbody tr td:nth-child(2) { /* make the second table column sticky */
+	position: sticky;
+	left: 0;
+	z-index: 1;
+}
+
+table tr#table-headers th:nth-child(2) { /* keep column header in front of column content when scrolling */
+	z-index: 3;
+}
+
+table tr#table-headers th:nth-child(2)::after, table tbody tr td:nth-child(2)::after { /* fix for keeping column border visible in combination with position sticky */
+	content:'';
+	position:absolute;
+	top: 0;
+	right: -1px;
+	height:100%;
+	border-right: 1px solid #ccc;
+}
+
+.tableFixHead {
+	margin-top: 35px;
+	/* overflow-y:  auto; /* make the table scrollable if height is more than 200 px  */
+	height: calc(100vh - 2em - 50px - 10px); /* s.t. scroll bar is visible */
+  }
+.tableFixHead thead {
+	position: sticky; /* make the table heads sticky */
+	top: 0px; /* table head will be placed from the top of the table and sticks to it */
+	z-index: 2;
+}
+table {
+	border-collapse: collapse; /* make the table borders collapse to each other */
+	width: 100%;
+}
+th,
+td {
+	padding: 8px 16px;
+	border: 1px solid #ccc;
+}
+
+.td-wrap{ /* for text wrapping */
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden; 
+	max-width:300px;
+}
+
+.td-wrap:hover{
+    white-space: pre-wrap;
+}
+
+tr.verbose th {
+	vertical-align: top;
+}
+
+tr.verbose th::after {
+	content: attr(title);
+	display: block;
+	font-size: smaller;
+	font-style: italic;
+	font-weight: normal;
+	white-space: pre-wrap;
+}
+
+.btn{
+	background-color: transparent;
+	border: transparent;
+}
+
+a.clicked {
+	background-color: #DDD;
+	border-style: inset;
+	padding: 0.6em 0.4em 0.4em 0.6em;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	/* width: 400px; */
+	background-color: white;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 5px;
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	/* overflow: hidden;  */
+	/* max-width:300px; */
+	font-family: sans-serif;
+	color:#555555;
+	font-weight: 500;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+.btn{
+	margin: 0;
+}
+
+.fa {
+	margin: 0;
+	color: black;
+}
+.fas {
+	margin: 2px;
+	color: black;
+}
+.fa-brands {
+	margin: 2px;
+	color: black;
+}
+
+a:link {
+	color: #4b7694;
+  }
+  
+a:visited {
+	color: #4b7694;
+}
