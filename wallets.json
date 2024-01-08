@@ -759,7 +759,7 @@
             "type": "-",
             "used": "-"
         },
-        "company": "-",
+        "company": "IDEMIA Group",
         "connectionTypes": "-",
         "credExchangeProtocol": "-",
         "credentialFormat": "-",
@@ -782,7 +782,7 @@
         "keyRotationHolder": "-",
         "keyRotationIssuer": "-",
         "logo": "static/idema.png",
-        "name": "IDEMA",
+        "name": "IDEMIA Mobile ID",
         "observability": "-",
         "offlineFriendly": "-",
         "openSource": "-",
