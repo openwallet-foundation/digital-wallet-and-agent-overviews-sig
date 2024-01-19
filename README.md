@@ -1,6 +1,6 @@
 # Digital Wallet and Agent Overviews Special Interest Group (SIG)
 
-The objectives of this SIG is to further develop and maintain the Digital Wallet Overview and making a similar overview for digital identity agents/SDKs. These overviews should provide transparency of the characteristics of wallets and agents in order to allow for comparison and effective decision making on which wallet is applicable for your use case. By creating awareness of these overviews, this work can lead to less fragmentation of the SSI playing field and increase adoption.
+The objectives of this SIG is to further develop and maintain the Digital Wallet Overview and including the digital identity agents/SDKs in the overview. The overview can be found [here](https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/). These overview should provide transparency of the characteristics of wallets and agents in order to allow for comparison and effective decision making on which wallet is applicable for your use case. By creating awareness of these overviews, this work can lead to less fragmentation of the SSI playing field and increase adoption.
 
 This SIG was accepted by the TAC on [September 20, 2023](../meetings/2023/2023-09-20.md). See [Digital Wallet and Agent Overviews SIG Proposal](https://github.com/openwallet-foundation/tac/issues/56) for more details.
 
