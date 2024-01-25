@@ -1,4 +1,4 @@
-fetch("wallets.json")
+fetch("flattened_wallets.json")
 .then(function(response){
 	return response.json();
 })
@@ -16,8 +16,8 @@ fetch("wallets.json")
 				<td>${wallet.verifierCapability}</td>
 				<td class="td-wrap">${wallet.scope}</td>
 				<td>${wallet.deployment}</td>
-				<td>${wallet.organizationalWallet}</td>
-				<td class="td-wrap">${wallet.openSource == 'Yes' ? '<a href="'+wallet.download.source+'">'+wallet.openSource+'</a>' : wallet.openSource}</td>
+				<td>${wallet.organisationalWallet}</td>
+				<td class="td-wrap">${wallet.openSource == 'Yes' ? '<a href="'+wallet.downloadSource+'">'+wallet.openSource+'</a>' : wallet.openSource}</td>
 				<td>${wallet.urlGooglePlayStore == '-' ? '-': '<a href="'+wallet.urlGooglePlayStore+'"><i class="fa-brands fa-google-play"></i></a>'}
 				${wallet.urlAppStore == '-' ? '-': '<a href="'+wallet.urlAppStore+'"><i class="fa-brands fa-app-store"></i></a>'}
 				${wallet.urlWebApp == '-' ? '-': '<a href="'+wallet.urlWebApp+'"><i class="fa-brands fa-firefox"></i></a>'}</td>
@@ -30,7 +30,7 @@ fetch("wallets.json")
 				<td>${wallet.identifierHolder}</td>
 				<td>${wallet.identifierIssuer}</td>
 				<td class="td-wrap">${wallet.revocationAlgorithm}</td>
-				<td class="td-wrap">${wallet.peer2peerProtocols}</td>
+				<td class="td-wrap">${wallet.peer2PeerProtocols}</td>
 				<td class="td-wrap">${wallet.credExchangeProtocol}</td>
 				<td>${wallet.blockchainUsed}</td>
 				<td class="td-wrap">${wallet.blockchainType}</td>
@@ -54,10 +54,10 @@ fetch("wallets.json")
 				<td>${wallet.keyRotationIssuer}</td>
 
 				<td>${wallet.eassi}</td>
-				<td>${wallet.EBSI}</td>
-				<td>${wallet.AIP}</td>
-				<td>${wallet.DDIP}</td>
-				<td>${wallet.MDOC}</td>
+				<td>${wallet.ebsi}</td>
+				<td>${wallet.aip}</td>
+				<td>${wallet.ddip}</td>
+				<td>${wallet.mdoc}</td>
 				
 			</tr>
 		`;
