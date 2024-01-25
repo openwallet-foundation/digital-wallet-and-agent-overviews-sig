@@ -47,8 +47,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -98,8 +97,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-" 
     },
     {
         "aip": "-",
@@ -149,8 +147,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -200,8 +197,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-" 
     },
     {
         "aip": "-",
@@ -251,8 +247,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -302,8 +297,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -353,8 +347,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -404,8 +397,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "Yes",
@@ -455,8 +447,7 @@
         "urlWebApp": "https://business.igrant.io/",
         "urlWebsite": "https://igrant.io/datawallet.html",
         "verifierCapability": "-",
-        "verifierUnlinkability": "Yes",
-        "webApp": "-"
+        "verifierUnlinkability": "Yes"
     },
     {
         "aip": "-",
@@ -506,8 +497,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -557,8 +547,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -608,8 +597,7 @@
         "urlWebApp": "-",
         "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html",
         "verifierCapability": "-",
-        "verifierUnlinkability": "Yes",
-        "webApp": "-"
+        "verifierUnlinkability": "Yes"
     },
     {
         "aip": "-",
@@ -659,8 +647,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -709,8 +696,7 @@
         "urlWebApp": "-",
         "urlWebsite": "https://www.gimly.io",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -760,8 +746,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -811,8 +796,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -862,8 +846,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -913,8 +896,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "Yes",
-        "webApp": "-"
+        "verifierUnlinkability": "Yes"
     },
     {
         "aip": "-",
@@ -964,8 +946,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -1015,8 +996,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "Yes",
-        "webApp": "-"
+        "verifierUnlinkability": "Yes"
     },
     {
         "aip": "-",
@@ -1066,8 +1046,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1117,8 +1096,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -1168,8 +1146,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1219,8 +1196,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1270,8 +1246,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1321,8 +1296,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1372,8 +1346,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1422,8 +1395,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "-",
-        "webApp": "-"
+        "verifierUnlinkability": "-"
     },
     {
         "aip": "-",
@@ -1473,8 +1445,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1524,8 +1495,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "No",
-        "webApp": "-"
+        "verifierUnlinkability": "No"
     },
     {
         "aip": "-",
@@ -1575,8 +1545,7 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "Yes",
-        "webApp": "-"
+        "verifierUnlinkability": "Yes"
     },
     {
         "aip": "-",
@@ -1626,7 +1595,6 @@
         "urlWebApp": "-",
         "urlWebsite": "-",
         "verifierCapability": "-",
-        "verifierUnlinkability": "Yes",
-        "webApp": "-"
+        "verifierUnlinkability": "Yes"
     }
 ]
