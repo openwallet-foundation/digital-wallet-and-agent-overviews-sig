@@ -4,16 +4,6 @@ The objectives of this SIG is to further develop and maintain the Digital Wallet
 
 This SIG was accepted by the TAC on [September 20, 2023](../meetings/2023/2023-09-20.md). See [Digital Wallet and Agent Overviews SIG Proposal](https://github.com/openwallet-foundation/tac/issues/56) for more details.
 
-## Participating
-This SIG is an open group. Anyone in the OpenWallet Foundation community can join and participate. There is no formal sign up process. Just show up and participate.
-
-If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/openwalletfoundation) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.com/channels/1022962884864643214/1154111877077532814) channel. 
-
-Upcoming meetings:
-- November 16th, 7:00 AM PT / 16:00 CET
-- November 30th, 7:00 AM PT / 16:00 CET
-- December 14th, 7:00 AM PT / 16:00 CET
-
 ## Target Audience
 This overview should be usable by persons and organisations. Anyone willing to use digital wallets or agents for digital credential purposes should be able to objectively compare the characteristics of wallets/agents and create a short-list of candidates for their use case. It can also serve as resource for market awareness and visibility of wallets/agents for wallet/agent vendors.
 
@@ -21,3 +11,23 @@ This overview should be usable by persons and organisations. Anyone willing to u
 We use the terminilogy on digital credentials, wallets and agents as described in the [ToIP glossary](https://docs.google.com/document/d/1fZByfuSOwszDRkE7ARQLeElSYmVznoOyJK4sxRvJpyM/edit).
 
 Included in the overview are holder agents+wallets, issuer agents and verifier agents. Initially, we will only include wallets and agents that at least have the functionality to store and exchange digital credentials.
+
+## Participating
+This SIG is an open group. Anyone in the OpenWallet Foundation community can join and participate. There is no formal sign up process. Just show up and participate.
+
+If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/openwalletfoundation) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.com/channels/1022962884864643214/1154111877077532814) channel. 
+
+### Upcoming meetings
+- February 8th, 2024
+- February 22th, 2024
+- March 7th, 2024
+- March 21th, 2024
+
+### Slides past meetings
+- [November 16, 2023](meetings/2023/16-11-2023.pdf)
+- [November 30, 2023](meetings/2023/30-11-2023.pdf)
+- [January 11, 2024](meetings/2024/11-01-2024.pdf)
+- [January 25, 2024](meetings/2024/25-01-2024.pdf)
+
+## Contributing
+
