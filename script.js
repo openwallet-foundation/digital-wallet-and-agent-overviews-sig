@@ -1,4 +1,4 @@
-fetch("wallets.json")
+fetch("flattened_wallets.json")
 .then(function(response){
 	return response.json();
 })
@@ -9,16 +9,20 @@ fetch("wallets.json")
 		out += `
 			<tr>
 				<td><img src='${wallet.logo}'></td>
-				<td>${wallet.website == "-" ? wallet.name: '<a href="'+wallet.website+'">'+wallet.name+'</a>'}</td>	
+				<td>${wallet.urlWebsite == "-" ? wallet.name: '<a href="'+wallet.urlWebsite+'">'+wallet.name+'</a>'}</td>	
 				<td>${wallet.company}</td>
+				<td>${wallet.holderCapability}</td>
+				<td>${wallet.issuerCapability}</td>
+				<td>${wallet.verifierCapability}</td>
 				<td class="td-wrap">${wallet.scope}</td>
 				<td>${wallet.deployment}</td>
-				<td>${wallet.organizationalWallet}</td>
-				<td class="td-wrap">${wallet.openSource == 'Yes' ? '<a href="'+wallet.download.source+'">'+wallet.openSource+'</a>' : wallet.openSource}</td>
-				<td>${wallet.download.googlePlay == '-' ? '-': '<a href="'+wallet.download.googlePlay+'"><i class="fa-brands fa-google-play"></i></a>'}
-				${wallet.download.appStore == '-' ? '-': '<a href="'+wallet.download.appStore+'"><i class="fa-brands fa-app-store"></i></a>'}
-				${wallet.download.webWallet == '-' ? '-': '<a href="'+wallet.download.webWallet+'"><i class="fa-brands fa-firefox"></i></a>'}</td> 
+				<td>${wallet.organisationalWallet}</td>
+				<td class="td-wrap">${wallet.openSource == 'Yes' ? '<a href="'+wallet.downloadSource+'">'+wallet.openSource+'</a>' : wallet.openSource}</td>
+				<td>${wallet.urlGooglePlayStore == '-' ? '-': '<a href="'+wallet.urlGooglePlayStore+'"><i class="fa-brands fa-google-play"></i></a>'}
+				${wallet.urlAppStore == '-' ? '-': '<a href="'+wallet.urlAppStore+'"><i class="fa-brands fa-app-store"></i></a>'}
+				${wallet.urlWebApp == '-' ? '-': '<a href="'+wallet.urlWebApp+'"><i class="fa-brands fa-firefox"></i></a>'}</td>
 				<td>${wallet.support == '-' ? '-' : '<a href="mailto:'+wallet.support+'">e-mail</a>'}</td>
+				<td>${wallet.api}</td>
 
 				<td>${wallet.credentialFormat}</td>
 				<td>${wallet.encodingScheme}</td>
@@ -26,11 +30,11 @@ fetch("wallets.json")
 				<td>${wallet.identifierHolder}</td>
 				<td>${wallet.identifierIssuer}</td>
 				<td class="td-wrap">${wallet.revocationAlgorithm}</td>
-				<td class="td-wrap">${wallet.peer2peerProtocols}</td>
+				<td class="td-wrap">${wallet.peer2PeerProtocols}</td>
 				<td class="td-wrap">${wallet.credExchangeProtocol}</td>
-				<td>${wallet.blockchain.used}</td>
-				<td class="td-wrap">${wallet.blockchain.type}</td>
-				<td class="td-wrap">${wallet.blockchain.purpose}</td>
+				<td>${wallet.blockchainUsed}</td>
+				<td class="td-wrap">${wallet.blockchainType}</td>
+				<td class="td-wrap">${wallet.blockchainPurpose}</td>
 				
 				<td class="td-wrap">${wallet.connectionTypes}</td>
 				<td>${wallet.deepLinking}</td>
@@ -45,15 +49,15 @@ fetch("wallets.json")
 				<td>${wallet.observability}</td>
 
 				<td>${wallet.cryptoAgility}</td>
-				<td>${wallet.postQuantumSecure}</td>
+				<td>${wallet.quantumSafe}</td>
 				<td>${wallet.keyRotationHolder}</td>
 				<td>${wallet.keyRotationIssuer}</td>
 
 				<td>${wallet.eassi}</td>
-				<td>${wallet.EBSI}</td>
-				<td>${wallet.AIP}</td>
-				<td>${wallet.DDIP}</td>
-				<td>${wallet.MDOC}</td>
+				<td>${wallet.ebsi}</td>
+				<td>${wallet.aip}</td>
+				<td>${wallet.ddip}</td>
+				<td>${wallet.mdoc}</td>
 				
 			</tr>
 		`;
