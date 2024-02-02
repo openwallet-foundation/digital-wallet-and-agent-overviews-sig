@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - main
+      - angular
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
