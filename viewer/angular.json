@@ -32,6 +32,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/digital-wallet-and-agent-overviews-sig/",
               "budgets": [
                 {
                   "type": "initial",
