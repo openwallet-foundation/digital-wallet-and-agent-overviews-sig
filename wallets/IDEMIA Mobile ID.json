@@ -1,0 +1,8 @@
+{
+  "company": "IDEMIA Group",
+  "eassi": "No",
+  "logo": "logos/idema.png",
+  "name": "IDEMIA Mobile ID",
+  "$schema": "../schema.json",
+  "openSource": false
+}

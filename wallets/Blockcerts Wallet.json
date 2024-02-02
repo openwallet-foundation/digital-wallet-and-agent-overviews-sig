@@ -1,0 +1,10 @@
+{
+  "blockchainType": "Bitcoin and Ethereum, with Merkle proof linking credential to blockchain transaction",
+  "blockchainUsed": "Yes",
+  "company": "Hyland Credentials (formerly: Learning Machine)",
+  "eassi": "No",
+  "logo": "logos/blockcerts-wallet.png",
+  "name": "Blockcerts Wallet",
+  "openSource": true,
+  "$schema": "../schema.json"
+}
