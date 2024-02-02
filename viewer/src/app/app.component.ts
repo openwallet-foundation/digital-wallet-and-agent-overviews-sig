@@ -50,7 +50,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   async ngOnInit(): Promise<void> {
     const wallets = await firstValueFrom(
-      this.httpClient.get<Wallet[]>('/assets/wallets.json')
+      this.httpClient.get<Wallet[]>('assets/wallets.json')
     );
     this.dataSource.data = wallets;
     this.displayedColumns = this.columns;
