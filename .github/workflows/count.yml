@@ -26,7 +26,7 @@ jobs:
       - name: Create JSON file
         run: |
           mkdir values
-          echo "{ \"schemaVersion\": 1, \"label\": \"Profiles\", \"message\": \"${{ steps.file_count.outputs.wallet-count }}\", \"color\": \"green\" }" > values/profiles.json
+          echo "{ \"schemaVersion\": 1, \"label\": \"Wallets\", \"message\": \"${{ steps.file_count.outputs.wallet-count }}\", \"color\": \"green\" }" > values/wallets.json
 
       # Deploy to local repo
       - name: Deploy
