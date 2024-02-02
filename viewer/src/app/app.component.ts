@@ -33,21 +33,28 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
+/**
+ * The main component of the application
+ */
 export class AppComponent implements OnInit, AfterViewInit {
-  updatedAt!: Date;
-
+  //reference to the MatTableDataSource
   dataSource = new MatTableDataSource<Wallet>();
-
+  // columns that should be displayed in the table
   columns: string[] = ['wallet', 'company', 'openSource', 'linkToApp'];
 
+  //reference to the paginator to be added to the table
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-
+  //reference to the sort to be added to the table
   @ViewChild(MatSort) sort!: MatSort;
 
+  //columns to be displayed in the table, not implemeneted yet
   displayedColumns: string[] = [];
 
   constructor(private httpClient: HttpClient) {}
 
+  /**
+   * Fetches the wallets from the json file and sets the dataSource to the wallets
+   */
   async ngOnInit(): Promise<void> {
     const wallets = await firstValueFrom(
       this.httpClient.get<Wallet[]>('assets/wallets.json')
@@ -56,6 +63,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.displayedColumns = this.columns;
   }
 
+  /**
+   * After the view has been initialized, set the sort and paginator to the dataSource
+   */
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
