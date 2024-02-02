@@ -59,7 +59,7 @@ jobs:
         run: cd viewer && npm run build -- --configuration production
 
       - name: upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: viewer
           path: viewer/dist/browser
