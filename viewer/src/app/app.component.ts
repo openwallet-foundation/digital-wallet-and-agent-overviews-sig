@@ -12,6 +12,8 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { InfoComponent } from './info/info.component';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +31,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
     MatTooltipModule,
     MatSortModule,
     FlexLayoutModule,
+    MatDialogModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -50,7 +53,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   //columns to be displayed in the table, not implemeneted yet
   displayedColumns: string[] = [];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private dialog: MatDialog) {}
 
   /**
    * Fetches the wallets from the json file and sets the dataSource to the wallets
@@ -69,5 +72,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+  }
+
+  showInfo() {
+    this.dialog.open(InfoComponent);
   }
 }
