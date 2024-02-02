@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - angular
 
 permissions:
   contents: write
@@ -14,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Count files in wallet folder
         id: file_count
