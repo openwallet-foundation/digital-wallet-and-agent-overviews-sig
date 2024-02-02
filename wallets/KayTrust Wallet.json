@@ -1,0 +1,10 @@
+{
+  "blockchainType": "Blockchain network based on Ethereum",
+  "blockchainUsed": "Yes",
+  "company": "KayTrust",
+  "eassi": "No",
+  "logo": "logos/kaytrust-wallet.png",
+  "name": "KayTrust Wallet",
+  "openSource": false,
+  "$schema": "../schema.json"
+}

@@ -1,0 +1,8 @@
+{
+  "company": "Microsoft",
+  "eassi": "No",
+  "logo": "logos/microsoft-entra.png",
+  "name": "Microsoft Entra",
+  "openSource": false,
+  "$schema": "../schema.json"
+}

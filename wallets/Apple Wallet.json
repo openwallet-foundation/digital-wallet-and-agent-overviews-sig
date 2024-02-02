@@ -1,0 +1,8 @@
+{
+  "company": "Apple",
+  "eassi": "No",
+  "logo": "logos/apple-wallet.png",
+  "name": "Apple Wallet",
+  "$schema": "../schema.json",
+  "openSource": false
+}
