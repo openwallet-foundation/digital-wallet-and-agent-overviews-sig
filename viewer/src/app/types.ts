@@ -1,85 +1,39 @@
 export interface Wallet {
-  aip: Aip;
-  api: Aip;
-  blockchainPurpose: string;
-  blockchainType: string;
-  blockchainUsed: Aip;
-  company: string;
-  connectionTypes: string;
-  credExchangeProtocol: string;
-  credentialFormat: string;
-  cryptoAgility: Aip;
-  ddip: Aip;
-  deepLinking: Aip;
-  deployment: Aip;
-  downloadSource?: Aip;
-  eassi: Eassi;
-  ebsi: Aip;
-  encodingScheme: string;
-  hardwareSupport: Aip;
-  holderCapability: Aip;
-  identifierHolder: string;
-  identifierIssuer: string;
-  issuerCapability: Aip;
-  keyHistoryHolder: Aip;
-  keyHistoryIssuer: Aip;
-  keyRotationHolder: Aip;
-  keyRotationIssuer: Aip;
-  logo: string;
-  mdoc: Mdoc;
+  // name of the wallet
   name: string;
-  observability: Aip;
-  offlineFriendly: Aip;
-  openSource: string;
-  organisationalWallet: OrganisationalWallet;
-  peer2PeerProtocols: string;
-  portability: Aip;
-  predicates: Aip;
-  quantumSafe: Aip;
-  revocationAlgorithm: string;
-  scope: Scope;
-  selectiveDisclosure: Aip;
-  signatureAlgorithm: string;
-  support: Support;
-  urlAppStore: string;
-  urlGooglePlayStore: string;
-  urlWebApp: string;
+  // url to the website of the wallet with more information
   urlWebsite: string;
-  verifierCapability: Aip;
-  verifierUnlinkability: Aip;
-}
-
-export enum Aip {
-  DependingOn = 'Depending on ...',
-  Empty = '-',
-  No = 'No',
-  Yes = 'Yes',
-  YesImplemntationAccordingToARF = 'Yes, implemntation according to ARF',
-  YesNFCHWW = 'Yes, NFC HWW',
-}
-
-export enum Eassi {
-  No = 'No',
-  Soon = 'Soon',
-  Yes = 'Yes',
-}
-
-export enum Mdoc {
-  Empty = '-',
-  Planned = 'Planned',
-}
-
-export enum OrganisationalWallet {
-  Empty = '-',
-  YesButBrandedAsEnterpriseWalletPlatformByIGrantIo = 'Yes, but branded as Enterprise Wallet Platform by iGrant.io',
-}
-
-export enum Scope {
-  Empty = '-',
-  TravelHospitalityAccessControl = 'Travel, Hospitality, Access Control',
-}
-
-export enum Support {
-  Empty = '-',
-  SupportIgrantIo = 'support@igrant.io',
+  // url to the logo of the wallet
+  logo?: string;
+  // name of the company. In case it's a community project, the name of the community
+  company: string;
+  // url to the company, not the url to the product
+  companyUrl?: string;
+  //provide a link to a contact formular or insert an email address for support requests
+  contact?: string;
+  // is the wallet open source
+  openSource: boolean;
+  // if the wallet is open source, provide the url to the source code, like a github link
+  downloadSource?: string;
+  // add the license of the wallet. In case you have multiple licences, add them here.
+  license?: string;
+  // is the wallet capable of the holder role
+  holderCapability?: boolean;
+  // is the wallet capable of the issuer role
+  issuerCapability?: boolean;
+  // is the wallet capable of the verifier role
+  verifierCapability?: boolean;
+  // it is a cloud or mobile wallet
+  type?: 'cloud' | 'mobile';
+  // am I able to export my data from the wallet/agent and import them into another device/system
+  portability?: boolean;
+  // link to the app store from apple
+  urlAppStore?: string;
+  // link to the play store from google
+  urlGooglePlayStore?: string;
+  // link to the web app in case it's not a mobile wallet
+  urlWebApp?: string;
+  //TODO: do we need a link to the windows play store in case you can download it from the windows store?
+  // which profiles from the credential profile comparison SIG are supported
+  profiles?: string[];
 }
