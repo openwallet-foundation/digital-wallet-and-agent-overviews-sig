@@ -28,11 +28,14 @@ import { MatListModule } from '@angular/material/list';
   styleUrl: './wallets-show.component.scss',
 })
 export class WalletsShowComponent implements OnInit {
-  supportedCredentialProfiles = ['AnonCreds with did:cheqd', 'ISO mDL'];
+  //dummy entries
+  supportedCredentialProfiles = ['HAIP', 'ISO mDL'];
+
+  supportedCredentialFormats = ['MDOC'];
 
   wallet?: Wallet;
   constructor(
-    private walletsService: WalletsService,
+    public walletsService: WalletsService,
     private route: ActivatedRoute,
     private router: Router,
     private snachBar: MatSnackBar
