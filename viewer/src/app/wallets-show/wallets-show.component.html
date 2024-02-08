@@ -1,5 +1,5 @@
 <div class="content" *ngIf="wallet">
-  <a mat-button routerLink="/">Back to overview</a>
+  <a mat-icon-button routerLink="/"><mat-icon>arrow_back_ios</mat-icon></a>
   <div class="wallet" fxLayout="row" fxLayoutAlign="space-between center">
     <div>
       <h1>{{ wallet.name }}</h1>
@@ -42,9 +42,9 @@
     <mat-list>
       <mat-list-item>
         <div matListItemTitle><b>Open Source</b></div>
-        <div matListItemLine *ngIf="!wallet.downloadSource">
-          {{ wallet.openSource }}
-        </div>
+        <span matListItemLine *ngIf="!wallet.downloadSource"
+          >{{ wallet.openSource }}
+        </span>
         <a
           matListItemLine
           *ngIf="wallet.downloadSource"
@@ -54,42 +54,48 @@
       </mat-list-item>
       <mat-list-item>
         <div matListItemTitle><b>License</b></div>
-        <div matListItemLine>{{ wallet.license ?? 'unknown' }}</div>
+        <span matListItemLine>{{ wallet.license ?? 'unknown' }}</span>
       </mat-list-item>
       <mat-list-item>
         <div matListItemTitle><b>Type</b></div>
-        <div matListItemLine>{{ wallet.type }}</div>
+        <span matListItemLine>{{ wallet.type }}</span>
       </mat-list-item>
       <mat-list-item>
         <div matListItemTitle><b>Portability</b></div>
-        <div matListItemLine>{{ wallet.portability ?? 'unknown' }}</div>
+        <span matListItemLine>{{ wallet.portability ?? 'unknown' }}</span>
       </mat-list-item>
     </mat-list>
     <mat-list>
       <mat-list-item>
         <div matListItemTitle><b>Holder capability</b></div>
-        <div matListItemLine>{{ wallet.holderCapability ?? 'unknown' }}</div>
+        <span matListItemLine>{{ wallet.holderCapability ?? 'unknown' }}</span>
       </mat-list-item>
       <mat-list-item>
         <div matListItemTitle><b>Issuer capability</b></div>
-        <div matListItemLine>{{ wallet.issuerCapability ?? 'unknown' }}</div>
+        <span matListItemLine>{{ wallet.issuerCapability ?? 'unknown' }}</span>
       </mat-list-item>
       <mat-list-item>
         <div matListItemTitle><b>Verifier capability</b></div>
-        <div matListItemLine>{{ wallet.verifierCapability ?? 'unknown' }}</div>
+        <span matListItemLine>{{
+          wallet.verifierCapability ?? 'unknown'
+        }}</span>
       </mat-list-item>
     </mat-list>
   </div>
-  <h2>Supported Credential profiles (placeholders)</h2>
+  <h2>Supported Credential profiles</h2>
   <mat-list>
     <mat-list-item *ngFor="let profile of supportedCredentialProfiles">
-      <a
-        target="_blank"
-        [href]="
-          'https://openwallet-foundation.github.io/credential-format-comparison-sig/#/'
-        "
-        >{{ profile }}</a
-      >
+      <a target="_blank" [href]="walletsService.getLink('profile', profile)">{{
+        profile
+      }}</a>
+    </mat-list-item>
+  </mat-list>
+  <h2>Supported Credential formats</h2>
+  <mat-list>
+    <mat-list-item *ngFor="let format of supportedCredentialFormats">
+      <a target="_blank" [href]="walletsService.getLink('format', format)">{{
+        format
+      }}</a>
     </mat-list-item>
   </mat-list>
 </div>

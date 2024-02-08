@@ -35,5 +35,7 @@ export interface Wallet {
   urlWebApp?: string;
   //TODO: do we need a link to the windows play store in case you can download it from the windows store?
   // which profiles from the credential profile comparison SIG are supported
-  profiles?: string[];
+  credentialProfiles?: string[];
+  // which formats from the credential format comparison SIG are supported
+  credentialFormats?: string[];
 }
