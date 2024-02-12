@@ -84,16 +84,20 @@
       </mat-list-item>
     </mat-list>
   </div>
-  <div *ngFor="let resource of walletsService.resources">
+  @for (resource of walletsService.resources; track resource) {
+  <div>
     <h2>{{ resource.name }}</h2>
     <mat-list>
-      <mat-list-item *ngFor="let element of wallet[resource.id]">
+      @for (element of wallet[resource.id]; track element) {
+      <mat-list-item>
         <a
           target="_blank"
           [href]="walletsService.getLink(resource.id, element)"
           >{{ element }}</a
         >
       </mat-list-item>
+      }
     </mat-list>
   </div>
+  }
 </div>
