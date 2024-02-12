@@ -9,7 +9,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { Wallet } from '../types';
-import { WalletsService } from '../wallets.service';
+import { ResourceType, WalletsService } from '../wallets.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
@@ -38,6 +38,7 @@ import { MatChipsModule } from '@angular/material/chips';
 export class WalletsListComponent implements OnInit, AfterViewInit {
   //reference to the MatTableDataSource
   dataSource = new MatTableDataSource<Wallet>();
+
   // columns that should be displayed in the table
   columns: string[] = [
     'wallet',
@@ -48,7 +49,6 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     'capability',
     'portability',
     'linkToApp',
-    'profiles',
   ];
 
   //reference to the paginator to be added to the table
@@ -59,12 +59,13 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   //columns to be displayed in the table, not implemeneted yet
   displayedColumns: string[] = [];
 
-  constructor(private walletsService: WalletsService) {}
+  constructor(public walletsService: WalletsService) {}
 
   /**
    * Fetches the wallets from the json file and sets the dataSource to the wallets
    */
   async ngOnInit(): Promise<void> {
+    this.walletsService.resources.forEach((res) => this.columns.push(res.id));
     const wallets = await this.walletsService.loadWallets();
     this.dataSource.data = wallets;
     this.displayedColumns = this.columns;

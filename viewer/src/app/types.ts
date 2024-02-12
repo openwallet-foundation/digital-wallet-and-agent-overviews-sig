@@ -38,4 +38,16 @@ export interface Wallet {
   credentialProfiles?: string[];
   // which formats from the credential format comparison SIG are supported
   credentialFormats?: string[];
+  // which issuance protocols from the issuance protocol comparison SIG are supported
+  issuanceProtocols?: string[];
+  // which key management from the key management comparison SIG are supported
+  keyManagements?: string[];
+  // which presentation protocols from the presentation protocol comparison SIG are supported
+  presentationProtocols?: string[];
+  // which signing algorithms from the signing algorithm comparison SIG are supported
+  signingAlgorithms?: string[];
+  // which status management from the status management comparison SIG are supported
+  statusManagements?: string[];
+  // which trust management from the trust management comparison SIG are supported
+  trustManagements?: string[];
 }
