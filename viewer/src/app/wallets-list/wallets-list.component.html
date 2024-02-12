@@ -124,9 +124,11 @@
           Capability
         </th>
         <td mat-cell *matCellDef="let element">
-          <span *ngIf="element.holderCapability">Holder</span>
-          <span *ngIf="element.issuerCapability">Issuer</span>
-          <span *ngIf="element.verifierCapability">Verifier</span>
+          <div fxLayout="row" fxLayoutGap="8px">
+            <span *ngIf="element.holderCapability">Holder</span>
+            <span *ngIf="element.issuerCapability">Issuer</span>
+            <span *ngIf="element.verifierCapability">Verifier</span>
+          </div>
         </td>
       </ng-container>
       <ng-container matColumnDef="type">
@@ -155,23 +157,26 @@
           {{ element.portability }}
         </td>
       </ng-container>
-      <ng-container matColumnDef="profiles">
+      <ng-container
+        [matColumnDef]="resource.id"
+        *ngFor="let resource of walletsService.resources"
+      >
         <th
           mat-header-cell
           *matHeaderCellDef
           mat-sort-header
-          matTooltip="Which profiles are supported"
+          [matTooltip]="resource.tooltip"
         >
-          Supported profiles
+          {{ resource.name }}
         </th>
         <td mat-cell *matCellDef="let element">
-          <mat-chip-listbox>
-            <mat-chip-option
-              *ngFor="let profile of element.profiles"
-              selectable="false"
-              >{{ profile }}</mat-chip-option
-            >
-          </mat-chip-listbox>
+          <a
+            class="link-list"
+            target="_blank"
+            *ngFor="let profile of element[resource.id]"
+            [href]="walletsService.getLink(resource.id, profile)"
+            >{{ profile }}</a
+          >
         </td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
