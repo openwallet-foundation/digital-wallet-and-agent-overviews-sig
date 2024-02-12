@@ -4,13 +4,13 @@
   "scripts": {
     "ng": "ng",
     "prestart": "npm run merge",
+    "prebuild": "npm run merge",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "validate": "node scripts/validate.mjs",
-    "merge": "node scripts/merge-wallets.mjs",
-    "update:schemas": "node scripts/update-schemas.mjs"
+    "merge": "node scripts/merge-wallets.mjs"
   },
   "private": true,
   "dependencies": {
