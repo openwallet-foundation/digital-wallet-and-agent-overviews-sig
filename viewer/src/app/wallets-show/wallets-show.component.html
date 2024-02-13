@@ -70,16 +70,20 @@
     <mat-list>
       <mat-list-item>
         <div matListItemTitle><b>Holder capability</b></div>
-        <span matListItemLine>{{ wallet.holderCapability ?? 'unknown' }}</span>
+        <span matListItemLine>{{
+          wallet.capability?.includes('holder') ?? 'unknown'
+        }}</span>
       </mat-list-item>
       <mat-list-item>
         <div matListItemTitle><b>Issuer capability</b></div>
-        <span matListItemLine>{{ wallet.issuerCapability ?? 'unknown' }}</span>
+        <span matListItemLine>{{
+          wallet.capability?.includes('issuer') ?? 'unknown'
+        }}</span>
       </mat-list-item>
       <mat-list-item>
         <div matListItemTitle><b>Verifier capability</b></div>
         <span matListItemLine>{{
-          wallet.verifierCapability ?? 'unknown'
+          wallet.capability?.includes('verifier') ?? 'unknown'
         }}</span>
       </mat-list-item>
     </mat-list>

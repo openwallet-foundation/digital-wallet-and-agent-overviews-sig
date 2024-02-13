@@ -6,5 +6,5 @@
   "logo": "logos/blockpass.png",
   "name": "Blockpass",
   "openSource": false,
-  "$schema": "../schema.json"
+  "$schema": "../viewer/src/assets/schema.json"
 }

@@ -2,6 +2,6 @@
   "eassi": "No",
   "logo": "logos/idento-one.png",
   "name": "idento.one",
-  "$schema": "../schema.json",
+  "$schema": "../viewer/src/assets/schema.json",
   "openSource": false
 }

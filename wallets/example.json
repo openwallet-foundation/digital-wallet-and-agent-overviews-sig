@@ -1,5 +1,5 @@
 {
-  "$schema": "../schema.json",
+  "$schema": "../viewer/src/assets/schema.json",
   "company": "Example Company",
   "companyUrl": "https://openwallet.foundation/",
   "urlWebsite": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig",
@@ -9,9 +9,7 @@
   "openSource": true,
   "type": "cloud",
   "portability": true,
-  "holderCapability": true,
-  "issuerCapability": true,
-  "verifierCapability": true,
+  "capability": ["holder", "issuer"],
   "credentialProfiles": ["EBSI", "HAIP"],
   "credentialFormats": ["MDOC"],
   "downloadSource": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig",

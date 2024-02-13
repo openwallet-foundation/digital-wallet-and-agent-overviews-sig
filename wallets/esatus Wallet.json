@@ -32,5 +32,5 @@
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.esatus.wallet&hl=de_DE&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
   "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html",
   "verifierUnlinkability": "Yes",
-  "$schema": "../schema.json"
+  "$schema": "../viewer/src/assets/schema.json"
 }

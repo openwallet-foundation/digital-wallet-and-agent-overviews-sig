@@ -27,5 +27,5 @@
   "selectiveDisclosure": "No",
   "signatureAlgorithm": "ECDSA, soon: CL",
   "verifierUnlinkability": "No",
-  "$schema": "../schema.json"
+  "$schema": "../viewer/src/assets/schema.json"
 }

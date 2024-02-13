@@ -115,7 +115,8 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
         if (res.capability && res.capability.length > 0) {
           values = values.filter(
             (wallet) =>
-              res.capability?.includes('holder') && wallet.holderCapability
+              wallet.capability &&
+              res.capability?.every((cap) => wallet.capability?.includes(cap))
           );
         }
         if (res.portability) {
