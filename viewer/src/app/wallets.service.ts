@@ -2,28 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { Wallet } from './types';
-import { values } from './tooltip';
-
-export type ResourceType =
-  | 'credentialProfiles'
-  | 'credentialFormats'
-  | 'issuanceProtocols'
-  | 'keyManagements'
-  | 'presentationProtocols'
-  | 'signingAlgorithms'
-  | 'statusManagements'
-  | 'trustManagements';
-
-interface Resource {
-  // unique identifier of the column
-  id: ResourceType;
-  // unique identifier of the schema
-  schemaId: string;
-  // name of the column
-  name: string;
-  //tooltip to show to the user
-  tooltip: string;
-}
+import schema from '../assets/schema.json';
+import { FieldResponse } from './types';
+import { ResourceType } from './types';
+import { Resource } from './types';
 
 @Injectable({
   providedIn: 'root',
@@ -34,56 +16,64 @@ export class WalletsService {
       id: 'credentialProfiles',
       schemaId: 'Credential-Profile',
       name: 'Supported Profiles',
-      tooltip: 'Supported profiles',
     },
     {
       id: 'credentialFormats',
       schemaId: 'Credential-Format',
       name: 'Supported Formats',
-      tooltip: 'Supported formats',
     },
     {
       id: 'issuanceProtocols',
       schemaId: 'Issuance-Protocol',
       name: 'Supported Issuance Protocols',
-      tooltip: 'Supported issuance protocols',
     },
     {
       id: 'keyManagements',
       schemaId: 'Key-Management',
       name: 'Supported Key Managements',
-      tooltip: 'Supported key managements',
     },
     {
       id: 'presentationProtocols',
       schemaId: 'Presentation-Protocol',
       name: 'Supported Presentation Protocols',
-      tooltip: 'Supported presentation protocols',
     },
     {
       id: 'signingAlgorithms',
       schemaId: 'Signing-Algorithm',
       name: 'Supported Signing Algorithms',
-      tooltip: 'Supported signing algorithms',
     },
     {
       id: 'statusManagements',
       schemaId: 'Status-Management',
       name: 'Supported Status Managements',
-      tooltip: 'Supported status managements',
     },
     {
       id: 'trustManagements',
       schemaId: 'Trust-Management',
       name: 'Supported Trust Managements',
-      tooltip: 'Supported trust managements',
     },
   ];
 
   constructor(private httpClient: HttpClient) {}
 
+  /**
+   * Loads the wallets from the assets folder
+   * @returns
+   */
   loadWallets() {
     return firstValueFrom(this.httpClient.get<Wallet[]>('assets/wallets.json'));
+  }
+
+  /**
+   * Gets the definitions from the Credential Profile comparison SIG
+   * @returns
+   */
+  async getDefinitions() {
+    return firstValueFrom(
+      this.httpClient.get<FieldResponse>(
+        'https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json'
+      )
+    );
   }
 
   find(name: string) {
@@ -92,6 +82,12 @@ export class WalletsService {
     );
   }
 
+  /**
+   * Returns the link to the resource to the credential comparison SIG
+   * @param resourceType
+   * @param key
+   * @returns
+   */
   getLink(resourceType: ResourceType, key: string) {
     const url =
       'https://openwallet-foundation.github.io/credential-format-comparison-sig/#';
@@ -115,7 +111,12 @@ export class WalletsService {
     }
   }
 
-  getTooltip(resourceType: keyof typeof values) {
-    return values[resourceType];
+  /**
+   * Returns the tooltip for the resource
+   * @param resourceType
+   * @returns
+   */
+  getTooltip(resourceType: keyof typeof schema.properties) {
+    return schema.properties[resourceType].description;
   }
 }

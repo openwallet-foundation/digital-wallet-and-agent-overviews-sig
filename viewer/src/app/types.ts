@@ -1,3 +1,7 @@
+export type Capability = 'holder' | 'issuer' | 'verifier';
+
+export type WalletType = 'cloud' | 'mobile';
+
 export interface Wallet {
   // name of the wallet
   name: string;
@@ -17,14 +21,10 @@ export interface Wallet {
   downloadSource?: string;
   // add the license of the wallet. In case you have multiple licences, add them here.
   license?: string;
-  // is the wallet capable of the holder role
-  holderCapability?: boolean;
-  // is the wallet capable of the issuer role
-  issuerCapability?: boolean;
-  // is the wallet capable of the verifier role
-  verifierCapability?: boolean;
+  // is the wallet capable of multiple roles
+  capability?: Capability[];
   // it is a cloud or mobile wallet
-  type?: 'cloud' | 'mobile';
+  type?: WalletType;
   // am I able to export my data from the wallet/agent and import them into another device/system
   portability?: boolean;
   // link to the app store from apple
@@ -50,4 +50,40 @@ export interface Wallet {
   statusManagements?: string[];
   // which trust management from the trust management comparison SIG are supported
   trustManagements?: string[];
+}
+export interface Definition {
+  description: string;
+  type: string;
+  enum: string[];
+}
+export interface FieldResponse {
+  $schema: 'http://json-schema.org/draft-06/schema#';
+  type: 'object';
+  additionalProperties: {};
+  definitions: { [key: string]: Definition };
+}
+
+/**
+ * Type of the resource
+ */
+export type ResourceType =
+  | 'credentialProfiles'
+  | 'credentialFormats'
+  | 'issuanceProtocols'
+  | 'keyManagements'
+  | 'presentationProtocols'
+  | 'signingAlgorithms'
+  | 'statusManagements'
+  | 'trustManagements';
+
+/**
+ * Information from resources from the credential comparison SIG
+ */
+export interface Resource {
+  // unique identifier of the column
+  id: ResourceType;
+  // unique identifier of the schema
+  schemaId: string;
+  // name of the column
+  name: string;
 }

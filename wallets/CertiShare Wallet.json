@@ -27,5 +27,5 @@
   "selectiveDisclosure": "Yes",
   "signatureAlgorithm": "BBS+",
   "verifierUnlinkability": "No",
-  "$schema": "../schema.json"
+  "$schema": "../viewer/src/assets/schema.json"
 }

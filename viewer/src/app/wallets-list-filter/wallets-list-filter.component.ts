@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { WalletsService } from '../wallets.service';
+import { FieldResponse } from '../types';
 
 export interface WalletFilter {
   type?: 'cloud' | 'edge';
@@ -23,19 +24,6 @@ export interface WalletFilter {
   signingAlgorithms?: string[];
   statusManagements?: string[];
   trustManagements?: string[];
-}
-
-interface Resource {
-  description: string;
-  type: string;
-  enum: string[];
-}
-
-interface FieldResponse {
-  $schema: 'http://json-schema.org/draft-06/schema#';
-  type: 'object';
-  additionalProperties: {};
-  definitions: { [key: string]: Resource };
 }
 
 @Component({
@@ -65,11 +53,7 @@ export class WalletsListFilterComponent implements OnInit {
     public walletsService: WalletsService
   ) {}
   async ngOnInit(): Promise<void> {
-    this.values = await firstValueFrom(
-      this.httpClient.get<FieldResponse>(
-        'https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json'
-      )
-    );
+    this.values = await this.walletsService.getDefinitions();
     this.form = new FormGroup({
       type: new FormControl(),
       openSource: new FormControl(),

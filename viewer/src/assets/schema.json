@@ -47,17 +47,13 @@
       "type": "string",
       "description": "add the license of the wallet. In case you have multiple licenses, add them here."
     },
-    "holderCapability": {
-      "type": "boolean",
-      "description": "is the wallet capable of the holder role"
-    },
-    "issuerCapability": {
-      "type": "boolean",
-      "description": "is the wallet capable of the issuer role"
-    },
-    "verifierCapability": {
-      "type": "boolean",
-      "description": "is the wallet capable of the verifier role"
+    "capability": {
+      "type": "array",
+      "description": "list of capabilities of the wallet",
+      "items": {
+        "type": "string",
+        "enum": ["holder", "issuer", "verifier"]
+      }
     },
     "type": {
       "type": "string",
@@ -107,7 +103,7 @@
         "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Signing-Algorithm"
       }
     },
-    "statusAlgorithms": {
+    "statusManagements": {
       "type": "array",
       "description": "list of supported status algorithms, it has to be a valid credential format from the Credential Formats Comparison SIG",
       "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Status%20Algorithm",

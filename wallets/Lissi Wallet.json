@@ -28,5 +28,5 @@
   "selectiveDisclosure": "Yes",
   "signatureAlgorithm": "CL",
   "verifierUnlinkability": "Yes",
-  "$schema": "../schema.json"
+  "$schema": "../viewer/src/assets/schema.json"
 }
