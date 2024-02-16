@@ -11,7 +11,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { Wallet } from '../types';
 import { WalletsService } from '../wallets.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import {
   WalletFilter,
@@ -66,19 +66,21 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
 
   constructor(
     public walletsService: WalletsService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   /**
    * Fetches the wallets from the json file and sets the dataSource to the wallets
    */
   async ngOnInit(): Promise<void> {
-    if (localStorage.getItem('filter')) {
-      this.filter = JSON.parse(localStorage.getItem('filter')!);
-    }
+    //subscribe to the fragment of the route, if it changes, update the filter and load the wallets
+    this.route.fragment.subscribe(async (fragment) => {
+      this.filter = JSON.parse(fragment ?? '{}');
+      this.loadWallets();
+    });
     this.walletsService.resources.forEach((res) => this.columns.push(res.id));
-    const wallets = await this.walletsService.loadWallets();
-    this.dataSource.data = wallets;
     this.displayedColumns = this.columns;
   }
 
@@ -101,40 +103,58 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
       )
       .afterClosed()
       .subscribe(async (res: WalletFilter) => {
-        localStorage.setItem('filter', JSON.stringify(res));
-        this.filter = res;
-        let values = await this.walletsService.loadWallets();
-        if (res.type) {
-          values = values.filter((wallet) => wallet.type === res.type);
-        }
-        if (res.openSource) {
-          values = values.filter(
-            (wallet) => wallet.openSource === (res.openSource === 'true')
-          );
-        }
-        if (res.capability && res.capability.length > 0) {
-          values = values.filter(
-            (wallet) =>
-              wallet.capability &&
-              res.capability?.every((cap) => wallet.capability?.includes(cap))
-          );
-        }
-        if (res.portability) {
-          values = values.filter(
-            (wallet) => wallet.portability === (res.portability === 'true')
-          );
-        }
-
-        const resources = this.walletsService.resources.map((res) => res.id);
-        resources.forEach((resource) => {
-          if (res[resource]) {
-            values = values.filter((wallet) =>
-              res[resource]?.every((res) => wallet[resource]?.includes(res))
-            );
-          }
+        this.router.navigate([], {
+          relativeTo: this.route,
+          fragment: JSON.stringify(res),
+          replaceUrl: false,
         });
-        this.dataSource.data = values;
+        this.filter = res;
+        this.loadWallets();
       });
+  }
+
+  /**
+   * Load the filtered wallets
+   */
+  private async loadWallets() {
+    let values = await this.walletsService.loadWallets();
+    if (this.filter) {
+      if (this.filter.type) {
+        values = values.filter((wallet) => wallet.type === this.filter!.type);
+      }
+      if (this.filter.openSource) {
+        values = values.filter(
+          (wallet) => wallet.openSource === (this.filter!.openSource === 'true')
+        );
+      }
+      if (this.filter.capability && this.filter.capability.length > 0) {
+        values = values.filter(
+          (wallet) =>
+            wallet.capability &&
+            this.filter!.capability?.every((cap) =>
+              wallet.capability?.includes(cap)
+            )
+        );
+      }
+      if (this.filter.portability) {
+        values = values.filter(
+          (wallet) =>
+            wallet.portability === (this.filter!.portability === 'true')
+        );
+      }
+
+      const resources = this.walletsService.resources.map((res) => res.id);
+      resources.forEach((resource) => {
+        if (this.filter![resource]) {
+          values = values.filter((wallet) =>
+            this.filter![resource]?.every((res) =>
+              wallet[resource]?.includes(res)
+            )
+          );
+        }
+      });
+    }
+    this.dataSource.data = values;
   }
 
   /**
