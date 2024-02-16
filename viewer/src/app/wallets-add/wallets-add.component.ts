@@ -15,6 +15,8 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { WalletsService } from '../wallets.service';
 import { FieldResponse } from '../types';
 import { MatDividerModule } from '@angular/material/divider';
+import { ClipboardModule, Clipboard } from '@angular/cdk/clipboard';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-wallets-add',
@@ -29,6 +31,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatDividerModule,
     HttpClientModule,
+    ClipboardModule,
+    MatSnackBarModule,
   ],
   providers: [WalletsService],
   templateUrl: './wallets-add.component.html',
@@ -38,14 +42,19 @@ export class WalletsAddComponent implements OnInit {
   form!: FormGroup;
   values!: FieldResponse;
 
-  constructor(public walletsService: WalletsService) {}
+  constructor(
+    public walletsService: WalletsService,
+    private clipboard: Clipboard,
+    private snackBar: MatSnackBar
+  ) {}
 
   async ngOnInit(): Promise<void> {
     this.values = await this.walletsService.getDefinitions();
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),
+      logo: new FormControl(''),
       company: new FormControl('', [Validators.required]),
-      CompanyUrl: new FormControl('', []),
+      CompanyUrl: new FormControl(''),
       type: new FormControl('', [Validators.required]),
       openSource: new FormControl(false, [Validators.required]),
       license: new FormControl('', [Validators.required]),
@@ -69,5 +78,9 @@ export class WalletsAddComponent implements OnInit {
       null,
       2
     );
+  }
+  copy() {
+    this.clipboard.copy(this.getJSON());
+    this.snackBar.open('Copied to clipboard', 'Dismiss', { duration: 3000 });
   }
 }

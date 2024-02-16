@@ -7,6 +7,35 @@
 </div>
 <mat-dialog-content fxLayout="column" fxLayoutGap="16px">
   <p>
+    With the following steps you are able to add your wallet or agent to this
+    list. You need a Github Account to do so, every entry can be updated in the
+    future.
+  </p>
+  <ul>
+    <li>
+      Use this form to generate a JSON file for the entry. One all required
+      fields with a * are filled, you can copy the content to your clipboard.
+    </li>
+    <li>
+      Go to the
+      <a
+        href="https://github.com/cre8/digital-wallet-and-agent-overviews-sig/new/angular/wallets"
+        target="_blank"
+        >Github Repo</a
+      >
+      and add the content of the file. The name should be unique like
+      <code>yourCompany-walletName</code>.
+    </li>
+    <li>Commit the changes as a new branch and start a pull request.</li>
+    <li>After a positive review we will accept your request.</li>
+    <li>
+      If you are stuck, you can join or
+      <a href="" target="_blank">Discord Server</a> to ask for help or join one
+      of our <a href="" target="_blank"> recurring meetings</a>
+    </li>
+  </ul>
+
+  <p>
     This form will help you to generate the required JSON file that needs to be
     added to the GitHub Repository
   </p>
@@ -24,6 +53,11 @@
       @if(form.get('name')?.hasError('required')) {
       <mat-error> Wallet name is required </mat-error>
       }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Logo</mat-label>
+      <input matInput placeholder="Wallet logo" formControlName="logo" />
+      <mat-hint>{{ walletsService.getTooltip('logo') }}</mat-hint>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Company</mat-label>
@@ -93,4 +127,9 @@
     ></textarea>
   </mat-form-field>
 </mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [disabled]="form.invalid" (click)="copy()">
+    Copy to clipboard
+  </button></mat-dialog-actions
+>
 }
