@@ -45,7 +45,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
 
   // columns that should be displayed in the table
   columns: string[] = [
-    'wallet',
+    'name',
     'company',
     'type',
     'openSource',
