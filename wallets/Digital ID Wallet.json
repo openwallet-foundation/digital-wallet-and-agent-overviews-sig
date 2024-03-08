@@ -1,0 +1,8 @@
+{
+  "company": "Thales",
+  "eassi": "No",
+  "logo": "logos/digital-id-wallet.png",
+  "name": "Digital ID Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "openSource": false
+}
