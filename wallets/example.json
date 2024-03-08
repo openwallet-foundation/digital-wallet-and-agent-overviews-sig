@@ -1,0 +1,18 @@
+{
+  "$schema": "../viewer/src/assets/schema.json",
+  "company": "Example Company",
+  "companyUrl": "https://openwallet.foundation/",
+  "urlWebsite": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig",
+  "logo": "logos/open-wallet.png",
+  "name": "Example Wallet",
+  "contact": "info@example.com",
+  "openSource": true,
+  "type": "cloud",
+  "portability": true,
+  "capability": ["holder", "issuer"],
+  "credentialProfiles": ["EBSI", "HAIP"],
+  "credentialFormats": ["MDOC"],
+  "downloadSource": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig",
+  "license": "Apache 2.0",
+  "urlWebApp": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
+}
