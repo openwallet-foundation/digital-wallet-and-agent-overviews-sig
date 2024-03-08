@@ -119,4 +119,15 @@ export class WalletsService {
   getTooltip(resourceType: keyof typeof schema.properties) {
     return schema.properties[resourceType].description;
   }
+
+  /**
+   * Returns the logo url. It's either an absolute url or a relative path to the assets folder
+   * @param url
+   * @returns
+   */
+  getLogo(url?: string) {
+    if (!url) return;
+    if (url.startsWith('http')) return url;
+    return `assets/${url}`;
+  }
 }

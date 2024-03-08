@@ -1,7 +1,6 @@
 {
   "company": "IDEMIA Group",
   "eassi": "No",
-  "logo": "logos/idema.png",
   "name": "IDEMIA Mobile ID",
   "$schema": "../viewer/src/assets/schema.json",
   "openSource": false
