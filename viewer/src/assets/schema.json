@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Wallet",
+  "title": "Wallet",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "the schema version of the wallet"
+    },
+    "name": {
+      "type": "string",
+      "description": "name of the wallet"
+    },
+    "urlWebsite": {
+      "type": "string",
+      "description": "url to the website of the wallet with more information",
+      "format": "uri"
+    },
+    "logo": {
+      "type": "string",
+      "description": "url to the logo of the wallet"
+    },
+    "company": {
+      "type": "string",
+      "description": "name of the company. In case it's a community project, the name of the community"
+    },
+    "companyUrl": {
+      "type": "string",
+      "description": "url to the company, not the url to the product",
+      "format": "url"
+    },
+    "contact": {
+      "type": "string",
+      "description": "provide a link to a contact formula or insert an email address for support requests"
+    },
+    "openSource": {
+      "type": "boolean",
+      "description": "is the wallet open source"
+    },
+    "downloadSource": {
+      "type": "string",
+      "description": "if the wallet is open source, provide the url to the source code, like a github link",
+      "format": "uri"
+    },
+    "license": {
+      "type": "string",
+      "description": "add the license of the wallet. In case you have multiple licenses, add them here."
+    },
+    "capability": {
+      "type": "array",
+      "description": "list of capabilities of the wallet",
+      "items": {
+        "type": "string",
+        "enum": ["holder", "issuer", "verifier"]
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "it is a cloud or mobile wallet",
+      "enum": ["cloud", "mobile"]
+    },
+    "portability": {
+      "type": "boolean",
+      "description": "am I able to export my data from the wallet/agent and import them into another device/system"
+    },
+    "urlAppStore": {
+      "type": "string",
+      "description": "link to the app store from apple",
+      "format": "uri"
+    },
+    "urlGooglePlayStore": {
+      "type": "string",
+      "description": "link to the play store from google",
+      "format": "uri"
+    },
+    "urlWebApp": {
+      "type": "string",
+      "description": "link to the web app in case it's not a mobile wallet",
+      "format": "uri"
+    },
+    "credentialProfiles": {
+      "type": "array",
+      "description": "list of supported credential profiles, it has to be a valid credential profile from the Credential Profiles Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Credential-Profile"
+      }
+    },
+    "credentialFormats": {
+      "type": "array",
+      "description": "list of supported credential formats, it has to be a valid credential format from the Credential Formats Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Credential%20Format",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Credential-Format"
+      }
+    },
+    "signingAlgorithms": {
+      "type": "array",
+      "description": "list of supported signing algorithms, it has to be a valid credential format from the Credential Formats Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Signing%20Algorithm",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Signing-Algorithm"
+      }
+    },
+    "statusManagements": {
+      "type": "array",
+      "description": "list of supported status algorithms, it has to be a valid credential format from the Credential Formats Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Status%20Algorithm",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Status-Algorithm"
+      }
+    },
+    "keyManagements": {
+      "type": "array",
+      "description": "list of supported key managements, it has to be a valid credential format from the Credential Formats Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Key%20Management",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Key-Management"
+      }
+    },
+    "issuanceProtocols": {
+      "type": "array",
+      "description": "list of supported issuance protocols , it has to be a valid credential format from the Credential Formats Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Issuance%20Protocol",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Issuance-Protocol"
+      }
+    },
+    "presentationProtocols": {
+      "type": "array",
+      "description": "list of supported presentation protocols , it has to be a valid credential format from the Credential Formats Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Presentation%20Protocol",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Presentation-Protocol"
+      }
+    },
+    "trustManagements": {
+      "type": "array",
+      "description": "list of supported trust managements , it has to be a valid credential format from the Credential Formats Comparison SIG",
+      "$comment": "All values can be found here: https://openwallet-foundation.github.io/credential-format-comparison-sig/#/resources/Trust%20Management",
+      "items": {
+        "$ref": "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json#/definitions/Trust-Management"
+      }
+    }
+  },
+  "required": ["name", "urlWebsite", "company", "openSource"],
+  "additionalProperties": false
+}

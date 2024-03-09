@@ -1,0 +1,8 @@
+{
+  "company": "Government of BC",
+  "eassi": "No",
+  "logo": "logos/bc-wallet.png",
+  "name": "BC Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "openSource": false
+}

@@ -1,0 +1,7 @@
+{
+  "company": "Thales",
+  "eassi": "No",
+  "name": "Digital ID Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "openSource": false
+}
