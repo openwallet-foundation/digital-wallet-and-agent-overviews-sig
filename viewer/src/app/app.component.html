@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start center">
+  <span>Digital Wallet and Agent overview</span>
+  <div class="spacer"></div>
+  <button mat-button (click)="addWallet()">Add Wallet</button>
+  <button mat-button (click)="showInfo()">Info</button>
+  <div class="github">
+    <a
+      mat-button
+      href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
+      ><img src="assets/github.svg" alt="Github" /> <span>Github</span></a
+    >
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

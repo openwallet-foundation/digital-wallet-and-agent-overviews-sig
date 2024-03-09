@@ -1,0 +1,9 @@
+{
+  "blockchainType": "AceBlock blockchain framework",
+  "blockchainUsed": "Yes",
+  "company": "AceBlock",
+  "eassi": "No",
+  "name": "AceID Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "openSource": false
+}

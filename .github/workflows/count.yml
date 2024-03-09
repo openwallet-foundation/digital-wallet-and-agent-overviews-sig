@@ -1,0 +1,38 @@
+name: Count Files and Publish to badge-info
+
+on:
+  push:
+    branches:
+      - main
+      - angular
+
+permissions:
+  contents: write
+
+jobs:
+  count_files_and_publish_to_badgeinfo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Count files in wallet folder
+        id: file_count
+        run: |
+          file_count=$(find wallets -type f | wc -l)
+          echo "wallet-count=$file_count" >> $GITHUB_OUTPUT
+
+      - name: Create JSON file
+        run: |
+          mkdir values
+          echo "{ \"schemaVersion\": 1, \"label\": \"Wallets\", \"message\": \"${{ steps.file_count.outputs.wallet-count }}\", \"color\": \"green\" }" > values/wallets.json
+
+      # Deploy to local repo
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: badge-info
+          FOLDER: values
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

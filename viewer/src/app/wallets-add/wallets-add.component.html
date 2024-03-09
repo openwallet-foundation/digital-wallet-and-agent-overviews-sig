@@ -1,0 +1,135 @@
+@if(form) {
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <h1 mat-dialog-title>Add wallet</h1>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<mat-dialog-content fxLayout="column" fxLayoutGap="16px">
+  <p>
+    With the following steps you are able to add your wallet or agent to this
+    list. You need a Github Account to do so, every entry can be updated in the
+    future.
+  </p>
+  <ul>
+    <li>
+      Use this form to generate a JSON file for the entry. One all required
+      fields with a * are filled, you can copy the content to your clipboard.
+    </li>
+    <li>
+      Go to the
+      <a
+        href="https://github.com/cre8/digital-wallet-and-agent-overviews-sig/new/angular/wallets"
+        target="_blank"
+        >Github Repo</a
+      >
+      and add the content of the file. The name should be unique like
+      <code>yourCompany-walletName</code>.
+    </li>
+    <li>Commit the changes as a new branch and start a pull request.</li>
+    <li>After a positive review we will accept your request.</li>
+    <li>
+      If you are stuck, you can join or
+      <a href="" target="_blank">Discord Server</a> to ask for help or join one
+      of our <a href="" target="_blank"> recurring meetings</a>
+    </li>
+  </ul>
+
+  <p>
+    This form will help you to generate the required JSON file that needs to be
+    added to the GitHub Repository
+  </p>
+
+  <form
+    [formGroup]="form"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+    fxLayoutGap="16px"
+  >
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Wallet Name" formControlName="name" />
+      <mat-hint>{{ walletsService.getTooltip('name') }}</mat-hint>
+      @if(form.get('name')?.hasError('required')) {
+      <mat-error> Wallet name is required </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Logo</mat-label>
+      <input matInput placeholder="Wallet logo" formControlName="logo" />
+      <mat-hint>{{ walletsService.getTooltip('logo') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Company</mat-label>
+      <input matInput placeholder="Company" formControlName="company" />
+      <mat-hint>{{ walletsService.getTooltip('company') }}</mat-hint>
+      @if(form.get('company')?.hasError('required')) {
+      <mat-error> Company name is required </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Company URL</mat-label>
+      <input matInput placeholder="Company URL" formControlName="CompanyUrl" />
+      <mat-hint>{{ walletsService.getTooltip('companyUrl') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select formControlName="type">
+        <mat-option value="edge">Edge</mat-option>
+        <mat-option value="cloud">Cloud</mat-option>
+      </mat-select>
+      <mat-hint>{{ walletsService.getTooltip('type') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>License</mat-label>
+      <input matInput placeholder="License" formControlName="license" />
+      <mat-hint>{{ walletsService.getTooltip('license') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Capability</mat-label>
+      <mat-select formControlName="capability" multiple>
+        <mat-option value="issuer">Issuer</mat-option>
+        <mat-option value="holder">Holder</mat-option>
+        <mat-option value="verifier">Verifier</mat-option>
+      </mat-select>
+      <mat-hint>{{ walletsService.getTooltip('capability') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Portability</mat-label>
+      <mat-select formControlName="portability">
+        <mat-option value="yes">Yes</mat-option>
+        <mat-option value="no">No</mat-option>
+      </mat-select>
+      <mat-hint>{{ walletsService.getTooltip('portability') }}</mat-hint>
+    </mat-form-field>
+    @for (resource of walletsService.resources; track resource) {
+    <mat-form-field>
+      <mat-label>{{ resource.name }}</mat-label>
+      <mat-select formControlName="{{ resource.id }}" multiple>
+        @for (option of getValues(resource.schemaId); track option) {
+        <mat-option value="{{ option }}">{{ option }}</mat-option>
+        }
+      </mat-select>
+      <mat-hint>{{ walletsService.getTooltip(resource.id) }}</mat-hint>
+    </mat-form-field>
+    }
+  </form>
+  <mat-divider></mat-divider>
+  <mat-form-field>
+    <mat-label>JSON</mat-label>
+    <textarea
+      matInput
+      placeholder="JSON file to be added to the GitHub Repository"
+      [value]="getJSON()"
+      readonly
+      rows="10"
+      cols="50"
+    ></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [disabled]="form.invalid" (click)="copy()">
+    Copy to clipboard
+  </button></mat-dialog-actions
+>
+}

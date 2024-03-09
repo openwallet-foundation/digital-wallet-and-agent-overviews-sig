@@ -1,0 +1,6 @@
+{
+  "eassi": "No",
+  "name": "idento.one",
+  "$schema": "../viewer/src/assets/schema.json",
+  "openSource": false
+}

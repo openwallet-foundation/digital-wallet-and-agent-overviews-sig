@@ -1,0 +1,14 @@
+.github {
+    display: flex;
+    align-items: center;
+
+    img {
+        float: left;
+        padding: 4px 8px;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
