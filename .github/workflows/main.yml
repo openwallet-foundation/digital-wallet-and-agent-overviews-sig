@@ -7,7 +7,7 @@ on:
       - synchronize
   push:
     branches:
-      - main
+      - next
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -65,7 +65,7 @@ jobs:
 
   publish:
     # only run on the main branch
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/next'
     needs: [validate, build]
     runs-on: ubuntu-latest
     environment:
