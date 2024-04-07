@@ -4,7 +4,7 @@
 
 The objectives of this SIG is to further develop and maintain the Digital Wallet Overview and including the digital identity agents/SDKs in the overview. The overview can be found [here](https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/). These overview should provide transparency of the characteristics of wallets and agents in order to allow for comparison and effective decision-making on which wallet is applicable for your use case. By creating awareness of these overviews, this work can lead to less fragmentation of the SSI playing field and increase adoption.
 
-This SIG was accepted by the TAC on [September 20, 2023](../meetings/2023/2023-09-20.md). See [Digital Wallet and Agent Overviews SIG Proposal](https://github.com/openwallet-foundation/tac/issues/56) for more details.
+The old overview can be found [here](https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/old/), we are still merging the elemente in the new one.
 
 ## Participating
 
@@ -13,10 +13,18 @@ This SIG is an open group. Anyone in the OpenWallet Foundation community can joi
 If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/openwalletfoundation) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.com/channels/1022962884864643214/1154111877077532814) channel.
 
 Upcoming meetings:
+We meet every second Thursday via Zoom, the next date and time plus a calendar invitation can be found via this [link](https://zoom-lfx.platform.linuxfoundation.org/meeting/92821499615?password=bfd9bdad-249d-454e-97a5-727bc5fc2190).
 
-- November 16th, 7:00 AM PT / 16:00 CET
-- November 30th, 7:00 AM PT / 16:00 CET
-- December 14th, 7:00 AM PT / 16:00 CET
+In case you have an [openprofile](https://openprofile.dev/) with the same mail address as your calendar invitation, you can access all the recordings of the past meetings.
+
+## Contributing
+
+### Why should I add my digital wallet or agent?
+
+We strive to create a comprehensive and unbiased platform where every provider can showcase their solution at no cost. Recognising the challenge in quantifying subjective aspects, such as user-friendliness, our focus is on objective parameters. These include resource links and compliance with specific standards, ensuring clear, fact-based comparisons. By allowing and encouraging community contributions through pull requests, we maintain an up-to-date and inclusive matrix. Your active participation by submitting updates or new entries is invaluable, as it not only ensures the overview is correct and complete, but also supports a more informed and diverse user base.
+
+### How can I add my digital wallet or agent?
+Contributing to the overview can be done through filling in the form provided when clicking "Add Wallet/agent" in the upper right corner of the overview. The created JSON file can be submitted via a GITHUB pull request.
 
 ## Target Audience
 
@@ -36,31 +44,9 @@ There is a strong connection with the credential format comparison SIG. The cred
 
 We foresee that the safe wallet SIG provided us with new characteristics in the category of 'Security'. 
 
-## Contributing
-
-### Why should I add my digital wallet or agent?
-
-We strive to create a comprehensive and unbiased platform where every provider can showcase their solution at no cost. Recognising the challenge in quantifying subjective aspects, such as user-friendliness, our focus is on objective parameters. These include resource links and compliance with specific standards, ensuring clear, fact-based comparisons. By allowing and encouraging community contributions through pull requests, we maintain an up-to-date and inclusive matrix. Your active participation by submitting updates or new entries is invaluable, as it not only ensures the overview is correct and complete, but also supports a more informed and diverse user base.
-
-### How can I add my digital wallet or agent?
-Contributing to the overview can be done through filling in the form provided when clicking "Add Wallet/agent" in the upper right corner of the overview (soon to be added). This creates the JSON that should be added to `wallets.json` via a pull request.
-
-## Participating
-This SIG is an open group. Anyone in the OpenWallet Foundation community can join and participate. There is no formal sign-up process. Just show up and participate.
-
-If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/openwalletfoundation) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.com/channels/1022962884864643214/1154111877077532814) channel. 
-### Upcoming meetings
-- February 22th, 2024
-- March 7th, 2024
-- March 21th, 2024
-- April 4th, 2024
-
 ### Slides past meetings
 - [November 16, 2023](meetings/2023/16-11-2023.pdf)
 - [November 30, 2023](meetings/2023/30-11-2023.pdf)
 - [January 11, 2024](meetings/2024/11-01-2024.pdf)
 - [January 25, 2024](meetings/2024/25-01-2024.pdf)
 - [TAC quarterly update meeting, February 21st, 2024](https://docs.google.com/presentation/d/19jO1Mi4-7d8-XdjyuGsEjuiwH6KCb5We9S99tjYgSmQ/edit?usp=sharing)
-
-### Meeting recordings
-See the [LFX meetings](https://zoom-lfx.platform.linuxfoundation.org/meeting/92821499615?password=bfd9bdad-249d-454e-97a5-727bc5fc2190).
