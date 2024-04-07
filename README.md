@@ -1,5 +1,5 @@
 //TODO: set correct path to repo
-![Wallets](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcre8%2Fdigital-wallet-and-agent-overviews-sig%2Fbadge-info%2Fwallets.json)
+![Wallets](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fopenwallet-foundation%2Fdigital-wallet-and-agent-overviews-sig%2Fbadge-info%2Fwallets.json)
 
 # Digital Wallet and Agent Overviews Special Interest Group (SIG)
 
