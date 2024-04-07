@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- The meta viewport will scale my content to any device width -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Link to my stylesheet -->
+<link rel="stylesheet" href="styles.css">
+
+<title>Wallet Characteristics Overview</title>
+</head>
+
+<body>
+	<h1>Wallet Overview</h1>
+	<p style="text-align: center;">
+		<a href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"><i class="fas fa-code";></i>GitHub</a>
+		<a id="icons-top"></a>
+		<noscript>Javascript required.</noscript>
+	</p>
+	<div class="tableFixHead">
+		<table id="myTable">
+			<thead>
+				<tr id="top-headers">
+
+					<th style="background-color: #547a95; color: white;" colspan="13" scope="colgroup">General</th>
+					<th style="background-color: #547a95; color: white;" colspan="11" scope="colgroup">Technology Stack</th>
+					<th style="background-color: #547a95; color: white;" colspan="6" scope="colgroup">User-Friendliness</th>
+					<th style="background-color: #547a95; color: white;" colspan="4" scope="colgroup">Privacy</th>
+					<th style="background-color: #547a95; color: white;" colspan="4" scope="colgroup">Security</th>
+					<th style="background-color: #547a95; color: white;" colspan="5" scope="colgroup">Interoperability</th>
+				</tr>
+				<tr id="table-headers">
+					<!-- General -->
+					<th scope="col">Logo</th>
+					<th scope="col">Wallet 
+						<button class="btn" onclick="sortTable(1)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The name of the wallet and the link to the website.</span>
+						</i>
+					</th>
+					<th scope="col">Company 
+						<button class="btn" onclick="sortTable(2)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The developer of the wallet.</span>
+						</i>
+					</th>
+					<th scope="col">Holder Capability 
+						<button class="btn" onclick="sortTable(2)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet or agent have holder capabilities?</span>
+						</i>
+					</th>
+					<th scope="col">Issuer Capability
+						<button class="btn" onclick="sortTable(2)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet or agent have issuer capabilities?</span>
+						</i>
+					</th>
+					<th scope="col">Verifier Capability 
+						<button class="btn" onclick="sortTable(2)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet or agent have verifier capabilities?</span>
+						</i>
+					</th>
+					<th scope="col">Scope
+						<button class="btn" onclick="sortTable(3)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">General-purpose or domain-specific, and for which domain.</span>
+						</i>
+					</th>
+					<th scope="col">Deployment
+						<button class="btn" onclick="sortTable(4)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Running on edge-devices or in the cloud.</span>
+						</i>
+					</th>
+					
+					<th scope="col">Organisational Wallet
+						<button class="btn" onclick="sortTable(5)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Organisations are the target users.</span>
+						</i>
+					</th>
+					<th scope="col">Open Source
+						<button class="btn" onclick="sortTable(6)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Whether the wallet is open source and if so, the link to their code base.</span>
+						</i>
+					</th>
+					<th scope="col">Links to app
+						<button class="btn" onclick="sortTable(7)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The links to the downloads in Google Play, the App Store or the link to the web app / cloud service agent.</span>
+						</i>
+					</th>
+					
+					<th scope="col">Support
+						<button class="btn" onclick="sortTable(8)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The emailaddress for support.</span>
+						</i>
+					</th>
+					<th scope="col">API
+						<button class="btn" onclick="sortTable(8)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The link to the provided API.</span>
+						</i>
+					</th>
+					<!-- Tech Stack -->
+					<th scope="col">Credential Format
+						<button class="btn" onclick="sortTable(9)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The credential profile(s) supported by the wallet.</span>
+						</i>
+					</th>
+					<th scope="col">Encoding Scheme
+						<button class="btn" onclick="sortTable(10)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The encoding scheme(s) supported by the wallet.</span>
+						</i>
+					</th>
+					<th scope="col">Signature Algorithm
+						<button class="btn" onclick="sortTable(11)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The signature algorithm(s) supported by the wallet.</span>
+						</i>
+					</th>
+					<th scope="col">Holder Identifier
+						<button class="btn" onclick="sortTable(12)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The type of identifier used to identify the holder.</span>
+						</i>
+					</th>
+					<th scope="col">Issuer Identifier
+						<button class="btn" onclick="sortTable(13)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The type of identifier used to identify the issuer.</span>
+						</i>
+					</th>
+					<th scope="col">Revocation Mechanism
+						<button class="btn" onclick="sortTable(14)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The revocation mechanism(s) supported by the wallet.</span>
+						</i>
+					</th>
+					<th scope="col">Peer-to-Peer Protocol
+						<button class="btn" onclick="sortTable(15)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The peer-to-peer protocol(s) supported by the wallet.</span>
+						</i>
+					</th>
+					<th scope="col">Credential Exchange Protocol
+						<button class="btn" onclick="sortTable(16)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The credential exchange protocol(s) supported by the wallet.</span>
+						</i>
+					</th>
+					<th scope="col">Blockchain Used
+						<button class="btn" onclick="sortTable(17)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet work with a blockchain?</span>
+						</i>
+					</th>
+					<th scope="col">Blockchain Type
+						<button class="btn" onclick="sortTable(18)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The type(s) of blockchain supported by the wallet? N/A for wallets that do not use blockchain.</span>
+						</i>
+					</th>
+					<th scope="col">Blockchain Purpose
+						<button class="btn" onclick="sortTable(19)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">The purpose(s) for which the wallet uses blockchain. N/A for wallets that do not use blockchain.</span>
+						</i>
+					</th>
+					<!-- User Friendliness -->
+					<th scope="col">Connection Type
+						<button class="btn" onclick="sortTable(20)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">What types of connections can the wallet handle? Does the wallet support direct communication via QR-codes, bluetooth, etc. or connection-based, where a connection between holder and issuer/verifier can be reused?</span>
+						</i>
+					</th>
+					<th scope="col">Deep-Linking
+						<button class="btn" onclick="sortTable(21)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet support deep-linking? Can the wallet redirect the holder to the wallet app instead of to a website (with a QR-code), such that the user can have a mobile-only workflow? Or for web-based wallets, does the wallet have the ability to link directly to a specific task like a credential offer?</span>
+						</i>
+					</th>
+					<th scope="col">Offline Friendliness
+						<button class="btn" onclick="sortTable(22)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet support the exchange of credentials in an offline fashion, i.e. via bluetooth, NFC, et cetera?</span>
+						</i>
+					</th>
+					<th scope="col">Key History Holder
+						<button class="btn" onclick="sortTable(23)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is it possible to retain and obtain the history of keys related to a certain identifier of a holder?</span>
+						</i>
+					</th>
+					<th scope="col">Key History Issuer
+						<button class="btn" onclick="sortTable(24)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is it possible to retain and obtain the history of keys related to a certain identifier of an issuer?</span>
+						</i>
+					</th>
+					<th scope="col">Portability
+						<button class="btn" onclick="sortTable(25)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Can credentials be exported from the wallet, such that they can be imported by another wallet?</span>
+						</i>
+					</th>
+					<!-- Privacy -->
+					<th scope="col">Selective Disclosure
+						<button class="btn" onclick="sortTable(26)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet allow the user to present only selected claims from their credentials?</span>
+						</i>
+					</th>
+					<th scope="col">Predicates
+						<button class="btn" onclick="sortTable(27)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Can the wallet generate predicates, e.g. older than 18? This can be achieved through the support of zero-knowledge proofs.</span>
+						</i>
+					</th>
+					<th scope="col">Verifier Unlinkability
+						<button class="btn" onclick="sortTable(28)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is the verifier unable to link multiple presentations by the same holder together? Note: this is only relevant if the presentations do not contain identifiable information.</span>
+						</i>
+					</th>
+					<th scope="col">Observability
+						<button class="btn" onclick="sortTable(29)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Can the verifier observe the revocation status of the credential beyond the presentation?</span>
+						</i>
+					</th>
+					<!-- Security -->
+					<th scope="col">Crypto Agility
+						<button class="btn" onclick="sortTable(30)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is the credential format able to work with a variety of signature algorithms?</span>
+						</i>
+					</th>
+					<th scope="col">Post-Quantum Secure
+						<button class="btn" onclick="sortTable(31)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Does the wallet support post-quantum secure signature algorithms? Does the wallet use post-quantum secure encryption in the exchange and storage of credentials?</span>
+						</i>
+					</th>
+					<th scope="col">Key Rotation Holder
+						<button class="btn" onclick="sortTable(32)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Can the key referred to in a credential can be replaced by a new key?</span>
+						</i>
+					</th>
+					<th scope="col">Key Rotation Issuer
+						<button class="btn" onclick="sortTable(33)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Can the key referred to in a credential can be replaced by a new key?</span>
+						</i>
+					</th>
+					<!-- Interoperability -->
+					<th scope="col">Connected to TNO&nbsp;EASSI
+						<button class="btn" onclick="sortTable(34)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is the wallet connected to the<a href="https://eassi.ssi-lab.nl/">TNO EASSI</a> wallet gateway?</span>
+						</i>
+					</th>
+					<th scope="col">EBSI Compliant
+						<button class="btn" onclick="sortTable(35)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is the wallet compliant with<a href="https://api-conformance.ebsi.eu/docs/wallet-conformance">EBSI</a>specifications?</span>
+						</i>
+					</th>
+					<th scope="col">AIP Compliant
+						<button class="btn" onclick="sortTable(36)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is the wallet compliant with the<a href="https://github.com/hyperledger/aries-rfcs/blob/main/concepts/0302-aries-interop-profile/README.md">Aries Interop Profile</a>?</span>
+						</i>
+					</th>
+					<th scope="col">DDIP Compliant
+						<button class="btn" onclick="sortTable(37)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is the wallet compliant with the<a href="https://github.com/DutchBlockchainCoalition/DDIP/tree/main">Dutch Decentralized Identity Profile</a>?</span>
+						</i>
+					</th>
+					<th scope="col">ISO 18013 Compliant
+						<button class="btn" onclick="sortTable(38)">
+							<i class="fa-solid fa-sort"></i>
+						</button>
+						<i class="tooltip fa fa-info-circle">
+							<span class="tooltiptext">Is the wallet compliant with<a href="https://www.iso.org/standard/69084.html">ISO 18013-5 (mDL)</a>?</span>
+						</i>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="data-output">
+				<!-- Wallets from javascript file in here -->
+			</tbody>
+		</table>
+	</div>
+
+	<script>
+		const dType = 'application/vnd.ms-excel'
+		const fName = 'wallet-overview.xls'
+		const tbl = document.getElementById('myTable')
+		const ic = document.getElementById('icons-top')
+		const a = document.createElement('a')
+		a.appendChild(document.createTextNode('Open in Excel'))
+		a.innerHTML = '<i title="test" class="fa-solid fa-download"; style="color: black;"></i>Excel';
+		a.className = 'download'
+		a.download = fName
+		a.href = `data:${dType}, ${tbl.outerHTML.replace(/ /, '%20')}`
+		a.onclick = function(e) {
+			const tableData = tbl.outerHTML.replace(/<img[^>]*src="([^"]*)"[^>]*>/g, '$1')
+			this.href = `data:${dType}, ${encodeURIComponent(tableData)}`
+		}
+		a.onmousedown = function(e) {
+			this.classList.add('clicked')
+		}
+		a.onmouseup = a.onblur = function(e) {
+			this.classList.remove('clicked')
+		}
+		ic.parentNode.insertBefore(a, ic)
+	</script>
+
+	<script>
+	function sortTable(n) {
+		var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+		table = document.getElementById("myTable");
+		switching = true;
+		// Set the sorting direction to ascending:
+		dir = "asc";
+		/* Make a loop that will continue until
+		no switching has been done: */
+		while (switching) {
+			// Start by saying: no switching is done:
+			switching = false;
+			rows = table.rows;
+			console.log(rows)
+			/* Loop through all table rows (except the
+			first, which contains table headers): */
+			for (i = 2; i < (rows.length - 1); i++) {
+				// Start by saying there should be no switching:
+				shouldSwitch = false;
+				/* Get the two elements you want to compare,
+				one from current row and one from the next: */
+				x = rows[i].getElementsByTagName("TD")[n];
+				y = rows[i + 1].getElementsByTagName("TD")[n];
+				/* Check if the two rows should switch place,
+				based on the direction, asc or desc: */
+				if (dir == "asc") {
+					if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					// If so, mark as a switch and break the loop:
+					shouldSwitch = true;
+					break;
+					}
+				} else if (dir == "desc") {
+					if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					// If so, mark as a switch and break the loop:
+					shouldSwitch = true;
+					break;
+					}
+				}
+			}
+			if (shouldSwitch) {
+			/* If a switch has been marked, make the switch
+			and mark that a switch has been done: */
+			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			switching = true;
+			// Each time a switch is done, increase this count by 1:
+			switchcount ++;
+			} else {
+				/* If no switching has been done AND the direction is "asc",
+				set the direction to "desc" and run the while loop again. */
+				if (switchcount == 0 && dir == "asc") {
+					dir = "desc";
+					switching = true;
+				}
+			}
+		}
+	}
+	</script>
+	<script src="script.js"></script> <!-- Link to the javascript file -->
+</body>
+</html>
