@@ -67,7 +67,7 @@ jobs:
 
   publish:
     # only run on the main branch
-    if: github.ref == 'refs/heads/next'
+    if: github.ref == 'refs/heads/main'
     needs: [validate, build]
     runs-on: ubuntu-latest
     environment:
