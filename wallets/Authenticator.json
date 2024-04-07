@@ -1,0 +1,8 @@
+{
+  "company": "Microsoft",
+  "eassi": "No",
+  "logo": "logos/authenticator.png",
+  "name": "Authenticator",
+  "$schema": "../viewer/src/assets/schema.json",
+  "openSource": false
+}

@@ -1,0 +1,28 @@
+.content {
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+}
+
+.wallet {
+  padding: 50px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.company {
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  max-height: 200px;
+  max-width: 50%;
+  border-radius: 20px;
+  // make a shadow for the box
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}

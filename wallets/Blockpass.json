@@ -1,0 +1,10 @@
+{
+  "blockchainType": "Ethereum or Blockpass",
+  "blockchainUsed": "Yes",
+  "company": "Blockpass IDN",
+  "eassi": "No",
+  "logo": "logos/blockpass.png",
+  "name": "Blockpass",
+  "openSource": false,
+  "$schema": "../viewer/src/assets/schema.json"
+}
