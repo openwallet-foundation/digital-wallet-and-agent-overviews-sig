@@ -28,7 +28,7 @@
     "companyUrl": {
       "type": "string",
       "description": "url to the company, not the url to the product",
-      "format": "url"
+      "format": "uri"
     },
     "contact": {
       "type": "string",
@@ -144,6 +144,6 @@
       }
     }
   },
-  "required": ["name", "urlWebsite", "company", "openSource"],
+  "required": ["name", "urlWebsite", "company"],
   "additionalProperties": false
 }
