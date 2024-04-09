@@ -1,0 +1,7 @@
+{
+  "company": "Systems Integration Solutions",
+  "logo": "https://sis.lt/wp-content/uploads/2023/02/Styleprimary-1.svg",
+  "name": "CorpoSign DID",
+  "openSource": false,
+  "$schema": "../viewer/src/assets/schema.json"
+}
