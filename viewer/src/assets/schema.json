@@ -144,6 +144,6 @@
       }
     }
   },
-  "required": ["name", "urlWebsite", "company"],
+  "required": ["capability", "company", "name", "urlWebsite"],
   "additionalProperties": false
 }
