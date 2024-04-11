@@ -1,0 +1,14 @@
+{
+  "capability": ["holder"],
+  "company": "Talao",
+  "contact": "contact@altme.io",
+  "credentialProfiles": ["EBSI"],
+  "downloadSource": "https://github.com/TalaoDAO/AltMe",
+  "logo": "https://unicorn-cdn.b-cdn.net/c5a08f4c-0ad3-425b-add7-4ec916fff504/altme-wallet-logo.png?width=70&height=70",
+  "name": "Altme",
+  "openSource": true,
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "mobile",
+  "urlAppStore": "https://apps.apple.com/fr/app/altme/id1633216869",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.altme.alt.me.altme"
+}

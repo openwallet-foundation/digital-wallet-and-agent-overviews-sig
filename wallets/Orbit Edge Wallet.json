@@ -1,0 +1,12 @@
+{
+  "capability": ["holder"],
+  "company": "Northern Block",
+  "contact": "info@northernblock.io",
+  "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/22/09/dd220977-1f77-b23c-a624-5d6e1574a159/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/230x0w.webp",
+  "name": "Orbit Edge Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "mobile",
+  "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.northernblock",
+  "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
+}
