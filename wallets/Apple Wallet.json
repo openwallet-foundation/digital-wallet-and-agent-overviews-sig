@@ -1,8 +1,10 @@
 {
+  "capability": ["holder"],
   "company": "Apple",
-  "eassi": "No",
   "logo": "logos/apple-wallet.png",
   "name": "Apple Wallet",
+  "openSource": false,
   "$schema": "../viewer/src/assets/schema.json",
-  "openSource": false
+  "type": "mobile",
+  "urlWebsite": "https://www.apple.com/wallet/"
 }
