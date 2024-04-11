@@ -1,0 +1,9 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Trinsic",
+  "logo": "https://ml58lemqnh9a.i.optimole.com/cb:Xgnl.4ea3/w:404/h:116/q:100/f:best/https://trinsic.id/wp-content/uploads/2023/03/Logo-Blue-1024x299.png.png",
+  "name": "Trinsic Platform",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "cloud",
+  "urlWebsite": "https://trinsic.id/platform/"
+}

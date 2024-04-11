@@ -1,0 +1,12 @@
+{
+  "capability": ["holder"],
+  "company": "SelfKey",
+  "downloadSource": "https://github.com/SelfKeyFoundation/Identity-Wallet",
+  "logo": "https://selfkey.org/wp-content/uploads/2023/03/image-1.png",
+  "name": "SelfKey Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "mobile",
+  "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+  "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
+  "urlWebsite": "https://selfkey.org/selfkey-wallet/"
+}

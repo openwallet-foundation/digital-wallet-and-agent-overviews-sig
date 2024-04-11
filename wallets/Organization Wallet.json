@@ -1,0 +1,8 @@
+{
+  "capability": ["issuer", "holder", "verifier"],
+  "company": "Bosch",
+  "contact": "florin.coptil@bosch.com",
+  "name": "Organization Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "urlWebsite": "https://orgwallet.de/en/"
+}
