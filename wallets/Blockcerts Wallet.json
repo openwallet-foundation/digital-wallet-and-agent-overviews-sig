@@ -1,10 +1,13 @@
 {
-  "blockchainType": "Bitcoin and Ethereum, with Merkle proof linking credential to blockchain transaction",
-  "blockchainUsed": "Yes",
+  "capability": ["holder"],
   "company": "Hyland Credentials (formerly: Learning Machine)",
-  "eassi": "No",
+  "downloadSource": "https://github.com/blockchain-certificates",
   "logo": "logos/blockcerts-wallet.png",
   "name": "Blockcerts Wallet",
   "openSource": true,
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "mobile",
+  "urlAppStore": "https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.learningmachine.android.app&hl=en",
+  "urlWebsite": "https://www.blockcerts.org/about.html"
 }

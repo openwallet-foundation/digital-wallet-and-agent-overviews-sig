@@ -1,8 +1,15 @@
 {
+  "capability": ["holder"],
   "company": "Microsoft",
-  "eassi": "No",
+  "credentialFormats": ["JWT-VC"],
+  "keyManagements": ["did:web"],
   "logo": "logos/authenticator.png",
   "name": "Authenticator",
+  "openSource": false,
+  "presentationProtocols": ["OpenID4VP"],
   "$schema": "../viewer/src/assets/schema.json",
-  "openSource": false
+  "type": "mobile",
+  "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409",
+  "urlGooglePlayStore": "https://go.microsoft.com/fwlink/p/?linkid=2168850&clcid=0x409",
+  "urlWebsite": "https://www.microsoft.com/en-us/security/mobile-authenticator-app"
 }

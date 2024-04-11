@@ -1,9 +1,9 @@
 {
-  "blockchainType": "AceBlock blockchain framework",
-  "blockchainUsed": "Yes",
+  "capability": ["holder"],
   "company": "AceBlock",
-  "eassi": "No",
   "name": "AceID Wallet",
   "$schema": "../viewer/src/assets/schema.json",
-  "openSource": false
+  "openSource": false,
+  "type": "cloud",
+  "urlWebsite": "https://www.aceblock.com/modules/aceid/"
 }
