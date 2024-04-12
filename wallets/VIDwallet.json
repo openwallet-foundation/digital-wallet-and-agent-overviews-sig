@@ -10,6 +10,7 @@
   "presentationProtocols": ["OpenID4VP"],
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["ECDSA", "EdDSA"],
+  "statusManagements": ["Status List 2021"],
   "type": "mobile",
   "urlAppStore": "https://apps.apple.com/si/app/vidwallet/id1554340592",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.validatedid.wallet&hl=en_US&gl=US",

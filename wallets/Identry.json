@@ -8,6 +8,7 @@
   "openSource": false,
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["CL"],
+  "statusManagements": ["Indy Revocation"],
   "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
   "urlWebsite": "https://identry.io/"
 }

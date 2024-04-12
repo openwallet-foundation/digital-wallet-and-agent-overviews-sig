@@ -11,6 +11,7 @@
   "presentationProtocols": ["OpenID4VP"],
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["CL", "ECDSA"],
+  "statusManagements": ["Indy Revocation", "Status List 2021"],
   "type": "mobile",
   "urlAppStore": "https://apple.co/2Mz9nJp",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.igrant.mobileagent",

@@ -4,6 +4,7 @@
   "credentialFormats": ["AnonCred"],
   "credentialProfiles": ["AnonCreds with did:indy"],
   "downloadSource": "https://github.com/bcgov/bc-wallet-mobile",
+  "license": "Apache 2.0",
   "logo": "logos/bc-wallet.png",
   "name": "BC Wallet",
   "openSource": true,

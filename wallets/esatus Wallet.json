@@ -9,6 +9,7 @@
   "openSource": false,
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["CL"],
+  "statusManagements": ["Indy Revocation"],
   "type": "mobile",
   "urlAppStore": "https://apps.apple.com/us/app/esatus-wallet/id1496769057?itsct=apps_box&itscg=30200",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.esatus.wallet&hl=de_DE&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",

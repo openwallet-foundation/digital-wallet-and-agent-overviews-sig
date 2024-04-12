@@ -11,6 +11,7 @@
   "presentationProtocols": ["OpenID4VP"],
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["EdDSA", "RSA"],
+  "statusManagements": ["Status List 2021"],
   "type": "cloud",
   "urlWebsite": "https://gataca.io/products/gatacaStudio/"
 }
