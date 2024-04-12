@@ -4,6 +4,7 @@
   "credentialFormats": ["Idemix attribute-based credential"],
   "credentialProfiles": ["IRMA (Yivi) wallet"],
   "downloadSource": "https://github.com/privacybydesign/irmamobile/",
+  "license": "GPLv3",
   "logo": "logos/yivi.png",
   "name": "Yivi",
   "openSource": true,

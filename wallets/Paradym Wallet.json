@@ -1,6 +1,7 @@
 {
   "capability": ["holder"],
   "company": "Animo Solutions",
+  "contact": "ana@animo.id",
   "credentialFormats": ["JWT-VC"],
   "downloadSource": "https://github.com/animo/paradym-wallet",
   "issuanceProtocols": ["OpenID4VCI"],
