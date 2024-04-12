@@ -1,5 +1,6 @@
 .logo {
-  height: 40px;
+  max-height: 40px;
+  max-width: 120px;
 }
 
 .link-list {
@@ -17,9 +18,18 @@
 }
 
 .mat-mdc-cell {
+  border-right: 1px solid;
+  border-right-color: var(--mat-table-row-item-outline-color);
   font-size: 14px;
   min-height: 48px;
   text-align: center;
-  border-right: 1px solid;
-  border-right-color: var(--mat-table-row-item-outline-color);
 }
+
+.mat-mdc-cell.cdk-column-name {
+  text-align: left;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: whitesmoke;
+}
+
