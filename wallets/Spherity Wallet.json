@@ -10,6 +10,6 @@
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["CL", "BBS+ with public key binding", "EdDSA"],
   "statusManagements": ["Status List 2021"],
-  "type": "mobile",
+  "type": "edge",
   "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
 }

@@ -58,7 +58,7 @@
     "type": {
       "type": "string",
       "description": "The deployment model of the agent (e.g., cloud service or mobile app)",
-      "enum": ["cloud", "mobile"]
+      "enum": ["cloud", "edge"]
     },
     "portability": {
       "type": "boolean",

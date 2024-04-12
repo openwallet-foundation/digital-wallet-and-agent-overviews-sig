@@ -8,7 +8,7 @@
   "openSource": false,
   "presentationProtocols": ["OpenID4VP"],
   "$schema": "../viewer/src/assets/schema.json",
-  "type": "mobile",
+  "type": "edge",
   "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409",
   "urlGooglePlayStore": "https://go.microsoft.com/fwlink/p/?linkid=2168850&clcid=0x409",
   "urlWebsite": "https://www.microsoft.com/en-us/security/mobile-authenticator-app"

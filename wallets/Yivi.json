@@ -10,7 +10,7 @@
   "openSource": true,
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["CL"],
-  "type": "mobile",
+  "type": "edge",
   "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=org.irmacard.cardemu",
   "urlWebsite": "https://irma.app/docs/yivi-app/"
