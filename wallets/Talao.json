@@ -14,7 +14,7 @@
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["ECDSA"],
   "statusManagements": ["Status List 2021"],
-  "type": "mobile",
+  "type": "edge",
   "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.talao.wallet",
   "urlWebsite": "https://talao.io/"

@@ -13,7 +13,7 @@
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["BBS+ with public key binding", "ECDSA", "EdDSA", "RSA"],
   "statusManagements": ["Status List 2021"],
-  "type": "mobile",
+  "type": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/sphereon-wallet/id1661096796",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.sphereon.ssi.wallet",
   "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"

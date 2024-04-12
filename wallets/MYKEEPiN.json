@@ -6,7 +6,7 @@
   "name": "Wepublic",
   "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": ["ECDSA"],
-  "type": "mobile",
+  "type": "edge",
   "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet",
   "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.coinplug.mykeepin"

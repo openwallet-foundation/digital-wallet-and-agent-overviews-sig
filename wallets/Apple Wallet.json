@@ -5,6 +5,6 @@
   "name": "Apple Wallet",
   "openSource": false,
   "$schema": "../viewer/src/assets/schema.json",
-  "type": "mobile",
+  "type": "edge",
   "urlWebsite": "https://www.apple.com/wallet/"
 }

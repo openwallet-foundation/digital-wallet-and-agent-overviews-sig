@@ -9,7 +9,7 @@
   "name": "Altme",
   "openSource": true,
   "$schema": "../viewer/src/assets/schema.json",
-  "type": "mobile",
+  "type": "edge",
   "urlAppStore": "https://apps.apple.com/fr/app/altme/id1633216869",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.altme.alt.me.altme"
 }
