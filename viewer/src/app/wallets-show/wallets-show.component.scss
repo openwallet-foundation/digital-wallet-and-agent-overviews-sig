@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+.website {
+  font-size: small;
+}
+
 .company {
   font-weight: bold;
 }
@@ -25,4 +29,13 @@ a:hover {
   border-radius: 20px;
   // make a shadow for the box
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+h2 {
+  margin: 1em 0 0 0;
+}
+
+.mdc-list-item.mdc-list-item--with-one-line {
+  height: auto !important;
 }
