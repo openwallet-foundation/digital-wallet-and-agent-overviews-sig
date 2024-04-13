@@ -18,6 +18,16 @@ import {
   WalletsListFilterComponent,
 } from '../wallets-list-filter/wallets-list-filter.component';
 
+type Colums =
+  | 'name'
+  | 'company'
+  | 'type'
+  | 'openSource'
+  | 'license'
+  | 'capability'
+  | 'portability'
+  | 'linkToApp';
+
 @Component({
   selector: 'app-wallets-list',
   standalone: true,
@@ -89,6 +99,51 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
    */
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
+    this.dataSource.sortingDataAccessor = (item, property) => {
+      switch (property as Colums) {
+        case 'license':
+        case 'type':
+        case 'company':
+          return (item[property as keyof Wallet] as string) || '\ufff0';
+        case 'capability':
+          return (
+            (item[property as keyof Wallet] as string[])?.join(', ') || '\ufff0'
+          );
+        case 'linkToApp':
+          return item.urlGooglePlayStore || item.urlAppStore || '\ufff0';
+        case 'openSource':
+          // since the 0 string is smaller, it will be placed at the beginning
+          return item.openSource ? '0' : '1';
+        default:
+          return (item[property as keyof Wallet] as string) || '\ufff0';
+      }
+    };
+    this.dataSource.sortData = (data, sort: MatSort) => {
+      const isAsc = sort.direction === 'asc';
+      return data.sort((a, b) => {
+        let valueA = this.dataSource.sortingDataAccessor(a, sort.active);
+        let valueB = this.dataSource.sortingDataAccessor(b, sort.active);
+
+        // Handle Infinity and high Unicode character for consistent end-position sorting
+        let emptyA = valueA === Infinity || valueA === '\ufff0';
+        let emptyB = valueB === Infinity || valueB === '\ufff0';
+        if (emptyA && !emptyB) {
+          return 1; // Always place emptyA at the end
+        } else if (!emptyA && emptyB) {
+          return -1; // Always place emptyB at the end
+        } else {
+          // If both are non-empty, compare normally
+          if (typeof valueA === 'string' && typeof valueB === 'string') {
+            return (
+              valueA.toLowerCase().localeCompare(valueB.toLowerCase()) *
+              (isAsc ? 1 : -1)
+            );
+          } else {
+            return (valueA < valueB ? -1 : 1) * (isAsc ? 1 : -1);
+          }
+        }
+      });
+    };
     this.dataSource.paginator = this.paginator;
   }
 
