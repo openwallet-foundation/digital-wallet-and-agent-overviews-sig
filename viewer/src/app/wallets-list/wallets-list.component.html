@@ -12,7 +12,13 @@
     </div>
   </div>
   <section class="container">
-    <table mat-table [dataSource]="dataSource" matSort>
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      matSort
+      matSortActive="name"
+      matSortDirection="asc"
+    >
       <ng-container matColumnDef="name" [sticky]="true">
         <th
           mat-header-cell
