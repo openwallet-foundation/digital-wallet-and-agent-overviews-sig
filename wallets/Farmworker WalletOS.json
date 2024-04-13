@@ -9,7 +9,7 @@
   "capability": [
     "holder"
   ],
-  "portability": "no",
+  "portability": false,
   "linkToApp": "https://www.farmworkerwalletos.community/",
   "credentialProfiles": [
     "AnonCreds with did:cheqd",
