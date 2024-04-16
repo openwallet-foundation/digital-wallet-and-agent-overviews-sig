@@ -1,7 +1,0 @@
-{
-  "company": "IDEMIA Group",
-  "eassi": "No",
-  "name": "IDEMIA Mobile ID",
-  "$schema": "../viewer/src/assets/schema.json",
-  "openSource": false
-}
