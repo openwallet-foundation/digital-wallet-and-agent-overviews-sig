@@ -1,22 +1,15 @@
 {
-  "name": "Preparese Mobile",
-  "logo": "https://esencial.s3.us-west-1.amazonaws.com/images/ecosystem/Preparese_Logo-Green-Round.svg",
-  "company": "UFW Foundation",
-  "CompanyUrl": "https://ufwfoundation.org/",
-  "type": "edge",
-  "openSource": false,
-  "license": "Proprietary",
   "capability": [
     "holder"
   ],
-  "portability": false,
-  "linkToApp": "https://www.preparese.info/",
+  "company": "UFW Foundation",
+  "companyUrl": "https://ufwfoundation.org/",
+  "credentialFormats": [
+    "AnonCred"
+  ],
   "credentialProfiles": [
     "AnonCreds with did:cheqd",
     "AnonCreds with did:indy"
-  ],
-  "credentialFormats": [
-    "AnonCred"
   ],
   "issuanceProtocols": [
     "Issue Credential v2"
@@ -28,9 +21,12 @@
     "did:web",
     "link secrets"
   ],
-  "presentationProtocols": [
-    "Present Proof v2"
-  ],
+  "license": "Proprietary",
+  "logo": "https://esencial.s3.us-west-1.amazonaws.com/images/ecosystem/Preparese_Logo-Green-Round.svg",
+  "name": "Preparese Mobile",
+  "openSource": false,
+  "portability": false,
+  "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": [
     "CL",
     "EdDSA"
@@ -39,5 +35,6 @@
   "trustManagements": [
     "Verifier knows Issuers"
   ],
-  "$schema": "../schema.json"
+  "type": "edge",
+  "urlWebsite": "https://www.preparese.info/"
 }
