@@ -58,23 +58,23 @@
   <mat-divider></mat-divider>
   <div fxLayout="row" fxLayoutAlign="space-between start">
     <mat-list>
-      <mat-list-item title="{{walletsService.getTooltip('type')}}">
+      <mat-list-item [matTooltip]="walletsService.getTooltip('type')">
         <div matListItemTitle><b>Type</b></div>
         <span matListItemLine>{{ wallet.type }}</span>
       </mat-list-item>
-      <mat-list-item title="{{walletsService.getTooltip('capability')}}">
+      <mat-list-item [matTooltip]="walletsService.getTooltip('capability')">
         <div matListItemTitle><b>Capabilities</b></div>
         <span matListItemLine>{{
           wallet.capability?.join(', ')
         }}</span>
       </mat-list-item>
-      <mat-list-item title="{{walletsService.getTooltip('portability')}}">
+      <mat-list-item [matTooltip]="walletsService.getTooltip('portability')">
         <div matListItemTitle><b>Portability</b></div>
         <span matListItemLine>{{ wallet.portability ?? 'unknown' }}</span>
       </mat-list-item>
     </mat-list>
     <mat-list>
-      <mat-list-item title="{{walletsService.getTooltip('openSource')}}">
+      <mat-list-item [matTooltip]="walletsService.getTooltip('openSource')">
         <div matListItemTitle><b>Open Source</b></div>
         <span matListItemLine *ngIf="!wallet.downloadSource"
           >{{ wallet.openSource }}
@@ -87,7 +87,7 @@
         >
       </mat-list-item>
       <mat-list-item>
-        <div matListItemTitle title="{{walletsService.getTooltip('license')}}"><b>License</b></div>
+        <div matListItemTitle [matTooltip]="walletsService.getTooltip('license')"><b>License</b></div>
         <span matListItemLine>{{ wallet.license ?? 'unknown' }}</span>
       </mat-list-item>
     </mat-list>
