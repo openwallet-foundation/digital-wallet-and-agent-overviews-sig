@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-wallets-show',
@@ -22,6 +23,7 @@ import { MatListModule } from '@angular/material/list';
     FlexLayoutModule,
     MatIconModule,
     MatListModule,
+    MatTooltipModule,
   ],
   providers: [WalletsService],
   templateUrl: './wallets-show.component.html',
