@@ -1,0 +1,14 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Lissi GmbH",
+  "contact": "info@lissi.id",
+  "companyUrl": "https://www.lissi.id/",
+  "credentialProfiles": ["HAIP"],
+  "logo": "logos/lissi-wallet.png",
+  "name": "Lissi EUDI-Wallet Connector",
+  "openSource": false,
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "cloud",
+  "urlWebApp": "https://demo.lissi.id/",
+  "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
+}

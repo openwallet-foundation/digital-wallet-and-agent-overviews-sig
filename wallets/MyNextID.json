@@ -1,0 +1,9 @@
+{
+  "capability": ["issuer", "holder", "verifier"],
+  "company": "MyNextID",
+  "contact": "info@mynext.id",
+  "logo": "https://mynext.id/wp-content/uploads/2022/04/logo_mynextID.svg",
+  "name": "MyNextID",
+  "$schema": "../viewer/src/assets/schema.json",
+  "urlWebsite": "https://mynext.id/"
+}

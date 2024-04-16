@@ -1,0 +1,10 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Indicio",
+  "name": "Proven",
+  "openSource": false,
+  "logo": "https://indicio.tech/wp-content/uploads/2023/11/Indicio-wide.png",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "cloud",
+  "urlWebsite": "https://indicio.tech/indicio-proven/"
+}

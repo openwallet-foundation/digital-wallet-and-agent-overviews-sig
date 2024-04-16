@@ -1,0 +1,11 @@
+{
+  "capability": ["holder"],
+  "company": "2060",
+  "companyUrl": "https://2060.io",
+  "logo": "https://2060.io/images/hologram-app.png",
+  "name": "Hologram",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "edge",
+  "urlAppStore": "https://apps.apple.com/co/app/hologram-messaging/id6474701855",
+  "urlWebsite": "https://2060.io/#download"
+}

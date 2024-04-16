@@ -1,0 +1,8 @@
+{
+  "capability": ["issuer"],
+  "company": "Next ID",
+  "logo": "https://nextid.com/wp-content/uploads/2021/06/logotype_420x90_cropped_tight.png",
+  "name": "NextCert Issuer",
+  "$schema": "../viewer/src/assets/schema.json",
+  "urlWebsite": "https://nextid.com/nextcert-issuer/"
+}
