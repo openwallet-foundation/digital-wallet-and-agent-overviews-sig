@@ -1,0 +1,9 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Northern Block",
+  "contact": "info@northernblock.io",
+  "logo": "https://northernblock.io/wp-content/uploads/2020/09/northern-block-full-logo-100h-1.png",
+  "name": "Orbit Enterprise",
+  "$schema": "../viewer/src/assets/schema.json",
+  "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+}

@@ -1,22 +1,18 @@
 {
-  "name": "Farmworker WalletOS",
-  "logo": "https://farmworker-walletos.s3.us-west-1.amazonaws.com/images/app_logo.png",
-  "company": "Entidad",
-  "CompanyUrl": "https://www.entidad.io/",
-  "type": "edge",
-  "openSource": true,
-  "license": "Apache-2.0",
   "capability": [
     "holder"
   ],
-  "portability": "no",
-  "linkToApp": "https://www.farmworkerwalletos.community/",
+  "company": "Entidad",
+  "logo": "https://farmworker-walletos.s3.us-west-1.amazonaws.com/images/app_logo.png",
+  "name": "Farmworker WalletOS",
+
+  "companyUrl": "https://www.entidad.io/",
+  "credentialFormats": [
+    "AnonCred"
+  ],
   "credentialProfiles": [
     "AnonCreds with did:cheqd",
     "AnonCreds with did:indy"
-  ],
-  "credentialFormats": [
-    "AnonCred"
   ],
   "issuanceProtocols": [
     "Issue Credential v2"
@@ -28,14 +24,14 @@
     "did:web",
     "link secrets"
   ],
-  "presentationProtocols": [
-    "Present Proof v2"
-  ],
+  "license": "Apache 2.0",
+  "openSource": true,
+  "portability": false,
+  "$schema": "../viewer/src/assets/schema.json",
   "signingAlgorithms": [
     "CL",
     "EdDSA"
   ],
-  "statusManagements": [],
-  "trustManagements": [],
-  "$schema": "../schema.json"
+  "type": "edge",
+  "urlWebsite": "https://www.farmworkerwalletos.community/"
 }

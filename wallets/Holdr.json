@@ -1,0 +1,13 @@
+{
+  "capability": ["holder"],
+  "company": "Indicio",
+  "credentialFormats": ["AnonCred"],
+  "credentialProfiles": ["AnonCreds with did:indy"],
+  "logo": "https://indicio.tech/wp-content/uploads/2024/02/holdr_brand.png",
+  "name": "Holdr+",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "edge",
+  "urlAppStore": "https://apps.apple.com/us/app/holdr/id1620628623",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=tech.indicio.holdrplus",
+  "urlWebsite": "https://indicio.tech/holdr/"
+}

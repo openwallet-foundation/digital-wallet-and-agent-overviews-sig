@@ -18,6 +18,15 @@
           >Contact provider</a
         >
       </div>
+      <div fxLayout="row" fxLayoutGap="16px">
+        <p><a
+          *ngIf="wallet.urlWebsite"
+          class="website"
+          target="_blank"
+          [href]="wallet.urlWebsite"
+          >{{ wallet.urlWebsite }}</a
+        ></p>
+      </div>
       <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
         <a
           *ngIf="wallet.urlGooglePlayStore"
@@ -49,7 +58,23 @@
   <mat-divider></mat-divider>
   <div fxLayout="row" fxLayoutAlign="space-between start">
     <mat-list>
-      <mat-list-item>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('type')">
+        <div matListItemTitle><b>Type</b></div>
+        <span matListItemLine>{{ wallet.type }}</span>
+      </mat-list-item>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('capability')">
+        <div matListItemTitle><b>Capabilities</b></div>
+        <span matListItemLine>{{
+          wallet.capability?.join(', ')
+        }}</span>
+      </mat-list-item>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('portability')">
+        <div matListItemTitle><b>Portability</b></div>
+        <span matListItemLine>{{ wallet.portability ?? 'unknown' }}</span>
+      </mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('openSource')">
         <div matListItemTitle><b>Open Source</b></div>
         <span matListItemLine *ngIf="!wallet.downloadSource"
           >{{ wallet.openSource }}
@@ -58,40 +83,12 @@
           matListItemLine
           *ngIf="wallet.downloadSource"
           [href]="wallet.downloadSource"
-          >{{ wallet.openSource }}</a
+          >{{ wallet.downloadSource }}</a
         >
       </mat-list-item>
       <mat-list-item>
-        <div matListItemTitle><b>License</b></div>
+        <div matListItemTitle [matTooltip]="walletsService.getTooltip('license')"><b>License</b></div>
         <span matListItemLine>{{ wallet.license ?? 'unknown' }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <div matListItemTitle><b>Type</b></div>
-        <span matListItemLine>{{ wallet.type }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <div matListItemTitle><b>Portability</b></div>
-        <span matListItemLine>{{ wallet.portability ?? 'unknown' }}</span>
-      </mat-list-item>
-    </mat-list>
-    <mat-list>
-      <mat-list-item>
-        <div matListItemTitle><b>Holder capability</b></div>
-        <span matListItemLine>{{
-          wallet.capability?.includes('holder') ?? 'unknown'
-        }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <div matListItemTitle><b>Issuer capability</b></div>
-        <span matListItemLine>{{
-          wallet.capability?.includes('issuer') ?? 'unknown'
-        }}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <div matListItemTitle><b>Verifier capability</b></div>
-        <span matListItemLine>{{
-          wallet.capability?.includes('verifier') ?? 'unknown'
-        }}</span>
       </mat-list-item>
     </mat-list>
   </div>
@@ -111,4 +108,7 @@
     </mat-list>
   </div>
   }
+  <div id="history">
+    <p>Commit history: <a href="{{wallet.commitHistory}}">{{wallet.commitHistory}}</a></p>
+  </div>
 </div>

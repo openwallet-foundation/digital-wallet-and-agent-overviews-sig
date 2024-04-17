@@ -1,0 +1,12 @@
+{
+  "capability": ["holder"],
+  "company": "Dock",
+  "contact": "marketing@dock.io",
+  "downloadSource": "https://github.com/docknetwork/universal-wallet",
+  "name": "Dock Wallet",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "edge",
+  "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+  "urlWebsite": "https://www.dock.io/dock-wallet-app"
+}
