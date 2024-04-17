@@ -1,0 +1,8 @@
+{
+  "capability": ["holder"],
+  "company": "Gimly",
+  "logo": "https://assets-global.website-files.com/64b9387ee6a0b5f6b0f06fa0/64b9b2b54ae54bd94fc5a01a_Gimly%20Logo.svg",
+  "name": "Gimly ID",
+  "$schema": "../viewer/src/assets/schema.json",
+  "urlWebsite": "https://gimly.io/"
+}

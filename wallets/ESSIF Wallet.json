@@ -1,0 +1,11 @@
+{
+  "capability": ["holder"],
+  "company": "ESSIF Playground",
+  "downloadSource": "https://github.com/majo32/sk-essif-verifier",
+  "logo": "https://docs.essif.sk/wp-content/uploads/2021/12/blockchain.svg",
+  "name": "ESSIF Wallet",
+  "type": "cloud",
+  "urlWebApp": "https://wallet.essif.sk/",
+  "urlWebsite": "https://docs.essif.sk/en/home-english/",
+  "$schema": "../viewer/src/assets/schema.json"
+}

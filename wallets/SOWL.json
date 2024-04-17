@@ -1,0 +1,11 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "esatus AG",
+  "credentialFormats": ["AnonCred"],
+  "credentialProfiles": ["AnonCreds with did:indy"],
+  "logo": "logos/esatus-wallet.png",
+  "name": "SOWL",
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "cloud",
+  "urlWebsite": "https://esatus.com/en/digital-identity/"
+}
