@@ -54,7 +54,7 @@ export class WalletsAddComponent implements OnInit {
       name: new FormControl('', [Validators.required]),
       logo: new FormControl(''),
       company: new FormControl('', [Validators.required]),
-      CompanyUrl: new FormControl(''),
+      companyUrl: new FormControl(''),
       type: new FormControl('', [Validators.required]),
       openSource: new FormControl(false, [Validators.required]),
       license: new FormControl('', [Validators.required]),
