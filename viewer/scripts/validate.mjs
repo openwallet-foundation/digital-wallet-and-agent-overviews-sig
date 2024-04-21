@@ -14,7 +14,7 @@ files.map(file => {
   const wallet = JSON.parse(readFileSync(`../wallets/${file}`))
   if(!validate(wallet)) {
     console.error(`Error validating ${file}:`);
-    console.error(validate.errors);
+    console.error(JSON.stringify(validate.errors, null, 2));
     success = false;
   }
 });
