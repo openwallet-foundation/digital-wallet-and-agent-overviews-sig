@@ -2,6 +2,7 @@
   "capability": ["holder"],
   "company": "Talao",
   "contact": "contact@altme.io",
+  "urlWebsite": "https://altme.io/",
   "credentialProfiles": ["EBSI"],
   "downloadSource": "https://github.com/TalaoDAO/AltMe",
   "license": "Apache 2.0",

@@ -2,13 +2,12 @@
   "name": "hightrust.id",
   "logo": "https://raw.githubusercontent.com/megical/hightrust.id-assets/main/AppIcons/hitid-app-icon-1024.png",
   "company": "Megical Oy",
-  "CompanyUrl": "https://www.hightrust.id",
+  "urlWebsite": "https://www.hightrust.id",
   "type": "edge",
   "openSource": false,
   "license": "Commercial software license",
   "capability": [],
-  "portability": null,
-  "linkToApp": "",
+  "portability": false,
   "credentialProfiles": [],
   "credentialFormats": [],
   "issuanceProtocols": [],
@@ -17,5 +16,5 @@
   "signingAlgorithms": [],
   "statusManagements": [],
   "trustManagements": [],
-  "$schema": "../schema.json"
+  "$schema": "../viewer/src/assets/schema.json"
 }

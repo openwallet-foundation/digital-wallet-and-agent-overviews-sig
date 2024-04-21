@@ -74,7 +74,7 @@ export class WalletsAddComponent implements OnInit {
 
   getJSON() {
     return JSON.stringify(
-      { ...this.form.value, $schema: '../schema.json' },
+      { ...this.form.value, $schema: '../viewer/src/assets/schema.json' },
       null,
       2
     );
