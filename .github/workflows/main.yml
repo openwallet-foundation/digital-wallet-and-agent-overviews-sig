@@ -35,10 +35,9 @@ jobs:
 
       - name: Install dependencies
         run: cd viewer && npm ci
-
-      #TODO: we are not validating the schemas of the data files yet.
-      # - name: Validate
-      #   run: cd viewer && npm run validate
+      
+      - name: Validate
+        run: cd viewer && npm run validate
 
   build:
     runs-on: ubuntu-latest
