@@ -1,0 +1,21 @@
+{
+  "name": "VC Verifier",
+  "logo": "https://raw.githubusercontent.com/european-epc-competence-center/vc-verifier/main/assets/logo.png",
+  "company": "European EPC Competence Center GmbH",
+  "companyUrl": "https://id.eecc.de/products/vc_verifier.html",
+  "type": "cloud",
+  "openSource": true,
+  "license": "AGPL-3.0",
+  "capability": ["verifier"],
+  "portability": true,
+  "linkToApp": "https://ssi.eecc.de/verifier/",
+  "credentialProfiles": [],
+  "credentialFormats": ["LDP-VC", "SD-JWT-VC", "SD-JWT"],
+  "issuanceProtocols": [],
+  "keyManagements": ["did:jwk", "did:key", "did:web"],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA", "EdDSA"],
+  "statusManagements": ["Status List 2021"],
+  "trustManagements": [],
+  "$schema": "../viewer/src/assets/schema.json"
+}
