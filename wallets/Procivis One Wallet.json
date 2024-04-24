@@ -9,8 +9,8 @@
   "capability": [
     "holder"
   ],
-  "portability": "yes",
-  "linkToApp": "",
+  "portability": true,
+  "urlWebsite": "https://www.procivis.ch/en/procivis-one",
   "credentialProfiles": [
     "ISO mDL",
     "JSON-LD VCs with BBS (Holder DID)"

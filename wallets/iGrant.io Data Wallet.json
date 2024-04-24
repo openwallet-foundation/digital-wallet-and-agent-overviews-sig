@@ -34,7 +34,6 @@
     "x509"
   ],
   "issuanceProtocols": [
-    "Issue Credential v1",
     "OpenID4VCI"
   ],
   "keyManagements": [
@@ -48,7 +47,6 @@
     "raw public keys (jwk)"
   ],
   "presentationProtocols": [
-    "Present Proof v1",
     "OpenID4VP"
   ],
   "signingAlgorithms": [
@@ -63,7 +61,6 @@
   "trustManagements": [
     "EBSI Trust Registries",
     "OpenID Connect Federation",
-    "Hyperledger Indy",
     "Verifier knows Issuers",
     "X.509 certificates"
   ],
