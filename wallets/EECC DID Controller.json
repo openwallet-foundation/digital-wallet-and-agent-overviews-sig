@@ -8,7 +8,7 @@
   "license": "",
   "capability": ["issuer", "holder"],
   "portability": false,
-  "linkToApp": "https://id.eecc.de/products/did_controller.html",
+  "urlWebsite": "https://id.eecc.de/products/did_controller.html",
   "credentialProfiles": [],
   "credentialFormats": ["LDP-VC"],
   "issuanceProtocols": ["OpenID4VCI"],
