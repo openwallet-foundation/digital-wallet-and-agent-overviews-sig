@@ -51,16 +51,20 @@ export class WalletsAddComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.values = await this.walletsService.getDefinitions();
     this.form = new FormGroup({
+      capability: new FormControl([], [Validators.required]),
+      type: new FormControl(''),
       name: new FormControl('', [Validators.required]),
       logo: new FormControl(''),
       company: new FormControl('', [Validators.required]),
       companyUrl: new FormControl(''),
-      type: new FormControl('', [Validators.required]),
-      openSource: new FormControl(false, [Validators.required]),
-      license: new FormControl('', [Validators.required]),
-      capability: new FormControl([]),
-      portability: new FormControl(),
-      linkToApp: new FormControl(''),
+      urlWebsite: new FormControl('', [Validators.required]),
+      urlAppStore: new FormControl(''),
+      urlGooglePlayStore: new FormControl(''),
+      urlWebApp: new FormControl(''),
+      downloadSource: new FormControl(''),
+      openSource: new FormControl(false),
+      license: new FormControl(''),
+      portability: new FormControl(false),
     });
 
     this.walletsService.resources.forEach((resource) => {
@@ -73,11 +77,10 @@ export class WalletsAddComponent implements OnInit {
   }
 
   getJSON() {
-    return JSON.stringify(
-      { ...this.form.value, $schema: '../viewer/src/assets/schema.json' },
-      null,
-      2
-    );
+    const json = { ...this.form.value, $schema: '../viewer/src/assets/schema.json' }
+    json.openSource = json.openSource == "true" ? true : false
+    json.portability = json.portability == "true" ? true : false
+    return JSON.stringify(json, null, 2);
   }
   copy() {
     this.clipboard.copy(this.getJSON());
