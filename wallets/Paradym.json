@@ -1,0 +1,17 @@
+{
+	"capability": ["issuer", "verifier"],
+	"company": "Animo Solutions",
+	"contact": "ana@animo.id",
+	"credentialFormats": ["AnonCred", "SD-JWT-VC"],
+	"issuanceProtocols": ["OpenID4VCI", "Issue Credential v2"],
+	"keyManagements": ["did:jwk", "did:key", "did:web", "did:cheqd"],
+	"logo": "logos/paradym-wallet.png",
+	"name": "Paradym",
+	"openSource": false,
+	"presentationProtocols": ["OpenID4VP"],
+	"$schema": "../viewer/src/assets/schema.json",
+	"signingAlgorithms": ["EdDSA", "ECDSA"],
+	"credentialProfiles": ["AnonCreds with did:cheqd"],
+	"type": "cloud",
+	"urlWebsite": "https://paradym.id"
+}
