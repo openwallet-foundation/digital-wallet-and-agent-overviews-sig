@@ -40,5 +40,5 @@
   ],
   "statusManagements": ["Status List 2021", "Validity Credential"],
   "trustManagements": [],
-  "$schema": "../schema.json"
+  "$schema": "../viewer/src/assets/schema.json"
 }
