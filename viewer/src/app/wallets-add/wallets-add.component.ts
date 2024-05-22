@@ -77,9 +77,12 @@ export class WalletsAddComponent implements OnInit {
   }
 
   getJSON() {
-    const json = { ...this.form.value, $schema: '../viewer/src/assets/schema.json' }
-    json.openSource = json.openSource == "true" ? true : false
-    json.portability = json.portability == "true" ? true : false
+    const json = {
+      ...this.form.value,
+      $schema: '../viewer/src/assets/schema.json',
+    };
+    json.openSource = json.openSource == 'true' ? true : false;
+    json.portability = json.portability == 'true' ? true : false;
     return JSON.stringify(json, null, 2);
   }
   copy() {
