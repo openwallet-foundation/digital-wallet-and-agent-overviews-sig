@@ -44,7 +44,7 @@ export class WalletsService {
     },
     {
       id: 'statusManagements',
-      schemaId: 'Status-Management',
+      schemaId: 'Status-Algorithm',
       name: 'Supported Status Managements',
     },
     {
