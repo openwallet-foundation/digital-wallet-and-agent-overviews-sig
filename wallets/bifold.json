@@ -1,0 +1,13 @@
+{
+  "capability": ["holder"],
+  "company": "OpenWallet Foundation",
+  "contact": "https://discord.gg/openwalletfoundation",
+  "urlWebsite": "https://github.com/openwallet-foundation/bifold-wallet",
+  "credentialProfiles": ["AnonCreds with did:indy"],
+  "downloadSource": "https://github.com/openwallet-foundation/bifold-wallet",
+  "license": "Apache 2.0",
+  "name": "Bifold",
+  "openSource": true,
+  "$schema": "../viewer/src/assets/schema.json",
+  "type": "edge"
+}
