@@ -12,10 +12,6 @@
     "validate": "node scripts/validate.mjs",
     "merge": "node scripts/merge-wallets.mjs"
   },
-  "engines": {
-    "pnpm": ">=9",
-    "node": ">=18"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.3.0",
