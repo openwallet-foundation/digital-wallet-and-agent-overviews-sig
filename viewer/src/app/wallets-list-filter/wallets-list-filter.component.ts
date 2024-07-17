@@ -6,7 +6,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { WalletsService } from '../wallets.service';
 import { FieldResponse } from '../types';
@@ -37,7 +37,11 @@ export interface WalletFilter {
     MatInputModule,
     MatSelectModule,
     MatIconModule,
-    HttpClientModule,
+    
+// TODO: `HttpClientModule` should not be imported into a component directly.
+// Please refactor the code to add `provideHttpClient()` call to the provider list in the
+// application bootstrap logic and remove the `HttpClientModule` import from this component.
+HttpClientModule,
   ],
   providers: [WalletsService],
   templateUrl: './wallets-list-filter.component.html',
