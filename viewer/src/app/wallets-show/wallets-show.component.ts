@@ -3,7 +3,6 @@ import { WalletsService } from '../wallets.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Wallet } from '../types';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,7 +18,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     RouterModule,
     MatSnackBarModule,
     MatButtonModule,
-    HttpClientModule,
     FlexLayoutModule,
     MatIconModule,
     MatListModule,

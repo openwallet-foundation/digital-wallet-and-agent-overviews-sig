@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoComponent } from './info/info.component';
 import { MatButtonModule } from '@angular/material/button';
