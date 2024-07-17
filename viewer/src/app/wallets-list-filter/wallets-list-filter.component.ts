@@ -6,8 +6,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { WalletsService } from '../wallets.service';
 import { FieldResponse } from '../types';
 
@@ -37,7 +36,6 @@ export interface WalletFilter {
     MatInputModule,
     MatSelectModule,
     MatIconModule,
-    HttpClientModule,
   ],
   providers: [WalletsService],
   templateUrl: './wallets-list-filter.component.html',

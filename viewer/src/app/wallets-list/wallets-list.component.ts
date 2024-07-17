@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -34,7 +34,6 @@ type Colums =
   imports: [
     CommonModule,
     RouterModule,
-    HttpClientModule,
     MatTableModule,
     MatButtonModule,
     MatIconModule,
