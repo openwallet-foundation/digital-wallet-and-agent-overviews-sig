@@ -1,6 +1,11 @@
-<div class="content" *ngIf="wallet">
+<div class="content" *ngIf="wallet" fxLayout="column" fxLayoutGap="16px">
   <a mat-icon-button routerLink="/"><mat-icon>arrow_back_ios</mat-icon></a>
-  <div class="wallet" fxLayout="row" fxLayoutAlign="space-between center">
+  <div
+    class="wallet"
+    fxLayout="row"
+    fxLayout.xs="column-reverse"
+    fxLayoutAlign="space-between center"
+  >
     <div>
       <h1>{{ wallet.name }}</h1>
       <div fxLayout="row" fxLayoutGap="16px">
@@ -19,13 +24,15 @@
         >
       </div>
       <div fxLayout="row" fxLayoutGap="16px">
-        <p><a
-          *ngIf="wallet.urlWebsite"
-          class="website"
-          target="_blank"
-          [href]="wallet.urlWebsite"
-          >{{ wallet.urlWebsite }}</a
-        ></p>
+        <p>
+          <a
+            *ngIf="wallet.urlWebsite"
+            class="website"
+            target="_blank"
+            [href]="wallet.urlWebsite"
+            >Website</a
+          >
+        </p>
       </div>
       <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
         <a
@@ -49,10 +56,11 @@
       </div>
     </div>
     <img
+      *ngIf="logoError"
       [src]="walletsService.getLogo(wallet.logo)"
       class="logo"
       alt="Logo of the wallet"
-      onerror="this.src='assets/default-image.png';"
+      (error)="logoError = false"
     />
   </div>
   <mat-divider></mat-divider>
@@ -64,9 +72,7 @@
       </mat-list-item>
       <mat-list-item [matTooltip]="walletsService.getTooltip('capability')">
         <div matListItemTitle><b>Capabilities</b></div>
-        <span matListItemLine>{{
-          wallet.capability?.join(', ')
-        }}</span>
+        <span matListItemLine>{{ wallet.capability?.join(', ') }}</span>
       </mat-list-item>
       <mat-list-item [matTooltip]="walletsService.getTooltip('portability')">
         <div matListItemTitle><b>Portability</b></div>
@@ -87,28 +93,67 @@
         >
       </mat-list-item>
       <mat-list-item>
-        <div matListItemTitle [matTooltip]="walletsService.getTooltip('license')"><b>License</b></div>
+        <div
+          matListItemTitle
+          [matTooltip]="walletsService.getTooltip('license')"
+        >
+          <b>License</b>
+        </div>
         <span matListItemLine>{{ wallet.license ?? 'unknown' }}</span>
       </mat-list-item>
     </mat-list>
   </div>
-  @for (resource of walletsService.resources; track resource) {
-  <div>
-    <h2>{{ resource.name }}</h2>
-    <mat-list>
+  <mat-divider></mat-divider>
+  <h2>Supported</h2>
+  <mat-list>
+    @for (resource of walletsService.resources; track resource) {
+    <div *ngIf="wallet[resource.id]">
+      <div mat-subheader>
+        {{ resource.name }}
+      </div>
       @for (element of wallet[resource.id]; track element) {
       <mat-list-item>
         <a
+          mat-button
           target="_blank"
           [href]="walletsService.getLink(resource.id, element)"
           >{{ element }}</a
         >
       </mat-list-item>
       }
-    </mat-list>
+      <mat-divider></mat-divider>
+    </div>
+    }
+  </mat-list>
+  <div *ngIf="wallet.dependencies" fxLayout="column" fxLayoutGap="16px">
+    <h2>Dependencies</h2>
+    @for(dependency of wallet.dependencies; track dependency) {
+    <mat-card>
+      <mat-card-header>
+        <h2 matCardTitle>{{ dependency.name }}</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ dependency.description }}</p>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="space-between center" fxLayout="row">
+        <a
+          mat-button
+          target="_blank"
+          [href]="dependency.community"
+          *ngIf="dependency.community"
+          >Community</a
+        >
+        <a mat-button target="_blank" [href]="dependency.url" target="_blank"
+          >More information</a
+        >
+      </mat-card-actions>
+    </mat-card>
+    }
+    <mat-divider></mat-divider>
   </div>
-  }
   <div id="history">
-    <p>Commit history: <a href="{{wallet.commitHistory}}">{{wallet.commitHistory}}</a></p>
+    <a mat-button [href]="wallet.commitHistory" target="_blank"
+      >Commit history</a
+    >
   </div>
 </div>

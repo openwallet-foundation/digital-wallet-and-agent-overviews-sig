@@ -19,14 +19,15 @@ In case you have an [openprofile](https://openprofile.dev/) with the same mail a
 
 ### Why should I add my digital wallet or agent?
 
-We strive to create a comprehensive and unbiased platform where every provider can showcase their solution at no cost. Recognising the challenge in quantifying subjective aspects, such as user-friendliness, our focus is on objective parameters. These include resource links and compliance with specific standards, ensuring clear, fact-based comparisons. By allowing and encouraging community contributions through pull requests, we maintain an up-to-date and inclusive matrix. Your active participation by submitting updates or new entries is invaluable, as it not only ensures the overview is correct and complete, but also supports a more informed and diverse user base.
+We strive to create a comprehensive and unbiased platform where every provider can showcase their solution at no cost. Recognizing the challenge in quantifying subjective aspects, such as user-friendliness, our focus is on objective parameters. These include resource links and compliance with specific standards, ensuring clear, fact-based comparisons. By allowing and encouraging community contributions through pull requests, we maintain an up-to-date and inclusive matrix. Your active participation by submitting updates or new entries is invaluable, as it not only ensures the overview is correct and complete, but also supports a more informed and diverse user base.
 
 ### How can I add my digital wallet or agent?
+
 Contributing to the overview can be done through filling in the form provided when clicking "Add Wallet/agent" in the upper right corner of the overview. The created JSON file can be submitted via a GITHUB pull request.
 
 ## Target Audience
 
-This overview should be usable by persons and organisations. Anyone willing to use digital wallets or agents for digital credential purposes should be able to objectively compare the characteristics of wallets/agents and create a short-list of candidates for their use case. It can also serve as resource for market awareness and visibility of wallets/agents for wallet/agent vendors.
+This overview should be usable by persons and organizations. Anyone willing to use digital wallets or agents for digital credential purposes should be able to objectively compare the characteristics of wallets/agents and create a short-list of candidates for their use case. It can also serve as resource for market awareness and visibility of wallets/agents for wallet/agent vendors.
 
 ## Scoping
 
@@ -38,6 +39,12 @@ Included in the overview are holder agents+wallets, issuer agents and verifier a
 
 This SIG was accepted by the TAC on [September 20, 2023](../meetings/2023/2023-09-20.md). See [Digital Wallet and Agent Overviews SIG Proposal](https://github.com/openwallet-foundation/tac/issues/56) for more details.
 
-There is a strong connection with the [credential format comparison SIG](https://github.com/openwallet-foundation/credential-format-comparison-sig). The credential formats are incorporated as separate characterics (columns) in the overview, forming the basis of the technology stack.
+There is a strong connection with the [credential format comparison SIG](https://github.com/openwallet-foundation/credential-format-comparison-sig). The credential formats are incorporated as separate characteristics (columns) in the overview, forming the basis of the technology stack.
 
 We foresee that the safe wallet SIG provided us with new characteristics in the category of 'Security'.
+
+## Dependencies
+
+Each wallet and agent is capable to link to relevant dependencies like frameworks or libraries that are relevant. The linking will support the overview of the technology stack of the wallet or agent. We encourage developers to only link to relevant dependencies that are specific for the wallet or agent to avoid a long list of dependencies.
+
+The dependencies will be add as a new object in the `dependencies` folder and then linked by the unique `name` attribute in each wallet or agent object.

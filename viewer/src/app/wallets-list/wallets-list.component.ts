@@ -17,6 +17,7 @@ import {
   WalletFilter,
   WalletsListFilterComponent,
 } from '../wallets-list-filter/wallets-list-filter.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 type Colums =
   | 'name'
@@ -62,6 +63,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     'capability',
     'portability',
     'linkToApp',
+    'dependencies',
   ];
 
   //reference to the paginator to be added to the table
@@ -72,13 +74,19 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   //columns to be displayed in the table, not implemeneted yet
   displayedColumns: string[] = [];
   filter?: WalletFilter;
+  mobile = false;
 
   constructor(
     public walletsService: WalletsService,
     private dialog: MatDialog,
     private route: ActivatedRoute,
-    private router: Router
-  ) {}
+    private router: Router,
+    private breakpointObserver: BreakpointObserver
+  ) {
+    this.breakpointObserver
+      .observe([Breakpoints.XSmall])
+      .subscribe((res) => (this.mobile = res.matches));
+  }
 
   /**
    * Fetches the wallets from the json file and sets the dataSource to the wallets
