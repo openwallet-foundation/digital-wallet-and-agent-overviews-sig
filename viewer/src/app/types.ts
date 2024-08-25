@@ -33,7 +33,6 @@ export interface Wallet {
   urlGooglePlayStore?: string;
   // link to the web app in case it's not a mobile wallet
   urlWebApp?: string;
-  //TODO: do we need a link to the windows play store in case you can download it from the windows store?
   // which profiles from the credential profile comparison SIG are supported
   credentialProfiles?: string[];
   // which formats from the credential format comparison SIG are supported
@@ -78,8 +77,8 @@ export interface Definition {
 export interface FieldResponse {
   $schema: 'http://json-schema.org/draft-06/schema#';
   type: 'object';
-  additionalProperties: {};
-  definitions: { [key: string]: Definition };
+  additionalProperties: boolean;
+  definitions: Record<string, Definition>;
 }
 
 /**
