@@ -114,7 +114,7 @@
       @for (element of wallet[resource.id]; track element) {
       <mat-list-item>
         <a
-          matListItemLine
+          mat-button
           target="_blank"
           [href]="walletsService.getLink(resource.id, element)"
           >{{ element }}</a

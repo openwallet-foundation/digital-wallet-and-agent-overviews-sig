@@ -63,6 +63,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     'capability',
     'portability',
     'linkToApp',
+    'dependencies',
   ];
 
   //reference to the paginator to be added to the table
