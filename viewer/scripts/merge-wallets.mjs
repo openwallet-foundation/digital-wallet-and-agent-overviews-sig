@@ -36,7 +36,8 @@ for (const file of files) {
   }
   catch(e) {
     console.warn(`Error parsing ${file}: ${e}`)
+    process.exit(1);
   }
 }
-writeFileSync('src/assets/wallets.json', JSON.stringify(wallets, null, 2));
+writeFileSync('src/assets/wallets.json', JSON.stringify(wallets, null,));
 console.log(`Merged ${files.length} wallet files into src/assets/wallets.json`);
