@@ -1,4 +1,4 @@
-<div class="content" *ngIf="wallet">
+<div class="content" *ngIf="wallet" fxLayout="column" fxLayoutGap="16px">
   <a mat-icon-button routerLink="/"><mat-icon>arrow_back_ios</mat-icon></a>
   <div
     class="wallet"
@@ -60,7 +60,7 @@
       [src]="walletsService.getLogo(wallet.logo)"
       class="logo"
       alt="Logo of the wallet"
-      (error)="logoError = true"
+      (error)="logoError = false"
     />
   </div>
   <mat-divider></mat-divider>
@@ -103,24 +103,57 @@
       </mat-list-item>
     </mat-list>
   </div>
-  @for (resource of walletsService.resources; track resource) {
-  <div id="resources">
-    <h2>{{ resource.name }}</h2>
-    <mat-list>
+  <mat-divider></mat-divider>
+  <h2>Supported</h2>
+  <mat-list>
+    @for (resource of walletsService.resources; track resource) {
+    <div *ngIf="wallet[resource.id]">
+      <div mat-subheader>
+        {{ resource.name }}
+      </div>
       @for (element of wallet[resource.id]; track element) {
       <mat-list-item>
         <a
+          matListItemLine
           target="_blank"
           [href]="walletsService.getLink(resource.id, element)"
           >{{ element }}</a
         >
       </mat-list-item>
       }
-    </mat-list>
+      <mat-divider></mat-divider>
+    </div>
+    }
+  </mat-list>
+  <div *ngIf="wallet.dependencies" fxLayout="column" fxLayoutGap="16px">
+    <h2>Dependencies</h2>
+    @for(dependency of wallet.dependencies; track dependency) {
+    <mat-card>
+      <mat-card-header>
+        <h2 matCardTitle>{{ dependency.name }}</h2>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ dependency.description }}</p>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="space-between center" fxLayout="row">
+        <a
+          mat-button
+          target="_blank"
+          [href]="dependency.community"
+          *ngIf="dependency.community"
+          >Community</a
+        >
+        <a mat-button target="_blank" [href]="dependency.url" target="_blank"
+          >More information</a
+        >
+      </mat-card-actions>
+    </mat-card>
+    }
+    <mat-divider></mat-divider>
   </div>
-  }
-  <mat-divider></mat-divider>
   <div id="history">
-    <a routerLink="wallet.commitHistory">Commit history</a>
+    <a mat-button [href]="wallet.commitHistory" target="_blank"
+      >Commit history</a
+    >
   </div>
 </div>

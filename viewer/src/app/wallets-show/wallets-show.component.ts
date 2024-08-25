@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-wallets-show',
@@ -22,6 +23,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatListModule,
     MatTooltipModule,
+    MatCardModule,
   ],
   providers: [WalletsService],
   templateUrl: './wallets-show.component.html',
@@ -29,7 +31,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 })
 export class WalletsShowComponent implements OnInit {
   wallet?: Wallet;
-  logoError = false;
+  logoError = true;
   constructor(
     public walletsService: WalletsService,
     private route: ActivatedRoute,

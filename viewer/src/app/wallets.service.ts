@@ -1,12 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { Wallet } from './types';
+import { FieldResponse, Resource, ResourceType, Wallet } from './types';
 import schema from '../assets/schema.json';
-import { FieldResponse } from './types';
-import { ResourceType } from './types';
-import { Resource } from './types';
-
 @Injectable({
   providedIn: 'root',
 })
