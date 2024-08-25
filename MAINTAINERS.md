@@ -2,9 +2,10 @@
 
 | Maintainer        | GitHub ID       | Company Affiliation |
 | ----------------- | --------------- | ------------------- |
-| Maaike van Leuken | maaikevanleuken | TNO                 |
 | Samuel Rinnetmäki | samuelmr        | Findynet            |
-| Mirko Mollik      | cre8            | Fraunhofer FIT      |
+| Mirko Mollik      | cre8            | SPRIND              |
+
+Special thanks to Maaike van Leuken for setting up the initial project structure and contributing to the project.
 
 ## 1. What Does Being a Maintainer Entail
 
