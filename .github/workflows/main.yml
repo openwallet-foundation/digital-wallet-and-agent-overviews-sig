@@ -54,10 +54,7 @@ jobs:
         run: cd viewer && npm ci
 
       - name: Build Angular app
-        run: cd viewer && npm run build -- --configuration production
-      # this will be removed after iiw is over
-      - name: Copy old view
-        run: cp -r old viewer/dist/browser/old
+        run: cd viewer && npm run build -- --configuration production            
       - name: upload artifacts
         uses: actions/upload-artifact@v4
         with:
