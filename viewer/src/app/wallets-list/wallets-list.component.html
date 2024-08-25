@@ -32,6 +32,7 @@
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
             <img
+              fxHide.xs="true"
               [src]="walletsService.getLogo(element.logo)"
               class="logo"
               alt="Logo of the wallet"

@@ -28,12 +28,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   styleUrl: './wallets-show.component.scss',
 })
 export class WalletsShowComponent implements OnInit {
-  //dummy entries
-  supportedCredentialProfiles = ['HAIP', 'ISO mDL'];
-
-  supportedCredentialFormats = ['MDOC'];
-
   wallet?: Wallet;
+  logoError = false;
   constructor(
     public walletsService: WalletsService,
     private route: ActivatedRoute,
