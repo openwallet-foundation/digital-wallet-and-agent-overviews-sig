@@ -111,13 +111,13 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
         case 'license':
         case 'type':
         case 'company':
-          return (item[property as keyof Wallet] as string) || '\ufff0';
+          return (item[property as keyof Wallet] as string) ?? '\ufff0';
         case 'capability':
           return (
-            (item[property as keyof Wallet] as string[])?.join(', ') || '\ufff0'
+            (item[property as keyof Wallet] as string[])?.join(', ') ?? '\ufff0'
           );
         case 'linkToApp':
-          return item.urlGooglePlayStore || item.urlAppStore || '\ufff0';
+          return item.urlGooglePlayStore ?? item.urlAppStore ?? '\ufff0';
         case 'openSource':
           // since the 0 string is smaller, it will be placed at the beginning
           return item.openSource ? '0' : '1';
@@ -128,26 +128,24 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     this.dataSource.sortData = (data, sort: MatSort) => {
       const isAsc = sort.direction === 'asc';
       return data.sort((a, b) => {
-        let valueA = this.dataSource.sortingDataAccessor(a, sort.active);
-        let valueB = this.dataSource.sortingDataAccessor(b, sort.active);
-
+        const valueA = this.dataSource.sortingDataAccessor(a, sort.active);
+        const valueB = this.dataSource.sortingDataAccessor(b, sort.active);
         // Handle Infinity and high Unicode character for consistent end-position sorting
-        let emptyA = valueA === Infinity || valueA === '\ufff0';
-        let emptyB = valueB === Infinity || valueB === '\ufff0';
+        const emptyA = valueA === Infinity || valueA === '\ufff0';
+        const emptyB = valueB === Infinity || valueB === '\ufff0';
+        //TODO: algorithm needs to be optimized to deal with other fields than string (e.g. boolean) or empty arrays
         if (emptyA && !emptyB) {
           return 1; // Always place emptyA at the end
         } else if (!emptyA && emptyB) {
           return -1; // Always place emptyB at the end
+        } else if (typeof valueA === 'string' && typeof valueB === 'string') {
+          return (
+            valueA.toLowerCase().localeCompare(valueB.toLowerCase()) *
+            (isAsc ? 1 : -1)
+          );
         } else {
-          // If both are non-empty, compare normally
-          if (typeof valueA === 'string' && typeof valueB === 'string') {
-            return (
-              valueA.toLowerCase().localeCompare(valueB.toLowerCase()) *
-              (isAsc ? 1 : -1)
-            );
-          } else {
-            return (valueA < valueB ? -1 : 1) * (isAsc ? 1 : -1);
-          }
+          console.log(valueA, valueB);
+          return (valueA < valueB ? -1 : 1) * (isAsc ? 1 : -1);
         }
       });
     };
@@ -228,16 +226,14 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     const filtered: string[] = [];
     Object.keys(this.filter).forEach((key) => {
       const k = key as keyof WalletFilter;
-      if (this.filter && this.filter[k]) {
+      if (this.filter?.[k]) {
         if (typeof this.filter[k] === 'string') {
           filtered.push(`${key}: ${this.filter[k] as string}`);
         } else if (
           this.filter[k] instanceof Array &&
-          (this.filter[k] as Array<string>).length > 0
+          (this.filter[k] as string[]).length > 0
         ) {
-          filtered.push(
-            `${key}: ${(this.filter[k] as Array<string>).join(', ')}`
-          );
+          filtered.push(`${key}: ${(this.filter[k] as string[]).join(', ')}`);
         }
       }
     });

@@ -5,7 +5,7 @@
   "type": "edge",
   "openSource": false,
   "license": "Commercial software license",
-  "capability": [],
+  "capability": ["holder"],
   "credentialProfiles": [],
   "credentialFormats": [],
   "issuanceProtocols": [],

@@ -5,7 +5,6 @@
   "companyUrl": "https://id.eecc.de/products/did_controller.html",
   "type": "cloud",
   "openSource": false,
-  "license": "",
   "capability": ["issuer", "holder"],
   "portability": false,
   "urlWebsite": "https://id.eecc.de/products/did_controller.html",
