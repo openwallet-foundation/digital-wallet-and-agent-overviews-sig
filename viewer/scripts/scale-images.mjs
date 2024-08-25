@@ -39,6 +39,17 @@ const resizeImagesInFolder = async (inputFolder, outputFolder, maxWidth) => {
   }
 };
 
+const overrideFolder = (inputFolder, outputFolder) => {
+  // move all files from inputFolder to outputFolder
+  const files = fs.readdirSync(inputFolder);
+  for (const file of files) {
+    const inputPath = path.join(inputFolder, file);
+    const outputPath = path.join(outputFolder, file);
+    fs.copyFileSync(inputPath, outputPath);
+  }
+  fs.rmSync(inputFolder, { recursive: true });
+}
+
 resizeImagesInFolder(inputFolder, outputFolder, maxWidth)
-  .then(() => console.log('Image resizing completed.'))
+  .then(() => overrideFolder(outputFolder, inputFolder))
   .catch(error => console.error('An error occurred:', error));

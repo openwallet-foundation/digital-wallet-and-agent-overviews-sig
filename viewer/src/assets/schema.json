@@ -79,6 +79,14 @@
       "description": "Link to the web app - where the agent can be used with a browser",
       "format": "uri"
     },
+    "dependencies": {
+      "type": "array",
+      "description": "List of dependencies required to run the agent",
+      "items": {
+        "$comment": "it would help to use an enum here, but this job has to be run by each change so the enum gets updated for a valid test.",
+        "type": "string"
+      }
+    },
     "credentialProfiles": {
       "type": "array",
       "description": "List of supported credential profiles. They entries must be valid credential profiles defined by the Credential Profiles Comparison SIG.",

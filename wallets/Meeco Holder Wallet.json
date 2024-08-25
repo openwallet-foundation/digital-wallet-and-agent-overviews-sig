@@ -3,11 +3,17 @@
   "company": "Meeco Group Pty Ltd",
   "companyUrl": "https://meeco.me/",
   "credentialFormats": ["JWT-VC", "SD-JWT-VC"],
-  "credentialProfiles": ["EBSI", "HAIP", "JWT VC Presentation Profile", "SD-JWT VCs (w/ X.509 for Issuers)"],
+  "credentialProfiles": [
+    "EBSI",
+    "HAIP",
+    "JWT VC Presentation Profile",
+    "SD-JWT VCs (w/ X.509 for Issuers)"
+  ],
   "issuanceProtocols": ["OpenID4VCI"],
   "presentationProtocols": ["OpenID4VP"],
   "keyManagements": ["did:key", "did:jwk", "raw public keys (jwk)"],
   "license": "Commercial",
+  "urlWebsite": "https://meeco.me/",
   "logo": "logos/meeco.png",
   "name": "Meeco Holder Wallet",
   "openSource": false,
