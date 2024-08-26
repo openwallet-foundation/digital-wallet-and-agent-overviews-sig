@@ -14,7 +14,8 @@
 	"signingAlgorithms": ["EdDSA", "ECDSA"],
 	"type": "edge",
 	"license": "Apache-2.0",
-	"statusManagements": ["Indy Revocation"],
+	"statusManagements": ["Indy Revocation", "JWT/CWT status list"],
+	"dependencies": ["Credo", "SD-JWT-JS"],
 	"credentialProfiles": [
 		"AnonCreds with did:cheqd",
 		"AnonCreds with did:indy",

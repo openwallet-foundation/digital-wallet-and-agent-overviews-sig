@@ -11,6 +11,8 @@
 	"presentationProtocols": ["OpenID4VP"],
 	"$schema": "../viewer/src/assets/schema.json",
 	"signingAlgorithms": ["EdDSA", "ECDSA"],
+	"statusManagements": ["Indy Revocation", "JWT/CWT status list"],
+	"dependencies": ["Credo", "SD-JWT-JS"],
 	"credentialProfiles": ["AnonCreds with did:cheqd"],
 	"type": "cloud",
 	"urlWebsite": "https://paradym.id"
