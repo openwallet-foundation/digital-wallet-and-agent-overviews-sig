@@ -125,6 +125,42 @@
     </div>
     }
   </mat-list>
+  <div *ngIf="wallet.caseStudies" fxLayout="column" fxLayoutGap="16px">
+    <h2>Cast studies</h2>
+    <div fxLayout="row" fxLayoutGap="16px">
+      @for(caseStudy of wallet.caseStudies; track caseStudy) {
+      <mat-card appearance="outlined" fxFlex="33">
+        <mat-card-header>
+          <mat-card-title>{{ caseStudy.headline }}</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          [src]="caseStudy.imageUrl"
+          *ngIf="caseStudy.imageUrl"
+          alt="case study img"
+        />
+        <mat-card-content>
+          <p>{{ caseStudy.summary }}</p>
+          <mat-divider></mat-divider>
+          <mat-chip-set>
+            @for(tag of caseStudy.hashTags; track tag) {
+            <mat-chip>{{ tag }}</mat-chip>
+            }
+          </mat-chip-set>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <a
+            mat-button
+            target="_blank"
+            [href]="caseStudy.url"
+            *ngIf="caseStudy.url"
+            >Read more</a
+          ></mat-card-actions
+        >
+      </mat-card>
+      }
+    </div>
+  </div>
   <div *ngIf="wallet.dependencies" fxLayout="column" fxLayoutGap="16px">
     <h2>Dependencies</h2>
     @for(dependency of wallet.dependencies; track dependency) {

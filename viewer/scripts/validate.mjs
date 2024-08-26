@@ -6,6 +6,7 @@ import axios from 'axios';
 const ajv = new Ajv({allowUnionTypes: true});
 addFormats(ajv);
 const dependencyNames = [];
+const walletNames = [];
 
 // validate dependencies
 function validateDependencies() {
@@ -33,9 +34,6 @@ function validateDependencies() {
   }
 }
 
-validateDependencies();
-validateWallets();
-
 async function validateWallets() {
   const profileSIGSchema = await axios.get('https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json').then(res => res.data);
   ajv.addSchema(profileSIGSchema, "https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json");
@@ -49,6 +47,11 @@ async function validateWallets() {
       console.error(JSON.stringify(validate.errors, null, 2));
       success = false;
     }
+    if(walletNames.includes(wallet.name)) {
+      console.error(`Duplicate wallet name: ${wallet.name}`);
+      success = false;
+    }
+    walletNames.push(wallet.name);
     // validate the dependencies if the key is a valid one
     if(wallet.dependencies) {
       for(const dependency of wallet.dependencies) {
@@ -67,3 +70,32 @@ async function validateWallets() {
     process.exit(1);
   }
 }
+
+function validateCaseStudies() {
+  const validate = ajv.compile(JSON.parse(readFileSync('src/assets/case-study.schema.json')));
+  const files = readdirSync('../case-studies');
+  let success = true;
+  files.map(file => {
+    const caseStudy = JSON.parse(readFileSync(`../case-studies/${file}`))
+    if(!validate(caseStudy)) {
+      console.error(`Error validating ${file}:`);
+      console.error(JSON.stringify(validate.errors, null, 2));
+      success = false;
+    }
+    // check if the referenced wallets exist
+    if(!walletNames.includes(caseStudy.reference)) {
+      console.error(`Referenced wallet ${caseStudy.reference} not found in wallets`);
+      success = false
+    }
+  });
+  if(success) {
+    console.info('All case studies are valid');
+  } else {
+    console.error('Some case studies are invalid');
+    process.exit(1);
+  }
+}
+
+validateDependencies();
+await validateWallets();
+validateCaseStudies();

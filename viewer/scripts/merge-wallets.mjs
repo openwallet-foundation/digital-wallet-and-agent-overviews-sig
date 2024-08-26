@@ -8,7 +8,15 @@ const dependenciesFiles = readdirSync('../dependencies');
 
 const dependencies = dependenciesFiles.map(file => {
     const json = JSON.parse(readFileSync(`../dependencies/${file}`));
-    json['$schema'] = undefined;
+    delete json['$schema'];
+    return json;
+});
+
+const caseStudiesFiles = readdirSync('../case-studies');
+
+const caseStudies = caseStudiesFiles.map(file => {
+    const json = JSON.parse(readFileSync(`../case-studies/${file}`));
+    delete json['$schema'];
     return json;
 });
 
@@ -23,14 +31,14 @@ for (const file of files) {
     json.commitHistory = commitHistoryBase + file;
     // for now we insert the dependencies instead of just referencing them
     if(json.dependencies) {
-      json.dependencies = json.dependencies.map(dependency => {
-        const found = dependencies.find(d => d.name === dependency);
-        if(found) {
-          return found;
-        }
-        console.warn(`Could not find dependency ${dependency} for wallet ${json.name}`);
-        return dependency;
-      });
+      json.dependencies = json.dependencies.map(dependency =>
+         dependencies.find(d => d.name === dependency)
+      );
+    }
+    // we add the case studies to the wallet object to make it easier to access them
+    json.caseStudies = caseStudies.filter(c => c.reference === json.name);
+    if(json.caseStudies) {
+      console.log(json.caseStudies)
     }
     wallets.push(json)
   }

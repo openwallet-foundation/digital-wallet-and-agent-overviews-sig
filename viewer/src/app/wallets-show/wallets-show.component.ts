@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-wallets-show',
@@ -23,6 +24,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatTooltipModule,
+    MatChipsModule,
     MatCardModule,
   ],
   providers: [WalletsService],
@@ -46,6 +48,7 @@ export class WalletsShowComponent implements OnInit {
       this.router.navigate(['/']);
       this.snachBar.open(`Wallet ${id} not found`, 'Close');
     }
+    console.log(this.wallet);
   }
 
   getSupport(value?: string) {

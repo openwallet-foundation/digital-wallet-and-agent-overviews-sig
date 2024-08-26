@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "CaseStudy",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The schema version of the case study JSON entry"
+    },
+    "reference": {
+      "type": "string",
+      "description": "The name of the or agent to link it to"
+    },
+    "headline": {
+      "type": "string",
+      "description": "Name of the case study"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short summary of the case study"
+    },
+    "imageUrl": {
+      "type": "string",
+      "description": "URL to the image of the case study",
+      "format": "uri"
+    },
+    "url": {
+      "type": "string",
+      "description": "URL to the case study",
+      "format": "uri"
+    },
+    "hashTags": {
+      "type": "array",
+      "description": "List of hash tags that are relevant for the case study",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "reference",
+    "headline",
+    "summary",
+    "imageUrl",
+    "url",
+    "hashTags"
+  ],
+  "additionalProperties": false
+}
