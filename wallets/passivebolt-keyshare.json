@@ -1,0 +1,60 @@
+{
+  "capability": [
+    "holder",
+    "verifier"
+  ],
+  "type": "edge",
+  "name": "KeyShare",
+  "logo": "https://play-lh.googleusercontent.com/b5nnEmgdE6vKB11NqMoFyHthfqoLdxWQhUmR3cEvmRKFqJGymM0ZC2BznvFP4UwPPTg=w240-h480-rw",
+  "company": "PassiveBolt",
+  "companyUrl": "https://passivebolt.com",
+  "urlWebsite": "https://passivebolt.com",
+  "urlAppStore": "https://apps.apple.com/us/app/keyshare/id1628825811",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.passivebolt.keyshare&hl=en_US&pli=1",
+  "urlWebApp": "",
+  "downloadSource": "",
+  "openSource": false,
+  "license": "",
+  "portability": false,
+  "credentialProfiles": [
+    "ISO mDL",
+    "JSON-LD VCs with BBS (Credential is Secret)",
+    "JSON-LD VCs with BBS (Holder DID)",
+    "JWT VC Presentation Profile 2",
+    "JWT VC Presentation Profile",
+    "SD-JWT VCs (w/ X.509 for Issuers)"
+  ],
+  "credentialFormats": [
+    "CWT",
+    "JWT-VC",
+    "JWT",
+    "LDP-VC",
+    "MDOC",
+    "SD-JWT-VC",
+    "SD-JWT",
+    "VC (1.1)"
+  ],
+  "issuanceProtocols": [
+    "ISO 23220-3",
+    "OpenID4VCI"
+  ],
+  "keyManagements": [],
+  "presentationProtocols": [
+    "OpenID4VP",
+    "Present Proof v2",
+    "Present Proof v1.0"
+  ],
+  "signingAlgorithms": [
+    "BBS+ with public key binding",
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [
+    "Status List 2021"
+  ],
+  "trustManagements": [
+    "OpenID Connect Federation",
+    "X.509 certificates"
+  ],
+  "$schema": "../viewer/src/assets/schema.json"
+}
