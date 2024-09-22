@@ -37,7 +37,7 @@ for (const file of files) {
     }
     // we add the case studies to the wallet object to make it easier to access them
     json.caseStudies = caseStudies.filter(c => c.reference === json.name);
-    if(json.caseStudies) {
+    if(json.caseStudies.length > 0) {
       console.log(json.caseStudies)
     }
     wallets.push(json)

@@ -83,10 +83,12 @@ function validateCaseStudies() {
       success = false;
     }
     // check if the referenced wallets exist
-    if(!walletNames.includes(caseStudy.reference)) {
-      console.error(`Referenced wallet ${caseStudy.reference} not found in wallets`);
-      success = false
-    }
+    caseStudy.reference.forEach(element => {
+      if(!walletNames.includes(element)) {
+        console.error(`Referenced wallet ${caseStudy.reference} not found in wallets`);
+        success = false
+      }
+    });
   });
   if(success) {
     console.info('All case studies are valid');
