@@ -7,7 +7,7 @@
       "type": "string",
       "description": "The schema version of the case study JSON entry"
     },
-    "reference": {
+    "references": {
       "type": "array",
       "description": "The names of the or agent to link it to. It has to match with the name of the agent or a wallet",
       "items": {
@@ -63,11 +63,6 @@
           "contact": {
             "type": "string",
             "description": "Contact information of the stakeholder"
-          },
-          "pressRelease": {
-            "type": "string",
-            "description": "URL to the press release of the stakeholder",
-            "format": "uri"
           }
         },
         "required": ["name"],
@@ -76,7 +71,7 @@
     }
   },
   "required": [
-    "reference",
+    "references",
     "headline",
     "summary",
     "imageUrl",

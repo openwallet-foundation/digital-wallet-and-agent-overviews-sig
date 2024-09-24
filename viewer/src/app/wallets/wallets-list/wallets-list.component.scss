@@ -1,15 +1,27 @@
 .logo {
   max-height: 40px;
   max-width: 120px;
+  object-fit: contain;
+  width: auto;
+  height: auto;
 }
 
 .link-list {
   margin: 0 5px;
 }
 
+
+
 .container {
   height: calc(100vh - 149px);
   overflow: auto;
+}
+
+.embedded {
+  .container {
+    height: auto;
+    max-height: 800px;
+  }
 }
 
 .info {

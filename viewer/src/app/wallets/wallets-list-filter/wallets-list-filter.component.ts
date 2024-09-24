@@ -6,7 +6,6 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
-import { HttpClient } from '@angular/common/http';
 import { WalletsService } from '../wallets.service';
 import { FieldResponse } from '../types';
 
@@ -47,7 +46,6 @@ export class WalletsListFilterComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) private filter: WalletFilter,
-    private httpClient: HttpClient,
     public walletsService: WalletsService
   ) {}
   async ngOnInit(): Promise<void> {

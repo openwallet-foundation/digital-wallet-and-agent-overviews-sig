@@ -19,11 +19,19 @@
       "type": "string",
       "description": "A short description of the dependency"
     },
+    "license": {
+      "type": "string",
+      "description": "The license of the dependency"
+    },
+    "language": {
+      "type": "string",
+      "description": "The programming language of the dependency"
+    },
     "community": {
       "type": "string",
       "description": "A link to interact with the community of the dependency, e.g., a link to the Slack or Discord channel"
     }
   },
-  "required": ["name", "url", "$schema"],
+  "required": ["name", "url", "$schema", "language"],
   "additionalProperties": false
 }

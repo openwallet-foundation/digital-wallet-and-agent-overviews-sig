@@ -1,0 +1,17 @@
+<div class="content" *ngIf="dependency" fxLayout="column" fxLayoutGap="16px">
+  <a mat-icon-button routerLink="../"><mat-icon>arrow_back_ios</mat-icon></a>
+  <h2>{{ dependency.name }}</h2>
+  <p>{{ dependency.description }}</p>
+  <p>
+    License: {{ dependency.license }} | Language: {{ dependency.language }} |
+    <a mat-button [href]="dependency.url" target="_blank">
+      <mat-icon>code</mat-icon>
+      GitHub</a
+    >
+  </p>
+  <mat-divider></mat-divider>
+  <h3>Used by</h3>
+  <app-wallets-list
+    [wallets]="dependenciesService.getWallets(dependency.name)"
+  ></app-wallets-list>
+</div>

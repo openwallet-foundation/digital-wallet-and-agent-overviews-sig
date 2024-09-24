@@ -2,7 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { FieldResponse, Resource, ResourceType, Wallet } from './types';
-import schema from '../assets/schema.json';
+import schema from '../../assets/schema.json';
+import { walletData } from './wallets-data';
+import { CaseStudiesService } from '../case-studies/case-studies.service';
+import { DependenciesService } from '../dependencies/dependencies.service';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -50,14 +54,26 @@ export class WalletsService {
     },
   ];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(
+    private httpClient: HttpClient,
+    private caseStudiesService: CaseStudiesService,
+    private depenciesService: DependenciesService
+  ) {}
 
   /**
    * Loads the wallets from the assets folder
    * @returns
    */
   loadWallets() {
-    return firstValueFrom(this.httpClient.get<Wallet[]>('assets/wallets.json'));
+    return walletData;
+  }
+
+  getCaseStudies(wallet: Wallet) {
+    return this.caseStudiesService.getByWallet(wallet);
+  }
+
+  getDependencies(wallet: Wallet) {
+    return this.depenciesService.getByWallet(wallet);
   }
 
   /**
@@ -73,9 +89,7 @@ export class WalletsService {
   }
 
   find(name: string) {
-    return this.loadWallets().then((wallets) =>
-      wallets.find((wallet) => wallet.name === name)
-    );
+    return this.loadWallets().find((wallet) => wallet.name === name);
   }
 
   /**

@@ -83,9 +83,9 @@ function validateCaseStudies() {
       success = false;
     }
     // check if the referenced wallets exist
-    caseStudy.reference.forEach(element => {
+    caseStudy.references.forEach(element => {
       if(!walletNames.includes(element)) {
-        console.error(`Referenced wallet ${caseStudy.reference} not found in wallets`);
+        console.error(`Referenced wallet ${element} not found in wallets`);
         success = false
       }
     });

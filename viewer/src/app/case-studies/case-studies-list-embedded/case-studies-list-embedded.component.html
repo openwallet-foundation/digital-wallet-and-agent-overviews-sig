@@ -1,0 +1,38 @@
+<div fxLayout="column" fxLayoutGap="16px">
+  @for(caseStudy of caseStudies; track caseStudy; let last = $last) {
+  <div
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    class="entry"
+    [routerLink]=""
+  >
+    <div>
+      <h2>{{ caseStudy.headline }}</h2>
+      <h5>by {{ getCompanies(caseStudy) }}</h5>
+      <div
+        *ngIf="caseStudy.hashTags && caseStudy.hashTags.length > 0"
+        fxLayout="column"
+        fxLayoutGap="16px"
+      >
+        <mat-chip-set>
+          @for(wallet of caseStudiesService.getWallets(caseStudy); track wallet)
+          {
+          <a mat-chip [routerLink]="['/wallets', wallet.name]">{{
+            wallet.name
+          }}</a>
+          }
+        </mat-chip-set>
+      </div>
+      <span>{{ caseStudy.createdAt | date }}</span> |
+      <a mat-button [routerLink]="[caseStudy.headline]">Read more</a>
+    </div>
+    <div
+      *ngIf="caseStudy.imageUrl"
+      [ngStyle]="{ 'background-image': 'url(' + caseStudy.imageUrl + ')' }"
+      class="img"
+    ></div>
+  </div>
+  @if(!last) {
+  <mat-divider></mat-divider>
+  } }
+</div>

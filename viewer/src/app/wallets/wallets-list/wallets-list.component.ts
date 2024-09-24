@@ -1,5 +1,10 @@
-import {} from '@angular/common/http';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +15,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { Wallet } from '../types';
 import { WalletsService } from '../wallets.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import {
@@ -18,6 +23,9 @@ import {
   WalletsListFilterComponent,
 } from '../wallets-list-filter/wallets-list-filter.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { DependenciesService } from '../../dependencies/dependencies.service';
+import { CaseStudiesService } from '../../case-studies/case-studies.service';
+import { WalletsAddComponent } from '../wallets-add/wallets-add.component';
 
 type Colums =
   | 'name'
@@ -27,7 +35,9 @@ type Colums =
   | 'license'
   | 'capability'
   | 'portability'
-  | 'linkToApp';
+  | 'linkToApp'
+  | 'dependencies'
+  | 'caseStudies';
 
 @Component({
   selector: 'app-wallets-list',
@@ -44,12 +54,16 @@ type Colums =
     FlexLayoutModule,
     MatDialogModule,
     MatChipsModule,
+    NgOptimizedImage,
+    MatButtonModule,
   ],
   providers: [WalletsService],
   templateUrl: './wallets-list.component.html',
   styleUrl: './wallets-list.component.scss',
 })
 export class WalletsListComponent implements OnInit, AfterViewInit {
+  @Input() wallets?: Wallet[];
+
   //reference to the MatTableDataSource
   dataSource = new MatTableDataSource<Wallet>();
 
@@ -64,6 +78,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     'portability',
     'linkToApp',
     'dependencies',
+    'caseStudies',
   ];
 
   //reference to the paginator to be added to the table
@@ -81,7 +96,9 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     private dialog: MatDialog,
     private route: ActivatedRoute,
     private router: Router,
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    public dependenciesService: DependenciesService,
+    public caseStudiesService: CaseStudiesService
   ) {
     this.breakpointObserver
       .observe([Breakpoints.XSmall])
@@ -121,6 +138,8 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
         case 'openSource':
           // since the 0 string is smaller, it will be placed at the beginning
           return item.openSource ? '0' : '1';
+        case 'caseStudies':
+          return this.countCaseStudies(item);
         default:
           return (item[property as keyof Wallet] as string) || '\ufff0';
       }
@@ -152,6 +171,19 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  addWallet() {
+    this.dialog.open(WalletsAddComponent, { disableClose: true });
+  }
+
+  /**
+   * Returns the amount of case studies for a wallet or agent where it is involved.
+   * @param wallet
+   * @returns
+   */
+  countCaseStudies(wallet: Wallet): number {
+    return this.caseStudiesService.getByWallet(wallet).length;
+  }
+
   /**
    * Filters the wallets based on the filter object
    */
@@ -177,7 +209,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
    * Load the filtered wallets
    */
   private async loadWallets() {
-    let values = await this.walletsService.loadWallets();
+    let values = this.wallets ?? (await this.walletsService.loadWallets());
     if (this.filter) {
       if (this.filter.type) {
         values = values.filter((wallet) => wallet.type === this.filter!.type);

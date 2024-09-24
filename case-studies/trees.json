@@ -2,18 +2,14 @@
   "$schema": "../viewer/src/assets/case-study.schema.json",
   "references": ["BC Wallet", "Altme"],
   "url": "https://example.com",
-  "headline": "Digital Citizenship in Canada",
+  "headline": "Trees in Canada",
   "summary": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-  "imageUrl": "https://www2.gov.bc.ca/images/discoverBC/PublicEngagements.png",
-  "hashTags": ["Digital Identity", "Digital Wallet", "Digital Citizenship"],
+  "imageUrl": "https://images.unsplash.com/photo-1491838592561-ab572ec2d2cb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "hashTags": ["Digital Wallet", "Nature"],
   "createdAt": "2022-01-01",
   "stakeholders": [
     {
       "name": "BC Wallet",
-      "contact": "https://example.com"
-    },
-    {
-      "name": "Altme",
       "contact": "https://example.com"
     }
   ]

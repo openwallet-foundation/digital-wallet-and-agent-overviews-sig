@@ -1,5 +1,5 @@
 <div class="content" *ngIf="wallet" fxLayout="column" fxLayoutGap="16px">
-  <a mat-icon-button routerLink="/"><mat-icon>arrow_back_ios</mat-icon></a>
+  <a mat-icon-button routerLink="../"><mat-icon>arrow_back_ios</mat-icon></a>
   <div
     class="wallet"
     fxLayout="row"
@@ -82,15 +82,13 @@
     <mat-list>
       <mat-list-item [matTooltip]="walletsService.getTooltip('openSource')">
         <div matListItemTitle><b>Open Source</b></div>
-        <span matListItemLine *ngIf="!wallet.downloadSource"
-          >{{ wallet.openSource }}
-        </span>
-        <a
-          matListItemLine
-          *ngIf="wallet.downloadSource"
-          [href]="wallet.downloadSource"
-          >{{ wallet.downloadSource }}</a
-        >
+        @if(!wallet.downloadSource) {
+        <span matListItemLine>{{ wallet.openSource }} </span>
+        } @else {
+        <a matListItemLine [href]="wallet.downloadSource">{{
+          wallet.downloadSource
+        }}</a>
+        }
       </mat-list-item>
       <mat-list-item>
         <div
@@ -125,71 +123,30 @@
     </div>
     }
   </mat-list>
-  <div *ngIf="wallet.caseStudies" fxLayout="column" fxLayoutGap="16px">
-    <h2>Cast studies</h2>
-    <div fxLayout="row" fxLayoutGap="16px">
-      @for(caseStudy of wallet.caseStudies; track caseStudy) {
-      <mat-card appearance="outlined" fxFlex="33">
-        <mat-card-header>
-          <mat-card-title>{{ caseStudy.headline }}</mat-card-title>
-        </mat-card-header>
-        <img
-          mat-card-image
-          [src]="caseStudy.imageUrl"
-          *ngIf="caseStudy.imageUrl"
-          alt="case study img"
-        />
-        <mat-card-content>
-          <p>{{ caseStudy.summary }}</p>
-          <mat-divider></mat-divider>
-          <mat-chip-set>
-            @for(tag of caseStudy.hashTags; track tag) {
-            <mat-chip>{{ tag }}</mat-chip>
-            }
-          </mat-chip-set>
-        </mat-card-content>
-        <mat-card-actions align="end">
-          <a
-            mat-button
-            target="_blank"
-            [href]="caseStudy.url"
-            *ngIf="caseStudy.url"
-            >Read more</a
-          ></mat-card-actions
-        >
-      </mat-card>
-      }
-    </div>
-  </div>
-  <div *ngIf="wallet.dependencies" fxLayout="column" fxLayoutGap="16px">
-    <h2>Dependencies</h2>
-    @for(dependency of wallet.dependencies; track dependency) {
-    <mat-card>
-      <mat-card-header>
-        <h2 matCardTitle>{{ dependency.name }}</h2>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{ dependency.description }}</p>
-      </mat-card-content>
-      <mat-card-actions fxLayoutAlign="space-between center" fxLayout="row">
-        <a
-          mat-button
-          target="_blank"
-          [href]="dependency.community"
-          *ngIf="dependency.community"
-          >Community</a
-        >
-        <a mat-button target="_blank" [href]="dependency.url" target="_blank"
-          >More information</a
-        >
-      </mat-card-actions>
-    </mat-card>
-    }
-    <mat-divider></mat-divider>
-  </div>
-  <div id="history">
-    <a mat-button [href]="wallet.commitHistory" target="_blank"
-      >Commit history</a
+  <div
+    *ngIf="walletsService.getCaseStudies(wallet)"
+    fxLayout="column"
+    fxLayoutGap="16px"
+  >
+    <h2>Case studies</h2>
+    <app-case-studies-list-embedded
+      [caseStudies]="walletsService.getCaseStudies(wallet)"
+    ></app-case-studies-list-embedded>
+    <div
+      *ngIf="walletsService.getDependencies(wallet)"
+      fxLayout="column"
+      fxLayoutGap="16px"
     >
+      <h2>Dependencies</h2>
+      <app-dependency-list-embedded
+        [dependencies]="walletsService.getDependencies(wallet)"
+      ></app-dependency-list-embedded>
+      <mat-divider></mat-divider>
+    </div>
+    <div id="history">
+      <a mat-button [href]="wallet.commitHistory" target="_blank"
+        >Commit history</a
+      >
+    </div>
   </div>
 </div>

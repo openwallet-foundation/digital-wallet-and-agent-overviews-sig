@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" [ngClass]="{ embedded: wallets }">
   <div fxLayout="row" fxLayoutAlign="space-between center" class="table-header">
     <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
       <button mat-icon-button (click)="openFilter()">
@@ -10,6 +10,10 @@
         }
       </mat-chip-listbox>
     </div>
+    <div class="spacer"></div>
+    @if(!wallets) {
+    <button mat-button (click)="addWallet()">Add Wallet</button>
+    }
   </div>
   <section class="container">
     <table
@@ -27,7 +31,6 @@
           [matTooltip]="walletsService.getTooltip('name')"
         >
           Name
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
@@ -50,7 +53,6 @@
           [matTooltip]="walletsService.getTooltip('company')"
         >
           Company
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           <a
@@ -70,7 +72,6 @@
           [matTooltip]="walletsService.getTooltip('openSource')"
         >
           Open Source
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.openSource }}
@@ -84,7 +85,6 @@
           matTooltip="Link to the app stores"
         >
           Link to app
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row">
@@ -120,7 +120,6 @@
           [matTooltip]="walletsService.getTooltip('license')"
         >
           License
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.license }}
@@ -134,7 +133,6 @@
           [matTooltip]="walletsService.getTooltip('capability')"
         >
           Capability
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row" fxLayoutGap="8px">
@@ -154,7 +152,6 @@
           [matTooltip]="walletsService.getTooltip('type')"
         >
           Type
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.type }}
@@ -168,7 +165,6 @@
           [matTooltip]="walletsService.getTooltip('portability')"
         >
           Portability
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           {{ element.portability }}
@@ -185,12 +181,31 @@
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="column" fxLayoutGap="16px">
-            @for (dependency of element.dependencies; track dependency) {
-            <a matListItemLine target="_blank" [href]="dependency.url">{{
-              dependency.name
-            }}</a>
+            @for (dependency of walletsService.getDependencies(element); track
+            dependency) {
+            <a
+              matListItemLine
+              [routerLink]="'dependencies/' + dependency.name"
+              [href]="dependency.url"
+              >{{ dependency.name }}</a
+            >
             }
           </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="caseStudies">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          matTooltip="Are there case studies available?"
+        >
+          Case Studies
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span *ngIf="countCaseStudies(element) > 0">{{
+            countCaseStudies(element)
+          }}</span>
         </td>
       </ng-container>
       @for (resource of walletsService.resources; track resource) {
@@ -202,7 +217,6 @@
           [matTooltip]="walletsService.getTooltip(resource.id)"
         >
           {{ resource.name }}
-          <mat-icon class="info">info</mat-icon>
         </th>
         <td mat-cell *matCellDef="let element">
           @for (profile of element[resource.id]; track profile) {

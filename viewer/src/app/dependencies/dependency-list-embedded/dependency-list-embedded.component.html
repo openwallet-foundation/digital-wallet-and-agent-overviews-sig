@@ -1,0 +1,103 @@
+<div class="content">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="table-header">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+      <button mat-icon-button (click)="openFilter()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+      <mat-chip-listbox>
+        @for (filter of getFilterValues(); track filter) {
+        <mat-chip-option selectable="false">{{ filter }}</mat-chip-option>
+        }
+      </mat-chip-listbox>
+    </div>
+    <div class="spacer"></div>
+    <!-- <button mat-button (click)="addWallet()">Add Wallet</button> -->
+  </div>
+  <section class="container">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      matSort
+      matSortActive="name"
+      matSortDirection="asc"
+    >
+      <ng-container matColumnDef="name">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          [matTooltip]="dependenciesService.getTooltip('name')"
+        >
+          Name
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <a [routerLink]="['/dependencies', element.name]">{{
+            element.name
+          }}</a>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="description">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          [matTooltip]="dependenciesService.getTooltip('description')"
+        >
+          Description
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.description }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="language">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          [matTooltip]="dependenciesService.getTooltip('language')"
+        >
+          Language
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.language }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="license">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          [matTooltip]="dependenciesService.getTooltip('license')"
+        >
+          License
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.license }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="wallets">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          matTooltip="List of wallets and agents using this dependency"
+        >
+          Used by
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <div fxLayout="row" fxLayoutGap="8px">
+            @for(wallet of dependenciesService.getWallets(element.name); track
+            wallet) {
+            <a [routerLink]="['/wallets', wallet.name]">{{ wallet.name }}</a>
+            }
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="columns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns"></tr>
+    </table>
+  </section>
+</div>
+<mat-paginator
+  [pageSizeOptions]="[10, 20, 50, 100]"
+  [pageSize]="100"
+  showFirstLastButtons
+  aria-label="Select page of periodic elements"
+>
+</mat-paginator>
