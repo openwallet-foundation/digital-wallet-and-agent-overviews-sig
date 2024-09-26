@@ -1,0 +1,20 @@
+{
+  "capability": ["issuer", "holder", "verifier"],
+  "type": "cloud",
+  "name": "Anonyome Enterprise Wallet",
+  "logo": "logos/anonyome.png",
+  "company": "Anonyome Labs",
+  "companyUrl": "https://www.anonyome.com",
+  "urlWebsite": "https://sudoplatform.com/verifiable-credentials/",
+  "openSource": false,
+  "license": "",
+  "credentialProfiles": ["AnonCreds with did:indy"],
+  "credentialFormats": ["AnonCred", "LDP-VC", "VC (1.1)"],
+  "issuanceProtocols": ["Issue Credential v1", "Issue Credential v2"],
+  "keyManagements": ["did:indy", "did:key", "did:peer", "link secrets"],
+  "presentationProtocols": ["Present Proof v2", "Present Proof v1.0"],
+  "signingAlgorithms": ["BBS+ with public key binding", "CL", "ECDSA", "EdDSA"],
+  "statusManagements": ["Indy Revocation"],
+  "trustManagements": [],
+  "$schema": "../viewer/src/assets/schema.json"
+}
