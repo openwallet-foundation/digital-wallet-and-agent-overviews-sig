@@ -75,14 +75,28 @@ export class WalletsAddComponent implements OnInit {
   }
 
   getJSON() {
+    const removeEmptyStrings = (obj: any) => {
+      Object.keys(obj).forEach((key) => {
+        if (obj[key] && typeof obj[key] === 'object') {
+          removeEmptyStrings(obj[key]);
+        } else if (obj[key] === '') {
+          delete obj[key];
+        }
+      });
+    };
+
+    const formValue = { ...this.form.value };
+    removeEmptyStrings(formValue);
+
     const json = {
-      ...this.form.value,
+      ...formValue,
       $schema: '../viewer/src/assets/schema.json',
     };
     json.openSource = json.openSource == 'true' ? true : false;
     json.portability = json.portability == 'true' ? true : false;
     return JSON.stringify(json, null, 2);
   }
+
   copy() {
     this.clipboard.copy(this.getJSON());
     this.snackBar.open('Copied to clipboard', 'Dismiss', { duration: 3000 });

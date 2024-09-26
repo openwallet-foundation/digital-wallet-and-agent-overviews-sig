@@ -11,6 +11,7 @@ export const walletData: Wallet[] = [
     "openSource": false,
     "type": "cloud",
     "urlWebsite": "https://www.aceblock.com/modules/aceid/",
+    "id": "AceID Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/AceID Wallet.json"
   },
   {
@@ -31,6 +32,7 @@ export const walletData: Wallet[] = [
     "type": "edge",
     "urlAppStore": "https://apps.apple.com/fr/app/altme/id1633216869",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.altme.alt.me.altme",
+    "id": "Altme",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Altme.json"
   },
   {
@@ -43,6 +45,7 @@ export const walletData: Wallet[] = [
     "openSource": false,
     "type": "edge",
     "urlWebsite": "https://www.apple.com/wallet/",
+    "id": "Apple Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Apple Wallet.json"
   },
   {
@@ -60,6 +63,7 @@ export const walletData: Wallet[] = [
       "ECDSA"
     ],
     "urlWebsite": "https://atalaprism.io/",
+    "id": "Atala PRISM",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Atala PRISM.json"
   },
   {
@@ -83,6 +87,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409",
     "urlGooglePlayStore": "https://go.microsoft.com/fwlink/p/?linkid=2168850&clcid=0x409",
     "urlWebsite": "https://www.microsoft.com/en-us/security/mobile-authenticator-app",
+    "id": "Authenticator",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Authenticator.json"
   },
   {
@@ -113,6 +118,7 @@ export const walletData: Wallet[] = [
       "Credo",
       "SD-JWT-JS"
     ],
+    "id": "BC Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/BC Wallet.json"
   },
   {
@@ -127,6 +133,7 @@ export const walletData: Wallet[] = [
     "type": "cloud",
     "urlWebApp": "https://www.blockcerts.org/",
     "urlWebsite": "https://www.blockcerts.org/about.html",
+    "id": "Blockcerts Unversal Verifier",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Blockcerts Unversal Verifier.json"
   },
   {
@@ -142,6 +149,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.learningmachine.android.app&hl=en",
     "urlWebsite": "https://www.blockcerts.org/about.html",
+    "id": "Blockcerts Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Blockcerts Wallet.json"
   },
   {
@@ -156,6 +164,7 @@ export const walletData: Wallet[] = [
     "name": "CorpoSign DID",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=app.sis.mydid.net",
     "urlWebsite": "https://sis.lt/",
+    "id": "CorpoSign DID",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/CorpoSign DID.json"
   },
   {
@@ -168,6 +177,7 @@ export const walletData: Wallet[] = [
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.arcblock.wallet.app.product",
     "urlWebApp": "https://www.didwallet.io/",
     "urlWebsite": "https://www.arcblock.io/content/collections/en/did-wallet",
+    "id": "DID Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/DID Wallet.json"
   },
   {
@@ -187,6 +197,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/nl/app/datakeeper/id1546059184",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=nl.rabobank.ida&gl=US",
     "urlWebsite": "https://www.datakeeper.nl/enq",
+    "id": "Datakeeper",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Datakeeper.json"
   },
   {
@@ -197,6 +208,7 @@ export const walletData: Wallet[] = [
     "name": "Digital ID Wallet",
     "openSource": false,
     "urlWebsite": "https://www.thalesgroup.com/en/markets/digital-identity-and-security/government/identity/digital-identity-services/digital-id-wallet",
+    "id": "Digital ID Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Digital ID Wallet.json"
   },
   {
@@ -209,6 +221,7 @@ export const walletData: Wallet[] = [
     "downloadSource": "https://github.com/orgs/docknetwork/",
     "name": "Dock Certs",
     "urlWebsite": "https://www.dock.io/feature/issue-verifiable-credentials",
+    "id": "Dock Certs",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Dock Certs.json"
   },
   {
@@ -223,6 +236,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
     "urlWebsite": "https://www.dock.io/dock-wallet-app",
+    "id": "Dock Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Dock Wallet.json"
   },
   {
@@ -262,6 +276,7 @@ export const walletData: Wallet[] = [
     "trustManagements": [
       "Verifier knows Issuers"
     ],
+    "id": "EECC DID Controller",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/EECC DID Controller.json"
   },
   {
@@ -301,6 +316,7 @@ export const walletData: Wallet[] = [
       "Status List 2021"
     ],
     "trustManagements": [],
+    "id": "EECC Verifier",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/EECC Verifier.json"
   },
   {
@@ -314,6 +330,7 @@ export const walletData: Wallet[] = [
     "type": "cloud",
     "urlWebApp": "https://wallet.essif.sk/",
     "urlWebsite": "https://docs.essif.sk/en/home-english/",
+    "id": "ESSIF Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/ESSIF Wallet.json"
   },
   {
@@ -330,6 +347,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/endorser-mobile/id1556368693",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
     "urlWebsite": "https://endorser.ch/",
+    "id": "Endorser Mobile",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Endorser Mobile.json"
   },
   {
@@ -366,6 +384,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "edge",
     "urlWebsite": "https://www.farmworkerwalletos.community/",
+    "id": "Farmworker WalletOS",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Farmworker WalletOS.json"
   },
   {
@@ -402,6 +421,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "cloud",
     "urlWebsite": "https://gataca.io/products/gatacaStudio/",
+    "id": "Gataca Studio",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Gataca Studio.json"
   },
   {
@@ -439,6 +459,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/gataca/id1498607616",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.gataca.identity",
     "urlWebsite": "https://gataca.io/products/wallet/",
+    "id": "Gataca",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Gataca.json"
   },
   {
@@ -449,6 +470,7 @@ export const walletData: Wallet[] = [
     "logo": "https://assets-global.website-files.com/64b9387ee6a0b5f6b0f06fa0/64b9b2b54ae54bd94fc5a01a_Gimly%20Logo.svg",
     "name": "Gimly ID",
     "urlWebsite": "https://gimly.io/",
+    "id": "Gimly",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Gimly.json"
   },
   {
@@ -468,6 +490,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/holdr/id1620628623",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=tech.indicio.holdrplus",
     "urlWebsite": "https://indicio.tech/holdr/",
+    "id": "Holdr",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Holdr.json"
   },
   {
@@ -513,6 +536,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/co/app/hologram-messaging/id6474701855",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.twentysixty.mobileagent.m",
     "urlWebsite": "https://2060.io/#download",
+    "id": "Hologram",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Hologram.json"
   },
   {
@@ -525,6 +549,7 @@ export const walletData: Wallet[] = [
     "type": "cloud",
     "urlWebApp": "https://verifier.nextid.com/",
     "urlWebsite": "https://nextid.com/",
+    "id": "ICEF",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/ICEF.json"
   },
   {
@@ -574,6 +599,7 @@ export const walletData: Wallet[] = [
     "trustManagements": [
       "EBSI Trust Registries"
     ],
+    "id": "IZERTIS-identfy",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/IZERTIS-identfy.json"
   },
   {
@@ -600,6 +626,7 @@ export const walletData: Wallet[] = [
     ],
     "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
     "urlWebsite": "https://identry.io/",
+    "id": "Identry",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Identry.json"
   },
   {
@@ -612,6 +639,7 @@ export const walletData: Wallet[] = [
     "openSource": false,
     "type": "cloud",
     "urlWebsite": "https://developer.kaytrust.id/Provider/",
+    "id": "KayTrust Provider",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/KayTrust Provider.json"
   },
   {
@@ -627,6 +655,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/mytrust-wallet/id1477073898",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.everis.mytrust.app",
     "urlWebsite": "https://kaytrust.id/",
+    "id": "KayTrust Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/KayTrust Wallet.json"
   },
   {
@@ -667,6 +696,7 @@ export const walletData: Wallet[] = [
       "Status List 2021"
     ],
     "trustManagements": [],
+    "id": "Learner Credential Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Learner Credential Wallet.json"
   },
   {
@@ -686,6 +716,7 @@ export const walletData: Wallet[] = [
     "type": "cloud",
     "urlWebApp": "https://demo.lissi.id/",
     "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
+    "id": "Lissi EUDI-Wallet Connector",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Lissi EUDI-Wallet Connector.json"
   },
   {
@@ -711,6 +742,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/de/app/lissi-wallet/id1529848685",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.lissi.mobile.android&hl=de",
     "urlWebsite": "https://www.lissi.id/for-users",
+    "id": "Lissi Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Lissi Wallet.json"
   },
   {
@@ -739,6 +771,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=global.mattr.wallet",
     "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
+    "id": "MATTR Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/MATTR Wallet.json"
   },
   {
@@ -759,6 +792,7 @@ export const walletData: Wallet[] = [
     "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet",
     "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.coinplug.mykeepin",
+    "id": "MYKEEPiN",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/MYKEEPiN.json"
   },
   {
@@ -805,6 +839,7 @@ export const walletData: Wallet[] = [
       "X.509 certificates"
     ],
     "type": "cloud",
+    "id": "Meeco Holder Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Meeco Holder Wallet.json"
   },
   {
@@ -853,6 +888,7 @@ export const walletData: Wallet[] = [
       "X.509 certificates"
     ],
     "type": "cloud",
+    "id": "Meeco Organisation Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Meeco Organisation Wallet.json"
   },
   {
@@ -878,6 +914,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "cloud",
     "urlWebsite": "https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-verified-id",
+    "id": "Microsoft Entra",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Microsoft Entra.json"
   },
   {
@@ -891,6 +928,7 @@ export const walletData: Wallet[] = [
     "logo": "https://mynext.id/wp-content/uploads/2022/04/logo_mynextID.svg",
     "name": "MyNextID",
     "urlWebsite": "https://mynext.id/",
+    "id": "MyNextID",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/MyNextID.json"
   },
   {
@@ -901,6 +939,7 @@ export const walletData: Wallet[] = [
     "logo": "https://nextid.com/wp-content/uploads/2021/06/logotype_420x90_cropped_tight.png",
     "name": "NextCert Issuer",
     "urlWebsite": "https://nextid.com/nextcert-issuer/",
+    "id": "NextCert Issuer",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/NextCert Issuer.json"
   },
   {
@@ -915,6 +954,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.northernblock",
     "urlWebsite": "https://northernblock.io/orbit-edge-wallet/",
+    "id": "Orbit Edge Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Orbit Edge Wallet.json"
   },
   {
@@ -927,6 +967,7 @@ export const walletData: Wallet[] = [
     "logo": "https://northernblock.io/wp-content/uploads/2020/09/northern-block-full-logo-100h-1.png",
     "name": "Orbit Enterprise",
     "urlWebsite": "https://northernblock.io/orbit-enterprise/",
+    "id": "Orbit Enterprise",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Orbit Enterprise.json"
   },
   {
@@ -939,6 +980,7 @@ export const walletData: Wallet[] = [
     "contact": "florin.coptil@bosch.com",
     "name": "Organization Wallet",
     "urlWebsite": "https://orgwallet.de/en/",
+    "id": "Organization Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Organization Wallet.json"
   },
   {
@@ -992,6 +1034,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/nl/app/paradym-wallet/id6449846111?l=en",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.paradym.wallet",
     "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet",
+    "id": "Paradym Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Paradym Wallet.json"
   },
   {
@@ -1038,6 +1081,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "cloud",
     "urlWebsite": "https://paradym.id",
+    "id": "Paradym",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Paradym.json"
   },
   {
@@ -1078,6 +1122,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "edge",
     "urlWebsite": "https://www.preparese.info/",
+    "id": "Preparese Mobile",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Preparese Mobile.json"
   },
   {
@@ -1125,6 +1170,7 @@ export const walletData: Wallet[] = [
       "Validity Credential"
     ],
     "trustManagements": [],
+    "id": "Procivis One Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Procivis One Wallet.json"
   },
   {
@@ -1174,6 +1220,7 @@ export const walletData: Wallet[] = [
       "Validity Credential"
     ],
     "trustManagements": [],
+    "id": "Procivis One",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Procivis One.json"
   },
   {
@@ -1187,6 +1234,7 @@ export const walletData: Wallet[] = [
     "logo": "https://indicio.tech/wp-content/uploads/2023/11/Indicio-wide.png",
     "type": "cloud",
     "urlWebsite": "https://indicio.tech/indicio-proven/",
+    "id": "Proven",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Proven.json"
   },
   {
@@ -1205,6 +1253,7 @@ export const walletData: Wallet[] = [
     "name": "SOWL",
     "type": "cloud",
     "urlWebsite": "https://esatus.com/en/digital-identity/",
+    "id": "SOWL",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/SOWL.json"
   },
   {
@@ -1220,6 +1269,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
     "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
     "urlWebsite": "https://selfkey.org/selfkey-wallet/",
+    "id": "SelfKey Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/SelfKey Wallet.json"
   },
   {
@@ -1263,6 +1313,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/sphereon-wallet/id1661096796",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.sphereon.ssi.wallet",
     "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/",
+    "id": "Sphereon Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Sphereon Wallet.json"
   },
   {
@@ -1296,6 +1347,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "edge",
     "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet",
+    "id": "Spherity Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Spherity Wallet.json"
   },
   {
@@ -1336,6 +1388,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.talao.wallet",
     "urlWebsite": "https://talao.io/",
+    "id": "Talao",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Talao.json"
   },
   {
@@ -1351,6 +1404,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
     "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/",
+    "id": "Trisic ID",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Trisic ID.json"
   },
   {
@@ -1363,6 +1417,7 @@ export const walletData: Wallet[] = [
     "name": "Trinsic Platform",
     "type": "cloud",
     "urlWebsite": "https://trinsic.id/platform/",
+    "id": "Trisic Platform",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Trisic Platform.json"
   },
   {
@@ -1376,6 +1431,7 @@ export const walletData: Wallet[] = [
     "type": "cloud",
     "urlWebApp": "https://try.vidchain.net/demo",
     "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials",
+    "id": "VIDcredentials",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/VIDcredentials.json"
   },
   {
@@ -1413,6 +1469,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/si/app/vidwallet/id1554340592",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.validatedid.wallet&hl=en_US&gl=US",
     "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet",
+    "id": "VIDwallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/VIDwallet.json"
   },
   {
@@ -1426,6 +1483,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
     "urlWebsite": "https://www.verida.io/",
+    "id": "Verida",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Verida.json"
   },
   {
@@ -1456,6 +1514,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=nl.vidua.wallet",
     "urlWebsite": "https://vidua.nl/english/",
+    "id": "Vidua",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Vidua.json"
   },
   {
@@ -1481,6 +1540,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=org.irmacard.cardemu",
     "urlWebsite": "https://irma.app/docs/yivi-app/",
+    "id": "Yivi",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Yivi.json"
   },
   {
@@ -1510,6 +1570,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/zada-wallet/id1578666669",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.zadanetwork.wallet",
     "urlWebsite": "https://zada.io/",
+    "id": "ZADA",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/ZADA.json"
   },
   {
@@ -1539,6 +1600,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/us/app/esatus-wallet/id1496769057?itsct=apps_box&itscg=30200",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.esatus.wallet&hl=de_DE&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
     "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html",
+    "id": "esatus Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/esatus Wallet.json"
   },
   {
@@ -1571,6 +1633,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/de/app/helix-id-wallet/id1469238013",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.io.helix.id",
     "urlWebsite": "https://helixid.io/",
+    "id": "helix id",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/helix id.json"
   },
   {
@@ -1594,6 +1657,7 @@ export const walletData: Wallet[] = [
     "urlAppStore": "https://apps.apple.com/fi/app/hightrust-id/id1549852126",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.megical.easyaccess",
     "urlWebsite": "https://www.hightrust.id",
+    "id": "hightrust.id",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/hightrust.id.json"
   },
   {
@@ -1662,6 +1726,7 @@ export const walletData: Wallet[] = [
       "Verifier knows Issuers",
       "X.509 certificates"
     ],
+    "id": "iGrant.io Data Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/iGrant.io Data Wallet.json"
   },
   {
@@ -1729,6 +1794,7 @@ export const walletData: Wallet[] = [
       "Verifier knows Issuers",
       "X.509 certificates"
     ],
+    "id": "iGrant.io Enterprise Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/iGrant.io Enterprise Wallet.json"
   },
   {
@@ -1775,6 +1841,7 @@ export const walletData: Wallet[] = [
     "type": "cloud",
     "urlWebApp": "https://wallet.walt.id/",
     "urlWebsite": "https://walt.id/",
+    "id": "walt.id",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/walt.id.json"
   },
   {
@@ -1795,6 +1862,7 @@ export const walletData: Wallet[] = [
     "type": "cloud",
     "urlWebApp": "https://demo.wwwallet.org/",
     "urlWebsite": "https://wwwallet.github.io/wallet-docs/",
+    "id": "wwWallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/wwWallet.json"
   }
 ];

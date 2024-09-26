@@ -1,11 +1,6 @@
 <div fxLayout="column" fxLayoutGap="16px">
   @for(caseStudy of caseStudies; track caseStudy; let last = $last) {
-  <div
-    fxLayout="row"
-    fxLayoutAlign="space-between center"
-    class="entry"
-    [routerLink]=""
-  >
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="entry">
     <div>
       <h2>{{ caseStudy.headline }}</h2>
       <h5>by {{ getCompanies(caseStudy) }}</h5>
@@ -17,14 +12,14 @@
         <mat-chip-set>
           @for(wallet of caseStudiesService.getWallets(caseStudy); track wallet)
           {
-          <a mat-chip [routerLink]="['/wallets', wallet.name]">{{
+          <a mat-chip [routerLink]="['/wallets', wallet.id]">{{
             wallet.name
           }}</a>
           }
         </mat-chip-set>
       </div>
       <span>{{ caseStudy.createdAt | date }}</span> |
-      <a mat-button [routerLink]="[caseStudy.headline]">Read more</a>
+      <a mat-button [routerLink]="['/case-studies', caseStudy.id]">Read more</a>
     </div>
     <div
       *ngIf="caseStudy.imageUrl"

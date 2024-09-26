@@ -23,6 +23,7 @@ import {
   DependenciesFilterComponent,
   DependencyFilter,
 } from '../dependencies-filter/dependencies-filter.component';
+import { DependenciesAddComponent } from '../dependencies-add/dependencies-add.component';
 
 type DependenciesColumn = keyof typeof schema.properties | 'wallets';
 
@@ -91,7 +92,6 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
   }
 
   private loadDependencies() {
-    console.log('show');
     let dependencies = this.dependencies;
     if (this.filter) {
       if (this.filter.language) {
@@ -152,5 +152,9 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
       }
     });
     return filtered;
+  }
+
+  addDependency() {
+    this.dialog.open<DependenciesAddComponent>(DependenciesAddComponent);
   }
 }

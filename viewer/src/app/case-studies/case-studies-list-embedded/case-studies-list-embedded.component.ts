@@ -29,7 +29,7 @@ export class CaseStudiesListEmbeddedComponent {
 
   /**
    * Returns the list of companies that have built the wallet or agent involved in the use case.
-   * @param arg0
+   * @param caseStudy
    */
   getCompanies(caseStudy: CaseStudy) {
     return this.caseStudiesService

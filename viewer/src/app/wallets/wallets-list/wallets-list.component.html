@@ -41,7 +41,7 @@
               alt="Logo of the wallet"
               onerror="this.src='assets/default-image.png';"
             />
-            <a [routerLink]="element.name">{{ element.name }}</a>
+            <a [routerLink]="['/wallets', element.id]">{{ element.name }}</a>
           </div>
         </td>
       </ng-container>
@@ -185,8 +185,7 @@
             dependency) {
             <a
               matListItemLine
-              [routerLink]="'dependencies/' + dependency.name"
-              [href]="dependency.url"
+              [routerLink]="['/dependencies/', dependency.id]"
               >{{ dependency.name }}</a
             >
             }

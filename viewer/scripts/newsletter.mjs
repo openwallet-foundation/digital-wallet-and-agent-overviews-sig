@@ -1,16 +1,23 @@
 import {config} from 'dotenv';
 import fs from 'fs';
-import nodemailer from 'nodemailer';
 import handlebars from 'handlebars';
 import { execSync } from 'child_process';
+import {Client} from '@sendgrid/client';
+import {createTransport} from 'nodemailer'
 
 config();
+
+const service = new Client();
+
+service.setApiKey(process.env.SENDGRID_API_KEY);
+
 
 const walletFiles = fs.readdirSync('../wallets');
 const walletCounter = walletFiles.length;
 
 const wallets = walletFiles.map(walletFile => {
   const content = JSON.parse(fs.readFileSync(`../wallets/${walletFile}`, 'utf8'));
+  content.id = walletFile.slice(0, -5);
   return content;
 });
 
@@ -34,15 +41,22 @@ const caseStudyFiles = execSync(`git log --diff-filter=A --since="${fromDate}" -
 
 console.log(`Found ${caseStudyFiles.length} new case ${caseStudyFiles.length === 1 ? 'study' : 'studies'}: ${caseStudyFiles.join(', ')}`);
 
+//const url = 'https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/#';
+const url = 'http://localhost:4200/#';
+
 // format the case studies
 const caseStudies = caseStudyFiles.map(caseStudy => {
+  const id = caseStudy.split('/')[1].slice(0, -5);
   const content = JSON.parse(fs.readFileSync(`../${caseStudy}`, 'utf8'));
   delete content['$schema'];
-  const wallet = wallets.find(w => w.name === content.reference);
-  content.company = wallet.company;
-  content.companyUrl = wallet.companyUrl ?? wallet.urlWeb;
-  content.reference = wallet.name;
-  content.referenceUrl = `https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/#/${encodeURIComponent(wallet.name)}`;
+
+  content.wallets = wallets.filter(w =>content.references.includes(w.id)).map(wallet => ({
+    name: wallet.name,
+    company: wallet.company,
+    url: `${url}/wallets/${encodeURIComponent(wallet.id)}`,
+    companyUrl: wallet.companyUrl ?? wallet.urlWebsite,
+  }))
+  content.url = `${url}/case-studies/${encodeURIComponent(id)}`;
   return content;
 });
 
@@ -55,8 +69,9 @@ const template = handlebars.compile(templateSource);
 const html = template({ caseStudies, lastMonth: currentMonthName, subject, preHeader, walletCounter });
 
 
+//when using nodemail
 // Create a transporter
-let transporter = nodemailer.createTransport({
+let transporter = createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_ADDRESS,
@@ -79,3 +94,40 @@ transporter.sendMail(mailOptions, (error, info) => {
   }
   console.log('Email sent: ' + info.response);
 });
+
+/* const request = {
+  url: `/v3/verified_senders`,
+  method: 'GET',
+
+}
+service.request(request)
+  .then(([response, body]) => {
+    console.log(response.statusCode);
+    console.log(response.body);
+  })
+  .catch(error => {
+    console.error(error);
+  }); */
+
+// use sendgrid
+/* const listId = "d88713fd-1c3d-427a-8761-004b38e7a6c3";
+const senderId = 6190879;
+service.request({
+  url: `/v3/marketing/singlesends`,
+  method: 'POST',
+  body: {
+    name: "Monthly Case Study Overview", // Name for your campaign
+    send_to: {
+      list_ids: [listId], // Array of contact list IDs
+      all: false, // If true, it sends to all contacts
+    },
+    email_config: {
+      sender_id: senderId, // Sender ID, should be a verified sender in SendGrid
+      html_content: html,
+      subject,
+      send_at: 'now',
+      suppression_group_id: 180616,
+    },
+  },
+}).then(res => console.log(res), (err) => console.log(err.response.body));
+ */

@@ -8,6 +8,9 @@
       <mat-icon>code</mat-icon>
       GitHub</a
     >
+    @if(dependency.community) { |
+    <a mat-button [href]="dependency.community" target="_blank">Community</a>
+    }
   </p>
   <mat-divider></mat-divider>
   <h3>Used by</h3>

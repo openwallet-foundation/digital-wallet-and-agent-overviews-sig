@@ -14,6 +14,7 @@ const readAndProcessFiles = (directory, processFile) => {
   const files = readdirSync(directory);
   return files.map(file => {
     const json = JSON.parse(readFileSync(`${directory}/${file}`));
+    json.id = file.slice(0, -5);
     return processFile(json, file);
   });
 };

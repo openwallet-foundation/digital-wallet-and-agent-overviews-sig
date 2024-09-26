@@ -39,7 +39,7 @@ export class DependenciesShowComponent {
     public dependenciesService: DependenciesService
   ) {
     const id = this.route.snapshot.params['id'] as string;
-    const dependency = dependencyData.find((d) => d.name === id);
+    const dependency = dependencyData.find((d) => d.id === id);
     if (!dependency) {
       this.router
         .navigate(['../'], { relativeTo: this.route })

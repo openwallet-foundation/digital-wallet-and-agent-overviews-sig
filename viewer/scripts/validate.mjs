@@ -5,8 +5,8 @@ import axios from 'axios';
 
 const ajv = new Ajv({allowUnionTypes: true});
 addFormats(ajv);
-const dependencyNames = [];
-const walletNames = [];
+const dependencyIds = [];
+const walletIds = [];
 
 // validate dependencies
 function validateDependencies() {
@@ -20,11 +20,8 @@ function validateDependencies() {
       console.error(JSON.stringify(validate.errors, null, 2));
       success = false;
     }
-    if(dependencyNames.includes(dependency.name)) {
-      console.error(`Duplicate dependency name: ${dependency.name}`);
-      success = false;
-    }
-    dependencyNames.push(dependency.name);
+    const fileName = file.slice(0, -5);
+    dependencyIds.push(fileName);
   });
   if(success) {
     console.info('All dependencies are valid');
@@ -47,15 +44,12 @@ async function validateWallets() {
       console.error(JSON.stringify(validate.errors, null, 2));
       success = false;
     }
-    if(walletNames.includes(wallet.name)) {
-      console.error(`Duplicate wallet name: ${wallet.name}`);
-      success = false;
-    }
-    walletNames.push(wallet.name);
+    const fileName = file.slice(0, -5);
+    walletIds.push(fileName);
     // validate the dependencies if the key is a valid one
     if(wallet.dependencies) {
       for(const dependency of wallet.dependencies) {
-        if(!dependencyNames.includes(dependency)) {
+        if(!dependencyIds.includes(dependency)) {
           console.error(`dependency ${dependency} not found in dependencies`);
           success = false;
         }
@@ -84,7 +78,7 @@ function validateCaseStudies() {
     }
     // check if the referenced wallets exist
     caseStudy.references.forEach(element => {
-      if(!walletNames.includes(element)) {
+      if(!walletIds.includes(element)) {
         console.error(`Referenced wallet ${element} not found in wallets`);
         success = false
       }

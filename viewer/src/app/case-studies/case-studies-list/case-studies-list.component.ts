@@ -11,6 +11,8 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { Subscription } from 'rxjs';
 import { CaseStudy } from '../types';
 import { CaseStudiesListEmbeddedComponent } from '../case-studies-list-embedded/case-studies-list-embedded.component';
+import { MatDialog } from '@angular/material/dialog';
+import { CaseStudiesAddComponent } from '../case-studies-add/case-studies-add.component';
 
 @Component({
   selector: 'app-case-studies-list',
@@ -30,9 +32,9 @@ import { CaseStudiesListEmbeddedComponent } from '../case-studies-list-embedded/
   styleUrl: './case-studies-list.component.scss',
 })
 export class CaseStudiesListComponent implements OnInit, OnDestroy {
-  subscribe() {
-    alert('not implemented yet');
-  }
+  subscribeLink =
+    'https://lists.openwallet.foundation/g/wallet-case-studies-newsletter';
+
   routerSub?: Subscription;
 
   caseStudies: CaseStudy[] = [];
@@ -41,10 +43,12 @@ export class CaseStudiesListComponent implements OnInit, OnDestroy {
   constructor(
     public caseStudiesService: CaseStudiesService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
+    this.filter = this.route.snapshot.queryParams['tag'];
     this.routerSub = this.route.queryParams.subscribe((params) => {
       this.filter = params['tag'];
       this.caseStudies = this.caseStudiesService.getCaseStudies();
@@ -52,9 +56,31 @@ export class CaseStudiesListComponent implements OnInit, OnDestroy {
         this.caseStudies = this.caseStudies.filter((caseStudy) =>
           caseStudy.hashTags?.includes(this.filter as string)
         );
+        this.applyFilter();
       }
     });
     this.caseStudies = this.caseStudiesService.getCaseStudies();
+    this.applyFilter();
+  }
+
+  /**
+   * Validates if the value is euqal to the set filter.
+   * @param tag
+   * @returns
+   */
+  isSelected(tag: string): unknown {
+    return tag === this.filter;
+  }
+
+  /**
+   * Applies the filter that is set. Right it can only be filtered for one element.
+   */
+  private applyFilter() {
+    if (this.filter) {
+      this.caseStudies = this.caseStudies.filter((caseStudy) =>
+        caseStudy.hashTags?.includes(this.filter as string)
+      );
+    }
   }
 
   ngOnDestroy(): void {
@@ -67,5 +93,9 @@ export class CaseStudiesListComponent implements OnInit, OnDestroy {
       return;
     }
     this.router.navigate([], { queryParams: { tag } });
+  }
+
+  addCaseStudy() {
+    this.dialog.open<CaseStudiesAddComponent>(CaseStudiesAddComponent);
   }
 }

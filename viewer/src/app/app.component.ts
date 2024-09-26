@@ -5,7 +5,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoComponent } from './info/info.component';
 import { MatButtonModule } from '@angular/material/button';
-import { WalletsAddComponent } from './wallets/wallets-add/wallets-add.component';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';

@@ -9,6 +9,8 @@ export interface Stakeholder {
 }
 
 export interface CaseStudy {
+  // unique identifier based on the filename
+  id: string;
   // name of the case study
   headline: string;
   // date when the case study was created

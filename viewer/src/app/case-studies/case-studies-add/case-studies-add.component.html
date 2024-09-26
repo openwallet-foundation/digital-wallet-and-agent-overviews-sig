@@ -1,0 +1,200 @@
+@if(form) {
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <h1 mat-dialog-title>Add wallet</h1>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<mat-dialog-content fxLayout="column" fxLayoutGap="16px">
+  <p>
+    With the following steps you are able to add your case study to this list.
+    You need a Github Account to do so, every entry can be updated in the
+    future.
+  </p>
+  <ul>
+    <li>
+      Use this form to generate a JSON file for the entry. One all required
+      fields with a * are filled, you can copy the content to your clipboard.
+    </li>
+    <li>
+      <a
+        href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/fork"
+        target="_blank"
+        >Fork the Github repo</a
+      >
+      to your own account and add the content of the file to the
+      <code>dependencies</code> folder. The name should be unique.
+    </li>
+    <li>
+      Test the changes: run
+      <code>npm install && cd viewer && npm run build && npm run start</code>
+      and see the updated overview at <code>http://localhost:4200/</code>.
+    </li>
+    <li>
+      Create a new branch, commit the changes (using the <code>-s</code> flag to
+      sign off your changes) and start a pull request.
+    </li>
+    <li>After a positive review we will accept your request.</li>
+    <li>
+      If you need help or if you want to influence in the overview, please see
+      OpenWallet Foundation's
+      <a href="https://openwallet.foundation/participate/" target="_blank"
+        >participation instructions</a
+      >.
+    </li>
+  </ul>
+
+  <p>
+    This form will help you to generate the required JSON file that needs to be
+    added to the GitHub Repository. If the autocomplete options do not include
+    your value, just type it in.
+  </p>
+
+  <form
+    [formGroup]="form"
+    fxLayout="column"
+    fxLayoutAlign="start stretch"
+    fxLayoutGap="16px"
+  >
+    <mat-form-field>
+      <mat-label>Headline</mat-label>
+      <input matInput title="Headline" formControlName="headline" />
+      <mat-hint>{{ caseStudiesService.getTooltip('headline') }}</mat-hint>
+      @if(form.get('headline')?.hasError('required')) {
+      <mat-error>Headline is required </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Summary</mat-label>
+      <input matInput title="Summary" formControlName="summary" />
+      <mat-hint>{{ caseStudiesService.getTooltip('summary') }}</mat-hint>
+      @if(form.get('summary')?.hasError('required')) {
+      <mat-error>Summary is required </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        title="Created at"
+        formControlName="createdAt"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-hint>{{ caseStudiesService.getTooltip('createdAt') }}</mat-hint>
+      @if(form.get('createdAt')?.hasError('required')) {
+      <mat-error>Created at is required </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>URL</mat-label>
+      <input matInput title="URL" formControlName="url" />
+      <mat-hint>{{ caseStudiesService.getTooltip('url') }}</mat-hint>
+      @if(form.get('url')?.hasError('required')) {
+      <mat-error>URL is required </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input matInput title="Image URL" formControlName="imageUrl" />
+      <mat-hint>{{ caseStudiesService.getTooltip('imageUrl') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Hashtags</mat-label>
+      <mat-chip-grid
+        #chipGrid
+        aria-label="Fruit selection"
+        formControlName="hashTags"
+      >
+        @for (hashTag of getHashTags(); track $index) {
+        <mat-chip-row (removed)="removeHashtag(hashTag)">
+          {{ hashTag }}
+          <button matChipRemove>
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip-row>
+        }
+      </mat-chip-grid>
+      <input
+        type="text"
+        matInput
+        #hashTagInput
+        [matChipInputFor]="chipGrid"
+        [matAutocomplete]="hashTagAuto"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="addHashtag($event)"
+        (input)="setFilter(hashTagInput.value)"
+      />
+      <mat-autocomplete
+        #hashTagAuto="matAutocomplete"
+        (optionSelected)="selectedHashTag($event, hashTagInput)"
+      >
+        @for(tag of filteredHashTags; track tag) {
+        <mat-option [value]="tag">{{ tag }}</mat-option>
+        }
+      </mat-autocomplete>
+      <mat-hint>{{ caseStudiesService.getTooltip('hashTags') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>References</mat-label>
+      <mat-select formControlName="references" multiple>
+        @for(reference of references; track $index) {
+        <mat-option [value]="reference.id"
+          >{{ reference.name }} - {{ reference.company }}</mat-option
+        >
+        }
+      </mat-select>
+      <mat-hint>{{ caseStudiesService.getTooltip('references') }}</mat-hint>
+    </mat-form-field>
+    <div formArrayName="stakeholders">
+      @for(stakeholder of getFormArray(form.get('stakeholders')).controls; track
+      stakeholder; let i = $index) {
+      <div [formGroupName]="i">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+          <mat-hint
+            >Name of the stakeholder taking part in the case study</mat-hint
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Contact</mat-label>
+          <input matInput formControlName="contact" />
+          <mat-hint>Contact information for more information</mat-hint>
+        </mat-form-field>
+        <button
+          mat-button
+          (click)="removeStakeHolder(i)"
+          [disabled]="getFormArray(form.get('stakeholders')).length === 1"
+        >
+          Remove
+        </button>
+      </div>
+      }
+      <button mat-button (click)="addStakeHolder()">Add stakeholder</button>
+    </div>
+  </form>
+  <mat-divider></mat-divider>
+  <mat-form-field>
+    <mat-label>JSON</mat-label>
+    <textarea
+      matInput
+      placeholder="JSON file to be added to the GitHub Repository"
+      [value]="getJSON()"
+      readonly
+      rows="10"
+      cols="50"
+    ></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [disabled]="form.invalid" (click)="copy()">
+    Copy to clipboard
+  </button></mat-dialog-actions
+>
+}

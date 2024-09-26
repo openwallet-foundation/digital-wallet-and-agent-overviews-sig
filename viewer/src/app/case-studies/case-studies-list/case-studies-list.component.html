@@ -14,18 +14,20 @@
         studies that got added in the last month.
       </mat-card-content>
       <mat-card-actions>
-        <a
-          mat-button
-          href="mailto:wallet-case-studies-newsletter+subscribe@lists.openwallet.foundation"
-          >Subscribe</a
-        >
+        <a mat-flat-button [href]="subscribeLink" target="_blank">Subscribe</a>
       </mat-card-actions>
     </mat-card>
+    <mat-divider></mat-divider>
+    <button mat-button (click)="addCaseStudy()">Add Case Study</button>
     <mat-divider></mat-divider>
     <h4>Tags</h4>
     <mat-chip-listbox>
       @for(tag of caseStudiesService.getTags(); track tag) {
-      <mat-chip-option (click)="filterByTag(tag)">{{ tag }}</mat-chip-option>
+      <mat-chip-option
+        (click)="filterByTag(tag)"
+        [selected]="isSelected(tag)"
+        >{{ tag }}</mat-chip-option
+      >
       }
     </mat-chip-listbox>
   </div>

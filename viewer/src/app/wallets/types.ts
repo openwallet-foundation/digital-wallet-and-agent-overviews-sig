@@ -5,6 +5,8 @@ export type Capability = 'holder' | 'issuer' | 'verifier';
 export type WalletType = 'cloud' | 'edge';
 
 export interface Wallet {
+  // unique identifier based on the filename
+  id: string;
   // name of the wallet
   name: string;
   // url to the website of the wallet with more information

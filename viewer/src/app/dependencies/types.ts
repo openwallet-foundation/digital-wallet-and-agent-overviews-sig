@@ -2,6 +2,8 @@
  * A dependency of a wallet
  */
 export interface Dependency {
+  // unique identifier based on the filename
+  id: string;
   // a unique name of the dependency
   name: string;
   // a link to the dependency, ideally to the github repository to fetch the latest version

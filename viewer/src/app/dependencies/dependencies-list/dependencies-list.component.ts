@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DependenciesService } from '../dependencies.service';
 import { DependencyListEmbeddedComponent } from '../dependency-list-embedded/dependency-list-embedded.component';
 
@@ -10,8 +10,6 @@ import { DependencyListEmbeddedComponent } from '../dependency-list-embedded/dep
   templateUrl: './dependencies-list.component.html',
   styleUrl: './dependencies-list.component.scss',
 })
-export class DependenciesListComponent implements OnInit {
+export class DependenciesListComponent {
   constructor(public dependenciesService: DependenciesService) {}
-
-  ngOnInit(): void {}
 }

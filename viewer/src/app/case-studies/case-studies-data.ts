@@ -19,14 +19,15 @@ export const casestudyData: CaseStudy[] = [
     "createdAt": "2022-01-01",
     "stakeholders": [
       {
-        "name": "BC Wallet",
+        "name": "British Columbia",
         "contact": "https://example.com"
       },
       {
-        "name": "Altme",
+        "name": "Altme LLT",
         "contact": "https://example.com"
       }
-    ]
+    ],
+    "id": "citizenship"
   },
   {
     "references": [
@@ -44,9 +45,10 @@ export const casestudyData: CaseStudy[] = [
     "createdAt": "2022-01-01",
     "stakeholders": [
       {
-        "name": "BC Wallet",
+        "name": "Greenpeace",
         "contact": "https://example.com"
       }
-    ]
+    ],
+    "id": "trees"
   }
 ];

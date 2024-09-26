@@ -68,12 +68,31 @@ export class WalletsService {
     return walletData;
   }
 
+  /**
+   * Returns all case studies that are connected to this wallet or agent.
+   * @param wallet
+   * @returns
+   */
   getCaseStudies(wallet: Wallet) {
     return this.caseStudiesService.getByWallet(wallet);
   }
 
+  /**
+   * Returns all depdendencies that belong to this wallet or agent.
+   * @param wallet
+   * @returns
+   */
   getDependencies(wallet: Wallet) {
     return this.depenciesService.getByWallet(wallet);
+  }
+
+  /**
+   * Returns the company name of a wallet or agent.
+   * @param id
+   * @returns
+   */
+  getCompany(id: string) {
+    return this.loadWallets().find((wallet) => wallet.id === id)?.company;
   }
 
   /**
@@ -88,8 +107,8 @@ export class WalletsService {
     );
   }
 
-  find(name: string) {
-    return this.loadWallets().find((wallet) => wallet.name === name);
+  find(id: string) {
+    return this.loadWallets().find((wallet) => wallet.id === id);
   }
 
   /**

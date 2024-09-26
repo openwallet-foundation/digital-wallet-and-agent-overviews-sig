@@ -11,7 +11,7 @@
       </mat-chip-listbox>
     </div>
     <div class="spacer"></div>
-    <!-- <button mat-button (click)="addWallet()">Add Wallet</button> -->
+    <button mat-button (click)="addDependency()">Add Dependency</button>
   </div>
   <section class="container">
     <table
@@ -31,9 +31,7 @@
           Name
         </th>
         <td mat-cell *matCellDef="let element">
-          <a [routerLink]="['/dependencies', element.name]">{{
-            element.name
-          }}</a>
+          <a [routerLink]="['/dependencies', element.id]">{{ element.name }}</a>
         </td>
       </ng-container>
       <ng-container matColumnDef="description">

@@ -3,11 +3,21 @@ import { CaseStudy } from './types';
 import { Wallet } from '../wallets/types';
 import { casestudyData } from './case-studies-data';
 import { walletData } from '../wallets/wallets-data';
+import schema from '../../assets/case-study.schema.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CaseStudiesService {
+  /**
+   * Returns the tooltip for the resource
+   * @param resourceType
+   * @returns
+   */
+  getTooltip(resourceType: keyof typeof schema.properties) {
+    return schema.properties[resourceType].description;
+  }
+
   getByWallet(wallet: Wallet) {
     return casestudyData.filter((caseStudy: CaseStudy) =>
       caseStudy.references?.includes(wallet.name)
@@ -22,6 +32,10 @@ export class CaseStudiesService {
 
   getCaseStudies() {
     return casestudyData;
+  }
+
+  getCaseStudy(id: string) {
+    return this.getCaseStudies().find((caseStudy) => caseStudy.id === id);
   }
 
   /**
