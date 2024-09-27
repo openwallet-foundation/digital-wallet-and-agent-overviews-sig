@@ -14,5 +14,5 @@
   "urlAppStore": "https://apps.apple.com/us/app/bc-wallet/id1587380443",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ca.bc.gov.BCWallet",
   "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet",
-  "dependencies": ["Bifold", "Credo", "SD-JWT-JS"]
+  "dependencies": ["bifold", "credo", "sd-jwt-js"]
 }

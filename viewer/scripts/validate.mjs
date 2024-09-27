@@ -50,7 +50,7 @@ async function validateWallets() {
     if(wallet.dependencies) {
       for(const dependency of wallet.dependencies) {
         if(!dependencyIds.includes(dependency)) {
-          console.error(`dependency ${dependency} not found in dependencies`);
+          console.error(`[${fileName}]: dependency ${dependency} not found in dependencies`);
           success = false;
         }
       }
