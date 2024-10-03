@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync } from 'fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 
 // URL for the folder containing the wallet files in the GitHub repo
 const commitHistoryBase = 'https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/';
@@ -11,6 +11,9 @@ const OUTPUT_PATH = 'src/app';
 
 // Function to read and process JSON files from a directory
 const readAndProcessFiles = (directory, processFile) => {
+  if(!existsSync(directory)) {
+    return [];
+  }
   const files = readdirSync(directory);
   return files.map(file => {
     const json = JSON.parse(readFileSync(`${directory}/${file}`));

@@ -1,6 +1,6 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
-import {readFileSync, readdirSync} from 'fs';
+import {existsSync, readFileSync, readdirSync} from 'fs';
 import axios from 'axios';
 
 const ajv = new Ajv({allowUnionTypes: true});
@@ -67,6 +67,11 @@ async function validateWallets() {
 
 function validateCaseStudies() {
   const validate = ajv.compile(JSON.parse(readFileSync('src/assets/case-study.schema.json')));
+  // needed in case no folder is there
+  if(!existsSync('../case-studies')) {
+    console.info('No case studies found');
+    return;
+  }
   const files = readdirSync('../case-studies');
   let success = true;
   files.map(file => {
