@@ -79,13 +79,11 @@ export interface GithubRepo {
   watchers: number;
   default_branch: string;
   temp_clone_token: null;
-  custom_properties: CustomProperties;
+  custom_properties: unknown;
   organization: Organization;
   network_count: number;
   subscribers_count: number;
 }
-
-export interface CustomProperties {}
 
 export interface License {
   key: string;
