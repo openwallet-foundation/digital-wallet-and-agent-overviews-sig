@@ -1,4 +1,4 @@
-import { Component, ElementRef, model, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
   FormControl,
@@ -77,7 +77,8 @@ export class CaseStudiesAddComponent implements OnInit {
       createdAt: new FormControl('', Validators.required),
       imageUrl: new FormControl(''),
       url: new FormControl('', Validators.required),
-      hashTags: new FormControl([], Validators.required),
+      hashTags: new FormControl([]),
+      // could also be implemented as autocomplete chips, but
       references: new FormControl('', Validators.required),
       stakeholders: new FormArray([
         new FormGroup({
@@ -160,10 +161,10 @@ export class CaseStudiesAddComponent implements OnInit {
   }
 
   getJSON() {
-    const removeEmptyStrings = (obj: any) => {
+    const removeEmptyStrings = (obj: Record<string, unknown>) => {
       Object.keys(obj).forEach((key) => {
         if (obj[key] && typeof obj[key] === 'object') {
-          removeEmptyStrings(obj[key]);
+          removeEmptyStrings(obj[key] as Record<string, unknown>);
         } else if (obj[key] === '') {
           delete obj[key];
         }
@@ -172,6 +173,12 @@ export class CaseStudiesAddComponent implements OnInit {
 
     const formValue = { ...this.form.value };
     removeEmptyStrings(formValue);
+
+    // Format the createdAt date to RFC3339
+    if (formValue.createdAt) {
+      const date = new Date(formValue.createdAt);
+      formValue.createdAt = date.toISOString().split('T')[0];
+    }
 
     const json = {
       ...formValue,

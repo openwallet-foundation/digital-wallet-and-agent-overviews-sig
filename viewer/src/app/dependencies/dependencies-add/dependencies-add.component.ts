@@ -16,6 +16,9 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ClipboardModule, Clipboard } from '@angular/cdk/clipboard';
+import { HttpClient } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
+import { GithubRepo } from '../github-response';
 
 @Component({
   selector: 'app-dependencies-add',
@@ -46,7 +49,8 @@ export class DependenciesAddComponent implements OnInit {
   constructor(
     public dependenciesService: DependenciesService,
     private clipboard: Clipboard,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
@@ -60,13 +64,42 @@ export class DependenciesAddComponent implements OnInit {
     });
     this.licenses = this.dependenciesService.getLicenses();
     this.languages = this.dependenciesService.getLaguages();
+    this.form.get('url')?.valueChanges.subscribe((value: string) => {
+      // get the information from github
+      if (value.startsWith('https://github.com')) {
+        this.fetchGitHubRepoInfo(value);
+      }
+    });
+  }
+
+  /**
+   * Fetches the information from the GitHub API and writes it to the form.
+   * @param url
+   */
+  private fetchGitHubRepoInfo(url: string): void {
+    const repoPath = url.replace('https://github.com/', '');
+    const apiUrl = `https://api.github.com/repos/${repoPath}`;
+
+    firstValueFrom(this.http.get<GithubRepo>(apiUrl)).then(
+      (data) => {
+        this.form.patchValue({
+          name: data.name,
+          description: data.description,
+          license: data.license?.name,
+          language: data.language,
+        });
+      },
+      (error) => {
+        console.error('Error fetching GitHub repo info:', error);
+      }
+    );
   }
 
   getJSON() {
-    const removeEmptyStrings = (obj: any) => {
+    const removeEmptyStrings = (obj: Record<string, unknown>) => {
       Object.keys(obj).forEach((key) => {
         if (obj[key] && typeof obj[key] === 'object') {
-          removeEmptyStrings(obj[key]);
+          removeEmptyStrings(obj[key] as Record<string, unknown>);
         } else if (obj[key] === '') {
           delete obj[key];
         }

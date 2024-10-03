@@ -75,10 +75,10 @@ export class WalletsAddComponent implements OnInit {
   }
 
   getJSON() {
-    const removeEmptyStrings = (obj: any) => {
+    const removeEmptyStrings = (obj: Record<string, unknown>) => {
       Object.keys(obj).forEach((key) => {
         if (obj[key] && typeof obj[key] === 'object') {
-          removeEmptyStrings(obj[key]);
+          removeEmptyStrings(obj[key] as Record<string, unknown>);
         } else if (obj[key] === '') {
           delete obj[key];
         }

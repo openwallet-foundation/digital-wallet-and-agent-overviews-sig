@@ -1,4 +1,9 @@
-<div fxLayout="row" fxLayoutGap="16px" class="content">
+<div
+  fxLayout="row"
+  fxLayout.lt-sm="column-reverse"
+  fxLayoutGap="16px"
+  class="content"
+>
   <div fxFlex="70" fxFlex.xs="100">
     <app-case-studies-list-embedded
       [caseStudies]="caseStudies"

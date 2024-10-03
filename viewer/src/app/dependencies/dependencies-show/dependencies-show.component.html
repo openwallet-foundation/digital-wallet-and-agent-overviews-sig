@@ -1,20 +1,60 @@
 <div class="content" *ngIf="dependency" fxLayout="column" fxLayoutGap="16px">
-  <a mat-icon-button routerLink="../"><mat-icon>arrow_back_ios</mat-icon></a>
-  <h2>{{ dependency.name }}</h2>
-  <p>{{ dependency.description }}</p>
-  <p>
-    License: {{ dependency.license }} | Language: {{ dependency.language }} |
-    <a mat-button [href]="dependency.url" target="_blank">
-      <mat-icon>code</mat-icon>
-      GitHub</a
-    >
-    @if(dependency.community) { |
-    <a mat-button [href]="dependency.community" target="_blank">Community</a>
-    }
-  </p>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h2>{{ dependency.name }}</h2>
+    <button mat-icon-button (click)="share()">
+      <mat-icon>share</mat-icon>
+    </button>
+  </div>
   <mat-divider></mat-divider>
-  <h3>Used by</h3>
-  <app-wallets-list
-    [wallets]="dependenciesService.getWallets(dependency.name)"
-  ></app-wallets-list>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="16px">
+    <div fxFlex="70">
+      <mat-tab-group>
+        <mat-tab label="README">
+          <markdown lineNumbers [start]="5" *ngIf="readme">{{
+            readme
+          }}</markdown>
+        </mat-tab>
+        <mat-tab
+          [label]="wallets.length + ' Dependents'"
+          [disabled]="wallets.length === 0"
+        >
+          @if(wallets.length > 0) {
+          <app-wallets-list [wallets]="wallets"></app-wallets-list>
+          } @else {
+          <p>No linked wallets or agents</p>
+          }
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <div fxFlex="30">
+      <p>{{ dependency.description }}</p>
+      <mat-list>
+        <mat-list-item>
+          <div matListItemTitle>License</div>
+          <span matListItemLine>{{ dependency.license }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <div matListItemTitle>Language</div>
+          <span matListItemLine>{{ dependency.language }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <div matListItemTitle>Updated at</div>
+          <span matListItemLine>{{ github?.updated_at | date }}</span>
+        </mat-list-item>
+      </mat-list>
+      <mat-divider></mat-divider>
+      <h4>Repository</h4>
+      <a mat-button [href]="dependency.url" target="_blank">
+        <mat-icon matListItemIcon>link</mat-icon>
+        {{ dependency.url }}
+      </a>
+      @if(dependency.community) {
+      <h4>Community</h4>
+      <a mat-button [href]="dependency.community" target="_blank">
+        <mat-icon>forum</mat-icon>
+        {{ dependency.community }}
+      </a>
+      }
+    </div>
+  </div>
 </div>

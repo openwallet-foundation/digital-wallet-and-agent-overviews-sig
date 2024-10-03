@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DependenciesService } from '../dependencies.service';
-import { DependencyListEmbeddedComponent } from '../dependency-list-embedded/dependency-list-embedded.component';
+import { DependencyListEmbeddedComponent } from '../dependencies-list-embedded/dependencies-list-embedded.component';
 
 @Component({
   selector: 'app-dependencies-list',

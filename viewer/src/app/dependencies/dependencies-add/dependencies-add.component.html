@@ -57,6 +57,14 @@
     fxLayoutGap="16px"
   >
     <mat-form-field>
+      <mat-label>URL</mat-label>
+      <input matInput title="Wallet Name" formControlName="url" />
+      <mat-hint>{{ dependenciesService.getTooltip('url') }}</mat-hint>
+      @if(form.get('url')?.hasError('required')) {
+      <mat-error>URL is required </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
       <mat-label>Name</mat-label>
       <input matInput title="Name" formControlName="name" />
       <mat-hint>{{ dependenciesService.getTooltip('name') }}</mat-hint>
@@ -76,14 +84,6 @@
       <mat-label>Community</mat-label>
       <input matInput title="Community" formControlName="community" />
       <mat-hint>{{ dependenciesService.getTooltip('community') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>URL</mat-label>
-      <input matInput title="Wallet Name" formControlName="url" />
-      <mat-hint>{{ dependenciesService.getTooltip('url') }}</mat-hint>
-      @if(form.get('url')?.hasError('required')) {
-      <mat-error>URL is required </mat-error>
-      }
     </mat-form-field>
     <mat-form-field>
       <mat-label>License</mat-label>

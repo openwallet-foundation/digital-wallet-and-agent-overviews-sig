@@ -80,7 +80,6 @@
         title="Created at"
         formControlName="createdAt"
       />
-      <mat-hint>MM/DD/YYYY</mat-hint>
       <mat-datepicker-toggle
         matIconSuffix
         [for]="picker"
@@ -88,7 +87,7 @@
       <mat-datepicker #picker></mat-datepicker>
       <mat-hint>{{ caseStudiesService.getTooltip('createdAt') }}</mat-hint>
       @if(form.get('createdAt')?.hasError('required')) {
-      <mat-error>Created at is required </mat-error>
+      <mat-error>Created at is required in format MM/DD/YYYY</mat-error>
       }
     </mat-form-field>
     <mat-form-field>
@@ -152,9 +151,18 @@
       <mat-hint>{{ caseStudiesService.getTooltip('references') }}</mat-hint>
     </mat-form-field>
     <div formArrayName="stakeholders">
+      <h3>Stakeholders</h3>
+      <p>
+        Add a list of stakeholders that are participating in the case study.
+      </p>
       @for(stakeholder of getFormArray(form.get('stakeholders')).controls; track
       stakeholder; let i = $index) {
-      <div [formGroupName]="i">
+      <div
+        [formGroupName]="i"
+        fxLayout="row"
+        fxLayoutGap="16px"
+        fxLayoutAlign="start center"
+      >
         <mat-form-field>
           <mat-label>Name</mat-label>
           <input matInput formControlName="name" />
@@ -176,6 +184,7 @@
         </button>
       </div>
       }
+      <br />
       <button mat-button (click)="addStakeHolder()">Add stakeholder</button>
     </div>
   </form>

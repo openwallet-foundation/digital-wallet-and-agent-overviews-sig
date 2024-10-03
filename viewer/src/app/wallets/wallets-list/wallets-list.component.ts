@@ -163,7 +163,6 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
             (isAsc ? 1 : -1)
           );
         } else {
-          console.log(valueA, valueB);
           return (valueA < valueB ? -1 : 1) * (isAsc ? 1 : -1);
         }
       });

@@ -96,6 +96,9 @@ export class CaseStudiesListComponent implements OnInit, OnDestroy {
   }
 
   addCaseStudy() {
-    this.dialog.open<CaseStudiesAddComponent>(CaseStudiesAddComponent);
+    this.dialog.open<CaseStudiesAddComponent>(CaseStudiesAddComponent, {
+      disableClose: true,
+      width: '800px',
+    });
   }
 }

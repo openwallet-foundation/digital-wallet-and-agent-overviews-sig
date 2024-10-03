@@ -3,6 +3,10 @@ name: Monthly Newsletter
 on:
   schedule:
     - cron: '0 0 1 * *' # Runs at midnight on the first day of every month
+  workflow_dispatch:
+    inputs:
+      email:
+        description: 'Email address to send the newsletter to'
 
 jobs:
   generate-newsletter:
@@ -26,3 +30,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECIPIENT: ${{ github.event.inputs.email }}

@@ -18,7 +18,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { filter, Subscription } from 'rxjs';
 import { CaseStudiesListEmbeddedComponent } from '../../case-studies/case-studies-list-embedded/case-studies-list-embedded.component';
-import { DependencyListEmbeddedComponent } from '../../dependencies/dependency-list-embedded/dependency-list-embedded.component';
+import { DependencyListEmbeddedComponent } from '../../dependencies/dependencies-list-embedded/dependencies-list-embedded.component';
 
 @Component({
   selector: 'app-wallets-show',
@@ -93,5 +93,21 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
     return references.filter(
       (reference) => reference !== (this.wallet as Wallet).name
     );
+  }
+
+  /**
+   * Share the wallet
+   * @returns
+   */
+  share() {
+    if (!navigator.share) {
+      this.snachBar.open('Your browser does not support sharing');
+      return;
+    }
+    navigator.share({
+      title: this.wallet?.name,
+      text: `${this.wallet?.name} by ${this.wallet?.company}`,
+      url: window.location.href,
+    });
   }
 }

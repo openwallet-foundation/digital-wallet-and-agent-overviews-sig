@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DependencyListEmbeddedComponent } from './dependency-list-embedded.component';
+import { DependencyListEmbeddedComponent } from './dependencies-list-embedded.component';
 
 describe('DependencyListEmbeddedComponent', () => {
   let component: DependencyListEmbeddedComponent;
@@ -8,9 +8,8 @@ describe('DependencyListEmbeddedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DependencyListEmbeddedComponent]
-    })
-    .compileComponents();
+      imports: [DependencyListEmbeddedComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DependencyListEmbeddedComponent);
     component = fixture.componentInstance;

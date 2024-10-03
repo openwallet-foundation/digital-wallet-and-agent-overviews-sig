@@ -46,8 +46,8 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
     MatButtonModule,
     MatDialogModule,
   ],
-  templateUrl: './dependency-list-embedded.component.html',
-  styleUrl: './dependency-list-embedded.component.scss',
+  templateUrl: './dependencies-list-embedded.component.html',
+  styleUrl: './dependencies-list-embedded.component.scss',
 })
 export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
   @Input() dependencies: Dependency[] = [];
@@ -115,7 +115,7 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
     this.dialog
       .open<DependenciesFilterComponent, DependencyFilter>(
         DependenciesFilterComponent,
-        { data: this.filter }
+        { data: this.filter, disableClose: true }
       )
       .afterClosed()
       .subscribe(async (res: DependencyFilter) => {
@@ -155,6 +155,8 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
   }
 
   addDependency() {
-    this.dialog.open<DependenciesAddComponent>(DependenciesAddComponent);
+    this.dialog.open<DependenciesAddComponent>(DependenciesAddComponent, {
+      disableClose: true,
+    });
   }
 }

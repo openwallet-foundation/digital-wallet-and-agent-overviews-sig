@@ -5,7 +5,7 @@ export interface Stakeholder {
   // name of the stakeholder
   name: string;
   // a url or a mail address to contact the stakeholder
-  contact: string;
+  contact?: string;
 }
 
 export interface CaseStudy {
@@ -18,7 +18,7 @@ export interface CaseStudy {
   // short summary of the case study
   summary: string;
   // url to the image of the case study
-  imageUrl: string;
+  imageUrl?: string;
   // url to the case study
   url: string;
   // list of hash tags that are relevant for the case study

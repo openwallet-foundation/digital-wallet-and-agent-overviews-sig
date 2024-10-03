@@ -25,7 +25,12 @@ import { MatButtonModule } from '@angular/material/button';
 export class CaseStudiesListEmbeddedComponent {
   @Input() caseStudies: CaseStudy[] = [];
 
-  constructor(public caseStudiesService: CaseStudiesService) {}
+  constructor(public caseStudiesService: CaseStudiesService) {
+    this.caseStudies = this.caseStudies.sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
+  }
 
   /**
    * Returns the list of companies that have built the wallet or agent involved in the use case.

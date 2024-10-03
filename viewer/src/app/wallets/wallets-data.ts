@@ -114,9 +114,9 @@ export const walletData: Wallet[] = [
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ca.bc.gov.BCWallet",
     "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet",
     "dependencies": [
-      "Bifold",
-      "Credo",
-      "SD-JWT-JS"
+      "bifold",
+      "credo",
+      "sd-jwt-js"
     ],
     "id": "BC Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/BC Wallet.json"
@@ -184,7 +184,7 @@ export const walletData: Wallet[] = [
     "capability": [
       "holder"
     ],
-    "company": "Rabobank Nederland",
+    "company": "Datakeeper Wallet",
     "credentialFormats": [
       "LDP-VC"
     ],
@@ -196,7 +196,7 @@ export const walletData: Wallet[] = [
     ],
     "urlAppStore": "https://apps.apple.com/nl/app/datakeeper/id1546059184",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=nl.rabobank.ida&gl=US",
-    "urlWebsite": "https://www.datakeeper.nl/enq",
+    "urlWebsite": "https://www.datakeeper.nl/en",
     "id": "Datakeeper",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/Datakeeper.json"
   },
@@ -1017,14 +1017,14 @@ export const walletData: Wallet[] = [
       "ECDSA"
     ],
     "type": "edge",
-    "license": "Apache-2.0",
+    "license": "Apache 2.0",
     "statusManagements": [
       "Indy Revocation",
       "JWT/CWT status list"
     ],
     "dependencies": [
-      "Credo",
-      "SD-JWT-JS"
+      "credo",
+      "sd-jwt-js"
     ],
     "credentialProfiles": [
       "AnonCreds with did:cheqd",
@@ -1073,8 +1073,8 @@ export const walletData: Wallet[] = [
       "JWT/CWT status list"
     ],
     "dependencies": [
-      "Credo",
-      "SD-JWT-JS"
+      "credo",
+      "sd-jwt-js"
     ],
     "credentialProfiles": [
       "AnonCreds with did:cheqd"
@@ -1575,6 +1575,102 @@ export const walletData: Wallet[] = [
   },
   {
     "capability": [
+      "issuer",
+      "holder",
+      "verifier"
+    ],
+    "type": "cloud",
+    "name": "Anonyome Enterprise Wallet",
+    "logo": "logos/anonyome.png",
+    "company": "Anonyome Labs",
+    "companyUrl": "https://www.anonyome.com",
+    "urlWebsite": "https://sudoplatform.com/verifiable-credentials/",
+    "openSource": false,
+    "license": "",
+    "credentialProfiles": [
+      "AnonCreds with did:indy"
+    ],
+    "credentialFormats": [
+      "AnonCred",
+      "LDP-VC",
+      "VC (1.1)"
+    ],
+    "issuanceProtocols": [
+      "Issue Credential v1",
+      "Issue Credential v2"
+    ],
+    "keyManagements": [
+      "did:indy",
+      "did:key",
+      "did:peer",
+      "link secrets"
+    ],
+    "presentationProtocols": [
+      "Present Proof v2",
+      "Present Proof v1.0"
+    ],
+    "signingAlgorithms": [
+      "BBS+ with public key binding",
+      "CL",
+      "ECDSA",
+      "EdDSA"
+    ],
+    "statusManagements": [
+      "Indy Revocation"
+    ],
+    "trustManagements": [],
+    "id": "anonyome-enterprise-wallet",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/anonyome-enterprise-wallet.json"
+  },
+  {
+    "capability": [
+      "holder"
+    ],
+    "type": "edge",
+    "name": "Anonyome Mobile Wallet",
+    "logo": "logos/anonyome.png",
+    "company": "Anonyome Labs",
+    "companyUrl": "https://www.anonyome.com",
+    "urlWebsite": "https://sudoplatform.com/identity-wallet/",
+    "openSource": false,
+    "license": "",
+    "credentialProfiles": [
+      "AnonCreds with did:indy"
+    ],
+    "credentialFormats": [
+      "AnonCred",
+      "LDP-VC",
+      "VC (1.1)"
+    ],
+    "issuanceProtocols": [
+      "Issue Credential v1",
+      "Issue Credential v2"
+    ],
+    "keyManagements": [
+      "did:indy",
+      "did:key",
+      "did:peer",
+      "link secrets"
+    ],
+    "presentationProtocols": [
+      "Present Proof v2",
+      "Present Proof v1.0"
+    ],
+    "signingAlgorithms": [
+      "BBS+ with public key binding",
+      "CL",
+      "ECDSA",
+      "EdDSA"
+    ],
+    "statusManagements": [
+      "Indy Revocation"
+    ],
+    "trustManagements": [],
+    "id": "anonyome-wallet",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/anonyome-wallet.json"
+  },
+  {
+    "capability": [
       "holder"
     ],
     "company": "esatus AG",
@@ -1796,6 +1892,65 @@ export const walletData: Wallet[] = [
     ],
     "id": "iGrant.io Enterprise Wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/iGrant.io Enterprise Wallet.json"
+  },
+  {
+    "capability": [
+      "holder",
+      "verifier"
+    ],
+    "type": "edge",
+    "name": "KeyShare",
+    "logo": "https://play-lh.googleusercontent.com/b5nnEmgdE6vKB11NqMoFyHthfqoLdxWQhUmR3cEvmRKFqJGymM0ZC2BznvFP4UwPPTg=w240-h480-rw",
+    "company": "PassiveBolt",
+    "companyUrl": "https://passivebolt.com",
+    "urlWebsite": "https://passivebolt.com",
+    "urlAppStore": "https://apps.apple.com/us/app/keyshare/id1628825811",
+    "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.passivebolt.keyshare&hl=en_US&pli=1",
+    "openSource": false,
+    "license": "",
+    "portability": false,
+    "credentialProfiles": [
+      "ISO mDL",
+      "JSON-LD VCs with BBS (Credential is Secret)",
+      "JSON-LD VCs with BBS (Holder DID)",
+      "JWT VC Presentation Profile 2",
+      "JWT VC Presentation Profile",
+      "SD-JWT VCs (w/ X.509 for Issuers)"
+    ],
+    "credentialFormats": [
+      "CWT",
+      "JWT-VC",
+      "JWT",
+      "LDP-VC",
+      "MDOC",
+      "SD-JWT-VC",
+      "SD-JWT",
+      "VC (1.1)"
+    ],
+    "issuanceProtocols": [
+      "ISO 23220-3",
+      "OpenID4VCI"
+    ],
+    "keyManagements": [],
+    "presentationProtocols": [
+      "OpenID4VP",
+      "Present Proof v2",
+      "Present Proof v1.0"
+    ],
+    "signingAlgorithms": [
+      "BBS+ with public key binding",
+      "ECDSA",
+      "EdDSA"
+    ],
+    "statusManagements": [
+      "Status List 2021"
+    ],
+    "trustManagements": [
+      "OpenID Connect Federation",
+      "X.509 certificates"
+    ],
+    "id": "passivebolt-keyshare",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/passivebolt-keyshare.json"
   },
   {
     "capability": [

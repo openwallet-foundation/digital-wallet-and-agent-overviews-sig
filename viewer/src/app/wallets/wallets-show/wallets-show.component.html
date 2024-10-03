@@ -1,5 +1,6 @@
 <div class="content" *ngIf="wallet" fxLayout="column" fxLayoutGap="16px">
-  <a mat-icon-button routerLink="../"><mat-icon>arrow_back_ios</mat-icon></a>
+  <!--   <a mat-icon-button routerLink="../"><mat-icon>arrow_back_ios</mat-icon></a>
+ -->
   <div
     class="wallet"
     fxLayout="row"
@@ -9,30 +10,30 @@
     <div>
       <h1>{{ wallet.name }}</h1>
       <div fxLayout="row" fxLayoutGap="16px">
+        @if(wallet.companyUrl || getSupport(wallet.contact)) {
         <a
-          *ngIf="wallet.companyUrl"
           class="company"
           target="_blank"
-          [href]="wallet.companyUrl"
+          [href]="wallet.companyUrl ?? getSupport(wallet.contact)"
           >{{ wallet.company }}</a
         >
-        <span class="company" *ngIf="!wallet.companyUrl">{{
-          wallet.company
-        }}</span>
-        <a *ngIf="wallet.contact" [href]="getSupport(wallet.contact)"
-          >Contact provider</a
-        >
+        } @else {
+        <span class="company">{{ wallet.company }}</span>
+        }
       </div>
+      <br />
       <div fxLayout="row" fxLayoutGap="16px">
-        <p>
-          <a
-            *ngIf="wallet.urlWebsite"
-            class="website"
-            target="_blank"
-            [href]="wallet.urlWebsite"
-            >Website</a
-          >
-        </p>
+        <a
+          *ngIf="wallet.urlWebsite"
+          mat-flat-button
+          target="_blank"
+          [href]="wallet.urlWebsite"
+          >Website</a
+        >
+        <button mat-button (click)="share()">
+          <mat-icon>share</mat-icon>
+          Share
+        </button>
       </div>
       <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
         <a

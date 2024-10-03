@@ -11,6 +11,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { WalletsListComponent } from '../../wallets/wallets-list/wallets-list.component';
+import { GithubRepo } from '../github-response';
+import { MarkdownModule } from 'ngx-markdown';
+import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { MatTabsModule } from '@angular/material/tabs';
+import { Wallet } from '../../wallets/types';
 
 @Component({
   selector: 'app-dependencies-show',
@@ -25,12 +30,18 @@ import { WalletsListComponent } from '../../wallets/wallets-list/wallets-list.co
     MatButtonModule,
     MatChipsModule,
     WalletsListComponent,
+    MarkdownModule,
+    MatTabsModule,
+    FlexLayoutModule,
   ],
   templateUrl: './dependencies-show.component.html',
   styleUrl: './dependencies-show.component.scss',
 })
 export class DependenciesShowComponent {
   dependency?: Dependency;
+  github?: GithubRepo;
+  readme?: string;
+  wallets: Wallet[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -47,5 +58,32 @@ export class DependenciesShowComponent {
     } else {
       this.dependency = dependency;
     }
+    this.wallets = this.dependenciesService.getWallets(dependency!.id);
+    if (this.dependency?.url.startsWith('https://github.com')) {
+      this.dependenciesService
+        .fetchGitHubRepoInfo(this.dependency.url)
+        .then((repo) => (this.github = repo))
+        .then(() =>
+          this.dependenciesService
+            .fetchReadme(this.github as GithubRepo)
+            .then((readme) => (this.readme = readme))
+        );
+    }
+  }
+
+  /**
+   * Share the wallet
+   * @returns
+   */
+  share() {
+    if (!navigator.share) {
+      this.snackBar.open('Your browser does not support sharing');
+      return;
+    }
+    navigator.share({
+      title: this.dependency?.name,
+      text: this.dependency?.name,
+      url: window.location.href,
+    });
   }
 }

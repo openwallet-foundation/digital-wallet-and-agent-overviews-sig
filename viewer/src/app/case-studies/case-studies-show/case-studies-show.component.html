@@ -1,13 +1,25 @@
 @if(caseStudy) {
-<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="16px">
+<div
+  fxLayout="row"
+  fxLayout.lt-sm="column"
+  fxLayout.xs="column"
+  fxLayoutGap="16px"
+>
   <div fxFlex>
+    @if(caseStudy.imageUrl) {
     <img
       class="img"
       mat-card-image
       [src]="caseStudy.imageUrl"
       alt="image of the case study"
     />
-    <h1>{{ caseStudy.headline }}</h1>
+    }
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="16px">
+      <h1>{{ caseStudy.headline }}</h1>
+      <button mat-icon-button (click)="share()">
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
     <h4>{{ caseStudy.createdAt | date }}</h4>
     <p>{{ caseStudy.summary }}</p>
     <a mat-flat-button [href]="caseStudy.url" target="_blank"
