@@ -1,0 +1,20 @@
+.header {
+  height: 40vh;
+  h1 {
+    margin: 0;
+  }
+  padding: 20px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 20px;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .header, .content {
+    text-align: center; /* Center text for small screens */
+  }
+}

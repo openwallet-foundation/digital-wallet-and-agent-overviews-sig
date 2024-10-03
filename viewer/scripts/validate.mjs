@@ -1,11 +1,12 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
-import {readFileSync, readdirSync} from 'fs';
+import {existsSync, readFileSync, readdirSync} from 'fs';
 import axios from 'axios';
 
 const ajv = new Ajv({allowUnionTypes: true});
 addFormats(ajv);
-const dependencyNames = [];
+const dependencyIds = [];
+const walletIds = [];
 
 // validate dependencies
 function validateDependencies() {
@@ -19,11 +20,8 @@ function validateDependencies() {
       console.error(JSON.stringify(validate.errors, null, 2));
       success = false;
     }
-    if(dependencyNames.includes(dependency.name)) {
-      console.error(`Duplicate dependency name: ${dependency.name}`);
-      success = false;
-    }
-    dependencyNames.push(dependency.name);
+    const fileName = file.slice(0, -5);
+    dependencyIds.push(fileName);
   });
   if(success) {
     console.info('All dependencies are valid');
@@ -32,9 +30,6 @@ function validateDependencies() {
     process.exit(1);
   }
 }
-
-validateDependencies();
-validateWallets();
 
 async function validateWallets() {
   const profileSIGSchema = await axios.get('https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json').then(res => res.data);
@@ -49,11 +44,13 @@ async function validateWallets() {
       console.error(JSON.stringify(validate.errors, null, 2));
       success = false;
     }
+    const fileName = file.slice(0, -5);
+    walletIds.push(fileName);
     // validate the dependencies if the key is a valid one
     if(wallet.dependencies) {
       for(const dependency of wallet.dependencies) {
-        if(!dependencyNames.includes(dependency)) {
-          console.error(`dependency ${dependency} not found in dependencies`);
+        if(!dependencyIds.includes(dependency)) {
+          console.error(`[${fileName}]: dependency ${dependency} not found in dependencies`);
           success = false;
         }
       }
@@ -67,3 +64,39 @@ async function validateWallets() {
     process.exit(1);
   }
 }
+
+function validateCaseStudies() {
+  const validate = ajv.compile(JSON.parse(readFileSync('src/assets/case-study.schema.json')));
+  // needed in case no folder is there
+  if(!existsSync('../case-studies')) {
+    console.info('No case studies found');
+    return;
+  }
+  const files = readdirSync('../case-studies');
+  let success = true;
+  files.map(file => {
+    const caseStudy = JSON.parse(readFileSync(`../case-studies/${file}`))
+    if(!validate(caseStudy)) {
+      console.error(`Error validating ${file}:`);
+      console.error(JSON.stringify(validate.errors, null, 2));
+      success = false;
+    }
+    // check if the referenced wallets exist
+    caseStudy.references.forEach(element => {
+      if(!walletIds.includes(element)) {
+        console.error(`Referenced wallet ${element} not found in wallets`);
+        success = false
+      }
+    });
+  });
+  if(success) {
+    console.info('All case studies are valid');
+  } else {
+    console.error('Some case studies are invalid');
+    process.exit(1);
+  }
+}
+
+validateDependencies();
+await validateWallets();
+validateCaseStudies();

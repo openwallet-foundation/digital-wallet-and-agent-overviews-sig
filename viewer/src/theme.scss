@@ -31,6 +31,10 @@ $dark-theme: mat.define-theme((
       background: mat.get-theme-color($theme, primary, 90);
     }
   }
+
+  .header {
+    background: mat.get-theme-color($theme, primary, 90);
+  }
 }
 
 html {

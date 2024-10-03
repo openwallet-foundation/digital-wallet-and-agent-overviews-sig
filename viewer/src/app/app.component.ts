@@ -5,10 +5,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoComponent } from './info/info.component';
 import { MatButtonModule } from '@angular/material/button';
-import { WalletsAddComponent } from './wallets-add/wallets-add.component';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     FlexLayoutModule,
     MatMenuModule,
+    MatDividerModule,
     MatIconModule,
   ],
   templateUrl: './app.component.html',
@@ -30,10 +31,6 @@ import { MatIconModule } from '@angular/material/icon';
  */
 export class AppComponent {
   constructor(private dialog: MatDialog) {}
-
-  addWallet() {
-    this.dialog.open(WalletsAddComponent, { disableClose: true });
-  }
   showInfo() {
     this.dialog.open(InfoComponent);
   }

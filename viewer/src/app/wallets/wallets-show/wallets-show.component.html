@@ -1,0 +1,153 @@
+<div class="content" *ngIf="wallet" fxLayout="column" fxLayoutGap="16px">
+  <!--   <a mat-icon-button routerLink="../"><mat-icon>arrow_back_ios</mat-icon></a>
+ -->
+  <div
+    class="wallet"
+    fxLayout="row"
+    fxLayout.xs="column-reverse"
+    fxLayoutAlign="space-between center"
+  >
+    <div>
+      <h1>{{ wallet.name }}</h1>
+      <div fxLayout="row" fxLayoutGap="16px">
+        @if(wallet.companyUrl || getSupport(wallet.contact)) {
+        <a
+          class="company"
+          target="_blank"
+          [href]="wallet.companyUrl ?? getSupport(wallet.contact)"
+          >{{ wallet.company }}</a
+        >
+        } @else {
+        <span class="company">{{ wallet.company }}</span>
+        }
+      </div>
+      <br />
+      <div fxLayout="row" fxLayoutGap="16px">
+        <a
+          *ngIf="wallet.urlWebsite"
+          mat-flat-button
+          target="_blank"
+          [href]="wallet.urlWebsite"
+          >Website</a
+        >
+        <button mat-button (click)="share()">
+          <mat-icon>share</mat-icon>
+          Share
+        </button>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+        <a
+          *ngIf="wallet.urlGooglePlayStore"
+          [href]="wallet.urlGooglePlayStore"
+          target="_blank"
+          ><img
+            src="assets/google-play-badge.svg"
+            alt="Google Play Store"
+            width="150px"
+        /></a>
+        <a
+          *ngIf="wallet.urlAppStore"
+          [href]="wallet.urlAppStore"
+          target="_blank"
+          ><img
+            src="assets/app-store-badge.svg"
+            alt="Google Play Store"
+            width="150px"
+        /></a>
+      </div>
+    </div>
+    <img
+      *ngIf="logoError"
+      [src]="walletsService.getLogo(wallet.logo)"
+      class="logo"
+      alt="Logo of the wallet"
+      (error)="logoError = false"
+    />
+  </div>
+  <mat-divider></mat-divider>
+  <div fxLayout="row" fxLayoutAlign="space-between start">
+    <mat-list>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('type')">
+        <div matListItemTitle><b>Type</b></div>
+        <span matListItemLine>{{ wallet.type }}</span>
+      </mat-list-item>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('capability')">
+        <div matListItemTitle><b>Capabilities</b></div>
+        <span matListItemLine>{{ wallet.capability?.join(', ') }}</span>
+      </mat-list-item>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('portability')">
+        <div matListItemTitle><b>Portability</b></div>
+        <span matListItemLine>{{ wallet.portability ?? 'unknown' }}</span>
+      </mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('openSource')">
+        <div matListItemTitle><b>Open Source</b></div>
+        @if(!wallet.downloadSource) {
+        <span matListItemLine>{{ wallet.openSource }} </span>
+        } @else {
+        <a matListItemLine [href]="wallet.downloadSource">{{
+          wallet.downloadSource
+        }}</a>
+        }
+      </mat-list-item>
+      <mat-list-item>
+        <div
+          matListItemTitle
+          [matTooltip]="walletsService.getTooltip('license')"
+        >
+          <b>License</b>
+        </div>
+        <span matListItemLine>{{ wallet.license ?? 'unknown' }}</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <mat-divider></mat-divider>
+  <h2>Supported</h2>
+  <mat-list>
+    @for (resource of walletsService.resources; track resource) {
+    <div *ngIf="wallet[resource.id]">
+      <div mat-subheader>
+        {{ resource.name }}
+      </div>
+      @for (element of wallet[resource.id]; track element) {
+      <mat-list-item>
+        <a
+          mat-button
+          target="_blank"
+          [href]="walletsService.getLink(resource.id, element)"
+          >{{ element }}</a
+        >
+      </mat-list-item>
+      }
+      <mat-divider></mat-divider>
+    </div>
+    }
+  </mat-list>
+  <div
+    *ngIf="walletsService.getCaseStudies(wallet)"
+    fxLayout="column"
+    fxLayoutGap="16px"
+  >
+    <h2>Case studies</h2>
+    <app-case-studies-list-embedded
+      [caseStudies]="walletsService.getCaseStudies(wallet)"
+    ></app-case-studies-list-embedded>
+    <div
+      *ngIf="walletsService.getDependencies(wallet)"
+      fxLayout="column"
+      fxLayoutGap="16px"
+    >
+      <h2>Dependencies</h2>
+      <app-dependency-list-embedded
+        [dependencies]="walletsService.getDependencies(wallet)"
+      ></app-dependency-list-embedded>
+      <mat-divider></mat-divider>
+    </div>
+    <div id="history">
+      <a mat-button [href]="wallet.commitHistory" target="_blank"
+        >Commit history</a
+      >
+    </div>
+  </div>
+</div>
