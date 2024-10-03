@@ -1,8 +1,31 @@
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start center">
-  <span>Digital Wallet and Agent overview</span>
+  <div fxLayout="row" fxHide.xs="true">
+    <div class="github">
+      <a mat-button routerLink="/"
+        ><img src="assets/project-icon.png" alt="logo" height="20" />
+        <span>Home</span></a
+      >
+    </div>
+    <button mat-button [routerLink]="'/wallets'" routerLinkActive="active-link">
+      Wallets
+    </button>
+    <button
+      mat-button
+      [routerLink]="'/dependencies'"
+      routerLinkActive="active-link"
+    >
+      Dependencies
+    </button>
+    <button
+      mat-button
+      [routerLink]="'/case-studies'"
+      routerLinkActive="active-link"
+    >
+      Case Studies
+    </button>
+  </div>
   <div class="spacer"></div>
   <div fxLayout="row" fxLayoutAlign="start center" fxHide.xs="true">
-    <button mat-button (click)="addWallet()">Add Wallet</button>
     <button mat-button (click)="showInfo()">Info</button>
     <div class="github">
       <a
@@ -16,7 +39,32 @@
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="addWallet()">Add Wallet</button>
+    <button mat-menu-item routerLink="/">Home</button>
+    <button
+      mat-menu-item
+      [routerLink]="'/wallets'"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Wallets
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="'/dependencies'"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Dependencies
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="'/case-studies'"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Case Studies
+    </button>
+    <mat-divider></mat-divider>
     <button mat-menu-item (click)="showInfo()">Info</button>
     <a
       mat-menu-item

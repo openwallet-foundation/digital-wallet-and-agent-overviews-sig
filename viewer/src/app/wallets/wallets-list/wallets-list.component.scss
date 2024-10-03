@@ -1,0 +1,45 @@
+.logo {
+  max-height: 40px;
+  max-width: 120px;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+.link-list {
+  margin: 0 5px;
+}
+
+.container {
+  height: calc(100vh - 149px);
+  overflow: auto;
+}
+
+.embedded {
+  .container {
+    height: auto;
+    max-height: 800px;
+  }
+}
+
+.info {
+  margin-left: 5px;
+  display: none;
+}
+
+.mat-mdc-cell {
+  border-right: 1px solid;
+  border-right-color: var(--mat-table-row-item-outline-color);
+  font-size: 14px;
+  min-height: 48px;
+  text-align: center;
+}
+
+.mat-mdc-cell.cdk-column-name {
+  text-align: left;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: whitesmoke;
+}
+

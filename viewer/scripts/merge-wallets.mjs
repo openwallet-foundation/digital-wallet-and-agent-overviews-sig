@@ -1,43 +1,63 @@
-import { readdirSync, readFileSync, writeFileSync } from 'fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 
-// url for the folder containing the wallet files in the GitHub repo
-const commitHistoryBase = 'https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/'
+// URL for the folder containing the wallet files in the GitHub repo
+const commitHistoryBase = 'https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/';
 
+// Paths
+const DEPENDENCIES_PATH = '../dependencies';
+const CASE_STUDIES_PATH = '../case-studies';
+const WALLETS_PATH = '../wallets';
+const OUTPUT_PATH = 'src/app';
 
-const dependenciesFiles = readdirSync('../dependencies');
-
-const dependencies = dependenciesFiles.map(file => {
-    const json = JSON.parse(readFileSync(`../dependencies/${file}`));
-    json['$schema'] = undefined;
-    return json;
-});
-
-
-// function to merge all the individual wallet files into a single file
-const files = readdirSync('../wallets');
-
-const wallets = [];
-for (const file of files) {
-  try {
-    const json = JSON.parse(readFileSync(`../wallets/${file}`));
-    json.commitHistory = commitHistoryBase + file;
-    // for now we insert the dependencies instead of just referencing them
-    if(json.dependencies) {
-      json.dependencies = json.dependencies.map(dependency => {
-        const found = dependencies.find(d => d.name === dependency);
-        if(found) {
-          return found;
-        }
-        console.warn(`Could not find dependency ${dependency} for wallet ${json.name}`);
-        return dependency;
-      });
-    }
-    wallets.push(json)
+// Function to read and process JSON files from a directory
+const readAndProcessFiles = (directory, processFile) => {
+  if(!existsSync(directory)) {
+    return [];
   }
-  catch(e) {
-    console.warn(`Error parsing ${file}: ${e}`)
-    process.exit(1);
-  }
-}
-writeFileSync('src/assets/wallets.json', JSON.stringify(wallets, null,));
-console.log(`Merged ${files.length} wallet files into src/assets/wallets.json`);
+  const files = readdirSync(directory);
+  return files.map(file => {
+    const json = JSON.parse(readFileSync(`${directory}/${file}`));
+    json.id = file.slice(0, -5);
+    return processFile(json, file);
+  });
+};
+
+// Process functions
+const processDependencyFile = (json) => {
+  delete json['$schema'];
+  return json;
+};
+
+const processCaseStudyFile = (json) => {
+  delete json['$schema'];
+  return json;
+};
+
+const processWalletFile = (json, file) => {
+  json.commitHistory = commitHistoryBase + file;
+  delete json['$schema'];
+  return json;
+};
+
+// Read and process files
+const dependencies = readAndProcessFiles(DEPENDENCIES_PATH, processDependencyFile);
+const caseStudies = readAndProcessFiles(CASE_STUDIES_PATH, processCaseStudyFile);
+const wallets = readAndProcessFiles(WALLETS_PATH, processWalletFile);
+
+// Function to generate TypeScript content
+const generateTsContent = (type, data) => `
+import { ${type} } from './types';
+
+export const ${type.toLowerCase()}Data: ${type}[] = ${JSON.stringify(data, null, 2)};
+`;
+
+// Write to TypeScript files
+const writeTsFile = (filename, content) => {
+  writeFileSync(`${OUTPUT_PATH}/${filename}`, content);
+  console.log(`Merged files into ${OUTPUT_PATH}/${filename}`);
+};
+
+// Generate and write TypeScript content
+writeTsFile('wallets/wallets-data.ts', generateTsContent('Wallet', wallets));
+writeTsFile('dependencies/dependencies-data.ts', generateTsContent('Dependency', dependencies));
+writeTsFile('case-studies/case-studies-data.ts', generateTsContent('CaseStudy', caseStudies));
