@@ -1,6 +1,6 @@
-![Wallets](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fopenwallet-foundation%2Fdigital-wallet-and-agent-overviews-sig%2Fbadge-info%2Fwallets.json)
-
 # Digital Wallet and Agent Overviews Special Interest Group (SIG)
+
+![Wallets](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fopenwallet-foundation%2Fdigital-wallet-and-agent-overviews-sig%2Fbadge-info%2Fwallets.json)
 
 The objectives of this SIG is to further develop and maintain the Digital Wallet Overview and including the digital identity agents/SDKs in the overview. The overview can be found [here](https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/). These overview should provide transparency of the characteristics of wallets and agents in order to allow for comparison and effective decision-making on which wallet is applicable for your use case. By creating awareness of these overviews, this work can lead to less fragmentation of the SSI playing field and increase adoption.
 
@@ -47,4 +47,10 @@ We foresee that the safe wallet SIG provided us with new characteristics in the 
 
 Each wallet and agent is capable to link to relevant dependencies like frameworks or libraries that are relevant. The linking will support the overview of the technology stack of the wallet or agent. We encourage developers to only link to relevant dependencies that are specific for the wallet or agent to avoid a long list of dependencies.
 
-The dependencies will be add as a new object in the `dependencies` folder and then linked by the unique `name` attribute in each wallet or agent object.
+The dependencies will be add as a new object in the `dependencies` folder and then linked by the unique filename in each wallet or agent object. To generate the JSON object, you can use the form provided when clicking "Add Dependency" in the upper right corner of the overview.
+
+## Case Studies
+
+We are looking for case studies of the use of wallets and agents in the field. These case studies can be used to show the applicability of the wallets and agents in real life situations. The case studies will be added as a new object in the `case-studies` folder, referencing the wallets or agents by their filename. To generate the JSON object, you can use the form provided when clicking "Add Case Study" in the upper right corner of the overview.
+
+There is also the chance to subscribe to our newsletter that will be sent out every month. The newsletter will contain the latest submitted case studies to this overview. You can subscribe to the newsletter by clicking [here](https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/#/case-studies).
