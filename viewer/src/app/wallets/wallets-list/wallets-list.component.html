@@ -42,6 +42,9 @@
               onerror="this.src='assets/default-image.png';"
             />
             <a [routerLink]="['/wallets', element.id]">{{ element.name }}</a>
+            @if(isInvalid(element)) {
+            <mat-icon matTooltip="entry is invalid">warning</mat-icon>
+            }
           </div>
         </td>
       </ng-container>
