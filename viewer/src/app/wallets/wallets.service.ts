@@ -159,4 +159,22 @@ export class WalletsService {
     if (url.startsWith('http')) return url;
     return `assets/${url}`;
   }
+
+  /**
+   * It will check the error branch of the repo where the error messages are located.
+   * @param id name of the wallet
+   */
+  validEntry(id: string) {
+    return firstValueFrom(
+      this.httpClient.get<Record<string, string>>(
+        `https://raw.githubusercontent.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/refs/heads/errors/wallets/${id}.json`
+      )
+    )
+      .then((res) =>
+        Object.keys(res)
+          .map((key) => `${key}: ${res[key]}`)
+          .join(', ')
+      )
+      .catch(() => undefined);
+  }
 }

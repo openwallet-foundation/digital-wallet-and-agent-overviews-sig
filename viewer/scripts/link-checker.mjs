@@ -1,12 +1,13 @@
 // this script checks if all the links in the json files are still reachable
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from 'fs';
 import axios from 'axios';
-import { join, dirname } from 'path';
+import { join, dirname, basename, extname } from 'path';
 
 let counter = 0;
 let validFiles = 0;
 let invalidFiles = 0;
 const errorLog = {};
+const consolidatedErrors = {};
 
 async function isLinkReachable(url, filePath, jsonPath) {
   try {
@@ -27,6 +28,18 @@ async function isLinkReachable(url, filePath, jsonPath) {
       errorLog[filePath] = {};
     }
     errorLog[filePath][jsonPath] = url;
+
+    // Add to consolidated errors
+    const folderName = filePath.split('/')[1];
+    const fileNameWithoutExt = basename(filePath, extname(filePath));
+    if (!consolidatedErrors[folderName]) {
+      consolidatedErrors[folderName] = {};
+    }
+    if (!consolidatedErrors[folderName][fileNameWithoutExt]) {
+      consolidatedErrors[folderName][fileNameWithoutExt] = {};
+    }
+    consolidatedErrors[folderName][fileNameWithoutExt][jsonPath] = url;
+
     return false;
   }
 }
@@ -60,7 +73,7 @@ async function checkLinksInObject(obj, filePath, currentPath = '') {
 }
 
 async function validateFolder(folder) {
-  if(!existsSync(folder)) {
+  if (!existsSync(folder)) {
     return;
   }
   const files = readdirSync(folder);
@@ -104,6 +117,7 @@ const folders = ['case-studies', 'wallets', 'dependencies'];
   }
 
   console.log('\nError Log:');
+  console.log(errorLog);
   for (const [filePath, errors] of Object.entries(errorLog)) {
     const relativePath = filePath.replace('../', '');
     const errorFilePath = join(errorsDir, relativePath);
@@ -114,4 +128,7 @@ const folders = ['case-studies', 'wallets', 'dependencies'];
     }
     writeFileSync(errorFilePath, JSON.stringify(errors, null, 2));
   }
+
+  // Write all errors to a single errors.json file
+  writeFileSync(join(errorsDir, 'errors.json'), JSON.stringify(consolidatedErrors, null, 2));
 })();

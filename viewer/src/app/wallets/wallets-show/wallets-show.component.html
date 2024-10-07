@@ -35,6 +35,12 @@
           Share
         </button>
       </div>
+      @if(invalid) {
+      <div fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+        <mat-icon>warning</mat-icon>
+        <p>Entry is not valid: {{ invalid }}</p>
+      </div>
+      }
       <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
         <a
           *ngIf="wallet.urlGooglePlayStore"
@@ -69,7 +75,7 @@
     <mat-list>
       <mat-list-item [matTooltip]="walletsService.getTooltip('type')">
         <div matListItemTitle><b>Type</b></div>
-        <span matListItemLine>{{ wallet.type }}</span>
+        <span matListItemLine>{{ wallet.type ?? 'unknown' }}</span>
       </mat-list-item>
       <mat-list-item [matTooltip]="walletsService.getTooltip('capability')">
         <div matListItemTitle><b>Capabilities</b></div>
@@ -84,7 +90,7 @@
       <mat-list-item [matTooltip]="walletsService.getTooltip('openSource')">
         <div matListItemTitle><b>Open Source</b></div>
         @if(!wallet.downloadSource) {
-        <span matListItemLine>{{ wallet.openSource }} </span>
+        <span matListItemLine>{{ wallet.openSource ?? 'unknown' }} </span>
         } @else {
         <a matListItemLine [href]="wallet.downloadSource">{{
           wallet.downloadSource
