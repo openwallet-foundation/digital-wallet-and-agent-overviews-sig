@@ -54,7 +54,8 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
     private snachBar: MatSnackBar
   ) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    await this.walletsService.getErrors();
     this.routerSubscription = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -77,7 +78,7 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
         .navigate(['/'])
         .then(() => this.snachBar.open(`${id} not found`));
     }
-    this.invalid = await this.walletsService.validEntry(id);
+    this.invalid = await this.walletsService.invalidEntry(id);
   }
 
   getSupport(value?: string) {
