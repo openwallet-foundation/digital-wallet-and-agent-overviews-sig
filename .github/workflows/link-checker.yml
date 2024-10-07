@@ -1,0 +1,45 @@
+name: Link checker
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Runs at midnight every Sunday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  link-checker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: viewer/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: cd viewer && npm install
+
+      - name: Validate links
+        run: cd viewer && node scripts/link-checker.mjs
+
+      # Deploy to local repo
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: errors
+          FOLDER: errors
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

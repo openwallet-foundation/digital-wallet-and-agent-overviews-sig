@@ -7,6 +7,7 @@ on:
     inputs:
       email:
         description: 'Email address to send the newsletter to'
+        required: true
 
 jobs:
   generate-newsletter:
@@ -40,7 +41,7 @@ jobs:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ github.event.inputs.email }}
           NODE_ENV: ${{ vars.NODE_ENV }}
-          EMAIL_STORE: true
+          EMAIL_STORE: true          
       
       - name: Upload newsletter artifact
         uses: actions/upload-artifact@v4
