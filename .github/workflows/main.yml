@@ -33,6 +33,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: viewer/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: cd viewer && npm ci
       
@@ -49,12 +57,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: viewer/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         run: cd viewer && npm ci
 
+      - name: Lint
+        run: cd viewer && npm run lint
+
       - name: Build Angular app
         run: cd viewer && npm run build -- --configuration production            
+      
       - name: upload artifacts
         uses: actions/upload-artifact@v4
         with:
