@@ -31,3 +31,11 @@ jobs:
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ github.event.inputs.email }}
+          NODE_ENV: ${{ vars.NODE_ENV }}
+          EMAIL_STORE: true
+      
+      - name: Upload newsletter artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter
+          path: viewer/newsletter.html
