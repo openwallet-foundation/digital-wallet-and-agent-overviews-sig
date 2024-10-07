@@ -208,7 +208,8 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
    * Load the filtered wallets
    */
   private async loadWallets() {
-    let values = this.wallets ?? (await this.walletsService.loadWallets());
+    await this.walletsService.getErrors();
+    let values = this.wallets ?? this.walletsService.loadWallets();
     if (this.filter) {
       if (this.filter.type) {
         values = values.filter((wallet) => wallet.type === this.filter!.type);
@@ -269,5 +270,9 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
       }
     });
     return filtered;
+  }
+
+  isInvalid(wallet: Wallet) {
+    return this.walletsService.invalidEntry(wallet.id) !== '';
   }
 }

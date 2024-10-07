@@ -7,6 +7,11 @@ import { walletData } from './wallets-data';
 import { CaseStudiesService } from '../case-studies/case-studies.service';
 import { DependenciesService } from '../dependencies/dependencies.service';
 
+type ErrorFile = Record<
+  'wallets' | 'case-studies' | 'dependencies',
+  Record<string, Record<string, string>>
+>;
+
 @Injectable({
   providedIn: 'root',
 })
@@ -54,11 +59,18 @@ export class WalletsService {
     },
   ];
 
+  errors!: Record<string, Record<string, string>>;
+
   constructor(
     private httpClient: HttpClient,
     private caseStudiesService: CaseStudiesService,
     private depenciesService: DependenciesService
   ) {}
+
+  async init() {
+    this.errors = await this.getErrors();
+    console.log(this.errors);
+  }
 
   /**
    * Loads the wallets from the assets folder
@@ -164,17 +176,25 @@ export class WalletsService {
    * It will check the error branch of the repo where the error messages are located.
    * @param id name of the wallet
    */
-  validEntry(id: string) {
-    return firstValueFrom(
-      this.httpClient.get<Record<string, string>>(
-        `https://raw.githubusercontent.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/refs/heads/errors/wallets/${id}.json`
-      )
-    )
-      .then((res) =>
-        Object.keys(res)
-          .map((key) => `${key}: ${res[key]}`)
-          .join(', ')
-      )
-      .catch(() => undefined);
+  invalidEntry(id: string) {
+    if (!this.errors[id]) return '';
+    return Object.keys(this.errors[id])
+      .map((key) => `${key}: ${this.errors[id][key]}`)
+      .join(', ');
+  }
+
+  /**
+   * Get the errors from the error file
+   * @returns
+   */
+  getErrors(): Promise<Record<string, Record<string, string>>> {
+    //TODO: right now this has to be called with every call to get the errors. This should be fixed.
+    return this.errors
+      ? Promise.resolve(this.errors)
+      : firstValueFrom(
+          this.httpClient.get<ErrorFile>(
+            `https://raw.githubusercontent.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/refs/heads/errors/errors.json`
+          )
+        ).then((res) => (this.errors = res.wallets));
   }
 }
