@@ -68,13 +68,13 @@ if(process.env.EMAIL_STORE){
 
 function getMailConfig() {
   if(process.env.NODE_ENV === 'production'){
-    return {
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_ADDRESS,
-      pass: process.env.EMAIL_PASSWORD
-    }
-  }
+    return Promise.resolve({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_ADDRESS,
+        pass: process.env.EMAIL_PASSWORD
+      }
+    });
   }
   else {
     return createTestAccount().then((account) => ({
