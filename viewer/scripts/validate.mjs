@@ -2,7 +2,6 @@ import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import {existsSync, readFileSync, readdirSync} from 'fs';
 import axios from 'axios';
-import { join } from 'path';
 
 const ajv = new Ajv({allowUnionTypes: true});
 addFormats(ajv);
@@ -16,8 +15,11 @@ function normalizeFilename(filename) {
 
 // Check files in a folder to ensure they meet the desired format
 function checkFilesInFolder(folder) {
+  if(!existsSync(folder)) {
+    console.info(`No files found in ${folder}`);
+    return;
+  }
   const files = readdirSync(folder);
-  console.log(files);
   files.forEach(file => {
     const newFileName = normalizeFilename(file);
     if (file !== newFileName) {
@@ -85,6 +87,9 @@ async function validateWallets() {
 }
 
 function validateCaseStudies() {
+  if(!existsSync("../case-studies")) {
+    return;
+  }
   checkFilesInFolder('../case-studies');
   const validate = ajv.compile(JSON.parse(readFileSync('src/assets/case-study.schema.json')));
   // needed in case no folder is there

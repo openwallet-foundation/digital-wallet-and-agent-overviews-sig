@@ -60,6 +60,9 @@ async function checkLinksInObject(obj, filePath, currentPath = '') {
 }
 
 async function validateFolder(folder) {
+  if(!existsSync(folder)) {
+    return;
+  }
   const files = readdirSync(folder);
   const promises = files
     .filter(file => file.endsWith('.json'))
