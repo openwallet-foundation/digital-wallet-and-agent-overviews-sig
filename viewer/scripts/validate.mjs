@@ -17,10 +17,11 @@ function normalizeFilename(filename) {
 // Check files in a folder to ensure they meet the desired format
 function checkFilesInFolder(folder) {
   const files = readdirSync(folder);
+  console.log(files);
   files.forEach(file => {
     const newFileName = normalizeFilename(file);
     if (file !== newFileName) {
-      throw new Error(`Invalid filename: ${file}. Filenames must be lowercase and not contain whitespace.`);
+      throw new Error(`Invalid filename: ${file} should be ${newFileName}`);
     }
   });
 }
