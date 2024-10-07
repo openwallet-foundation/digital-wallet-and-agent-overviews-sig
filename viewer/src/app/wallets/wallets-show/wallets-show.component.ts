@@ -45,6 +45,7 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
   wallet?: Wallet;
   logoError = true;
   private routerSubscription?: Subscription;
+  invalid?: string;
 
   constructor(
     public walletsService: WalletsService,
@@ -76,6 +77,7 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
         .navigate(['/'])
         .then(() => this.snachBar.open(`${id} not found`));
     }
+    this.invalid = await this.walletsService.validEntry(id);
   }
 
   getSupport(value?: string) {
