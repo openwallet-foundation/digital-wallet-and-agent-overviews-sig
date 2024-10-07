@@ -80,7 +80,7 @@
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row" fxLayoutGap="8px">
-            @for(wallet of dependenciesService.getWallets(element.name); track
+            @for(wallet of dependenciesService.getWallets(element.id); track
             wallet) {
             <a [routerLink]="['/wallets', wallet.name]">{{ wallet.name }}</a>
             }

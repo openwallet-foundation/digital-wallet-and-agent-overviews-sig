@@ -2,7 +2,7 @@ import {config} from 'dotenv';
 import fs from 'fs';
 import handlebars from 'handlebars';
 import { execSync } from 'child_process';
-import {createTransport} from 'nodemailer'
+import {createTransport, createTestAccount, getTestMessageUrl} from 'nodemailer'
 
 config();
 
@@ -61,14 +61,33 @@ const preHeader = `We got ${caseStudies.length} new case ${caseStudies.length ==
 const template = handlebars.compile(templateSource);
 const html = template({ caseStudies, lastMonth: currentMonthName, subject, preHeader, walletCounter });
 
-// Create a transporter
-let transporter = createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_ADDRESS,
-    pass: process.env.EMAIL_PASSWORD
+if(process.env.EMAIL_STORE){
+  fs.writeFileSync(`./newsletter.html`, html);
+}
+
+
+function getMailConfig() {
+  if(process.env.NODE_ENV === 'production'){
+    return {
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.EMAIL_PASSWORD
+    }
   }
-});
+  }
+  else {
+    return createTestAccount().then((account) => ({
+      host: account.smtp.host,
+      port: account.smtp.port,
+      secure: account.smtp.secure,
+      auth: {
+        user: account.user,
+        pass: account.pass,
+      }
+    }))
+  }
+}
 
 // Email options
 let mailOptions = {
@@ -79,9 +98,12 @@ let mailOptions = {
 };
 
 // Send the email
-transporter.sendMail(mailOptions, (error, info) => {
+getMailConfig().then(config => createTransport(config).sendMail(mailOptions, (error, info) => {
   if (error) {
     return console.log(error);
   }
   console.log('Email sent: ' + info.response);
-});
+  if(process.env.NODE_ENV !== 'production') {
+    console.log('Preview URL: %s', getTestMessageUrl(info));
+  }
+}));
