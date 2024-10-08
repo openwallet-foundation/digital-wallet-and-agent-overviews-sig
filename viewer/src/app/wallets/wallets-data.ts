@@ -26,7 +26,7 @@ export const walletData: Wallet[] = [
     ],
     "downloadSource": "https://github.com/TalaoDAO/AltMe",
     "license": "Apache 2.0",
-    "logo": "https://unicorn-cdn.b-cdn.net/c5a08f4c-0ad3-425b-add7-4ec916fff504/altme-wallet-logo.png?width=70&height=70",
+    "logo": "logos/altme.png",
     "name": "Altme",
     "openSource": true,
     "type": "edge",
@@ -223,7 +223,7 @@ export const walletData: Wallet[] = [
     ],
     "company": "Hyland Credentials",
     "downloadSource": "https://github.com/blockchain-certificates/blockcerts-verifier",
-    "logo": "https://avatars.githubusercontent.com/u/19539594?s=48&v=4",
+    "logo": "logos/blockcerts-unversal-verifier.png",
     "name": "Blockcerts Universal Verifier",
     "openSource": true,
     "type": "cloud",
@@ -256,7 +256,7 @@ export const walletData: Wallet[] = [
     "credentialProfiles": [
       "EBSI"
     ],
-    "logo": "https://sis.lt/wp-content/uploads/2023/02/Styleprimary-1.svg",
+    "logo": "logos/corposign-did.svg",
     "name": "CorpoSign DID",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=app.sis.mydid.net",
     "urlWebsite": "https://sis.lt/",
@@ -337,7 +337,7 @@ export const walletData: Wallet[] = [
   },
   {
     "name": "DID Controller",
-    "logo": "https://ipfs.ssi.eecc.de/ipfs/QmbpNRxRxfLB1AooHUR1vQLMMGo3gVHakz98kxvJuM6p41?filename=did_controller_logo.png",
+    "logo": "logos/eecc-did-controller.png",
     "company": "European EPC Competence Center GmbH",
     "companyUrl": "https://id.eecc.de/products/did_controller.html",
     "type": "cloud",
@@ -377,7 +377,7 @@ export const walletData: Wallet[] = [
   },
   {
     "name": "VC Verifier",
-    "logo": "https://raw.githubusercontent.com/european-epc-competence-center/vc-verifier/main/assets/logo.png",
+    "logo": "logos/eecc-verifier.png",
     "company": "European EPC Competence Center GmbH",
     "companyUrl": "https://id.eecc.de/products/vc_verifier.html",
     "type": "cloud",
@@ -468,7 +468,7 @@ export const walletData: Wallet[] = [
     ],
     "company": "ESSIF Playground",
     "downloadSource": "https://github.com/majo32/sk-essif-verifier",
-    "logo": "https://docs.essif.sk/wp-content/uploads/2021/12/blockchain.svg",
+    "logo": "logos/essif-wallet.svg",
     "name": "ESSIF Wallet",
     "type": "cloud",
     "urlWebApp": "https://wallet.essif.sk/",
@@ -481,7 +481,6 @@ export const walletData: Wallet[] = [
       "holder"
     ],
     "company": "Entidad",
-    "logo": "https://farmworker-walletos.s3.us-west-1.amazonaws.com/images/app_logo.png",
     "name": "Farmworker WalletOS",
     "companyUrl": "https://www.entidad.io/",
     "credentialFormats": [
@@ -593,7 +592,7 @@ export const walletData: Wallet[] = [
       "holder"
     ],
     "company": "Gimly",
-    "logo": "https://assets-global.website-files.com/64b9387ee6a0b5f6b0f06fa0/64b9b2b54ae54bd94fc5a01a_Gimly%20Logo.svg",
+    "logo": "logos/gimly.svg",
     "name": "Gimly ID",
     "urlWebsite": "https://gimly.io/",
     "id": "gimly",
@@ -634,7 +633,7 @@ export const walletData: Wallet[] = [
   },
   {
     "name": "hightrust.id",
-    "logo": "https://raw.githubusercontent.com/megical/hightrust.id-assets/main/AppIcons/hitid-app-icon-1024.png",
+    "logo": "logos/hightrust.png",
     "company": "Megical Oy",
     "type": "edge",
     "openSource": false,
@@ -667,7 +666,7 @@ export const walletData: Wallet[] = [
     "credentialProfiles": [
       "AnonCreds with did:indy"
     ],
-    "logo": "https://indicio.tech/wp-content/uploads/2024/02/holdr_brand.png",
+    "logo": "logos/holdr.png",
     "name": "Holdr+",
     "type": "edge",
     "urlAppStore": "https://apps.apple.com/us/app/holdr/id1620628623",
@@ -701,7 +700,7 @@ export const walletData: Wallet[] = [
       "did:web",
       "did:indy"
     ],
-    "logo": "https://2060.io/images/hologram-app.png",
+    "logo": "logos/hologram.png",
     "name": "Hologram",
     "presentationProtocols": [
       "Present Proof v1.0",
@@ -727,7 +726,7 @@ export const walletData: Wallet[] = [
       "verifier"
     ],
     "company": "Next ID",
-    "logo": "https://verifier.nextid.com/images/ICEF-logo.png",
+    "logo": "logos/icef.png",
     "name": "ICEF Certificate Verifier",
     "type": "cloud",
     "urlWebApp": "https://verifier.nextid.com/",
@@ -985,7 +984,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "edge",
     "name": "Learner Credential Wallet",
-    "logo": "https://user-images.githubusercontent.com/7339800/129089107-fa190c95-76fd-4a93-8e36-ff4d3ae5681c.png",
+    "logo": "logos/learner-credential-wallet.png",
     "company": "MIT (Digital Credentials Consortium)",
     "companyUrl": "https://digitalcredentials.mit.edu/",
     "urlWebsite": "https://lcw.app/",
@@ -1034,7 +1033,7 @@ export const walletData: Wallet[] = [
     "name": "Lissi EUDI-Wallet Connector",
     "openSource": false,
     "type": "cloud",
-    "urlWebApp": "https://demo.lissi.id/",
+    "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
     "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
     "id": "lissi-eudi-wallet-connector",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/lissi-eudi-wallet-connector.json"
@@ -1059,7 +1058,7 @@ export const walletData: Wallet[] = [
       "OpenID4VP"
     ],
     "type": "edge",
-    "urlAppStore": "https://apps.apple.com/de/app/lissi-wallet/id1529848685",
+    "urlAppStore": "https://apps.apple.com/de/app/lissi-id-wallet/id6475958390",
     "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.lissi.mobile.android&hl=de",
     "urlWebsite": "https://www.lissi.id/for-users",
     "id": "lissi-wallet",
@@ -1245,7 +1244,6 @@ export const walletData: Wallet[] = [
     ],
     "company": "MyNextID",
     "contact": "info@mynext.id",
-    "logo": "https://mynext.id/wp-content/uploads/2022/04/logo_mynextID.svg",
     "name": "MyNextID",
     "urlWebsite": "https://mynext.id/",
     "id": "mynextid",
@@ -1256,7 +1254,7 @@ export const walletData: Wallet[] = [
       "issuer"
     ],
     "company": "Next ID",
-    "logo": "https://nextid.com/wp-content/uploads/2021/06/logotype_420x90_cropped_tight.png",
+    "logo": "logos/nextcert-issuer.png",
     "name": "NextCert Issuer",
     "urlWebsite": "https://nextid.com/nextcert-issuer/",
     "id": "nextcert-issuer",
@@ -1268,7 +1266,7 @@ export const walletData: Wallet[] = [
     ],
     "company": "Northern Block",
     "contact": "info@northernblock.io",
-    "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/22/09/dd220977-1f77-b23c-a624-5d6e1574a159/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/230x0w.webp",
+    "logo": "logos/orbit-edge-wallet.webp",
     "name": "Orbit Edge Wallet",
     "type": "edge",
     "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
@@ -1284,7 +1282,7 @@ export const walletData: Wallet[] = [
     ],
     "company": "Northern Block",
     "contact": "info@northernblock.io",
-    "logo": "https://northernblock.io/wp-content/uploads/2020/09/northern-block-full-logo-100h-1.png",
+    "logo": "logos/orbit-enterprise.png",
     "name": "Orbit Enterprise",
     "urlWebsite": "https://northernblock.io/orbit-enterprise/",
     "id": "orbit-enterprise",
@@ -1411,7 +1409,7 @@ export const walletData: Wallet[] = [
     ],
     "type": "edge",
     "name": "KeyShare",
-    "logo": "https://play-lh.googleusercontent.com/b5nnEmgdE6vKB11NqMoFyHthfqoLdxWQhUmR3cEvmRKFqJGymM0ZC2BznvFP4UwPPTg=w240-h480-rw",
+    "logo": "logos/passivebolt-keyshare.webp",
     "company": "PassiveBolt",
     "companyUrl": "https://passivebolt.com",
     "urlWebsite": "https://passivebolt.com",
@@ -1487,7 +1485,6 @@ export const walletData: Wallet[] = [
       "link secrets"
     ],
     "license": "Proprietary",
-    "logo": "https://esencial.s3.us-west-1.amazonaws.com/images/ecosystem/Preparese_Logo-Green-Round.svg",
     "name": "Preparese Mobile",
     "openSource": false,
     "portability": false,
@@ -1610,7 +1607,7 @@ export const walletData: Wallet[] = [
     "company": "Indicio",
     "name": "Proven",
     "openSource": false,
-    "logo": "https://indicio.tech/wp-content/uploads/2023/11/Indicio-wide.png",
+    "logo": "logos/proven.png",
     "type": "cloud",
     "urlWebsite": "https://indicio.tech/indicio-proven/",
     "id": "proven",
@@ -1623,7 +1620,6 @@ export const walletData: Wallet[] = [
     "company": "SelfKey",
     "downloadSource": "https://github.com/SelfKeyFoundation/Identity-Wallet",
     "license": "MIT",
-    "logo": "https://selfkey.org/wp-content/uploads/2023/03/image-1.png",
     "name": "SelfKey Wallet",
     "type": "edge",
     "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
@@ -1776,7 +1772,7 @@ export const walletData: Wallet[] = [
     ],
     "company": "Trinsic",
     "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
-    "logo": "https://ml58lemqnh9a.i.optimole.com/cb:Xgnl.4ea3/w:404/h:116/q:100/f:best/https://trinsic.id/wp-content/uploads/2023/03/Logo-Blue-1024x299.png.png",
+    "logo": "logos/trisic-id.png",
     "name": "Trinsic ID",
     "openSource": true,
     "type": "edge",
@@ -1792,7 +1788,7 @@ export const walletData: Wallet[] = [
       "verifier"
     ],
     "company": "Trinsic",
-    "logo": "https://ml58lemqnh9a.i.optimole.com/cb:Xgnl.4ea3/w:404/h:116/q:100/f:best/https://trinsic.id/wp-content/uploads/2023/03/Logo-Blue-1024x299.png.png",
+    "logo": "logos/trisic-platform.png",
     "name": "Trinsic Platform",
     "type": "cloud",
     "urlWebsite": "https://trinsic.id/platform/",
@@ -1804,7 +1800,7 @@ export const walletData: Wallet[] = [
       "holder"
     ],
     "company": "Verida",
-    "logo": "https://assets-global.website-files.com/60e8365cd5794f8db04151ed/6107868980521e0acf27b2d9_favicon.svg",
+    "logo": "logos/verida.svg",
     "name": "Verida Wallet",
     "type": "edge",
     "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
@@ -1819,7 +1815,7 @@ export const walletData: Wallet[] = [
       "verifier"
     ],
     "company": "Validated ID",
-    "logo": "https://assets-global.website-files.com/5ec68f0bd0db4b52be8cf1d5/65005b574785a9648a59e490_LOGO.svg",
+    "logo": "logos/vidcredentials.svg",
     "name": "VIDcredentials",
     "type": "cloud",
     "urlWebApp": "https://try.vidchain.net/demo",
@@ -1955,7 +1951,7 @@ export const walletData: Wallet[] = [
       "EBSI"
     ],
     "downloadSource": "https://github.com/wwWallet",
-    "logo": "https://demo.wwwallet.org/static/media/logo.4c2efe036042f9f1f0a8.png",
+    "logo": "logos/wwwallet.png",
     "name": "wwWallet",
     "openSource": true,
     "type": "cloud",

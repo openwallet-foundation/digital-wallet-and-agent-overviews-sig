@@ -1,12 +1,16 @@
 {
-  "capability": ["holder"],
+  "capability": [
+    "holder"
+  ],
   "company": "Talao",
   "contact": "contact@altme.io",
   "urlWebsite": "https://altme.io/",
-  "credentialProfiles": ["EBSI"],
+  "credentialProfiles": [
+    "EBSI"
+  ],
   "downloadSource": "https://github.com/TalaoDAO/AltMe",
   "license": "Apache 2.0",
-  "logo": "https://unicorn-cdn.b-cdn.net/c5a08f4c-0ad3-425b-add7-4ec916fff504/altme-wallet-logo.png?width=70&height=70",
+  "logo": "logos/altme.png",
   "name": "Altme",
   "openSource": true,
   "$schema": "../viewer/src/assets/schema.json",

@@ -1,8 +1,11 @@
 {
-  "capability": ["holder", "verifier"],
+  "capability": [
+    "holder",
+    "verifier"
+  ],
   "type": "edge",
   "name": "KeyShare",
-  "logo": "https://play-lh.googleusercontent.com/b5nnEmgdE6vKB11NqMoFyHthfqoLdxWQhUmR3cEvmRKFqJGymM0ZC2BznvFP4UwPPTg=w240-h480-rw",
+  "logo": "logos/passivebolt-keyshare.webp",
   "company": "PassiveBolt",
   "companyUrl": "https://passivebolt.com",
   "urlWebsite": "https://passivebolt.com",
@@ -29,15 +32,27 @@
     "SD-JWT",
     "VC (1.1)"
   ],
-  "issuanceProtocols": ["ISO 23220-3", "OpenID4VCI"],
+  "issuanceProtocols": [
+    "ISO 23220-3",
+    "OpenID4VCI"
+  ],
   "keyManagements": [],
   "presentationProtocols": [
     "OpenID4VP",
     "Present Proof v2",
     "Present Proof v1.0"
   ],
-  "signingAlgorithms": ["BBS+ with public key binding", "ECDSA", "EdDSA"],
-  "statusManagements": ["Status List 2021"],
-  "trustManagements": ["OpenID Connect Federation", "X.509 certificates"],
+  "signingAlgorithms": [
+    "BBS+ with public key binding",
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [
+    "Status List 2021"
+  ],
+  "trustManagements": [
+    "OpenID Connect Federation",
+    "X.509 certificates"
+  ],
   "$schema": "../viewer/src/assets/schema.json"
 }
