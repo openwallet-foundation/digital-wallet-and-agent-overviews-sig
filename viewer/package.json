@@ -7,13 +7,16 @@
     "prebuild": "npm run merge",
     "start": "ng serve",
     "build": "ng build",
+    "build:ssr": "ng build --configuration ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "validate": "node scripts/validate.mjs",
     "merge": "node scripts/merge-wallets.mjs",
     "lint": "ng lint",
     "newsletter": "node scripts/newsletter.mjs",
-    "serve:ssr:viewer": "node dist/server/server.mjs"
+    "serve:ssr:viewer": "node dist/server/server.mjs",
+    "docker:build": "docker build -t wallet-agent-overview .",
+    "docker:run": "docker run -p 4000:4000 wallet-agent-overview"
   },
   "private": true,
   "dependencies": {

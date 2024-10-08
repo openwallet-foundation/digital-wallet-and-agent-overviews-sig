@@ -20,22 +20,16 @@
             "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/assets"
-            ],
+            "assets": ["src/assets"],
             "styles": [
               "src/theme.scss",
               "src/styles.scss",
               "node_modules/prismjs/themes/prism-okaidia.css"
             ],
-            "scripts": [
-              "node_modules/prismjs/prism.js"
-            ],
+            "scripts": ["node_modules/prismjs/prism.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -58,6 +52,27 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "ssr": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.ssr.ts"
+                }
+              ]
             },
             "development": {
               "optimization": false,
