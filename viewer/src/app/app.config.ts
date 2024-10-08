@@ -3,7 +3,7 @@ import { provideRouter, withRouterConfig } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { LocationStrategy } from '@angular/common';
+import { IMAGE_CONFIG, LocationStrategy } from '@angular/common';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { provideMarkdown } from 'ngx-markdown';
@@ -18,6 +18,14 @@ export const appConfig: ApplicationConfig = {
     provideNativeDateAdapter(),
     provideMarkdown({}),
     { provide: LocationStrategy, useClass: environment.locationStrategy },
+    // instead of ignoring the warning, we should generate the correct image sizes
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        disableImageSizeWarning: true,
+        disableImageLazyLoadWarning: true,
+      },
+    },
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'outline' },

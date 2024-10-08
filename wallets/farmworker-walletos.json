@@ -3,9 +3,7 @@
     "holder"
   ],
   "company": "Entidad",
-  "logo": "https://farmworker-walletos.s3.us-west-1.amazonaws.com/images/app_logo.png",
   "name": "Farmworker WalletOS",
-
   "companyUrl": "https://www.entidad.io/",
   "credentialFormats": [
     "AnonCred"

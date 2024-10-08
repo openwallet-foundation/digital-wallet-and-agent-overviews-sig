@@ -1,11 +1,13 @@
 {
   "name": "hightrust.id",
-  "logo": "https://raw.githubusercontent.com/megical/hightrust.id-assets/main/AppIcons/hitid-app-icon-1024.png",
+  "logo": "logos/hightrust.png",
   "company": "Megical Oy",
   "type": "edge",
   "openSource": false,
   "license": "Commercial software license",
-  "capability": ["holder"],
+  "capability": [
+    "holder"
+  ],
   "credentialProfiles": [],
   "credentialFormats": [],
   "issuanceProtocols": [],

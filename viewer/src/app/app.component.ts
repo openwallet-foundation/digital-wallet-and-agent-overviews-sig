@@ -68,17 +68,22 @@ export class AppComponent implements OnInit {
       .subscribe((information) => {
         if (information) {
           this.titleService.setTitle(information.title);
-          this.metaService.updateTag({
-            name: 'description',
-            content: `Description for ${information.description}`,
-          });
+          if (information.description) {
+            this.metaService.updateTag({
+              name: 'description',
+              content: information.description,
+            });
+            this.metaService.updateTag({
+              property: 'og:description',
+              content: `${information.description}`,
+            });
+          } else {
+            this.metaService.removeTag('name="description"');
+            this.metaService.removeTag('property="og:description"');
+          }
           this.metaService.updateTag({
             property: 'og:title',
             content: information.title,
-          });
-          this.metaService.updateTag({
-            property: 'og:description',
-            content: `Description for ${information.description}`,
           });
           if (information.image) {
             this.metaService.updateTag({

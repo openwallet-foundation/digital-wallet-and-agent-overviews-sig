@@ -1,7 +1,9 @@
 {
-  "capability": ["verifier"],
+  "capability": [
+    "verifier"
+  ],
   "company": "Next ID",
-  "logo": "https://verifier.nextid.com/images/ICEF-logo.png",
+  "logo": "logos/icef.png",
   "name": "ICEF Certificate Verifier",
   "$schema": "../viewer/src/assets/schema.json",
   "type": "cloud",
