@@ -1,20 +1,39 @@
 {
   "name": "DID Controller",
-  "logo": "https://ipfs.ssi.eecc.de/ipfs/QmbpNRxRxfLB1AooHUR1vQLMMGo3gVHakz98kxvJuM6p41?filename=did_controller_logo.png",
+  "logo": "logos/eecc-did-controller.png",
   "company": "European EPC Competence Center GmbH",
   "companyUrl": "https://id.eecc.de/products/did_controller.html",
   "type": "cloud",
   "openSource": false,
-  "capability": ["issuer", "holder"],
+  "capability": [
+    "issuer",
+    "holder"
+  ],
   "portability": false,
   "urlWebsite": "https://id.eecc.de/products/did_controller.html",
   "credentialProfiles": [],
-  "credentialFormats": ["LDP-VC"],
-  "issuanceProtocols": ["OpenID4VCI"],
-  "keyManagements": ["did:key", "did:web"],
-  "presentationProtocols": ["OpenID4VP"],
-  "signingAlgorithms": ["ECDSA", "EdDSA"],
-  "statusManagements": ["Status List 2021"],
-  "trustManagements": ["Verifier knows Issuers"],
+  "credentialFormats": [
+    "LDP-VC"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "did:key",
+    "did:web"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [
+    "Status List 2021"
+  ],
+  "trustManagements": [
+    "Verifier knows Issuers"
+  ],
   "$schema": "../viewer/src/assets/schema.json"
 }

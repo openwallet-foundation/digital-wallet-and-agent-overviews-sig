@@ -1,8 +1,10 @@
 {
-  "capability": ["holder"],
+  "capability": [
+    "holder"
+  ],
   "company": "Northern Block",
   "contact": "info@northernblock.io",
-  "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/22/09/dd220977-1f77-b23c-a624-5d6e1574a159/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/230x0w.webp",
+  "logo": "logos/orbit-edge-wallet.webp",
   "name": "Orbit Edge Wallet",
   "$schema": "../viewer/src/assets/schema.json",
   "type": "edge",
