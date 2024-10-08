@@ -9,6 +9,10 @@ import schema from '../../assets/case-study.schema.json';
   providedIn: 'root',
 })
 export class CaseStudiesService {
+  find(id: string) {
+    return casestudyData.find((caseStudy) => caseStudy.id === id);
+  }
+
   /**
    * Returns the tooltip for the resource
    * @param resourceType

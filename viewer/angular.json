@@ -20,16 +20,27 @@
             "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/assets"],
+            "assets": [
+              "src/assets"
+            ],
             "styles": [
               "src/theme.scss",
               "src/styles.scss",
               "node_modules/prismjs/themes/prism-okaidia.css"
             ],
-            "scripts": ["node_modules/prismjs/prism.js"]
+            "scripts": [
+              "node_modules/prismjs/prism.js"
+            ],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {

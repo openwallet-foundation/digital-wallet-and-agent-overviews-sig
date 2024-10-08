@@ -6,6 +6,7 @@ import { CaseStudiesShowComponent } from './case-studies/case-studies-show/case-
 import { DependenciesListComponent } from './dependencies/dependencies-list/dependencies-list.component';
 import { DependenciesShowComponent } from './dependencies/dependencies-show/dependencies-show.component';
 import { HomeComponent } from './home/home.component';
+import { TitleResolver } from './title-resolver';
 
 export const routes: Routes = [
   {
@@ -18,10 +19,12 @@ export const routes: Routes = [
       {
         path: '',
         component: WalletsListComponent,
+        title: 'Wallets',
       },
       {
         path: ':id',
         component: WalletsShowComponent,
+        title: TitleResolver,
       },
     ],
   },
@@ -31,10 +34,12 @@ export const routes: Routes = [
       {
         path: '',
         component: CaseStudiesListComponent,
+        title: 'Case Studies',
       },
       {
         path: ':id',
         component: CaseStudiesShowComponent,
+        title: TitleResolver,
       },
     ],
   },
@@ -44,10 +49,12 @@ export const routes: Routes = [
       {
         path: '',
         component: DependenciesListComponent,
+        title: 'Dependencies',
       },
       {
         path: ':id',
         component: DependenciesShowComponent,
+        title: TitleResolver,
       },
     ],
   },
