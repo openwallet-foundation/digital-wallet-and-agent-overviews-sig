@@ -1,5 +1,5 @@
-import { HashLocationStrategy } from '@angular/common';
+import { PathLocationStrategy } from '@angular/common';
 
 export const environment = {
-  locationStrategy: HashLocationStrategy,
+  locationStrategy: PathLocationStrategy,
 };

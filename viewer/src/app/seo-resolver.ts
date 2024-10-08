@@ -1,43 +1,58 @@
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-} from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { WalletsService } from './wallets/wallets.service';
 import { CaseStudiesService } from './case-studies/case-studies.service';
 import { DependenciesService } from './dependencies/dependencies.service';
 
+export interface SeoInformation {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
-export class TitleResolver implements Resolve<string> {
+export class SeoResolver implements Resolve<SeoInformation> {
   constructor(
     private walletsService: WalletsService,
     private caseStudiesService: CaseStudiesService,
     private dependenciesService: DependenciesService
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot): Observable<string> {
+  resolve(route: ActivatedRouteSnapshot): Observable<SeoInformation> {
     const id = route.paramMap.get('id');
     const path = route.parent?.routeConfig?.path;
 
     if (path?.startsWith('wallets')) {
       const wallet = this.walletsService.find(id!);
-      return of(wallet ? `Wallet: ${wallet.name}` : 'Wallet Not Found');
+      return of(
+        wallet
+          ? {
+              title: `Wallet: ${wallet.name}`,
+              image: wallet.logo,
+            }
+          : {
+              title: 'Wallet Not Found',
+            }
+      );
     } else if (path?.startsWith('case-studies')) {
       const caseStudy = this.caseStudiesService.find(id!);
       return of(
-        caseStudy ? `Case Study: ${caseStudy.headline}` : 'Case Study Not Found'
+        caseStudy
+          ? { title: `Case Study: ${caseStudy.headline}` }
+          : { title: 'Case Study Not Found' }
       );
     } else if (path?.startsWith('dependencies')) {
       const dependency = this.dependenciesService.find(id!);
       return of(
-        dependency ? `Dependency: ${dependency.name}` : 'Dependency Not Found'
+        dependency
+          ? { title: `Dependency: ${dependency.name}` }
+          : { title: 'Dependency Not Found' }
       );
     }
 
-    return of('Not Found');
+    return of({ title: 'Not Found' });
   }
 }

@@ -120,6 +120,7 @@ export class WalletsService {
   }
 
   find(id: string) {
+    console.log('id', id);
     return this.loadWallets().find((wallet) => wallet.id === id);
   }
 

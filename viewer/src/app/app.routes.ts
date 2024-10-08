@@ -6,12 +6,13 @@ import { CaseStudiesShowComponent } from './case-studies/case-studies-show/case-
 import { DependenciesListComponent } from './dependencies/dependencies-list/dependencies-list.component';
 import { DependenciesShowComponent } from './dependencies/dependencies-show/dependencies-show.component';
 import { HomeComponent } from './home/home.component';
-import { TitleResolver } from './title-resolver';
+import { SeoResolver } from './seo-resolver';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    data: { title: 'Wallet and Agent Overview' },
   },
   {
     path: 'wallets',
@@ -19,12 +20,12 @@ export const routes: Routes = [
       {
         path: '',
         component: WalletsListComponent,
-        title: 'Wallets',
+        data: { title: 'Wallets' },
       },
       {
         path: ':id',
         component: WalletsShowComponent,
-        title: TitleResolver,
+        resolve: { seo: SeoResolver },
       },
     ],
   },
@@ -34,12 +35,12 @@ export const routes: Routes = [
       {
         path: '',
         component: CaseStudiesListComponent,
-        title: 'Case Studies',
+        data: { title: 'Case Studies' },
       },
       {
         path: ':id',
         component: CaseStudiesShowComponent,
-        title: TitleResolver,
+        resolve: { seo: SeoResolver },
       },
     ],
   },
@@ -49,12 +50,12 @@ export const routes: Routes = [
       {
         path: '',
         component: DependenciesListComponent,
-        title: 'Dependencies',
+        data: { title: 'Dependencies' },
       },
       {
         path: ':id',
         component: DependenciesShowComponent,
-        title: TitleResolver,
+        resolve: { seo: SeoResolver },
       },
     ],
   },
