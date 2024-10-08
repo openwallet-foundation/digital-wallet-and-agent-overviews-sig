@@ -5,6 +5,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { DependenciesService } from '../dependencies.service';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 export interface DependencyFilter {
   license?: string;
@@ -19,6 +20,7 @@ export interface DependencyFilter {
     MatSelectModule,
     MatDialogModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatButtonModule,
   ],
   templateUrl: './dependencies-filter.component.html',

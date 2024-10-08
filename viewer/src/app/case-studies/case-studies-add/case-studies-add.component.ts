@@ -26,6 +26,7 @@ import { WalletsService } from '../../wallets/wallets.service';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { Wallet } from '../../wallets/types';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-case-studies-add',
@@ -40,6 +41,7 @@ import { Wallet } from '../../wallets/types';
     MatButtonModule,
     MatAutocompleteModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatSnackBarModule,
     ClipboardModule,
     MatChipsModule,

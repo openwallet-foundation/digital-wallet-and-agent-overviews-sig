@@ -16,6 +16,7 @@ import { FieldResponse } from '../types';
 import { MatDividerModule } from '@angular/material/divider';
 import { ClipboardModule, Clipboard } from '@angular/cdk/clipboard';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-wallets-add',
@@ -24,6 +25,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     MatDialogModule,
     MatButtonModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,

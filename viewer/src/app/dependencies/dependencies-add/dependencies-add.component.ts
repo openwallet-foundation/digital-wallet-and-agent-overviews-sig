@@ -19,6 +19,7 @@ import { ClipboardModule, Clipboard } from '@angular/cdk/clipboard';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { GithubRepo } from '../github-response';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-dependencies-add',
@@ -33,6 +34,7 @@ import { GithubRepo } from '../github-response';
     MatButtonModule,
     MatAutocompleteModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatSnackBarModule,
     ClipboardModule,
   ],

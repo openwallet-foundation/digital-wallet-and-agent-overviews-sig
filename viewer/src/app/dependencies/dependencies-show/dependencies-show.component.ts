@@ -16,6 +16,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Wallet } from '../../wallets/types';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-dependencies-show',
@@ -33,6 +34,7 @@ import { Wallet } from '../../wallets/types';
     MarkdownModule,
     MatTabsModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
   ],
   templateUrl: './dependencies-show.component.html',
   styleUrl: './dependencies-show.component.scss',
@@ -72,7 +74,7 @@ export class DependenciesShowComponent {
   }
 
   /**
-   * Share the wallet
+   * Share the dependency
    * @returns
    */
   share() {
@@ -80,10 +82,14 @@ export class DependenciesShowComponent {
       this.snackBar.open('Your browser does not support sharing');
       return;
     }
-    navigator.share({
-      title: this.dependency?.name,
-      text: this.dependency?.name,
-      url: window.location.href,
-    });
+    navigator
+      .share({
+        title: this.dependency?.name,
+        text: this.dependency?.name,
+        url: window.location.href,
+      })
+      .catch(() => {
+        // do nothing, just catch the error
+      });
   }
 }

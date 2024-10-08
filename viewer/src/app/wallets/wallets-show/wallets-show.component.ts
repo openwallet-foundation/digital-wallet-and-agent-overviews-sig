@@ -19,6 +19,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { filter, Subscription } from 'rxjs';
 import { CaseStudiesListEmbeddedComponent } from '../../case-studies/case-studies-list-embedded/case-studies-list-embedded.component';
 import { DependencyListEmbeddedComponent } from '../../dependencies/dependencies-list-embedded/dependencies-list-embedded.component';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-wallets-show',
@@ -29,6 +30,7 @@ import { DependencyListEmbeddedComponent } from '../../dependencies/dependencies
     MatSnackBarModule,
     MatButtonModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatIconModule,
     MatListModule,
     MatTooltipModule,

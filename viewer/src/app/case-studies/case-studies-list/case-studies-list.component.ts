@@ -13,6 +13,7 @@ import { CaseStudy } from '../types';
 import { CaseStudiesListEmbeddedComponent } from '../case-studies-list-embedded/case-studies-list-embedded.component';
 import { MatDialog } from '@angular/material/dialog';
 import { CaseStudiesAddComponent } from '../case-studies-add/case-studies-add.component';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-case-studies-list',
@@ -26,6 +27,7 @@ import { CaseStudiesAddComponent } from '../case-studies-add/case-studies-add.co
     MatListModule,
     MatButtonModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     CaseStudiesListEmbeddedComponent,
   ],
   templateUrl: './case-studies-list.component.html',
