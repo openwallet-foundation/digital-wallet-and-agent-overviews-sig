@@ -4,46 +4,35 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
       "urlWebsite": "https://endorser.ch/"
     },
-    "farmworker-walletos": {
-      "logo": "https://farmworker-walletos.s3.us-west-1.amazonaws.com/images/app_logo.png"
-    },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/"
     },
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919"
     },
-    "lissi-eudi-wallet-connector": {
-      "urlWebApp": "https://demo.lissi.id/"
-    },
-    "lissi-wallet": {
-      "urlAppStore": "https://apps.apple.com/de/app/lissi-wallet/id1529848685"
-    },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
-    },
-    "preparese-mobile": {
-      "logo": "https://esencial.s3.us-west-1.amazonaws.com/images/ecosystem/Preparese_Logo-Green-Round.svg",
-      "companyUrl": "https://ufwfoundation.org/",
-      "urlWebsite": "https://www.preparese.info/"
     },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "preparese-mobile": {
+      "companyUrl": "https://ufwfoundation.org/",
+      "urlWebsite": "https://www.preparese.info/"
     },
     "selfkey-wallet": {
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/",
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "logo": "https://selfkey.org/wp-content/uploads/2023/03/image-1.png"
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
@@ -54,6 +43,9 @@
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+    },
+    "passivebolt-keyshare": {
+      "companyUrl": "https://passivebolt.com"
     }
   }
 }
