@@ -9,6 +9,6 @@
   "openSource": false,
   "$schema": "../viewer/src/assets/schema.json",
   "type": "cloud",
-  "urlWebApp": "https://demo.lissi.id/",
+  "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
   "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
 }
