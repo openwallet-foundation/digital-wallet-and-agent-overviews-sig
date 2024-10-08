@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { WalletsService } from '../../wallets/wallets.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-case-studies-show',
@@ -20,6 +21,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     CommonModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatDividerModule,
     MatChipsModule,
     RouterModule,

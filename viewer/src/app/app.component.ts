@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { InfoComponent } from './info/info.component';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
@@ -19,6 +20,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatToolbarModule,
     MatButtonModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatMenuModule,
     MatDividerModule,
     MatIconModule,

@@ -16,6 +16,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Wallet } from '../../wallets/types';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-dependencies-show',
@@ -33,6 +34,7 @@ import { Wallet } from '../../wallets/types';
     MarkdownModule,
     MatTabsModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
   ],
   templateUrl: './dependencies-show.component.html',
   styleUrl: './dependencies-show.component.scss',
