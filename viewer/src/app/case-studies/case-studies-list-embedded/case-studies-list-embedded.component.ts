@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
   selector: 'app-case-studies-list-embedded',
@@ -17,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     MatDividerModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatButtonModule,
   ],
   templateUrl: './case-studies-list-embedded.component.html',

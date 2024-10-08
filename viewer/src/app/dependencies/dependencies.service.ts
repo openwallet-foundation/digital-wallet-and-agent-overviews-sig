@@ -18,6 +18,10 @@ export class DependenciesService {
     return dependencyData;
   }
 
+  find(id: string) {
+    return dependencyData.find((dependency) => dependency.id === id);
+  }
+
   /**
    * Returns all licenses that are used by the dependencies
    */

@@ -8,6 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { WalletsService } from '../wallets.service';
 import { FieldResponse } from '../types';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 export interface WalletFilter {
   type?: 'cloud' | 'edge';
@@ -31,6 +32,7 @@ export interface WalletFilter {
     MatDialogModule,
     MatButtonModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,

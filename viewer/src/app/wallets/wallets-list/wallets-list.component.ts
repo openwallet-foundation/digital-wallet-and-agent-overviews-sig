@@ -26,6 +26,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { DependenciesService } from '../../dependencies/dependencies.service';
 import { CaseStudiesService } from '../../case-studies/case-studies.service';
 import { WalletsAddComponent } from '../wallets-add/wallets-add.component';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 type Colums =
   | 'name'
@@ -52,6 +53,7 @@ type Colums =
     MatTooltipModule,
     MatSortModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatDialogModule,
     MatChipsModule,
     NgOptimizedImage,

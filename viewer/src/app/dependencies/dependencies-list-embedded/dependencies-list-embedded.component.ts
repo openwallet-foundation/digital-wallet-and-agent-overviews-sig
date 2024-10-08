@@ -24,6 +24,7 @@ import {
   DependencyFilter,
 } from '../dependencies-filter/dependencies-filter.component';
 import { DependenciesAddComponent } from '../dependencies-add/dependencies-add.component';
+import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 type DependenciesColumn = keyof typeof schema.properties | 'wallets';
 
@@ -40,6 +41,7 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
     MatTooltipModule,
     MatSortModule,
     FlexLayoutModule,
+    FlexLayoutServerModule,
     MatDialogModule,
     MatChipsModule,
     NgOptimizedImage,
