@@ -1,0 +1,43 @@
+{
+  "name": "Preparese Mobile",
+  "logo": "https://esencial.s3.us-west-1.amazonaws.com/images/ecosystem/Preparese_Logo-Green-Round.svg",
+  "company": "UFW Foundation",
+  "CompanyUrl": "https://ufwfoundation.org/",
+  "type": "edge",
+  "openSource": false,
+  "license": "Proprietary",
+  "capability": [
+    "holder"
+  ],
+  "portability": "no",
+  "linkToApp": "https://www.preparese.info/",
+  "credentialProfiles": [
+    "AnonCreds with did:cheqd",
+    "AnonCreds with did:indy"
+  ],
+  "credentialFormats": [
+    "AnonCred"
+  ],
+  "issuanceProtocols": [
+    "Issue Credential v2"
+  ],
+  "keyManagements": [
+    "did:cheqd",
+    "did:indy",
+    "did:peer",
+    "did:web",
+    "link secrets"
+  ],
+  "presentationProtocols": [
+    "Present Proof v2"
+  ],
+  "signingAlgorithms": [
+    "CL",
+    "EdDSA"
+  ],
+  "statusManagements": [],
+  "trustManagements": [
+    "Verifier knows Issuers"
+  ],
+  "$schema": "../schema.json"
+}
