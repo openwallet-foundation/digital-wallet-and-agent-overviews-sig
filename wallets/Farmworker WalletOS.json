@@ -1,6 +1,6 @@
 {
   "name": "Farmworker WalletOS",
-  "logo": "https://farmworker-walletos.s3.us-west-1.amazonaws.com/images/app_logo.png",
+  "logo": "https://cdn.prod.website-files.com/6520979d785cc136404a270d/65237d6a3505e25d76ed58c7_wallet-p-1080.png",
   "company": "Entidad",
   "CompanyUrl": "https://www.entidad.io/",
   "type": "edge",
@@ -12,7 +12,7 @@
   "portability": "no",
   "linkToApp": "https://www.farmworkerwalletos.community/",
   "credentialProfiles": [
-    "AnonCreds with did:cheqd",
+    "AnonCreds with did:web",
     "AnonCreds with did:indy"
   ],
   "credentialFormats": [
@@ -22,7 +22,6 @@
     "Issue Credential v2"
   ],
   "keyManagements": [
-    "did:cheqd",
     "did:indy",
     "did:peer",
     "did:web",
