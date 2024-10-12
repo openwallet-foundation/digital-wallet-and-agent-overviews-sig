@@ -41,7 +41,10 @@ export class SeoResolver implements Resolve<SeoInformation> {
       const caseStudy = this.caseStudiesService.find(id!);
       return of(
         caseStudy
-          ? { title: `Case Study: ${caseStudy.headline}` }
+          ? {
+              title: `Case Study: ${caseStudy.headline}`,
+              image: caseStudy.imageUrl,
+            }
           : { title: 'Case Study Not Found' }
       );
     } else if (path?.startsWith('dependencies')) {
