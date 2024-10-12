@@ -1,6 +1,5 @@
 import { CaseStudy } from './types';
 
-//an example of a case study
 export const casestudyData: CaseStudy[] = [
   {
     headline:

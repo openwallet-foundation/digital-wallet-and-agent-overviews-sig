@@ -30,7 +30,8 @@ export class SeoResolver implements Resolve<SeoInformation> {
       return of(
         wallet
           ? {
-              title: `Wallet: ${wallet.name}`,
+              title: wallet.name,
+              description: `An application provided by ${wallet.company}`,
               image: wallet.logo,
             }
           : {
@@ -42,7 +43,11 @@ export class SeoResolver implements Resolve<SeoInformation> {
       return of(
         caseStudy
           ? {
-              title: `Case Study: ${caseStudy.headline}`,
+              title: caseStudy.headline,
+              description:
+                caseStudy.summary.length > 200
+                  ? `${caseStudy.summary.slice(0, 197)}...`
+                  : caseStudy.summary,
               image: caseStudy.imageUrl,
             }
           : { title: 'Case Study Not Found' }
@@ -51,7 +56,7 @@ export class SeoResolver implements Resolve<SeoInformation> {
       const dependency = this.dependenciesService.find(id!);
       return of(
         dependency
-          ? { title: `Dependency: ${dependency.name}` }
+          ? { title: dependency.name, description: dependency.description }
           : { title: 'Dependency Not Found' }
       );
     }

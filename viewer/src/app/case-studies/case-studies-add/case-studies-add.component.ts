@@ -77,8 +77,14 @@ export class CaseStudiesAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      headline: new FormControl('', Validators.required),
-      summary: new FormControl('', Validators.required),
+      headline: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(60),
+      ]),
+      summary: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(1000),
+      ]),
       createdAt: new FormControl('', Validators.required),
       imageUrl: new FormControl(''),
       url: new FormControl('', Validators.required),
