@@ -198,6 +198,24 @@ export class CaseStudiesAddComponent implements OnInit {
     this.snackBar.open('Copied to clipboard', 'Dismiss', { duration: 3000 });
   }
 
+  downloadFile() {
+    const json = this.getJSON();
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    const name = this.form
+      .get('headline')
+      ?.value.split(' ')
+      .join('-')
+      .toLowerCase();
+    a.download = `${name}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  }
+
   addDemoEntry() {
     const caseStudy: Omit<CaseStudy, 'id'> = {
       headline:

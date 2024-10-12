@@ -212,6 +212,9 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button (click)="addDemoEntry()">Add demo values</button>
+  <button mat-button [disabled]="form.invalid" (click)="downloadFile()">
+    Download file
+  </button>
   <button mat-button [disabled]="form.invalid" (click)="copy()">
     Copy to clipboard
   </button></mat-dialog-actions
