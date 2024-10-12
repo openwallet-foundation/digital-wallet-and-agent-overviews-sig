@@ -77,7 +77,7 @@
     "headline",
     "summary",
     "imageUrl",
-    "state",
+    "stage",
     "url",
     "hashTags",
     "createdAt"
