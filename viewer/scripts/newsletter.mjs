@@ -29,9 +29,14 @@ if (!fromDate || !untilDate) {
 }
 
 // Get the list of files added in the specified date range
-const caseStudyFiles = execSync(`git log --diff-filter=A --since="${fromDate}" --until="${untilDate}" --name-only --pretty=format:`, { encoding: 'utf8' })
+let caseStudyFiles = execSync(`git log --diff-filter=A --since="${fromDate}" --until="${untilDate}" --name-only --pretty=format:`, { encoding: 'utf8' })
   .split('\n')
   .filter(file => file.startsWith('case-studies/') && file.endsWith('.json'));
+
+if(process.env.LOCAL) {
+  //use all files that are included in the folder
+  caseStudyFiles = fs.readdirSync('../case-studies').map(file => `case-studies/${file}`);
+}
 
 console.log(`Found ${caseStudyFiles.length} new case ${caseStudyFiles.length === 1 ? 'study' : 'studies'}: ${caseStudyFiles.join(', ')}`);
 
@@ -53,10 +58,12 @@ const caseStudies = caseStudyFiles.map(caseStudy => {
   return content;
 });
 
-const currentMonthName = new Date().toLocaleString('default', { month: 'long' });
+const currentDate = new Date();
+currentDate.setMonth(currentDate.getMonth() - 1);
+const currentMonthName = currentDate.toLocaleString('default', { month: 'long' });
 const templateSource = fs.readFileSync('./scripts/mail-template.hbs', 'utf8');
-const subject = `Monthly Wallet Case Study Newsletter - ${currentMonthName}`;
-const preHeader = `We got ${caseStudies.length} new case ${caseStudies.length === 1 ? 'study' : 'studies'}`;
+const subject = `Monthly Wallet and Agent Case Study Newsletter - ${currentMonthName}`;
+const preHeader = `${caseStudies.length} new case ${caseStudies.length === 1 ? 'study' : 'studies'} for ${currentMonthName}`;
 
 const template = handlebars.compile(templateSource);
 const html = template({ caseStudies, lastMonth: currentMonthName, subject, preHeader, walletCounter });

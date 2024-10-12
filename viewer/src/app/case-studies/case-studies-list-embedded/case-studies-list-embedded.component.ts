@@ -8,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-case-studies-list-embedded',
@@ -20,6 +21,7 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
     FlexLayoutModule,
     FlexLayoutServerModule,
     MatButtonModule,
+    MatCardModule,
   ],
   templateUrl: './case-studies-list-embedded.component.html',
   styleUrl: './case-studies-list-embedded.component.scss',

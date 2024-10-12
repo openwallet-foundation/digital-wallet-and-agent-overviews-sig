@@ -84,7 +84,11 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
     this.loadDependencies();
     //subscribe to the fragment of the route, if it changes, update the filter and load the wallets
     this.route.fragment.subscribe(async (fragment) => {
-      this.filter = JSON.parse(fragment ?? '{}');
+      if (fragment === 'add') {
+        this.addDependency();
+      } else {
+        this.filter = JSON.parse(fragment ?? '{}');
+      }
       this.loadDependencies();
     });
   }

@@ -27,6 +27,7 @@ import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { Wallet } from '../../wallets/types';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
+import { CaseStudy, CaseStudySage } from '../types';
 
 @Component({
   selector: 'app-case-studies-add',
@@ -65,6 +66,8 @@ export class CaseStudiesAddComponent implements OnInit {
 
   references: Wallet[] = [];
 
+  caseStudiesStages: CaseStudySage[] = ['poc', 'production', 'retired'];
+
   constructor(
     public caseStudiesService: CaseStudiesService,
     private clipboard: Clipboard,
@@ -79,6 +82,7 @@ export class CaseStudiesAddComponent implements OnInit {
       createdAt: new FormControl('', Validators.required),
       imageUrl: new FormControl(''),
       url: new FormControl('', Validators.required),
+      stage: new FormControl('', Validators.required),
       hashTags: new FormControl([]),
       // could also be implemented as autocomplete chips, but
       references: new FormControl('', Validators.required),
@@ -192,5 +196,28 @@ export class CaseStudiesAddComponent implements OnInit {
   copy() {
     this.clipboard.copy(this.getJSON());
     this.snackBar.open('Copied to clipboard', 'Dismiss', { duration: 3000 });
+  }
+
+  addDemoEntry() {
+    const caseStudy: Omit<CaseStudy, 'id'> = {
+      headline:
+        'Spherity and RCS Global introduce the first Catena-X Certified Battery Passport Solution',
+      summary:
+        'Spherity and RCS Global have launched the first Catena-X certified Battery Passport Solution called Claritas. This solution enhances transparency in the battery supply chain, ensuring compliance with global sustainability and ethical sourcing standards. Integrating seamlessly with the Catena-X ecosystem, it facilitates data exchange and lifecycle management, supporting circular economy goals. The passport helps companies meet EU regulations, reduce costs, and improve sustainability reporting, focusing on repair, recycling, and carbon footprint management. This innovation marks a significant step toward responsible battery production and supply chain accountability.',
+      createdAt: '2024-05-15',
+      stage: 'production',
+      imageUrl:
+        'https://cdn.prod.website-files.com/66a91e51440a74950f23fc8f/66c6c510b1a8b8421be7f9b3_Spherity%20x%20RCS%20Global-Catena-x%20certifed%201%20updated.jpg',
+      url: 'https://www.spherity.com/newsroom/catena-x-certified-battery-passport-solution',
+      hashTags: ['Battery Passport', 'CatenaX', 'Sustanability'],
+      references: ['spherity-wallet'],
+      stakeholders: [
+        {
+          name: 'RCS Global',
+        },
+      ],
+      $schema: '../viewer/src/assets/case-study.schema.json',
+    };
+    this.form.patchValue(caseStudy);
   }
 }
