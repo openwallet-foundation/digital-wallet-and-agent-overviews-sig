@@ -22,7 +22,7 @@
     "stage": {
       "type": "string",
       "description": "The stage of the case study",
-      "enum": ["poc", "production"]
+      "enum": ["poc", "production", "retired"]
     },
     "headline": {
       "type": "string",

@@ -61,6 +61,11 @@ export class CaseStudiesListComponent implements OnInit, OnDestroy {
         this.applyFilter();
       }
     });
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment === 'add') {
+        this.addCaseStudy();
+      }
+    });
     this.caseStudies = this.caseStudiesService.getCaseStudies();
     this.applyFilter();
   }

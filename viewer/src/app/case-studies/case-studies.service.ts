@@ -24,18 +24,25 @@ export class CaseStudiesService {
 
   getByWallet(wallet: Wallet) {
     return casestudyData.filter((caseStudy: CaseStudy) =>
-      caseStudy.references?.includes(wallet.name)
+      caseStudy.references?.includes(wallet.id)
     );
   }
 
   getWallets(caseStudy: CaseStudy) {
     return (caseStudy.references as string[]).map(
-      (name) => walletData.find((wallet) => wallet.name === name) as Wallet
+      (id) => walletData.find((wallet) => wallet.id === id) as Wallet
     );
   }
 
+  /**
+   * Returns all case studies but sorted by the date they were created
+   * @returns
+   */
   getCaseStudies() {
-    return casestudyData;
+    return casestudyData.sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
   }
 
   getCaseStudy(id: string) {

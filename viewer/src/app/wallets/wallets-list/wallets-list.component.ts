@@ -1,8 +1,10 @@
 import {
   AfterViewInit,
   Component,
+  Inject,
   Input,
   OnInit,
+  PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,7 +17,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { Wallet } from '../types';
 import { WalletsService } from '../wallets.service';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import {
+  CommonModule,
+  isPlatformBrowser,
+  NgOptimizedImage,
+} from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import {
@@ -91,7 +97,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   //columns to be displayed in the table, not implemeneted yet
   displayedColumns: string[] = [];
   filter?: WalletFilter;
-  mobile = false;
+  mobile = true;
 
   constructor(
     public walletsService: WalletsService,
@@ -100,11 +106,15 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     private router: Router,
     private breakpointObserver: BreakpointObserver,
     public dependenciesService: DependenciesService,
-    public caseStudiesService: CaseStudiesService
+    public caseStudiesService: CaseStudiesService,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {
-    this.breakpointObserver
-      .observe([Breakpoints.XSmall])
-      .subscribe((res) => (this.mobile = res.matches));
+    const isBrowser = isPlatformBrowser(this.platformId);
+    if (isBrowser) {
+      this.breakpointObserver
+        .observe([Breakpoints.XSmall])
+        .subscribe((res) => (this.mobile = res.matches));
+    }
   }
 
   /**
@@ -113,7 +123,11 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   async ngOnInit(): Promise<void> {
     //subscribe to the fragment of the route, if it changes, update the filter and load the wallets
     this.route.fragment.subscribe(async (fragment) => {
-      this.filter = JSON.parse(fragment ?? '{}');
+      if (fragment === 'add') {
+        this.addWallet();
+      } else {
+        this.filter = JSON.parse(fragment ?? '{}');
+      }
       this.loadWallets();
     });
     this.walletsService.resources.forEach((res) => this.columns.push(res.id));
@@ -210,7 +224,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
    * Load the filtered wallets
    */
   private async loadWallets() {
-    await this.walletsService.getErrors();
+    this.walletsService.getErrors();
     let values = this.wallets ?? this.walletsService.loadWallets();
     if (this.filter) {
       if (this.filter.type) {

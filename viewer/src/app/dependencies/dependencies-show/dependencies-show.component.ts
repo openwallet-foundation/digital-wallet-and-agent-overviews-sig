@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { dependencyData } from '../dependencies-data';
 import { Dependency } from '../types';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DependenciesService } from '../dependencies.service';
@@ -17,6 +17,7 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Wallet } from '../../wallets/types';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-dependencies-show',
@@ -44,13 +45,22 @@ export class DependenciesShowComponent {
   github?: GithubRepo;
   readme?: string;
   wallets: Wallet[] = [];
+  mobile = true;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private snackBar: MatSnackBar,
-    public dependenciesService: DependenciesService
+    public dependenciesService: DependenciesService,
+    breakpointObserver: BreakpointObserver,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {
+    const isBrowser = isPlatformBrowser(this.platformId);
+    if (isBrowser) {
+      breakpointObserver
+        .observe([Breakpoints.XSmall])
+        .subscribe((result) => (this.mobile = result.matches));
+    }
     const id = this.route.snapshot.params['id'] as string;
     const dependency = dependencyData.find((d) => d.id === id);
     if (!dependency) {
@@ -69,7 +79,13 @@ export class DependenciesShowComponent {
           this.dependenciesService
             .fetchReadme(this.github as GithubRepo)
             .then((readme) => (this.readme = readme))
-        );
+        )
+        .catch(() => {
+          // when there was an error fetching the readme, like rate limiting, show the link to click manually
+          this.readme = `<a href="${
+            (this.dependency as Dependency).url
+          }" target="_blank">README</a>`;
+        });
     }
   }
 

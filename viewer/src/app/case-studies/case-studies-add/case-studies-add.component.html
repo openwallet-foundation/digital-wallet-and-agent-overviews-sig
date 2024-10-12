@@ -27,7 +27,7 @@
     </li>
     <li>
       Test the changes: run
-      <code>npm install && cd viewer && npm run build && npm run start</code>
+      <code>npm install && cd viewer && npm start</code>
       and see the updated overview at <code>http://localhost:4200/</code>.
     </li>
     <li>
@@ -104,10 +104,19 @@
       <mat-hint>{{ caseStudiesService.getTooltip('imageUrl') }}</mat-hint>
     </mat-form-field>
     <mat-form-field>
+      <mat-label>Stage</mat-label>
+      <mat-select formControlName="stage">
+        <mat-option value="poc">Proof of Concept</mat-option>
+        <mat-option value="production">Production</mat-option>
+        <mat-option value="retired">Retired</mat-option>
+      </mat-select>
+      <mat-hint>{{ caseStudiesService.getTooltip('stage') }}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
       <mat-label>Hashtags</mat-label>
       <mat-chip-grid
         #chipGrid
-        aria-label="Fruit selection"
+        aria-label="Hashtag selection"
         formControlName="hashTags"
       >
         @for (hashTag of getHashTags(); track $index) {
@@ -202,6 +211,10 @@
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
+  <button mat-button (click)="addDemoEntry()">Add demo values</button>
+  <button mat-button [disabled]="form.invalid" (click)="downloadFile()">
+    Download file
+  </button>
   <button mat-button [disabled]="form.invalid" (click)="copy()">
     Copy to clipboard
   </button></mat-dialog-actions
