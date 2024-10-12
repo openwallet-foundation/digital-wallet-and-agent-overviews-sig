@@ -60,6 +60,9 @@
       <mat-label>Headline</mat-label>
       <input matInput title="Headline" formControlName="headline" />
       <mat-hint>{{ caseStudiesService.getTooltip('headline') }}</mat-hint>
+      <mat-hint align="end"
+        >{{ form.get('headline')?.value.length }}/60</mat-hint
+      >
       @if(form.get('headline')?.hasError('required')) {
       <mat-error>Headline is required </mat-error>
       }

@@ -26,11 +26,13 @@
     },
     "headline": {
       "type": "string",
-      "description": "Name of the case study"
+      "description": "Name of the case study, max 60 chars",
+      "maxLength": 60
     },
     "summary": {
       "type": "string",
-      "description": "Short summary of the case study"
+      "description": "Short summary of the case study, max 1000 chars",
+      "maxLength": 1000
     },
     "imageUrl": {
       "type": "string",
@@ -75,6 +77,7 @@
     "headline",
     "summary",
     "imageUrl",
+    "state",
     "url",
     "hashTags",
     "createdAt"
