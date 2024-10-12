@@ -5,7 +5,12 @@
       <mat-card-title>{{ caseStudy.headline }}</mat-card-title>
       <mat-card-subtitle>by {{ getCompanies(caseStudy) }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="caseStudy.imageUrl" />
+    <img
+      mat-card-image
+      [src]="caseStudy.imageUrl"
+      alt=""
+      *ngIf="caseStudy.imageUrl"
+    />
     <mat-card-content>
       <mat-chip-set>
         @for(wallet of caseStudiesService.getWallets(caseStudy); track wallet) {
