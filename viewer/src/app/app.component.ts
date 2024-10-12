@@ -88,7 +88,9 @@ export class AppComponent implements OnInit {
           if (information.image) {
             this.metaService.updateTag({
               property: 'og:image',
-              content: information.image,
+              content: information.image.startsWith('logos')
+                ? `https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/assets/${information.image}`
+                : information.image,
             });
           } else {
             this.metaService.removeTag('property="og:image"');
