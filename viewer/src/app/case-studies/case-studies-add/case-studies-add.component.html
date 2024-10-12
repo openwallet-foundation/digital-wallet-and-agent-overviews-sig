@@ -71,6 +71,9 @@
       <mat-label>Summary</mat-label>
       <input matInput title="Summary" formControlName="summary" />
       <mat-hint>{{ caseStudiesService.getTooltip('summary') }}</mat-hint>
+      <mat-hint align="end"
+        >{{ form.get('summary')?.value.length }}/1000</mat-hint
+      >
       @if(form.get('summary')?.hasError('required')) {
       <mat-error>Summary is required </mat-error>
       }
