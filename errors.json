@@ -18,20 +18,20 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
+    "preparese-mobile": {
+      "companyUrl": "https://ufwfoundation.org/",
+      "urlWebsite": "https://www.preparese.info/"
+    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/",
-      "companyUrl": "https://ufwfoundation.org/"
+    "selfkey-wallet": {
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
+      "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
-    "selfkey-wallet": {
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
-      "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
