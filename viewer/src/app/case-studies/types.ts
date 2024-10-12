@@ -8,6 +8,7 @@ export interface Stakeholder {
   contact?: string;
 }
 
+export type CaseStudySage = 'poc' | 'production' | 'retired';
 export interface CaseStudy {
   // unique identifier based on the filename
   id: string;
@@ -21,10 +22,14 @@ export interface CaseStudy {
   imageUrl?: string;
   // url to the case study
   url: string;
+  // stage of the case study
+  stage: CaseStudySage;
   // list of hash tags that are relevant for the case study
   hashTags?: string[];
   // list of wallets and agents that are mentioned in the case study
   references?: string[];
   // a list of stakeholders that are mentioned in the case study
   stakeholders?: Stakeholder[];
+  // reference to a schema
+  $schema?: string;
 }

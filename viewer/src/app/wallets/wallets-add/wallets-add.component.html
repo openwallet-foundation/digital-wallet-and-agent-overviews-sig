@@ -20,18 +20,28 @@
       <a
         href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/fork"
         target="_blank"
-        >Fork the Github repo</a> to your own account and add the content of the file to the
+        >Fork the Github repo</a
+      >
+      to your own account and add the content of the file to the
       <code>wallets</code> folder. The name should be unique like
       <code>yourCompany-walletName.json</code>.
     </li>
-    <li>Test the changes: run <code>npm install && cd viewer && npm run build && npm run start</code>
-      and see the updated overview at <code>http://localhost:4200/</code>.</li>
-    <li>Create a new branch, commit the changes (using the <code>-s</code> flag to sign off your changes)
-      and start a pull request.</li>
+    <li>
+      Test the changes: run
+      <code>npm install && cd viewer && npm start</code>
+      and see the updated overview at <code>http://localhost:4200/</code>.
+    </li>
+    <li>
+      Create a new branch, commit the changes (using the <code>-s</code> flag to
+      sign off your changes) and start a pull request.
+    </li>
     <li>After a positive review we will accept your request.</li>
     <li>
-      If you need help or if you want to influence in the overview, please see OpenWallet Foundation's
-      <a href="https://openwallet.foundation/participate/" target="_blank">participation instructions</a>.
+      If you need help or if you want to influence in the overview, please see
+      OpenWallet Foundation's
+      <a href="https://openwallet.foundation/participate/" target="_blank"
+        >participation instructions</a
+      >.
     </li>
   </ul>
 
@@ -96,12 +106,20 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>AppStore URL</mat-label>
-      <input matInput placeholder="https://apple.co/..." formControlName="urlAppStore" />
+      <input
+        matInput
+        placeholder="https://apple.co/..."
+        formControlName="urlAppStore"
+      />
       <mat-hint>{{ walletsService.getTooltip('urlAppStore') }}</mat-hint>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Google Play Store URL</mat-label>
-      <input matInput placeholder="https://play.google.com/store/apps/..." formControlName="urlGooglePlayStore" />
+      <input
+        matInput
+        placeholder="https://play.google.com/store/apps/..."
+        formControlName="urlGooglePlayStore"
+      />
       <mat-hint>{{ walletsService.getTooltip('urlGooglePlayStore') }}</mat-hint>
     </mat-form-field>
     <mat-form-field>
@@ -124,7 +142,11 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Source code</mat-label>
-      <input matInput placeholder="https://github.com/..." formControlName="downloadSource" />
+      <input
+        matInput
+        placeholder="https://github.com/..."
+        formControlName="downloadSource"
+      />
       <mat-hint>{{ walletsService.getTooltip('downloadSource') }}</mat-hint>
     </mat-form-field>
     <mat-form-field>
@@ -161,6 +183,9 @@
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
+  <button mat-button [disabled]="form.invalid" (click)="downloadFile()">
+    Download file
+  </button>
   <button mat-button [disabled]="form.invalid" (click)="copy()">
     Copy to clipboard
   </button></mat-dialog-actions

@@ -4,6 +4,7 @@
     margin: 0;
   }
   padding: 20px;
+  position: relative;
 }
 
 .content {
@@ -13,8 +14,18 @@
   line-height: 2;
 }
 
+#logo {
+  position: absolute;
+  left: 50%;
+  margin-left: 150px;
+  filter: grayscale(100%) opacity(0.3);
+}
+
 @media (max-width: 600px) {
   .header, .content {
     text-align: center; /* Center text for small screens */
+  }
+  #logo {
+    display: none;
   }
 }

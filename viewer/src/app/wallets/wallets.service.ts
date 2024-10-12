@@ -178,7 +178,7 @@ export class WalletsService {
    * @param id name of the wallet
    */
   invalidEntry(id: string) {
-    if (!this.errors[id]) return '';
+    if (!this.errors || !this.errors[id]) return '';
     return Object.keys(this.errors[id])
       .map((key) => `${key}: ${this.errors[id][key]}`)
       .join(', ');
