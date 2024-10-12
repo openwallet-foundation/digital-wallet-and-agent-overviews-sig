@@ -22,13 +22,16 @@
       "urlWebsite": "https://orgwallet.de/en/"
     },
     "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/",
-      "urlWebsite": "https://www.preparese.info/"
+      "urlWebsite": "https://www.preparese.info/",
+      "companyUrl": "https://ufwfoundation.org/"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "selfkey-wallet": {
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
-      "urlWebsite": "https://selfkey.org/selfkey-wallet/",
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
+      "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
@@ -45,9 +48,6 @@
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
-    },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     }
   }
 }
