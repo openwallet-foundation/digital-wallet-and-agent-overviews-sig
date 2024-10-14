@@ -8,7 +8,16 @@ on:
       email:
         description: 'Email address to send the newsletter to'
         required: true
-
+      all:
+        description: 'Uses all entries in the database'
+        required: false
+        type: boolean
+        default: false
+      instance:
+        description: 'hosted instance to use'
+        required: false
+        type: string
+        default: 'https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/#'
 jobs:
   generate-newsletter:
     runs-on: ubuntu-latest
@@ -41,7 +50,9 @@ jobs:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_RECIPIENT: ${{ github.event.inputs.email }}
           NODE_ENV: ${{ vars.NODE_ENV }}
-          EMAIL_STORE: true          
+          EMAIL_STORE: true
+          LOCAL: ${{ github.event.inputs.all }}
+          LOCATION: ${{ github.event.inputs.instance }}     
       
       - name: Upload newsletter artifact
         uses: actions/upload-artifact@v4
