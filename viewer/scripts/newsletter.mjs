@@ -55,6 +55,7 @@ const caseStudies = caseStudyFiles.map(caseStudy => {
     companyUrl: wallet.companyUrl ?? wallet.urlWebsite,
   }))
   content.url = `${url}/case-studies/${encodeURIComponent(id)}`;
+  content.hashTags = content.hashTags.map(tag => ({url: `${url}/case-studies?tag=${encodeURIComponent(tag)}`, value: tag}));
   return content;
 });
 

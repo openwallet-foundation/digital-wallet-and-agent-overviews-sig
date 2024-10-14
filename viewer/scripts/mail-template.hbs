@@ -158,7 +158,7 @@
         .hash-tags {
             margin-top: 10px;
         }
-        .hash-tags span {
+        .hash-tags a {
             background-color: #eeeeee;
             border-radius: 4px;
             padding: 5px 10px;
@@ -212,11 +212,12 @@
     </h3>
     <p>{{this.summary}}</p>
     <br>
-    <a href="{{this.url}}" target="_blank">Read More</a>
+    <a href="{{this.url}}" target="_blank"><b>Read More</b></a>
+    <br>
     <br>
     <div class="hash-tags">
         {{#each this.hashTags}}
-        <span>#{{this}}</span>
+        <a href="{{this.url}}">#{{this.value}}</span>
         {{/each}}
     </div>
 </div>

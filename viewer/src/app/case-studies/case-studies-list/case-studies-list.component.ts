@@ -14,6 +14,7 @@ import { CaseStudiesListEmbeddedComponent } from '../case-studies-list-embedded/
 import { MatDialog } from '@angular/material/dialog';
 import { CaseStudiesAddComponent } from '../case-studies-add/case-studies-add.component';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-case-studies-list',
@@ -46,7 +47,8 @@ export class CaseStudiesListComponent implements OnInit, OnDestroy {
     public caseStudiesService: CaseStudiesService,
     private route: ActivatedRoute,
     private router: Router,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private snackbar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -59,6 +61,20 @@ export class CaseStudiesListComponent implements OnInit, OnDestroy {
           caseStudy.hashTags?.includes(this.filter as string)
         );
         this.applyFilter();
+        if (this.caseStudies.length === 0) {
+          const found = this.caseStudiesService
+            .getTags()
+            .find((tag) => tag === this.filter);
+          if (!found) {
+            this.snackbar
+              .open(
+                `No case studies found for tag: ${this.filter}`,
+                'Reset filter'
+              )
+              .afterDismissed()
+              .subscribe(() => this.router.navigate([]));
+          }
+        }
       }
     });
     this.route.fragment.subscribe((fragment) => {
