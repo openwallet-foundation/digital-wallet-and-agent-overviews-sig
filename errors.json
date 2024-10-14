@@ -18,39 +18,36 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
+    },
     "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/",
-      "urlWebsite": "https://www.preparese.info/"
+      "urlWebsite": "https://www.preparese.info/",
+      "companyUrl": "https://ufwfoundation.org/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
     },
     "selfkey-wallet": {
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "vidwallet": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
-    },
     "vidcredentials": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
-    "icef": {
-      "urlWebsite": "https://nextid.com/"
+    "vidwallet": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     }
   }
 }
