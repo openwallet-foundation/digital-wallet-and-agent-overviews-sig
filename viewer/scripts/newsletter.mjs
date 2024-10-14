@@ -3,6 +3,7 @@ import fs from 'fs';
 import handlebars from 'handlebars';
 import { execSync } from 'child_process';
 import {createTransport, createTestAccount, getTestMessageUrl} from 'nodemailer'
+import Mailjet from 'node-mailjet';
 
 config();
 
@@ -97,21 +98,85 @@ function getMailConfig() {
   }
 }
 
-// Email options
-let mailOptions = {
-  from: process.env.EMAIL_ADDRESS,
-  to: process.env.EMAIL_RECIPIENT ?? 'wallet-case-studies-newsletter@lists.openwallet.foundation',
-  subject,
-  html
-};
+function sendViaMailJet() {
+  const mailjet = new Mailjet({
+    apiKey: process.env.MJ_APIKEY_PUBLIC,
+    apiSecret: process.env.MJ_APIKEY_PRIVATE
+  });
 
-// Send the email
-getMailConfig().then(config => createTransport(config).sendMail(mailOptions, (error, info) => {
-  if (error) {
-    return console.log(error);
-  }
-  console.log('Email sent: ' + info.response);
-  if(process.env.NODE_ENV !== 'production') {
-    console.log('Preview URL: %s', getTestMessageUrl(info));
-  }
-}));
+  mailjet.post('send', { version: 'v3.1' }).request({
+    Messages: [
+      {
+        From: {
+          Email: "newsletter@walli.eu",
+          Name: 'Open Wallet Foundation'
+        },
+        To: [
+          {
+            Email: "rnlchwv8w@lists.mailjet.com",
+          }
+        ],
+        Subject: subject,
+        HTMLPart: html,
+        ContactsListID: "10464589" // Specify the contact list ID
+      }
+    ]
+  }).then((result) => console.log(JSON.stringify(result.body, null ,4)))
+    .catch((err) => console.log(JSON.stringify(err.response.data, null ,4)));
+}
+
+function sendIndividual() {
+  const mailjet = new Mailjet({
+    apiKey: process.env.MJ_APIKEY_PUBLIC,
+    apiSecret: process.env.MJ_APIKEY_PRIVATE
+  });
+
+  mailjet.post('send', { version: 'v3.1' }).request({
+    Messages: [
+      {
+        From: {
+          Email: "newsletter@walli.eu",
+          Name: 'Open Wallet Foundation'
+        },
+        To: [
+          {
+            Email: process.env.EMAIL_RECIPIENT
+          }
+        ],
+        Subject: subject,
+        HTMLPart: html,
+      }
+    ]
+  }).then((result) => console.log(JSON.stringify(result.body, null ,4)))
+    .catch((err) => console.log(JSON.stringify(err.response.data, null ,4)));
+}
+
+// old approach for owf list
+function sendLocal() {
+  // Email options
+  let mailOptions = {
+    from: process.env.EMAIL_ADDRESS,
+    to: process.env.EMAIL_RECIPIENT ?? 'wallet-case-studies-newsletter@lists.openwallet.foundation',
+    subject,
+    html
+  };
+
+  // Send the email
+  getMailConfig().then(config => createTransport(config).sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log('Email sent: ' + info.response);
+    if(process.env.NODE_ENV !== 'production') {
+      console.log('Preview URL: %s', getTestMessageUrl(info));
+    }
+  }));
+}
+
+if(process.env.EMAIL_RECIPIENT) {
+  sendIndividual();
+} else if(process.env.MJ_APIKEY_PUBLIC) {
+  sendViaMailJet();
+} else {
+  sendLocal();
+}

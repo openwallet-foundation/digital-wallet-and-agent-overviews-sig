@@ -37,6 +37,7 @@
     "express": "^4.18.2",
     "marked": "^12.0.2",
     "ngx-markdown": "^18.1.0",
+    "node-mailjet": "^6.0.6",
     "prismjs": "^1.29.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.3",
