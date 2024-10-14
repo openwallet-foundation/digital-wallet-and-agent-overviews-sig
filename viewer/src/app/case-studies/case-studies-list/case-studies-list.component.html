@@ -8,6 +8,9 @@
     <app-case-studies-list-embedded
       [caseStudies]="caseStudies"
     ></app-case-studies-list-embedded>
+    @if(caseStudies.length === 0) {
+    <h4>No case studies found.</h4>
+    }
   </div>
   <div fxFlex fxLayout="column" fxLayoutGap="16px">
     <mat-card>
