@@ -5,6 +5,9 @@
     }
   },
   "wallets": {
+    "aceid-wallet": {
+      "urlWebsite": "https://www.aceblock.com/modules/aceid/"
+    },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
       "urlWebsite": "https://endorser.ch/"
@@ -22,13 +25,13 @@
       "companyUrl": "https://ufwfoundation.org/",
       "urlWebsite": "https://www.preparese.info/"
     },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
-    },
     "selfkey-wallet": {
       "urlWebsite": "https://selfkey.org/selfkey-wallet/",
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
+    },
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
@@ -36,18 +39,18 @@
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
     },
-    "vidcredentials": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
-    },
-    "vidwallet": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "vidcredentials": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
+    },
+    "vidwallet": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     }
   }
 }
