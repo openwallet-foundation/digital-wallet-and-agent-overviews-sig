@@ -46,8 +46,8 @@ jobs:
         run: cd viewer && node scripts/newsletter.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          MJ_APIKEY_PUBLIC: ${{ secrets.MJ_APIKEY_PUBLIC }}
+          MJ_APIKEY_PRIVATE: ${{ secrets.MJ_APIKEY_PRIVATE }}
           EMAIL_RECIPIENT: ${{ github.event.inputs.email }}
           NODE_ENV: ${{ vars.NODE_ENV }}
           EMAIL_STORE: true
