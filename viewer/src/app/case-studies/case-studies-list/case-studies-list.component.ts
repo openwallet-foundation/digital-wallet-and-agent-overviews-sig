@@ -35,8 +35,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrl: './case-studies-list.component.scss',
 })
 export class CaseStudiesListComponent implements OnInit, OnDestroy {
-  subscribeLink =
-    'https://lists.openwallet.foundation/g/wallet-case-studies-newsletter';
+  subscribeLink = 'https://sgzwn.mjt.lu/wgt/sgzwn/xvm0/form?c=29dfe052';
 
   routerSub?: Subscription;
 
