@@ -1,5 +1,5 @@
 {
-  "urlWebsite": "https://selfkey.org/selfkey-wallet/",
+  "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
   "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-  "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
+  "urlWebsite": "https://selfkey.org/selfkey-wallet/"
 }

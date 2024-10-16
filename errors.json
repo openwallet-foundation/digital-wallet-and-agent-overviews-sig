@@ -5,11 +5,11 @@
     }
   },
   "wallets": {
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
@@ -21,33 +21,33 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
+    },
     "preparese-mobile": {
       "companyUrl": "https://ufwfoundation.org/",
       "urlWebsite": "https://www.preparese.info/"
     },
     "selfkey-wallet": {
-      "urlWebsite": "https://selfkey.org/selfkey-wallet/",
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
-    },
-    "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
-    },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
+      "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
+    "trisic-id": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
+    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
+    "vidcredentials": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
-    },
-    "vidcredentials": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
