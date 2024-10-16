@@ -1,0 +1,43 @@
+{
+  "capability": [
+    "holder"
+  ],
+  "type": "edge",
+  "name": "Farmworker Wallet OS",
+  "logo": "https://cdn.prod.website-files.com/6520979d785cc136404a270d/65237d6a3505e25d76ed58c7_wallet-p-1080.png",
+  "company": " Entidad",
+  "companyUrl": "https://www.entidad.io",
+  "urlWebsite": "https://www.farmworkerwalletos.community/",
+  "downloadSource": "https://github.com/openwallet-foundation-labs/farmworker-wallet-os",
+  "openSource": true,
+  "license": "Apache 2.0",
+  "portability": false,
+  "credentialProfiles": [
+    "AnonCreds with did:indy",
+    "AnonCreds with did:web"
+  ],
+  "credentialFormats": [
+    "AnonCred"
+  ],
+  "issuanceProtocols": [],
+  "keyManagements": [
+    "did:indy",
+    "did:jwk",
+    "did:key",
+    "did:peer",
+    "did:web",
+    "raw public keys (jwk)"
+  ],
+  "presentationProtocols": [
+    "Present Proof v2",
+    "Present Proof v1.0"
+  ],
+  "signingAlgorithms": [
+    "CL",
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [],
+  "trustManagements": [],
+  "$schema": "../viewer/src/assets/schema.json"
+}
