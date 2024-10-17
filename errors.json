@@ -33,15 +33,18 @@
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
-    "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
-    },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
+    "trisic-id": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
+    },
+    "vidwallet": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     },
     "vidcredentials": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
@@ -49,21 +52,9 @@
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
-    "vidwallet": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
-    },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
-    },
-    "holdr": {
-      "urlWebsite": "https://indicio.tech/holdr/"
-    },
-    "proven": {
-      "urlWebsite": "https://indicio.tech/indicio-proven/"
-    },
-    "zada": {
-      "urlWebsite": "https://zada.io/"
     }
   }
 }
