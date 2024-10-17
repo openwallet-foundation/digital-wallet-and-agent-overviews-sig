@@ -108,7 +108,7 @@ function sendViaMailJet() {
     Messages: [
       {
         From: {
-          Email: "newsletter@walli.eu",
+          Email: "newsletter@walletoverview.info",
           Name: 'Open Wallet Foundation'
         },
         To: [
@@ -135,8 +135,8 @@ function sendIndividual() {
     Messages: [
       {
         From: {
-          Email: "newsletter@walli.eu",
-          Name: 'Open Wallet Foundation'
+          Email: "newsletter@walletoverview.info",
+          Name: 'Wallet Overview'
         },
         To: [
           {
