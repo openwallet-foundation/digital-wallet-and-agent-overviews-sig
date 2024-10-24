@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/Credential-Format.json",
+  "Name": "JWP",
+  "Specification": "https://github.com/json-web-proofs/json-web-proofs",
+  "Standardization (Body, Process)": "DIF",
+  "Encoding Scheme": "JSON ?",
+  "Crypto Agility": true,
+  "Selective Disclosure": {
+    "Value": true,
+    "Description": "ZKP, Hash&Salt"
+  },
+  "Predicates": true
+}

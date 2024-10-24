@@ -1,0 +1,6 @@
+{
+  "$schema": "../../schemas/Trust-Management.json",
+  "Name": "X.509 certificates",
+  "Implementation Support": "broadly available",
+  "Description": "Trust is managed by way of attributes attested in the certificate (e.g. could be role of an issuer) in combination with trust chains. The ultimate entity in the chain is typically trust anchor recipients need to rely in. "
+}

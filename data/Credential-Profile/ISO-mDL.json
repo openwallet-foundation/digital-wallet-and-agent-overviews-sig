@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/Credential-Profile.json",
+  "Name": "ISO mDL",
+  "Credential Profile Description": "[Profile description goes here]",
+  "Credential Format": "MDOC",
+  "Signing Algorithm": "ECDSA",
+  "Status Algorithm": "medium-term expiration",
+  "Key Management (Issuer)": "pub key in X.509 cert",
+  "Key Management (Holder)": "cose key",
+  "Trust Management": "Verified issuer certificate authority list (VICAL)",
+  "Formal Specification": "ISO 18013-5"
+}

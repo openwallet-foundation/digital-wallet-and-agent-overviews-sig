@@ -2,6 +2,7 @@ import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import {existsSync, readFileSync, readdirSync} from 'fs';
 import axios from 'axios';
+import { validateProfiles } from './profiles/validate.mjs';
 
 const ajv = new Ajv({allowUnionTypes: true});
 addFormats(ajv);
@@ -127,3 +128,4 @@ validateDependencies();
 await validateWallets();
 checkFilesInFolder('../case-studies');
 validateCaseStudies();
+validateProfiles();

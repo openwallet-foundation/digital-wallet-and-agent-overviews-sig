@@ -1,4 +1,5 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs';
+import { mergeProfiles } from './profiles/merge.mjs';
 
 // URL for the folder containing the wallet files in the GitHub repo
 const commitHistoryBase = 'https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/';
@@ -61,3 +62,5 @@ const writeTsFile = (filename, content) => {
 writeTsFile('wallets/wallets-data.ts', generateTsContent('Wallet', wallets));
 writeTsFile('dependencies/dependencies-data.ts', generateTsContent('Dependency', dependencies));
 writeTsFile('case-studies/case-studies-data.ts', generateTsContent('CaseStudy', caseStudies));
+
+mergeProfiles();

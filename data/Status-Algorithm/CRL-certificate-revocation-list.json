@@ -1,0 +1,7 @@
+{
+  "$schema": "../../schemas/Status-Algorithm.json",
+  "Name": "CRL - certificate revocation list",
+  "Recognition by government authorities (NIST, BSI, ...)": true,
+  "Category": "Deny-List",
+  "Observability": true
+}

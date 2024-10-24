@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schemas/Credential-Format.json",
+  "Name": "LDP-VC",
+  "Implementation Support": "https://github.com/digitalbazaar/jsonld.js",
+  "IPR Policy": "https://www.w3.org/Consortium/Patent-Policy-20200915/#sec-Requirements",
+  "Specification": "https://www.w3.org/TR/vc-data-model/",
+  "Standardization (Body, Process)": "W3C",
+  "Encoding Scheme": "JSON-LD",
+  "Rich Schemas-Semantic": true,
+  "Crypto Agility": true,
+  "Selective Disclosure": {
+    "Value": true,
+    "Description": "BBS\nCL-Signatures (CL)\nShort Randomizable Signatures (ps-sig)"
+  },
+  "Predicates": {
+    "Value": true,
+    "Description": "depending on signature algorithm"
+  },
+  "Compatibility with Signing Algorithms": "ECDSA, EdDSA, RSA",
+  "Compatibility with Key Management Methods (Issuer)": [
+    "did:key",
+    "did:web",
+    "did:ebsi",
+    "did:iota",
+    "did:jwk",
+    "did:cheqd",
+    "did:velocity"
+  ]
+}

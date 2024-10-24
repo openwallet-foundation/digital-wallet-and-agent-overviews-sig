@@ -1,0 +1,32 @@
+<div *ngIf="resource" class="content">
+  <mat-card>
+    <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-card-title>{{ res.Name }}</mat-card-title>
+      <button mat-icon-button routerLink="../">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let value of values">
+          <div matListItemTitle>
+            <b>{{ value.key }}</b>
+            <!-- TODO: in case a key includes a /, it will break the logic of the route -->
+            <button
+              mat-icon-button
+              [routerLink]="'/definitions/' + resource + '/' + value.key"
+            >
+              <mat-icon>info</mat-icon>
+            </button>
+          </div>
+          <div matListItemLine *ngIf="value.type === 'text'">
+            <span>{{ value.value }}</span>
+          </div>
+          <div matListItemLine *ngIf="value.type === 'link'">
+            <a [href]="value.value" target="_blank">{{ value.value }}</a>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

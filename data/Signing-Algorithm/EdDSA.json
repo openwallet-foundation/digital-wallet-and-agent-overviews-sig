@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schemas/Signing-Algorithm.json",
+  "Name": "EdDSA",
+  "Implementation Support": "many mature implementations",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": true,
+    "Description": "widely accepted, though still behind ECDSA"
+  },
+  "Performance": "high",
+  "Hardware support": false,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": false,
+  "Security strength": "257 / 384 / 512 bit",
+  "Post-quantum security": false
+}

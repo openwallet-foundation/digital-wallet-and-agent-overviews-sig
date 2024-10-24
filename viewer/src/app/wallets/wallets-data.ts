@@ -480,37 +480,45 @@ export const walletData: Wallet[] = [
     "capability": [
       "holder"
     ],
-    "company": "Entidad",
-    "name": "Farmworker WalletOS",
-    "companyUrl": "https://www.entidad.io/",
+    "type": "edge",
+    "name": "Farmworker Wallet OS",
+    "logo": "https://cdn.prod.website-files.com/6520979d785cc136404a270d/65237d6a3505e25d76ed58c7_wallet-p-1080.png",
+    "company": " Entidad",
+    "companyUrl": "https://www.entidad.io",
+    "urlWebsite": "https://www.farmworkerwalletos.community/",
+    "downloadSource": "https://github.com/openwallet-foundation-labs/farmworker-wallet-os",
+    "openSource": true,
+    "license": "Apache 2.0",
+    "portability": false,
+    "credentialProfiles": [
+      "AnonCreds with did:indy",
+      "AnonCreds with did:web"
+    ],
     "credentialFormats": [
       "AnonCred"
     ],
-    "credentialProfiles": [
-      "AnonCreds with did:cheqd",
-      "AnonCreds with did:indy"
-    ],
-    "issuanceProtocols": [
-      "Issue Credential v2"
-    ],
+    "issuanceProtocols": [],
     "keyManagements": [
-      "did:cheqd",
       "did:indy",
+      "did:jwk",
+      "did:key",
       "did:peer",
       "did:web",
-      "link secrets"
+      "raw public keys (jwk)"
     ],
-    "license": "Apache 2.0",
-    "openSource": true,
-    "portability": false,
+    "presentationProtocols": [
+      "Present Proof v2",
+      "Present Proof v1.0"
+    ],
     "signingAlgorithms": [
       "CL",
+      "ECDSA",
       "EdDSA"
     ],
-    "type": "edge",
-    "urlWebsite": "https://www.farmworkerwalletos.community/",
-    "id": "farmworker-walletos",
-    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/farmworker-walletos.json"
+    "statusManagements": [],
+    "trustManagements": [],
+    "id": "farmworker-wallet-os",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/farmworker-wallet-os.json"
   },
   {
     "capability": [

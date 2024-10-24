@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/Presentation-Protocol.json",
+  "Name": "Present Proof v2",
+  "Specification": "https://hyperledger.github.io/aries-rfcs/latest/aip2/0454-present-proof-v2"
+}

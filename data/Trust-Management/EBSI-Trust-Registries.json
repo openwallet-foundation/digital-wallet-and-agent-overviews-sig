@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/Trust-Management.json",
+  "Name": "EBSI Trust Registries",
+  "Description": "Ledger-anchored trust registries"
+}

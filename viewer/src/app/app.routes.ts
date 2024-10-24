@@ -7,6 +7,12 @@ import { DependenciesListComponent } from './dependencies/dependencies-list/depe
 import { DependenciesShowComponent } from './dependencies/dependencies-show/dependencies-show.component';
 import { HomeComponent } from './home/home.component';
 import { SeoResolver } from './seo-resolver';
+import { CredentialProfileListComponent } from './credential-profiles/credential-profile-list/credential-profile-list.component';
+import { CredentialProfileShowComponent } from './credential-profiles/credential-profile-show/credential-profile-show.component';
+import { ResourcesListComponent } from './resources/resources-list/resources-list.component';
+import { ResourcesShowComponent } from './resources/resources-show/resources-show.component';
+import { DefinitionComponent } from './definition/definition.component';
+import { title } from 'process';
 
 export const routes: Routes = [
   {
@@ -58,5 +64,57 @@ export const routes: Routes = [
         resolve: { seo: SeoResolver },
       },
     ],
+  },
+  {
+    path: 'credential-profiles',
+    children: [
+      {
+        path: '',
+        component: CredentialProfileListComponent,
+        data: { title: 'Credential Profiles' },
+      },
+      {
+        path: ':id',
+        component: CredentialProfileShowComponent,
+        resolve: { seo: SeoResolver },
+      },
+    ],
+  },
+  {
+    path: 'resources/:resource',
+    children: [
+      {
+        path: '',
+        component: ResourcesListComponent,
+        resolve: { seo: SeoResolver },
+      },
+      {
+        path: ':id',
+        component: ResourcesShowComponent,
+        resolve: { seo: SeoResolver },
+      },
+    ],
+  },
+  {
+    path: 'definitions',
+    data: { title: 'Definitions' },
+    children: [
+      {
+        path: '',
+        component: DefinitionComponent,
+      },
+      {
+        path: ':resource',
+        component: DefinitionComponent,
+      },
+      {
+        path: ':resource/:id',
+        component: DefinitionComponent,
+      },
+    ],
+  },
+  {
+    path: '**',
+    redirectTo: '/',
   },
 ];

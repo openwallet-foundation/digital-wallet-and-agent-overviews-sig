@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/Signing-Algorithm.json",
+  "Name": "PS",
+  "Implementation Support": "Hyperledger Anoncreds, https://github.com/hyperledger/anoncreds-v2-rs ",
+  "Specification": "PS-Signatures of there own do not have a formal specification, that is included in Anoncreds-V2",
+  "Standardization (Body, Process)": "none",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": false,
+    "Description": "not acknowledged (independent crypto analysis published)"
+  },
+  "Hardware support": false,
+  "Performance": "medium, faster than CL, slower than Schnorr, single-digit milliseconds for all operations, even in a threshold decentralized setting",
+  "Unlinkability-Uncorrelatability-Blind signatures possible": true,
+  "Post-quantum security": false
+}

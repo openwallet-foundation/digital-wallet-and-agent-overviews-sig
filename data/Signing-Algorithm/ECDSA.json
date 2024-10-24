@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/Signing-Algorithm.json",
+  "Name": "ECDSA",
+  "Implementation Support": "many mature implementations",
+  "Specification": "X9.62-2005",
+  "Standardization (Body, Process)": "ANSI",
+  "Recognition by government authorities (NIST, BSI, ...)": true,
+  "Hardware support": true,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": false,
+  "Security strength": "256 / 384 / 512 bit",
+  "Post-quantum security": false
+}

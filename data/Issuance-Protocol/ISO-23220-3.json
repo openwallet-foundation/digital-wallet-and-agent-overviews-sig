@@ -1,0 +1,4 @@
+{
+  "$schema": "../../schemas/Issuance-Protocol.json",
+  "Name": "ISO 23220-3"
+}

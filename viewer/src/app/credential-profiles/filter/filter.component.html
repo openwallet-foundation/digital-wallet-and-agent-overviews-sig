@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Filter profiles</h1>
+<form [formGroup]="form" (ngSubmit)="filter()">
+  <div mat-dialog-content>
+    <div *ngFor="let group of selectionColumns" [formGroupName]="group.key">
+      <h3>{{ group.key }}</h3>
+      <div *ngFor="let element of group.elements">
+        <mat-checkbox
+          *ngIf="isCheckbox(element)"
+          [formControlName]="element.show"
+        >
+          <div
+            fxLayout="row"
+            fxLayoutAlign="space-between center"
+            fxLayoutGap="8px"
+          >
+            <span>{{ element.show }}</span>
+            <mat-icon [matTooltip]="element.tooltip">info</mat-icon>
+          </div>
+        </mat-checkbox>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions fxLayout="row" fxLayoutAlign="space-between center">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button type="submit" color="accent" cdkFocusInitial>Ok</button>
+  </div>
+</form>

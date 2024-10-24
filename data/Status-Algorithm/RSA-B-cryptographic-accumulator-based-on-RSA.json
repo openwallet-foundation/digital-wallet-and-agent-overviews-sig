@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/Status-Algorithm.json",
+  "Name": "RSA-B - cryptographic accumulator based on RSA",
+  "Implementation Support": "https://github.com/privacybydesign/gabi/tree/master/revocation",
+  "Specification": "https://eprint.iacr.org/2017/043.pdf",
+  "Recognition by government authorities (NIST, BSI, ...)": false,
+  "Category": "Accumulator",
+  "Observability": true,
+  "Traceability": false,
+  "Offline Friendliness": true
+}

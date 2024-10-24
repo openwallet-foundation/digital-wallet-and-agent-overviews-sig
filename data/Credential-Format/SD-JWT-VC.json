@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schemas/Credential-Format.json",
+  "Name": "SD-JWT-VC",
+  "IPR Policy": "https://trustee.ietf.org/documents/trust-legal-provisions/",
+  "Specification": "https://datatracker.ietf.org/doc/html/draft-terbu-oauth-sd-jwt-vc",
+  "Standardization (Body, Process)": "IETF (OAuth WG)",
+  "Encoding Scheme": "JSON",
+  "Rich Schemas-Semantic": false,
+  "Crypto Agility": true,
+  "Selective Disclosure": true,
+  "Predicates": false,
+  "Compatibility with Signing Algorithms": "ECDSA, EdDSA, RSA",
+  "Compatibility with Key Management Methods (Issuer)": [
+    "did:key",
+    "did:web",
+    "did:ebsi",
+    "did:iota",
+    "did:jwk",
+    "did:cheqd",
+    "did:velocity"
+  ]
+}

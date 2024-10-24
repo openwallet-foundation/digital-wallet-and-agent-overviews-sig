@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/Key-Management.json",
+  "Name": "did:jwk",
+  "Party": ["holder", "issuer"]
+}

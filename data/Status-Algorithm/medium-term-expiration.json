@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/Status-Algorithm.json",
+  "Name": "medium-term expiration",
+  "Specification": "weeks"
+}

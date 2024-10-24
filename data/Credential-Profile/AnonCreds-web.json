@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/Credential-Profile.json",
+  "Name": "AnonCreds with did:web",
+  "Credential Profile Description": "AnonCreds with did:web",
+  "Credential Format": "AnonCred",
+  "Signing Algorithm": "CL",
+  "Status Algorithm": "Indy Revocation",
+  "Key Management (Issuer)": "did:web",
+  "Key Management (Holder)": "link secrets",
+  "Trust Management": "Verifier knows Issuers",
+  "Formal Specification": "https://github.com/2060-io/did-web-anoncreds-method"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/Key-Management.json",
+  "Name": "did:indy",
+  "Implementation Support": "https://hyperledger.github.io/indy-did-method/",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "dlt"
+  },
+  "Key Rotation": true,
+  "Key History": true,
+  "Party": ["issuer"]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schemas/Status-Algorithm.json",
+  "Name": "Status List 2021",
+  "Implementation Support": "https://github.com/transmute-industries/verifiable-data/tree/main/packages/vc-status-rl-2020",
+  "Specification": "https://w3c-ccg.github.io/vc-status-list-2021/",
+  "Standardization (Body, Process)": "W3C",
+  "Recognition by government authorities (NIST, BSI, ...)": false,
+  "Category": "Bitstring",
+  "Observability": true,
+  "Traceability": {
+    "Value": true,
+    "Description": "potentially possible with malicious issuer by providing a revocation list with a single entry"
+  }
+}

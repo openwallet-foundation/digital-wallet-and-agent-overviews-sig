@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schemas/Credential-Format.json",
+  "Name": "JWT",
+  "Implementation Support": "https://jwt.io/libraries",
+  "IPR Policy": "https://trustee.ietf.org/documents/trust-legal-provisions/",
+  "Specification": "https://datatracker.ietf.org/doc/rfc7519/",
+  "Standardization (Body, Process)": "IETF",
+  "Encoding Scheme": "compact and JSON serialization",
+  "Rich Schemas-Semantic": false,
+  "Crypto Agility": true,
+  "Selective Disclosure": false,
+  "Predicates": false,
+  "Compatibility with Signing Algorithms": "ECDSA, EdDSA, RSA",
+  "Compatibility with Key Management Methods (Issuer)": [
+    "did:key",
+    "did:web",
+    "did:ebsi",
+    "did:iota",
+    "did:jwk",
+    "did:cheqd",
+    "did:velocity"
+  ]
+}

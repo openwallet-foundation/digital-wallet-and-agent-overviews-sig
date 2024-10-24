@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/Credential-Profile.json",
+  "Name": "AnonCreds with did:indy",
+  "Credential Profile Description": "Well-known default profile in all Hyperledger Indy implementations. A favoured profile due to selective disclosure and predicate capability as well as privacy-preserving revocation mechanism. Standardization in community spec in progress (July 2022).",
+  "Credential Format": "AnonCred",
+  "Signing Algorithm": "CL",
+  "Status Algorithm": "Indy Revocation",
+  "Key Management (Issuer)": "did:indy",
+  "Key Management (Holder)": "link secrets",
+  "Trust Management": "Verifier knows Issuers",
+  "Formal Specification": "https://hyperledger.github.io/anoncreds-spec/"
+}

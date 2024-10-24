@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/Signing-Algorithm.json",
+  "Name": "RSA",
+  "Implementation Support": "many mature implementations",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": true,
+    "Description": "but support is fading"
+  },
+  "Hardware support": true,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": false,
+  "Security strength": "2048 / 3072 / 4096 (scales bad)",
+  "Post-quantum security": false
+}

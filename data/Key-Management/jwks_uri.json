@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schemas/Key-Management.json",
+  "Name": "jwks_uri",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "web server"
+  },
+  "Key Rotation": true,
+  "Key History": {
+    "Value": true,
+    "Description": "conditional (with OpenID Connect Federation Key History)"
+  },
+  "Party": ["issuer"]
+}

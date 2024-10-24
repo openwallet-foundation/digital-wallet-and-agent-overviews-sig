@@ -1,0 +1,7 @@
+{
+  "$schema": "../../schemas/Key-Management.json",
+  "Name": "did:cheqd",
+  "Specification": "https://docs.cheqd.io/identity/architecture/adr-list/adr-001-cheqd-did-method",
+  "Implementation Support": "https://docs.cheqd.io/identity/sdk/understanding-sdks",
+  "Party": ["issuer"]
+}

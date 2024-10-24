@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/Key-Management.json",
+  "Name": "did:ebsi",
+  "Implementation Support": "https://ec.europa.eu/digital-building-blocks/wikis/display/EBSIDOC/EBSI+DID+Method",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "dlt"
+  },
+  "Key Rotation": true,
+  "Key History": true,
+  "Party": ["issuer"]
+}

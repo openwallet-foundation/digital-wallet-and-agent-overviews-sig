@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/Status-Algorithm.json",
+  "Name": "SLTD database (travel and identity documents)",
+  "Category": "Deny-List"
+}

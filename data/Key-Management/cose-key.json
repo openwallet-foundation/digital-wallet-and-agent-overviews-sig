@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/Key-Management.json",
+  "Name": "cose key",
+  "Implementation Support": "https://www.rfc-editor.org/rfc/rfc9052.html"
+}

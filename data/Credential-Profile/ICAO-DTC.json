@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/Credential-Profile.json",
+  "Name": "ICAO DTC",
+  "Credential Profile Description": "[Profile description goes here]",
+  "Credential Format": "ICAO DTC",
+  "Signing Algorithm": "ECDSA",
+  "Status Algorithm": "SLTD database (travel and identity documents)",
+  "Key Management (Issuer)": "raw public keys (none jwk)",
+  "Key Management (Holder)": "raw public keys (none jwk)",
+  "Trust Management": "X.509 certificates"
+}
