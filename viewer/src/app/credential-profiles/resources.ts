@@ -24,9 +24,11 @@ export interface IProfile {
   'Formal Specification'?: string;
 }
 
+export type FormatValues = Record<string, Partial<any>>;
+
 export interface Format {
   structure: Structure;
-  values: { [key: string]: Partial<any> };
+  values: FormatValues;
 }
 
 export interface Structure {

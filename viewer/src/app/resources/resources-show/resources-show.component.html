@@ -1,7 +1,7 @@
 <div *ngIf="resource" class="content">
   <mat-card>
     <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
-      <mat-card-title>{{ res.Name }}</mat-card-title>
+      <mat-card-title>{{ res!['Name'] }}</mat-card-title>
       <button mat-icon-button routerLink="../">
         <mat-icon>arrow_back_ios</mat-icon>
       </button>

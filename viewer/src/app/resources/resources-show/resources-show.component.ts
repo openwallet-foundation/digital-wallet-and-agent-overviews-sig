@@ -28,9 +28,9 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
   styleUrl: './resources-show.component.scss',
 })
 export class ResourcesShowComponent implements OnInit {
-  values: { type: string; key: string; value: any }[] = [];
+  values: { type: string; key: string; value: string }[] = [];
   resource!: string;
-  res?: any;
+  res?: Record<string, string | { Value: string; Description: string }>;
   constructor(
     private route: ActivatedRoute,
     private snachBar: MatSnackBar,
@@ -51,7 +51,7 @@ export class ResourcesShowComponent implements OnInit {
     this.values = Object.keys(this.res)
       .filter((key) => key !== '$schema')
       .map((key) => {
-        let value = this.res[key];
+        let value = this.res![key];
         let type = 'text';
         if (typeof value === 'string' && value.startsWith('http')) {
           type = 'link';

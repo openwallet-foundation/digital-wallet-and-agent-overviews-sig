@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Format, IProfile, Resources } from './resources';
+import { Format, FormatValues, IProfile, Resources } from './resources';
 //TODO: instead of importing the values from the json file, we coulld use a http fetch. With this approach, we don't have an error when the repository is cloned and the json file is not present yet.
 import values from '../../assets/structure.json';
 export type Resource =
@@ -11,6 +11,24 @@ export type Resource =
   | 'Issuance Protocol'
   | 'Presentation Protocol'
   | 'Trust Management';
+
+interface Field {
+  Description: boolean;
+  Value: string;
+}
+
+interface TooltipElement {
+  description: string;
+  allOf: TooltipElement[];
+  $ref: string;
+}
+
+interface TypeElement {
+  type: string;
+  allOf: TypeElement[];
+  $ref: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -54,11 +72,11 @@ export class AppService {
     return Object.keys(this.getFormat(key).values);
   }
 
-  getValues(key: keyof Resources): any {
+  getValues(key: keyof Resources): FormatValues {
     return this.getFormat(key).values;
   }
 
-  getValue(field: any) {
+  getValue(field: Field) {
     if (field.Description) return field.Value;
     return field;
   }
@@ -68,7 +86,7 @@ export class AppService {
    */
   createStatistic(resource: Resource) {
     const counter: Record<string, number> = {};
-    this.getNames('Credential Profile').forEach((profile: any) => {
+    this.getNames('Credential Profile').forEach((profile: string) => {
       const subValue = this.getValues('Credential Profile')[profile][resource];
       if (subValue) {
         if (!counter[subValue]) {
@@ -85,7 +103,7 @@ export class AppService {
    * @param value
    * @returns
    */
-  getTooltip(value: any) {
+  getTooltip(value: TooltipElement) {
     if (value.description) {
       return value.description;
     }
@@ -100,13 +118,13 @@ export class AppService {
     return '';
   }
 
-  getType(value: any) {
+  getType(value: TypeElement) {
     if (value.type) {
       return value.type;
     } else {
       const ref = value.allOf ? value.allOf[0].$ref : value.$ref;
       const res = JSON.parse(JSON.stringify(values.defs));
-      const id = ref.split('/').pop();
+      const id = ref.split('/').pop() as string;
       return res.definitions[id].type;
     }
   }

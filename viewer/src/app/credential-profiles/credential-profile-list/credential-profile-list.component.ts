@@ -103,7 +103,7 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
 
   private addData() {
     this.dataSource.data = Object.values(this.data.values)
-      .map((value: any) => {
+      .map((value) => {
         Object.keys(value)
           .filter((value) =>
             this.appService.extraValues.includes(value as Resource)

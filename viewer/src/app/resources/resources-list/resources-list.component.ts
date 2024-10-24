@@ -62,7 +62,7 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
     });
   }
 
-  dataSource = new MatTableDataSource<any>();
+  dataSource = new MatTableDataSource<Record<string, string>>();
   displayedColumns: string[] = [];
 
   allColumns: string[] = [];
@@ -123,7 +123,7 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
     }
   }
 
-  isSelected(row: any) {
+  isSelected(row: { Name: string }) {
     const id = this.route.snapshot.paramMap.get('id');
     if (!id) return false;
     return row.Name === id;
@@ -163,7 +163,7 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
       .filter((row) => this.displayedColumns.indexOf(row) < 0);
   }
 
-  elementType(value: any) {
+  elementType(value: { Value: string; Description: string }) {
     if (typeof value === 'undefined') return 'undefined';
     if (typeof value === 'boolean') return 'icon';
     if (typeof value.Value !== 'undefined') return 'icon-tooltip';

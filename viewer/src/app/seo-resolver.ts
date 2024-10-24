@@ -77,7 +77,7 @@ export class SeoResolver implements Resolve<SeoInformation> {
         ];
         return of(
           res
-            ? { title: `${resource}: ${res.Name}` }
+            ? { title: `${resource}: ${res['Name']}` }
             : { title: 'Resource Not Found' }
         );
       }

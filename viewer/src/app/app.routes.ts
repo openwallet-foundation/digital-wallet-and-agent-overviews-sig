@@ -12,7 +12,6 @@ import { CredentialProfileShowComponent } from './credential-profiles/credential
 import { ResourcesListComponent } from './resources/resources-list/resources-list.component';
 import { ResourcesShowComponent } from './resources/resources-show/resources-show.component';
 import { DefinitionComponent } from './definition/definition.component';
-import { title } from 'process';
 
 export const routes: Routes = [
   {
