@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Key-Management.json",
+  "$schema": "../../schemas/key-management.json",
   "Name": "did:ebsi",
   "Implementation Support": "https://ec.europa.eu/digital-building-blocks/wikis/display/EBSIDOC/EBSI+DID+Method",
   "Infrastructure for Key Resolution": {

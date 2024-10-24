@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Key-Management.json",
+  "$schema": "../../schemas/key-management.json",
   "Name": "did:indy",
   "Implementation Support": "https://hyperledger.github.io/indy-did-method/",
   "Infrastructure for Key Resolution": {

@@ -10,7 +10,7 @@ export function copySchema() {
 }
 
 export function updateSchema() {
-  const schemaPath = `${schemaFolder}/Credential-Profile.json`;
+  const schemaPath = `${schemaFolder}/credential-profile.json`;
   const file = JSON.parse(readFileSync(schemaPath, 'utf8'));
   const generatedFolder = "src/assets/schemas";
 

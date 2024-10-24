@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "CWT",
   "Specification": "https://www.rfc-editor.org/rfc/rfc8392.html",
   "Standardization (Body, Process)": "IETF",

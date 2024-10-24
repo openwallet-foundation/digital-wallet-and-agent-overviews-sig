@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "MDOC",
   "Specification": "ISO 18013-5",
   "Standardization (Body, Process)": "ISO",

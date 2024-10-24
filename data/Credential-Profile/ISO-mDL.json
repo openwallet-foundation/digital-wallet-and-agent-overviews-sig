@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Profile.json",
+  "$schema": "../../schemas/credential-profile.json",
   "Name": "ISO mDL",
   "Credential Profile Description": "[Profile description goes here]",
   "Credential Format": "MDOC",

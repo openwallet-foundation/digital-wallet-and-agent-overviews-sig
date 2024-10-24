@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "SD-JWT",
   "Implementation Support": "https://github.com/oauthstuff/draft-selective-disclosure-jwt#implementations",
   "IPR Policy": "https://trustee.ietf.org/documents/trust-legal-provisions/",

@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Status-Algorithm.json",
+  "$schema": "../../schemas/status-algorithm.json",
   "Name": "Status List 2021",
   "Implementation Support": "https://github.com/transmute-industries/verifiable-data/tree/main/packages/vc-status-rl-2020",
   "Specification": "https://w3c-ccg.github.io/vc-status-list-2021/",

@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Signing-Algorithm.json",
+  "$schema": "../../schemas/signing-algorim.json",
   "Name": "BBS+ with public key binding",
   "Implementation Support": "https://github.com/mattrglobal/bbs-signatures",
   "Specification": "https://datatracker.ietf.org/doc/draft-looker-cfrg-bbs-signatures/",

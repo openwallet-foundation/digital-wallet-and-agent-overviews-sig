@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Signing-Algorithm.json",
+  "$schema": "../../schemas/signing-algorim.json",
   "Name": "CL",
   "Implementation Support": "Hyperledger Ursa, https://github.com/privacybydesign/gabi ",
   "Specification": "CL-Signatures of there own do not have a formal specification, that is included in Anoncreds",

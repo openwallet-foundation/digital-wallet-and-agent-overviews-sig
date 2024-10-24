@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Status-Algorithm.json",
+  "$schema": "../../schemas/status-algorithm.json",
   "Name": "JWT/CWT status list",
   "Implementation Support": "https://github.com/vcstuff/draft-looker-oauth-jwt-cwt-status-list",
   "Specification": "https://datatracker.ietf.org/doc/draft-terbu-oauth-sd-jwt-vc/",

@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "VC (1.1)",
   "Implementation Support": "https://jwt.io/libraries",
   "IPR Policy": "https://www.w3.org/Consortium/Patent-Policy-20200915/#sec-Requirements",

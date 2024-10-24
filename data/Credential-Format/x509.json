@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "x509",
   "Standardization (Body, Process)": "ITUT",
   "Encoding Scheme": "ASN.1",

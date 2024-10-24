@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Profile.json",
+  "$schema": "../../schemas/credential-profile.json",
   "Name": "AnonCreds with cardano blockchain",
   "Credential Profile Description": "AnonCreds with cardano blockchain",
   "Credential Format": "AnonCred",

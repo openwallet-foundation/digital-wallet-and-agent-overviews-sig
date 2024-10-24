@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "Signing-Algorithm.json",
+  "$id": "signing-algorim.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {

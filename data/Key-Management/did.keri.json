@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Key-Management.json",
+  "$schema": "../../schemas/key-management.json",
   "Name": "did:keri",
   "Implementation Support": "https://weboftrust.github.io/did-keri/",
   "Infrastructure for Key Resolution": {

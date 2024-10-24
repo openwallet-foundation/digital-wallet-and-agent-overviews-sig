@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Profile.json",
+  "$schema": "../../schemas/credential-profile.json",
   "Name": "IRMA (Yivi) wallet",
   "Credential Profile Description": "https://dominoweb.draco.res.ibm.com/reports/rz3730_revised.pdf",
   "Credential Format": "Idemix attribute-based credential",

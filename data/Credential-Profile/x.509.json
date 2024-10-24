@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Profile.json",
+  "$schema": "../../schemas/credential-profile.json",
   "Name": "x.509",
   "Credential Profile Description": "[Profile description goes here]",
   "Credential Format": "x509",

@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Key-Management.json",
+  "$schema": "../../schemas/key-management.json",
   "Name": "raw public keys (none jwk)",
   "Infrastructure for Key Resolution": false,
   "Key Rotation": false,

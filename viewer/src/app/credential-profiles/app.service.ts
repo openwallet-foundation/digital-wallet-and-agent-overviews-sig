@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Format, FormatValues, IProfile, Resources } from './resources';
-//TODO: instead of importing the values from the json file, we coulld use a http fetch. With this approach, we don't have an error when the repository is cloned and the json file is not present yet.
 import values from '../../assets/structure.json';
 export type Resource =
   | 'Credential Format'

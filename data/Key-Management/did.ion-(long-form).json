@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Key-Management.json",
+  "$schema": "../../schemas/key-management.json",
   "Name": "did:ion (long form)",
   "Implementation Support": "https://github.com/decentralized-identity/ion",
   "Infrastructure for Key Resolution": false,

@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Profile.json",
+  "$schema": "../../schemas/credential-profile.json",
   "Name": "NGI Atlantic for OpenID4VCs",
   "Credential Profile Description": "https://ngiatlantic.info\nhttps://ngiatlantic.eu/funded-experiments/next-generation-ssi-standards",
   "Credential Format": "JWT-VC",

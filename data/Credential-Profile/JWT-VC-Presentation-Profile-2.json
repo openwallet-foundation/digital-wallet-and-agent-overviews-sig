@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Profile.json",
+  "$schema": "../../schemas/credential-profile.json",
   "Name": "JWT VC Presentation Profile 2",
   "Credential Profile Description": "https://identity.foundation/jwt-vc-presentation-profile/",
   "Credential Format": "JWT-VC",

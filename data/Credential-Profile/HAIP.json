@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Profile.json",
+  "$schema": "../../schemas/credential-profile.json",
   "Name": "HAIP",
   "Credential Profile Description": "OpenID4VC High Assurance Interoperability Profile with SD-JWT-VC",
   "Formal Specification": "https://vcstuff.github.io/oid4vc-haip-sd-jwt-vc/draft-oid4vc-haip-sd-jwt-vc.html#name-authors-addresses",

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "Presentation-Protocol.json",
+  "$id": "presentation-protocol.json",
   "type": "object",
   "additionalProperties": false,
   "properties": {

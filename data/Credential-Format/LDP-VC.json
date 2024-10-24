@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "LDP-VC",
   "Implementation Support": "https://github.com/digitalbazaar/jsonld.js",
   "IPR Policy": "https://www.w3.org/Consortium/Patent-Policy-20200915/#sec-Requirements",

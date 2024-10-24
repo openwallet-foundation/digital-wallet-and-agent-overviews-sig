@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "CESR/CESR Proof",
   "Specification": "https://www.ietf.org/archive/id/draft-pfeairheller-cesr-proof-00.html",
   "Standardization (Body, Process)": "IETF (intention to go to Blockchain WG)",

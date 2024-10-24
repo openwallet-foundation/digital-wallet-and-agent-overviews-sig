@@ -19,8 +19,8 @@ export function mergeProfiles() {
       let content = readFileSync(join(schemaFolder, resource), 'utf8');
       content = content.replaceAll('"$ref": "defs.json', `"$ref": "${githubPath}/main/schemas/defs.json`);
       const structure = JSON.parse(content);
-
-      input[subFolder.replace(/-/g, ' ')] = {
+      const name = capitalizeWords(subFolder.replace(/-/g, ' '));
+      input[name] = {
           structure,
           values: {}
       };
@@ -29,13 +29,18 @@ export function mergeProfiles() {
           // write the content of the file to the json object
           const content = JSON.parse(readFileSync(join(folder, subFolder, file), 'utf8'));
           content['$schema'] = content['$schema'].replace('../..', `/main/${githubPath}`);
-
-          input[subFolder.replace(/-/g, ' ')].values[content.Name] = content;
+          const name = capitalizeWords(subFolder.replace(/-/g, ' '));
+          input[name].values[content.Name] = content;
       });
   });
   //TODO: think about to separate the structure and the values files in the future so others can query only the information they need
   // write the final json object to a file
   writeFileSync(mergedStructure, JSON.stringify(input));
-
   updateSchema();
+}
+
+function capitalizeWords(str) {
+  return str.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }

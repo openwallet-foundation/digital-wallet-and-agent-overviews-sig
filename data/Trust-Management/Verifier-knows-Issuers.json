@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Trust-Management.json",
+  "$schema": "../../schemas/trust-management.json",
   "Name": "Verifier knows Issuers",
   "Implementation Support": "Manual / bespoke",
   "IPR Policy": "None",

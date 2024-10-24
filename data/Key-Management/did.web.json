@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Key-Management.json",
+  "$schema": "../../schemas/key-management.json",
   "Name": "did:web",
   "Implementation Support": "https://github.com/w3c-ccg/did-method-web",
   "Infrastructure for Key Resolution": {

@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schemas/Credential-Format.json",
+  "$schema": "../../schemas/credential-format.json",
   "Name": "Gordian Envelope",
   "Implementation Support": "command-line MVP https://github.com/BlockchainCommons/envelope-cli-swift",
   "IPR Policy": "SPDI:BSD-2-Clause-Patent https://spdx.org/licenses/BSD-2-Clause-Patent.html",
