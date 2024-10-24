@@ -1,14 +1,10 @@
 {
-  "capability": [
-    "holder"
-  ],
+  "capability": ["holder"],
   "company": "Systems Integration Solutions",
-  "credentialProfiles": [
-    "EBSI"
-  ],
+  "credentialProfiles": ["EBSI"],
   "logo": "logos/corposign-did.svg",
   "name": "CorpoSign DID",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=app.sis.mydid.net",
   "urlWebsite": "https://sis.lt/"
 }

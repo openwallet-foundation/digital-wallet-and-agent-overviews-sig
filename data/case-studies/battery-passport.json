@@ -13,5 +13,5 @@
       "contact": "https://www.rcsglobal.com/"
     }
   ],
-  "$schema": "../viewer/src/assets/case-study.schema.json"
+  "$schema": "../../schemas/case-study.json"
 }

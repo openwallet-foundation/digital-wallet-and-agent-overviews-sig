@@ -5,35 +5,16 @@
   "companyUrl": "https://id.eecc.de/products/did_controller.html",
   "type": "cloud",
   "openSource": false,
-  "capability": [
-    "issuer",
-    "holder"
-  ],
+  "capability": ["issuer", "holder"],
   "portability": false,
   "urlWebsite": "https://id.eecc.de/products/did_controller.html",
   "credentialProfiles": [],
-  "credentialFormats": [
-    "LDP-VC"
-  ],
-  "issuanceProtocols": [
-    "OpenID4VCI"
-  ],
-  "keyManagements": [
-    "did:key",
-    "did:web"
-  ],
-  "presentationProtocols": [
-    "OpenID4VP"
-  ],
-  "signingAlgorithms": [
-    "ECDSA",
-    "EdDSA"
-  ],
-  "statusManagements": [
-    "Status List 2021"
-  ],
-  "trustManagements": [
-    "Verifier knows Issuers"
-  ],
-  "$schema": "../viewer/src/assets/schema.json"
+  "credentialFormats": ["LDP-VC"],
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:key", "did:web"],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA", "EdDSA"],
+  "statusManagements": ["Status List 2021"],
+  "trustManagements": ["Verifier knows Issuers"],
+  "$schema": "../../schemas/wallet.json"
 }

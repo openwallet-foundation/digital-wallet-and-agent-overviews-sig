@@ -9,7 +9,7 @@
   "openSource": false,
   "portability": false,
   "presentationProtocols": ["OpenID4VP"],
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["ECDSA", "RSA"],
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",

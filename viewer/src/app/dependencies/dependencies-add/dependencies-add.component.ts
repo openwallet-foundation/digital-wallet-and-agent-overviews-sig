@@ -113,7 +113,7 @@ export class DependenciesAddComponent implements OnInit {
 
     const json = {
       ...formValue,
-      $schema: '../viewer/src/assets/dependency.schema.json',
+      $schema: '../../schemas/dependency.json',
     };
     return JSON.stringify(json, null, 2);
   }

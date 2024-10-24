@@ -5,7 +5,7 @@
   "logo": "logos/kaytrust-wallet.png",
   "name": "KayTrust Wallet",
   "openSource": false,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/mytrust-wallet/id1477073898",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.everis.mytrust.app",

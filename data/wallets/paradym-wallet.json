@@ -10,7 +10,7 @@
   "name": "Paradym Wallet",
   "openSource": true,
   "presentationProtocols": ["OpenID4VP"],
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["EdDSA", "ECDSA"],
   "type": "edge",
   "license": "Apache 2.0",

@@ -1,13 +1,11 @@
 {
-  "capability": [
-    "holder"
-  ],
+  "capability": ["holder"],
   "company": "Trinsic",
   "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
   "logo": "logos/trisic-id.png",
   "name": "Trinsic ID",
   "openSource": true,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",

@@ -7,33 +7,16 @@
   "openSource": true,
   "downloadSource": "https://github.com/european-epc-competence-center/vc-verifier",
   "license": "AGPL-3.0",
-  "capability": [
-    "verifier"
-  ],
+  "capability": ["verifier"],
   "portability": true,
   "urlWebsite": "https://ssi.eecc.de/verifier/",
   "credentialProfiles": [],
-  "credentialFormats": [
-    "LDP-VC",
-    "SD-JWT-VC",
-    "SD-JWT"
-  ],
+  "credentialFormats": ["LDP-VC", "SD-JWT-VC", "SD-JWT"],
   "issuanceProtocols": [],
-  "keyManagements": [
-    "did:jwk",
-    "did:key",
-    "did:web"
-  ],
-  "presentationProtocols": [
-    "OpenID4VP"
-  ],
-  "signingAlgorithms": [
-    "ECDSA",
-    "EdDSA"
-  ],
-  "statusManagements": [
-    "Status List 2021"
-  ],
+  "keyManagements": ["did:jwk", "did:key", "did:web"],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA", "EdDSA"],
+  "statusManagements": ["Status List 2021"],
   "trustManagements": [],
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../../schemas/wallet.json"
 }

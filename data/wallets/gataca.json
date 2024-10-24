@@ -9,7 +9,7 @@
   "name": "Gataca Wallet",
   "openSource": false,
   "presentationProtocols": ["OpenID4VP"],
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["EdDSA", "RSA"],
   "statusManagements": ["Status List 2021"],
   "type": "edge",

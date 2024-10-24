@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "CaseStudy",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The schema version of the case study JSON entry"
+    },
+    "references": {
+      "type": "array",
+      "description": "The names of the or agent to link it to. It has to match with the name of the agent or a wallet",
+      "items": {
+        "type": "string"
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "The date the case study was added",
+      "format": "date"
+    },
+    "stage": {
+      "type": "string",
+      "description": "The stage of the case study",
+      "enum": ["poc", "production", "retired"]
+    },
+    "headline": {
+      "type": "string",
+      "description": "Name of the case study, max 60 chars",
+      "maxLength": 60
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short summary of the case study, max 1000 chars",
+      "maxLength": 1000
+    },
+    "imageUrl": {
+      "type": "string",
+      "description": "URL to the image of the case study",
+      "format": "uri"
+    },
+    "url": {
+      "type": "string",
+      "description": "URL to the case study",
+      "format": "uri"
+    },
+    "hashTags": {
+      "type": "array",
+      "description": "List of hash tags that are relevant for the case study",
+      "$comment": "this should be a defined list of hash tags",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stakeholders": {
+      "type": "array",
+      "description": "List of stakeholders that are relevant for the case study",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the stakeholder"
+          },
+          "contact": {
+            "type": "string",
+            "description": "Contact information of the stakeholder"
+          }
+        },
+        "required": ["name"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "references",
+    "headline",
+    "summary",
+    "imageUrl",
+    "stage",
+    "url",
+    "hashTags",
+    "createdAt"
+  ],
+  "additionalProperties": false
+}

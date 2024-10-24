@@ -8,7 +8,7 @@
   "logo": "logos/zada.png",
   "name": "ZADA",
   "openSource": true,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["CL", "RSA"],
   "statusManagements": ["Indy Revocation"],
   "type": "edge",

@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Signing-Algorithm.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "$ref": "defs.json#/definitions/Schema"
+    },
+    "Name": {
+      "type": "string",
+      "description": "A unique identifier for the signing algorithm"
+    },
+    "Implementation Support": {
+      "$ref": "defs.json#/definitions/Implementation-Support"
+    },
+    "IPR Policy": {
+      "$ref": "defs.json#/definitions/IPR-Policy"
+    },
+    "Specification": {
+      "$ref": "defs.json#/definitions/Specification"
+    },
+    "Standardization (Body, Process)": {
+      "$ref": "defs.json#/definitions/Standardization"
+    },
+    "Recognition by government authorities (NIST, BSI, ...)": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Is the signing algorithm recognized in regulatory frameworks of leading government bodies?"
+        }
+      ]
+    },
+    "Performance": {
+      "type": "string",
+      "description": "How performant is the signing algorithm?",
+      "$comment": "difficult to answer, since there is no performance framework to measure against"
+    },
+    "Hardware support": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Is the Signing Algorithm supported by common hardware-backed cryptographic implementations, such as Secure Elements, SecureEnclave, HSM, Strongbox, TEE, TPM",
+          "$comment": "Using different approaches can lead to different results when choosing key lengths or performance measurements"
+        }
+      ]
+    },
+    "Unlinkability-Uncorrelatability-Blind signatures possible": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Is the Signing Algorithm capable of creating a credential scheme, such that two verification processes can not be linked/correlated by colluding Verifiers/Relying Parties?"
+        }
+      ]
+    },
+    "Security strength": {
+      "type": "string",
+      "description": "What level of security strength is common and standardized for this signing algorithm?"
+    },
+    "Post-quantum security": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Is the Signing Algorithm still secure if quantum computing achieves substantial computation power?"
+        }
+      ]
+    }
+  },
+  "required": ["$schema", "Name"],
+  "title": "SigningAlgorithm"
+}

@@ -7,7 +7,7 @@
   "logo": "logos/mattr-wallet.png",
   "name": "MATTR Showcase Wallet",
   "openSource": false,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["BBS+ with public key binding", "EdDSA"],
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243",

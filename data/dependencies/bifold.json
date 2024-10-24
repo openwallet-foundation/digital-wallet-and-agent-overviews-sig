@@ -1,5 +1,5 @@
 {
-  "$schema": "../viewer/src/assets/dependency.schema.json",
+  "$schema": "../../schemas/dependency.json",
   "name": "Bifold",
   "url": "https://github.com/openwallet-foundation/bifold-wallet",
   "description": "Aries Mobile Agent React Native - Part of the Aries Bifold effort to provide SSI capabilities in a production ready app.",

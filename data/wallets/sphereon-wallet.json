@@ -4,14 +4,25 @@
   "credentialFormats": ["JWT", "JWT-VC", "LDP-VC"],
   "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet",
   "issuanceProtocols": ["OpenID4VCI"],
-  "keyManagements": ["did:jwk", "did:key", "did:cheqd", "did:web", "pub key in X.509 cert"],
+  "keyManagements": [
+    "did:jwk",
+    "did:key",
+    "did:cheqd",
+    "did:web",
+    "pub key in X.509 cert"
+  ],
   "license": "GPL 3.0",
   "logo": "logos/sphereon-wallet.png",
   "name": "Sphereon Wallet",
   "openSource": true,
   "presentationProtocols": ["OpenID4VP"],
-  "$schema": "../viewer/src/assets/schema.json",
-  "signingAlgorithms": ["BBS+ with public key binding", "ECDSA", "EdDSA", "RSA"],
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": [
+    "BBS+ with public key binding",
+    "ECDSA",
+    "EdDSA",
+    "RSA"
+  ],
   "statusManagements": ["Status List 2021"],
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/sphereon-wallet/id1661096796",

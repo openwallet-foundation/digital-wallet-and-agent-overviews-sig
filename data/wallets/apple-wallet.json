@@ -4,7 +4,7 @@
   "logo": "logos/apple-wallet.png",
   "name": "Apple Wallet",
   "openSource": false,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "type": "edge",
   "urlWebsite": "https://www.apple.com/wallet/"
 }

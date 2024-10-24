@@ -5,7 +5,7 @@
   "credentialProfiles": ["AnonCreds with did:indy"],
   "logo": "logos/esatus-wallet.png",
   "name": "SOWL",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "type": "cloud",
   "urlWebsite": "https://esatus.com/en/digital-identity/"
 }

@@ -2,10 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { FieldResponse, Resource, ResourceType, Wallet } from './types';
-import schema from '../../assets/schema.json';
+import schema from '../../assets/schemas/wallet.json';
 import { walletData } from './wallets-data';
 import { CaseStudiesService } from '../case-studies/case-studies.service';
 import { DependenciesService } from '../dependencies/dependencies.service';
+import fields from '../../assets/schemas/fields.json';
 
 type ErrorFile = Record<
   'wallets' | 'case-studies' | 'dependencies',
@@ -112,11 +113,7 @@ export class WalletsService {
    * @returns
    */
   async getDefinitions() {
-    return firstValueFrom(
-      this.httpClient.get<FieldResponse>(
-        'https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json'
-      )
-    );
+    return fields as FieldResponse;
   }
 
   find(id: string) {
@@ -130,11 +127,10 @@ export class WalletsService {
    * @returns
    */
   getLink(resourceType: ResourceType, key: string) {
-    const url =
-      'https://openwallet-foundation.github.io/credential-format-comparison-sig/#';
+    const url = '';
     switch (resourceType) {
       case 'credentialProfiles':
-        return `${url}/profiles/${key}`;
+        return `${url}/credential-profiles/${key}`;
       case 'credentialFormats':
         return `${url}/resources/Credential%20Format/${key}`;
       case 'issuanceProtocols':

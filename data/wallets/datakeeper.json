@@ -5,7 +5,7 @@
   "logo": "logos/datakeeper.png",
   "name": "Datakeeper",
   "openSource": false,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["ECDSA"],
   "urlAppStore": "https://apps.apple.com/nl/app/datakeeper/id1546059184",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=nl.rabobank.ida&gl=US",

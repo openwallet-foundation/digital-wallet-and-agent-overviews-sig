@@ -3,7 +3,7 @@
   "company": "KayTrust",
   "name": "KayTrust Provider",
   "openSource": false,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "type": "cloud",
   "urlWebsite": "https://developer.kaytrust.id/Provider/"
 }

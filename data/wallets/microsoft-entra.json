@@ -7,7 +7,7 @@
   "name": "Microsoft Entra Verified ID",
   "openSource": false,
   "presentationProtocols": ["OpenID4VP"],
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "statusManagements": ["Status List 2021"],
   "type": "cloud",
   "urlWebsite": "https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-verified-id"

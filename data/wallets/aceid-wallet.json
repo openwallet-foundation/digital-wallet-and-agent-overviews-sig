@@ -2,7 +2,7 @@
   "capability": ["holder"],
   "company": "AceBlock",
   "name": "AceID Wallet",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "openSource": false,
   "type": "cloud",
   "urlWebsite": "https://www.aceblock.com/modules/aceid/"

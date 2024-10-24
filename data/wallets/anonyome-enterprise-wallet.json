@@ -16,5 +16,5 @@
   "signingAlgorithms": ["BBS+ with public key binding", "CL", "ECDSA", "EdDSA"],
   "statusManagements": ["Indy Revocation"],
   "trustManagements": [],
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../../schemas/wallet.json"
 }

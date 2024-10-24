@@ -6,41 +6,16 @@
   "type": "cloud",
   "openSource": false,
   "license": "Proprietary",
-  "capability": [
-    "issuer",
-    "holder",
-    "verifier"
-  ],
+  "capability": ["issuer", "holder", "verifier"],
   "portability": true,
   "urlWebsite": "https://www.procivis.ch/en/procivis-one",
-  "credentialProfiles": [
-    "ISO mDL",
-    "JSON-LD VCs with BBS (Holder DID)"
-  ],
-  "credentialFormats": [
-    "JWT-VC",
-    "LDP-VC",
-    "MDOC",
-    "SD-JWT-VC"
-  ],
-  "issuanceProtocols": [
-    "OpenID4VCI"
-  ],
-  "keyManagements": [
-    "did:jwk",
-    "did:key",
-    "did:web",
-    "pub key in X.509 cert"
-  ],
-  "presentationProtocols": [
-    "OpenID4VP"
-  ],
-  "signingAlgorithms": [
-    "BBS+ with public key binding",
-    "ECDSA",
-    "EdDSA"
-  ],
+  "credentialProfiles": ["ISO mDL", "JSON-LD VCs with BBS (Holder DID)"],
+  "credentialFormats": ["JWT-VC", "LDP-VC", "MDOC", "SD-JWT-VC"],
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:jwk", "did:key", "did:web", "pub key in X.509 cert"],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["BBS+ with public key binding", "ECDSA", "EdDSA"],
   "statusManagements": ["Status List 2021", "Validity Credential"],
   "trustManagements": [],
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../../schemas/wallet.json"
 }

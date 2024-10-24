@@ -4,7 +4,7 @@
   "credentialFormats": ["JWT", "JWT-VC"],
   "logo": "logos/mykeepin.png",
   "name": "Wepublic",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["ECDSA"],
   "type": "edge",
   "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet",

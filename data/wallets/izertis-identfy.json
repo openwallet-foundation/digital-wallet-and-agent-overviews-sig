@@ -29,5 +29,5 @@
     "short-term expiration"
   ],
   "trustManagements": ["EBSI Trust Registries"],
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../../schemas/wallet.json"
 }

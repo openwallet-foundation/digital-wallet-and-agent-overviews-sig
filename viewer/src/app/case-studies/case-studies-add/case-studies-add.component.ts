@@ -194,7 +194,7 @@ export class CaseStudiesAddComponent implements OnInit {
 
     const json = {
       ...formValue,
-      $schema: '../viewer/src/assets/case-study.schema.json',
+      $schema: '../../schemas/case-study.json',
     };
     return JSON.stringify(json, null, 2);
   }
@@ -240,7 +240,7 @@ export class CaseStudiesAddComponent implements OnInit {
           name: 'RCS Global',
         },
       ],
-      $schema: '../viewer/src/assets/case-study.schema.json',
+      $schema: '../../schemas/case-study.json',
     };
     this.form.patchValue(caseStudy);
   }

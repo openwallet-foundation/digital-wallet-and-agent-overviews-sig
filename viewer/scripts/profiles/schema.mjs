@@ -2,6 +2,13 @@ import {readFileSync, writeFileSync, lstatSync, readdirSync, existsSync, mkdirSy
 import { folder, schemaFolder } from './values.mjs';
 import { join } from 'path';
 
+export function copySchema() {
+  const files = readdirSync(schemaFolder);
+  for(const file of files) {
+    writeFileSync(join('src/assets/schemas', file), readFileSync(join(schemaFolder, file), 'utf8'), 'utf8');
+  }
+}
+
 export function updateSchema() {
   const schemaPath = `${schemaFolder}/Credential-Profile.json`;
   const file = JSON.parse(readFileSync(schemaPath, 'utf8'));
@@ -31,18 +38,19 @@ export function updateSchema() {
     }
   });
   writeFileSync(join(generatedFolder, 'fields.json'), JSON.stringify(schema, null, 2), 'utf8');
+  copySchema();
+}
 
-  function getEnum(subFolder) {
-  // adds the resources to the schema file of the profile
-      try {
-          const info = lstatSync(`${folder}/${subFolder.replace(' ', '-')}`);
-          if(info.isDirectory()) {
-              return readdirSync(`${folder}/${subFolder.replace(' ', '-')}`).map((file) =>
-                  JSON.parse(readFileSync(`${folder}/${subFolder.replace(' ', '-')}/${file}`, 'utf8')).Name
-              );
-          }
-      } catch (e) {
-          return null;
-      }
-  }
+function getEnum(subFolder) {
+// adds the resources to the schema file of the profile
+    try {
+        const info = lstatSync(`${folder}/${subFolder.replace(' ', '-')}`);
+        if(info.isDirectory()) {
+            return readdirSync(`${folder}/${subFolder.replace(' ', '-')}`).map((file) =>
+                JSON.parse(readFileSync(`${folder}/${subFolder.replace(' ', '-')}/${file}`, 'utf8')).Name
+            );
+        }
+    } catch (e) {
+        return null;
+    }
 }

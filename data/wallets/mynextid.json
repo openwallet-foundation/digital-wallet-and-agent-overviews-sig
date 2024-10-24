@@ -3,6 +3,6 @@
   "company": "MyNextID",
   "contact": "info@mynext.id",
   "name": "MyNextID",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "urlWebsite": "https://mynext.id/"
 }

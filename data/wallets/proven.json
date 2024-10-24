@@ -1,13 +1,10 @@
 {
-  "capability": [
-    "issuer",
-    "verifier"
-  ],
+  "capability": ["issuer", "verifier"],
   "company": "Indicio",
   "name": "Proven",
   "openSource": false,
   "logo": "logos/proven.png",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "type": "cloud",
   "urlWebsite": "https://indicio.tech/indicio-proven/"
 }

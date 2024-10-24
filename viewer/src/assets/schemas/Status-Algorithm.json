@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Status-Algorithm.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "$ref": "defs.json#/definitions/Schema"
+    },
+    "Name": {
+      "type": "string",
+      "description": "Unique identifier of the algorithm"
+    },
+    "Implementation Support": {
+      "$ref": "defs.json#/definitions/Implementation-Support"
+    },
+    "IPR Policy": {
+      "$ref": "defs.json#/definitions/IPR-Policy"
+    },
+    "Specification": {
+      "$ref": "defs.json#/definitions/Specification"
+    },
+    "Standardization (Body, Process)": {
+      "$ref": "defs.json#/definitions/Standardization"
+    },
+    "Recognition by government authorities (NIST, BSI, ...)": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Is the status algorithm recognized in regulatory frameworks of leading government bodies?"
+        }
+      ]
+    },
+    "Category": {
+      "type": "string",
+      "description": "Algorithm that behind the implementation of the revocation (Bitlist = each credential has a position in the list. Deny-List: revoked credentials will be added on demand. Accumulator: cryptographic proof the holder presents to show that the credential is not revoked)"
+    },
+    "Performance": {
+      "type": "string",
+      "description": "How performant is the revocation mechanism (for issuer, holder and verifier)?",
+      "$comment": "For this case there could be some king of test framework"
+    },
+    "Observability": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Does the Verifier have the possibility to observe the revocation status beyond the presentation?"
+        }
+      ]
+    },
+    "Traceability": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Does the issuer have possibilities to trace the usage of his issued credentials through the revocation mechanism?",
+          "$comment": "With a size of one used element the issuer should always be able to trace the usage of his issued credentials"
+        }
+      ]
+    },
+    "Scalability": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "At what scale has the algorithm/technology been demonstrated to work? Are there any known issues?"
+        }
+      ]
+    },
+    "Offline Friendliness": {
+      "allOf": [
+        {
+          "$ref": "defs.json#/definitions/Filter"
+        },
+        {
+          "description": "Does the revocation mechanism support an authentication if the holder is offline?"
+        }
+      ]
+    }
+  },
+  "required": ["$schema", "Name"],
+  "title": "RevocationAlgorithm"
+}

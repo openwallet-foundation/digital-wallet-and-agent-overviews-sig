@@ -1,5 +1,5 @@
 {
-  "$schema": "../viewer/src/assets/dependency.schema.json",
+  "$schema": "../../schemas/dependency.json",
   "name": "SD-JWT-JS",
   "url": "https://github.com/openwallet-foundation-labs/sd-jwt-js",
   "description": "A TypeScript implementation of the Selective Disclosure JWT (SD-JWT) spec.",

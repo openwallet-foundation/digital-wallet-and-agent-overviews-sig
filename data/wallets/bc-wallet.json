@@ -8,7 +8,7 @@
   "logo": "logos/bc-wallet.png",
   "name": "BC Wallet",
   "openSource": true,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["CL"],
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/bc-wallet/id1587380443",

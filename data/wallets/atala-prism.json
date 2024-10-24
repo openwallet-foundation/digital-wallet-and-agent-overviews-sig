@@ -7,5 +7,5 @@
   "openSource": false,
   "signingAlgorithms": ["ECDSA"],
   "urlWebsite": "https://atalaprism.io/",
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../../schemas/wallet.json"
 }

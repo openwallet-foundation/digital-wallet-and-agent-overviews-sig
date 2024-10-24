@@ -17,7 +17,7 @@
   "logo": "logos/meeco.png",
   "name": "Meeco Holder Wallet",
   "openSource": false,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["EdDSA", "ECDSA"],
   "statusManagements": ["Status List 2021"],
   "trustManagements": ["EBSI Trust Registries", "X.509 certificates"],

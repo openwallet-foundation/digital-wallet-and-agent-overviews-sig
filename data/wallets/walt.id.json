@@ -11,7 +11,7 @@
   "name": "walt.id",
   "openSource": true,
   "presentationProtocols": ["OpenID4VP"],
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["ECDSA", "EdDSA", "RSA"],
   "statusManagements": ["Status List 2021"],
   "type": "cloud",

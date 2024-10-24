@@ -5,9 +5,7 @@
   "type": "edge",
   "openSource": false,
   "license": "Commercial software license",
-  "capability": [
-    "holder"
-  ],
+  "capability": ["holder"],
   "credentialProfiles": [],
   "credentialFormats": [],
   "issuanceProtocols": [],
@@ -19,5 +17,5 @@
   "urlAppStore": "https://apps.apple.com/fi/app/hightrust-id/id1549852126",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.megical.easyaccess",
   "urlWebsite": "https://www.hightrust.id",
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../../schemas/wallet.json"
 }

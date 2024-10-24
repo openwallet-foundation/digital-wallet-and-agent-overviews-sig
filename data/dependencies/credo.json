@@ -1,5 +1,5 @@
 {
-  "$schema": "../viewer/src/assets/dependency.schema.json",
+  "$schema": "../../schemas/dependency.json",
   "name": "Credo",
   "url": "https://github.com/openwallet-foundation/credo-ts",
   "description": "Typescript framework for building decentralized identity and verifiable credential solutions",

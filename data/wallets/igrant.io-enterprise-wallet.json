@@ -8,10 +8,7 @@
   "urlWebsite": "https://igrant.io",
   "openSource": false,
   "license": "Commercial",
-  "capability": [
-    "issuer",
-    "verifier"
-  ],
+  "capability": ["issuer", "verifier"],
   "portability": true,
   "credentialProfiles": [
     "AnonCreds with did:indy",
@@ -32,9 +29,7 @@
     "VC (1.1)",
     "x509"
   ],
-  "issuanceProtocols": [
-    "OpenID4VCI"
-  ],
+  "issuanceProtocols": ["OpenID4VCI"],
   "keyManagements": [
     ".well-known/jwt-issuer",
     "did:ebsi",
@@ -45,23 +40,14 @@
     "pub key in X.509 cert",
     "raw public keys (jwk)"
   ],
-  "presentationProtocols": [
-    "OpenID4VP"
-  ],
-  "signingAlgorithms": [
-    "CL",
-    "ECDSA",
-    "EdDSA"
-  ],
-  "statusManagements": [
-    "Indy Revocation",
-    "Status List 2021"
-  ],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["CL", "ECDSA", "EdDSA"],
+  "statusManagements": ["Indy Revocation", "Status List 2021"],
   "trustManagements": [
     "EBSI Trust Registries",
     "OpenID Connect Federation",
     "Verifier knows Issuers",
     "X.509 certificates"
   ],
-  "$schema": "../viewer/src/assets/schema.json"
+  "$schema": "../../schemas/wallet.json"
 }

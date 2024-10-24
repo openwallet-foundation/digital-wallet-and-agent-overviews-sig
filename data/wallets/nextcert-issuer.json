@@ -1,10 +1,8 @@
 {
-  "capability": [
-    "issuer"
-  ],
+  "capability": ["issuer"],
   "company": "Next ID",
   "logo": "logos/nextcert-issuer.png",
   "name": "NextCert Issuer",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "urlWebsite": "https://nextid.com/nextcert-issuer/"
 }

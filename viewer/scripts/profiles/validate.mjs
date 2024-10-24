@@ -1,4 +1,4 @@
-import {readdirSync, readFileSync, rmSync, writeFileSync} from 'fs';
+import {readdirSync, readFileSync } from 'fs';
 import process from 'process';
 import { defFile, folder, schemaFolder, structureFile } from './values.mjs';
 import Ajv from 'ajv';

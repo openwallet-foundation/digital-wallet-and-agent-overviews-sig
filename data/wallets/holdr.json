@@ -1,17 +1,11 @@
 {
-  "capability": [
-    "holder"
-  ],
+  "capability": ["holder"],
   "company": "Indicio",
-  "credentialFormats": [
-    "AnonCred"
-  ],
-  "credentialProfiles": [
-    "AnonCreds with did:indy"
-  ],
+  "credentialFormats": ["AnonCred"],
+  "credentialProfiles": ["AnonCreds with did:indy"],
   "logo": "logos/holdr.png",
   "name": "Holdr+",
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/holdr/id1620628623",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=tech.indicio.holdrplus",

@@ -13,7 +13,7 @@ const CASE_STUDIES_PATH = '../data/case-studies';
 const DEPENDENCY_SCHEMA_PATH = 'src/assets/dependency.schema.json';
 const WALLET_SCHEMA_PATH = 'src/assets/schema.json';
 const CASE_STUDY_SCHEMA_PATH = 'src/assets/case-study.schema.json';
-const PROFILE_SIG_SCHEMA_URL = 'https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json';
+const PROFILE_SIG_SCHEMA_URL = 'src/assets/schemas/fields.json';
 
 const dependencyIds = [];
 const walletIds = [];

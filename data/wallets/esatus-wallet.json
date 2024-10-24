@@ -7,7 +7,7 @@
   "logo": "logos/esatus-wallet.png",
   "name": "esatus Wallet",
   "openSource": false,
-  "$schema": "../viewer/src/assets/schema.json",
+  "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["CL"],
   "statusManagements": ["Indy Revocation"],
   "type": "edge",
