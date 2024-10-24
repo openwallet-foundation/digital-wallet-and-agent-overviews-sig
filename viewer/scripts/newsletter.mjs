@@ -32,7 +32,7 @@ if (!fromDate || !untilDate) {
 // Get the list of files added in the specified date range
 let caseStudyFiles = execSync(`git log --diff-filter=A --since="${fromDate}" --until="${untilDate}" --name-only --pretty=format:`, { encoding: 'utf8' })
   .split('\n')
-  .filter(file => file.startsWith('case-studies/') && file.endsWith('.json'));
+  .filter(file => file.startsWith('data/case-studies/') && file.endsWith('.json'));
 
 if(process.env.LOCAL) {
   //use all files that are included in the folder

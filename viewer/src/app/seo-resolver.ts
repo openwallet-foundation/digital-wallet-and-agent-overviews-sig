@@ -75,7 +75,11 @@ export class SeoResolver implements Resolve<SeoInformation> {
         const res = this.appService.getValues(resource as keyof Resources)?.[
           id
         ];
-        return of(res ? { title: res.Name } : { title: 'Resource Not Found' });
+        return of(
+          res
+            ? { title: `${resource}: ${res.Name}` }
+            : { title: 'Resource Not Found' }
+        );
       }
     }
 

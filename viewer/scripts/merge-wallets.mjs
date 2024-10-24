@@ -5,9 +5,9 @@ import { mergeProfiles } from './profiles/merge.mjs';
 const commitHistoryBase = 'https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/';
 
 // Paths
-const DEPENDENCIES_PATH = '../dependencies';
-const CASE_STUDIES_PATH = '../case-studies';
-const WALLETS_PATH = '../wallets';
+const DEPENDENCIES_PATH = '../data/dependencies';
+const CASE_STUDIES_PATH = '../data/case-studies';
+const WALLETS_PATH = '../data/wallets';
 const OUTPUT_PATH = 'src/app';
 
 // Function to read and process JSON files from a directory

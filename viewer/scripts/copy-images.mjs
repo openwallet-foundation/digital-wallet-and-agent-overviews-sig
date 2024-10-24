@@ -1,11 +1,10 @@
 // Search for external link of images, download them and set a new reference to the local file
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import { createWriteStream } from 'fs';
-import { error } from 'console';
 
-const folder = "../wallets";
+const folder = "../data/wallets";
 const files = readdirSync(folder);
 
 async function downloadImage(url, filepath) {

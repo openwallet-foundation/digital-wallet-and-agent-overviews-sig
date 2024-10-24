@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start center">
-  <div fxLayout="row" fxHide.xs="true">
+  <div fxLayout="row" fxHide.lt-md="true">
     <div class="github">
       <a mat-button routerLink="/"
         ><img src="assets/project-icon.png" alt="logo" height="20" />
@@ -7,7 +7,7 @@
       >
     </div>
     <button mat-button [routerLink]="'/wallets'" routerLinkActive="active-link">
-      Wallets
+      Wallets & Agents
     </button>
     <button
       mat-button
@@ -48,7 +48,7 @@
     >
   </div>
   <div class="spacer"></div>
-  <div fxLayout="row" fxLayoutAlign="start center" fxHide.xs="true">
+  <div fxLayout="row" fxLayoutAlign="start center" fxHide.lt-md="true">
     <button mat-button (click)="showInfo()">Info</button>
     <div class="github">
       <a
@@ -58,7 +58,7 @@
       >
     </div>
   </div>
-  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide.gt-xs="true">
+  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide.gt-sm="true">
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
@@ -69,7 +69,7 @@
       routerLinkActive="active-link"
       [routerLinkActiveOptions]="{ exact: true }"
     >
-      Wallets
+      Wallets & Agents
     </button>
     <button
       mat-menu-item

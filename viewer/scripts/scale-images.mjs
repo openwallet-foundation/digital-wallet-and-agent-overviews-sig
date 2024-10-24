@@ -2,16 +2,19 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const inputFolder = 'src/assets/logos';
-const outputFolder = 'src/assets/logos-resized';
-const maxWidth = 200;
+const INPUT_FOLDER = 'src/assets/logos';
+const OUTPUT_FOLDER = 'src/assets/logos-resized';
+const MAX_WIDTH = 200;
 
 // Create the output folder if it doesn't exist
-if (!fs.existsSync(outputFolder)) {
-  fs.mkdirSync(outputFolder, { recursive: true });
+function createOutputFolder(folder) {
+  if (!fs.existsSync(folder)) {
+    fs.mkdirSync(folder, { recursive: true });
+  }
 }
 
-const resizeImage = async (inputPath, outputPath, maxWidth) => {
+// Resize an image if its width is greater than maxWidth, otherwise copy it
+async function resizeImage(inputPath, outputPath, maxWidth) {
   try {
     const metadata = await sharp(inputPath).metadata();
     if (metadata.width > maxWidth) {
@@ -26,9 +29,10 @@ const resizeImage = async (inputPath, outputPath, maxWidth) => {
   } catch (error) {
     console.error(`Error processing ${path.basename(inputPath)}:`, error);
   }
-};
+}
 
-const resizeImagesInFolder = async (inputFolder, outputFolder, maxWidth) => {
+// Resize all images in a folder
+async function resizeImagesInFolder(inputFolder, outputFolder, maxWidth) {
   const files = fs.readdirSync(inputFolder);
   for (const file of files) {
     const inputPath = path.join(inputFolder, file);
@@ -37,10 +41,10 @@ const resizeImagesInFolder = async (inputFolder, outputFolder, maxWidth) => {
       await resizeImage(inputPath, outputPath, maxWidth);
     }
   }
-};
+}
 
-const overrideFolder = (inputFolder, outputFolder) => {
-  // move all files from inputFolder to outputFolder
+// Move all files from one folder to another and remove the original folder
+function overrideFolder(inputFolder, outputFolder) {
   const files = fs.readdirSync(inputFolder);
   for (const file of files) {
     const inputPath = path.join(inputFolder, file);
@@ -50,6 +54,11 @@ const overrideFolder = (inputFolder, outputFolder) => {
   fs.rmSync(inputFolder, { recursive: true });
 }
 
-resizeImagesInFolder(inputFolder, outputFolder, maxWidth)
-  .then(() => overrideFolder(outputFolder, inputFolder))
-  .catch(error => console.error('An error occurred:', error));
+// Main function to resize images and override the folder
+async function main() {
+  createOutputFolder(OUTPUT_FOLDER);
+  await resizeImagesInFolder(INPUT_FOLDER, OUTPUT_FOLDER, MAX_WIDTH);
+  overrideFolder(OUTPUT_FOLDER, INPUT_FOLDER);
+}
+
+main().catch(error => console.error('An error occurred:', error));
