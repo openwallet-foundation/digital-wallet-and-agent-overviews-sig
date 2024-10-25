@@ -15,7 +15,7 @@
   "signingAlgorithms": ["ECDSA"],
   "statusManagements": ["JWT/CWT status list"],
   "trustManagements": ["Verifier knows Issuers", "X.509 certificates"],
-  "logo": "logos/mattr-wallet.png",
+  "logo": "logos/lissi.png",
   "name": "Lissi EUDI-Wallet Connector",
   "openSource": false,
   "$schema": "../viewer/src/assets/schema.json",
