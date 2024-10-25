@@ -25,9 +25,9 @@ export function mergeProfiles() {
           values: {}
       };
       // write the content of the file to the json object
-      readdirSync(join(folder, subFolder)).filter(file => file !== structureFile).forEach((file) => {
+      readdirSync(join(folder, subFolder + 's')).filter(file => file !== structureFile).forEach((file) => {
           // write the content of the file to the json object
-          const content = JSON.parse(readFileSync(join(folder, subFolder, file), 'utf8'));
+          const content = JSON.parse(readFileSync(join(folder, subFolder + 's', file), 'utf8'));
           content['$schema'] = content['$schema'].replace('../..', `/main/${githubPath}`);
           const name = capitalizeWords(subFolder.replace(/-/g, ' '));
           input[name].values[content.Name] = content;
