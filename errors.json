@@ -16,10 +16,8 @@
       "urlWebsite": "https://endorser.ch/"
     },
     "identry": {
-      "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919"
-    },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
+      "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
+      "urlWebsite": "https://identry.io/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
@@ -28,10 +26,16 @@
       "companyUrl": "https://ufwfoundation.org/",
       "urlWebsite": "https://www.preparese.info/"
     },
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
     "selfkey-wallet": {
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
-      "urlWebsite": "https://selfkey.org/selfkey-wallet/",
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
+      "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
@@ -46,15 +50,15 @@
     "vidcredentials": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
+    },
+    "orbit-edge-wallet": {
+      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
     }
   }
 }
