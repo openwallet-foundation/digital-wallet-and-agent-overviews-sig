@@ -5,11 +5,11 @@
     }
   },
   "wallets": {
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
@@ -18,6 +18,9 @@
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
       "urlWebsite": "https://identry.io/"
+    },
+    "hightrust.id": {
+      "urlWebsite": "https://www.hightrust.id"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
@@ -44,11 +47,11 @@
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "vidcredentials": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
-    },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+    },
+    "vidcredentials": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
