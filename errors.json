@@ -5,11 +5,11 @@
     }
   },
   "wallets": {
-    "anonyome-wallet": {
-      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
-    },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
+    },
+    "anonyome-wallet": {
+      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
@@ -30,25 +30,25 @@
       "urlWebsite": "https://orgwallet.de/en/"
     },
     "selfkey-wallet": {
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/"
+    },
+    "trisic-id": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
-    "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
+    "vidua": {
+      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
+      "urlWebsite": "https://vidua.nl/english/"
     },
     "vidcredentials": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
-    },
-    "vidua": {
-      "urlWebsite": "https://vidua.nl/english/",
-      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
