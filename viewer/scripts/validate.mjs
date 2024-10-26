@@ -10,9 +10,9 @@ addFormats(ajv);
 const DEPENDENCIES_PATH = '../data/dependencies';
 const WALLETS_PATH = '../data/wallets';
 const CASE_STUDIES_PATH = '../data/case-studies';
-const DEPENDENCY_SCHEMA_PATH = 'src/assets/dependency.schema.json';
-const WALLET_SCHEMA_PATH = 'src/assets/schema.json';
-const CASE_STUDY_SCHEMA_PATH = 'src/assets/case-study.schema.json';
+const DEPENDENCY_SCHEMA_PATH = '../schemas/dependency.json';
+const WALLET_SCHEMA_PATH = '../schemas/wallet.json';
+const CASE_STUDY_SCHEMA_PATH = '../schemas/case-study.json';
 const PROFILE_SIG_SCHEMA_URL = 'src/assets/schemas/fields.json';
 
 const dependencyIds = [];
@@ -72,9 +72,10 @@ function validateDependencies() {
 }
 
 // Validate wallets
-async function validateWallets() {
+function validateWallets() {
   const files = checkFilesInFolder(WALLETS_PATH).map(normalizeFilename);
-  const profileSIGSchema = await axios.get(PROFILE_SIG_SCHEMA_URL).then(res => res.data);
+  const profileSIGSchema = JSON.parse(readFileSync(PROFILE_SIG_SCHEMA_URL));
+  console.log(profileSIGSchema);
   ajv.addSchema(profileSIGSchema, PROFILE_SIG_SCHEMA_URL);
   const success = validateFiles(files, WALLETS_PATH, WALLET_SCHEMA_PATH, walletIds, (wallet, fileName) => {
     if (wallet.dependencies) {
@@ -117,7 +118,7 @@ function validateCaseStudies() {
 
 async function main() {
   validateDependencies();
-  await validateWallets();
+  validateWallets();
   validateCaseStudies();
   validateProfiles();
 }

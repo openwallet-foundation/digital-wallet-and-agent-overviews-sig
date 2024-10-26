@@ -1035,9 +1035,35 @@ export const walletData: Wallet[] = [
     "contact": "info@lissi.id",
     "companyUrl": "https://www.lissi.id/",
     "credentialProfiles": [
-      "HAIP"
+      "HAIP",
+      "ISO mDL",
+      "SD-JWT VCs (w/ X.509 for Issuers)"
     ],
-    "logo": "logos/lissi-wallet.png",
+    "credentialFormats": [
+      "MDOC",
+      "SD-JWT-VC"
+    ],
+    "issuanceProtocols": [
+      "OpenID4VCI"
+    ],
+    "keyManagements": [
+      ".well-known/jwt-issuer",
+      "pub key in X.509 cert"
+    ],
+    "presentationProtocols": [
+      "OpenID4VP"
+    ],
+    "signingAlgorithms": [
+      "ECDSA"
+    ],
+    "statusManagements": [
+      "JWT/CWT status list"
+    ],
+    "trustManagements": [
+      "Verifier knows Issuers",
+      "X.509 certificates"
+    ],
+    "logo": "logos/lissi.png",
     "name": "Lissi EUDI-Wallet Connector",
     "openSource": false,
     "type": "cloud",
@@ -1053,13 +1079,34 @@ export const walletData: Wallet[] = [
     "company": "Lissi GmbH",
     "companyUrl": "https://www.lissi.id/",
     "contact": "info@lissi.id",
+    "portability": false,
     "credentialProfiles": [
-      "HAIP"
+      "HAIP",
+      "ISO mDL",
+      "SD-JWT VCs (w/ X.509 for Issuers)"
+    ],
+    "credentialFormats": [
+      "MDOC",
+      "SD-JWT-VC"
     ],
     "issuanceProtocols": [
       "OpenID4VCI"
     ],
-    "logo": "logos/lissi-wallet.png",
+    "keyManagements": [
+      ".well-known/jwt-issuer",
+      "pub key in X.509 cert"
+    ],
+    "signingAlgorithms": [
+      "ECDSA"
+    ],
+    "statusManagements": [
+      "JWT/CWT status list"
+    ],
+    "trustManagements": [
+      "Verifier knows Issuers",
+      "X.509 certificates"
+    ],
+    "logo": "logos/lissi.png",
     "name": "Lissi Wallet",
     "openSource": false,
     "presentationProtocols": [

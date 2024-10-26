@@ -42,15 +42,22 @@ export function updateSchema() {
 }
 
 function getEnum(subFolder) {
-// adds the resources to the schema file of the profile
-    try {
-        const info = lstatSync(`${folder}/${subFolder.replace(' ', '-')}`);
+  // adds the resources to the schema file of the profile
+  try {
+      const s = capitalizeWords(subFolder.replace(' ', '-')) + 's';
+        const info = lstatSync(`${folder}/${s}`);
         if(info.isDirectory()) {
-            return readdirSync(`${folder}/${subFolder.replace(' ', '-')}`).map((file) =>
-                JSON.parse(readFileSync(`${folder}/${subFolder.replace(' ', '-')}/${file}`, 'utf8')).Name
+            return readdirSync(`${folder}/${s}`).map((file) =>
+                JSON.parse(readFileSync(`${folder}/${s}/${file}`, 'utf8')).Name
             );
         }
     } catch (e) {
         return null;
     }
+}
+
+function capitalizeWords(str) {
+  return str.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
