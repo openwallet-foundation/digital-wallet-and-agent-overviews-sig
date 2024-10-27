@@ -1,7 +1,6 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import { existsSync, readFileSync, readdirSync } from 'fs';
-import axios from 'axios';
 import { validateProfiles } from './profiles/validate.mjs';
 
 const ajv = new Ajv({ allowUnionTypes: true });
@@ -13,7 +12,7 @@ const CASE_STUDIES_PATH = '../data/case-studies';
 const DEPENDENCY_SCHEMA_PATH = '../schemas/dependency.json';
 const WALLET_SCHEMA_PATH = '../schemas/wallet.json';
 const CASE_STUDY_SCHEMA_PATH = '../schemas/case-study.json';
-const PROFILE_SIG_SCHEMA_URL = 'src/assets/schemas/fields.json';
+const PROFILE_SIG_SCHEMA_URL = '../viewer/src/assets/schemas/fields.json';
 
 const dependencyIds = [];
 const walletIds = [];
@@ -75,8 +74,7 @@ function validateDependencies() {
 function validateWallets() {
   const files = checkFilesInFolder(WALLETS_PATH).map(normalizeFilename);
   const profileSIGSchema = JSON.parse(readFileSync(PROFILE_SIG_SCHEMA_URL));
-  console.log(profileSIGSchema);
-  ajv.addSchema(profileSIGSchema, PROFILE_SIG_SCHEMA_URL);
+  ajv.addSchema(profileSIGSchema, 'viewer/src/assets/schemas/fields.json');
   const success = validateFiles(files, WALLETS_PATH, WALLET_SCHEMA_PATH, walletIds, (wallet, fileName) => {
     if (wallet.dependencies) {
       for (const dependency of wallet.dependencies) {

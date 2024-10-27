@@ -1,9 +1,8 @@
 import {readdirSync, readFileSync } from 'fs';
 import process from 'process';
-import { defFile, folder, schemaFolder, structureFile } from './values.mjs';
+import { dataFolderToSchema, defFile, folder, profileFolders, schemaFolder, structureFile } from './values.mjs';
 import Ajv from 'ajv';
 import { join } from 'path';
-
 
 export function validateProfiles() {
   // pattern to match windows compliant file names
@@ -11,8 +10,9 @@ export function validateProfiles() {
 
   let error = false;
   //will loop through all the files and will check if the entries match with the structure defined in the info.json file.
-  readdirSync(folder).forEach((subFolder) => {
-      const infoFile = readFileSync(`${schemaFolder}/${subFolder}.json`, 'utf8');
+  readdirSync(folder).filter(folder => profileFolders.includes(folder)).forEach((subFolder) => {
+    const schemaFile = dataFolderToSchema(subFolder);
+      const infoFile = readFileSync(`${schemaFolder}/${schemaFile}.json`, 'utf8');
       if(!infoFile) {
           console.log(`No schema file found for ${subFolder}`);
           process.exit(1);

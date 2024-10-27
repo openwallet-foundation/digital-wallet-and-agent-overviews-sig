@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync, readdirSync } from 'fs';
-import { schemaFolder, folder, mergedStructure, structureFile, defFile, githubPath, ignoreFiles } from './values.mjs';
+import { schemaFolder, folder, mergedStructure, structureFile, defFile, githubPath, profileFolders, schemaToDataFolder } from './values.mjs';
 import { join } from 'path';
 import { updateSchema } from './schema.mjs';
 
@@ -7,7 +7,8 @@ export function mergeProfiles() {
   // merges the json files to one json file
   const input = {};
   // loop through all subfolders
-  readdirSync(schemaFolder).filter(file => !ignoreFiles.includes(file.split('.')[0])).forEach((resource) => {
+  readdirSync(schemaFolder).filter(file =>
+    profileFolders.includes(schemaToDataFolder(file.split('.')[0])) || file === defFile).forEach((resource) => {
       if(resource === defFile) {
         input['defs'] = JSON.parse(readFileSync(join(schemaFolder, resource), 'utf8'));
         return;

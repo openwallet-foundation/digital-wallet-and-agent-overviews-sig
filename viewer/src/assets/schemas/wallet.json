@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "CredentialAgent",
-  "title": "Credential Agent",
+  "$id": "Wallet",
+  "title": "Wallet or Agent",
   "type": "object",
   "properties": {
     "$schema": {

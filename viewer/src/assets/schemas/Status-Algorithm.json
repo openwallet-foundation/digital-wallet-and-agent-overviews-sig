@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "status-algorithm.json",
+  "$id": "StatusAlgorithm",
   "type": "object",
   "additionalProperties": false,
   "properties": {

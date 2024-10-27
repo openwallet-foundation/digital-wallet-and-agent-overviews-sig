@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "Requirement",
+  "$id": "Dependency",
   "type": "object",
   "properties": {
     "$schema": {
       "type": "string",
-      "description": "The schema version of the requirement JSON entry"
+      "description": "The schema version of the dependency JSON entry"
     },
     "name": {
       "type": "string",
