@@ -42,6 +42,16 @@ export class AppService {
     'Presentation Protocol',
     'Trust Management',
   ];
+  public mappedValues = {
+    'Credential Format': 'credentialFormats',
+    'Signing Algorithm': 'signingAlgorithms',
+    'Status Algorithm': 'statusAlgorithms',
+    'Key Management (Issuer)': 'keyManagements',
+    'Key Management (Holder)': 'keyManagements',
+    'Issuance Protocol': 'issuanceProtocols',
+    'Presentation Protocol': 'presentationProtocols',
+    'Trust Management': 'trustManagements',
+  };
 
   getProfile(id: string): IProfile {
     return this.getFormat('Credential Profile').values[id] as IProfile;
