@@ -22,26 +22,26 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
     },
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/",
       "companyUrl": "https://ufwfoundation.org/"
     },
     "selfkey-wallet": {
-      "urlWebsite": "https://selfkey.org/selfkey-wallet/",
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+      "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
+    "trisic-id": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
-    "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
