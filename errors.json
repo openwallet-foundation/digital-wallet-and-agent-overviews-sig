@@ -5,15 +5,15 @@
     }
   },
   "wallets": {
-    "endorser-mobile": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
-      "urlWebsite": "https://endorser.ch/"
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
+    "endorser-mobile": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
+      "urlWebsite": "https://endorser.ch/"
     },
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
@@ -22,20 +22,20 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/",
       "companyUrl": "https://ufwfoundation.org/"
     },
     "selfkey-wallet": {
       "urlWebsite": "https://selfkey.org/selfkey-wallet/",
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
     },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
-    },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
@@ -52,6 +52,9 @@
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+    },
+    "zada": {
+      "urlWebsite": "https://zada.io/"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
