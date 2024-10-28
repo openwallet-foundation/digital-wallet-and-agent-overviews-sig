@@ -1880,6 +1880,55 @@ export const walletData: Wallet[] = [
   },
   {
     "capability": [
+      "verifier"
+    ],
+    "type": "cloud",
+    "name": "Vidos Verifier",
+    "logo": "https://vidos-id.github.io/static-assets/openwallet_foundation/vidos-logo-onwhite.png",
+    "company": "Vidos",
+    "companyUrl": "https://vidos.id",
+    "urlWebsite": "https://vidos.id",
+    "urlWebApp": "https://vidos.id",
+    "openSource": false,
+    "license": "Commercial SaaS",
+    "portability": false,
+    "credentialProfiles": [
+      "JSON-LD VCs with BBS (Credential is Secret)",
+      "JSON-LD VCs with BBS (Holder DID)"
+    ],
+    "credentialFormats": [
+      "JWT-VC",
+      "JWT",
+      "LDP-VC",
+      "VC (1.1)"
+    ],
+    "issuanceProtocols": [],
+    "keyManagements": [
+      "did:cheqd",
+      "did:ebsi",
+      "did:ion (long form)",
+      "did:jwk",
+      "did:key",
+      "did:peer",
+      "did:web"
+    ],
+    "presentationProtocols": [],
+    "signingAlgorithms": [
+      "BBS+ with public key binding",
+      "ECDSA",
+      "EdDSA",
+      "RSA",
+      "Schnorr"
+    ],
+    "statusManagements": [
+      "Status List 2021"
+    ],
+    "trustManagements": [],
+    "id": "vidos-id",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/vidos-id.json"
+  },
+  {
+    "capability": [
       "holder"
     ],
     "company": "Cleverbase",
