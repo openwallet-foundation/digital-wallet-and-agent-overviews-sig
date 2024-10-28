@@ -5,14 +5,15 @@
     }
   },
   "wallets": {
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
+    },
     "endorser-mobile": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile",
+      "companyUrl": "https://communitycred.org/"
     },
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
@@ -28,6 +29,9 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
@@ -40,9 +44,6 @@
     },
     "vidcredentials": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
-    },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
