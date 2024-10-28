@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "TrustManagement",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "$ref": "defs.json#/definitions/Schema"
+    },
+    "Name": {
+      "type": "string",
+      "description": "A unique identifier for the trust management approach"
+    },
+    "Implementation Support": {
+      "$ref": "defs.json#/definitions/Implementation-Support"
+    },
+    "IPR Policy": {
+      "$ref": "defs.json#/definitions/IPR-Policy"
+    },
+    "Standardization (Body, Process)": {
+      "$ref": "defs.json#/definitions/Standardization"
+    },
+    "Specification": {
+      "$ref": "defs.json#/definitions/Specification"
+    },
+    "Description": {
+      "type": "string",
+      "description": "Explanation or link to a source how this trust management approach works"
+    }
+  },
+  "required": ["$schema", "Name"],
+  "title": "TrustManagement"
+}

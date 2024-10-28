@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/signing-algorithm.json",
+  "Name": "CL",
+  "Implementation Support": "Hyperledger Ursa, https://github.com/privacybydesign/gabi ",
+  "Specification": "CL-Signatures of there own do not have a formal specification, that is included in Anoncreds",
+  "Standardization (Body, Process)": "none",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": false,
+    "Description": "not acknowledged (independent crypto analysis published)"
+  },
+  "Performance": "Ursa: up to 7 seconds for a validation and approximately 30 seconds for credential definition generation; IRMA (Yivi): both in less than a second",
+  "Hardware support": false,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": true,
+  "Security strength": "equivalent to RSA2048",
+  "Post-quantum security": false
+}

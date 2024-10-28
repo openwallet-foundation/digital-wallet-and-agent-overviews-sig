@@ -18,6 +18,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { Title, Meta } from '@angular/platform-browser';
 import { filter, switchMap, map } from 'rxjs';
 import { SeoInformation } from './seo-resolver';
+import { AppService } from './credential-profiles/app.service';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,7 @@ import { SeoInformation } from './seo-resolver';
     MatMenuModule,
     MatDividerModule,
     MatIconModule,
+    MatMenuModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -40,12 +42,15 @@ import { SeoInformation } from './seo-resolver';
  * The main component of the application
  */
 export class AppComponent implements OnInit {
+  tabs: string[] = [];
+
   constructor(
     private titleService: Title,
     private metaService: Meta,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private appService: AppService
   ) {}
 
   showInfo() {
@@ -101,5 +106,9 @@ export class AppComponent implements OnInit {
           });
         }
       });
+    this.appService.getElements();
+    this.tabs = Object.keys(this.appService.getElements()).filter(
+      (key) => key !== 'Credential Profile' && key !== 'defs'
+    );
   }
 }

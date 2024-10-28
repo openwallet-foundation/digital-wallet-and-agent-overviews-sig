@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "raw public keys (jwk)",
+  "Implementation Support": "https://www.rfc-editor.org/rfc/rfc7517",
+  "IPR Policy": "https://trustee.ietf.org/documents/trust-legal-provisions/",
+  "Specification": "https://www.rfc-editor.org/rfc/rfc7517",
+  "Infrastructure for Key Resolution": false,
+  "Key Rotation": false,
+  "Key History": {
+    "Value": true,
+    "Description": "conditional (with OpenID Connect Federation Key History)"
+  },
+  "Party": ["holder", "issuer"]
+}

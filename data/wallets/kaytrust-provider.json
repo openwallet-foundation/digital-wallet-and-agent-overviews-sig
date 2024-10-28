@@ -1,0 +1,9 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "KayTrust",
+  "name": "KayTrust Provider",
+  "openSource": false,
+  "$schema": "../../schemas/wallet.json",
+  "type": "cloud",
+  "urlWebsite": "https://developer.kaytrust.id/Provider/"
+}

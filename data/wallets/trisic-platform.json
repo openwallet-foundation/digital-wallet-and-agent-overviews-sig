@@ -1,0 +1,9 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Trinsic",
+  "logo": "logos/trisic-platform.png",
+  "name": "Trinsic Platform",
+  "$schema": "../../schemas/wallet.json",
+  "type": "cloud",
+  "urlWebsite": "https://trinsic.id/platform/"
+}

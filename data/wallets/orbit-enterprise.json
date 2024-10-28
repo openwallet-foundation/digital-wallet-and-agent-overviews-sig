@@ -1,0 +1,9 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Northern Block",
+  "contact": "info@northernblock.io",
+  "logo": "logos/orbit-enterprise.png",
+  "name": "Orbit Enterprise",
+  "$schema": "../../schemas/wallet.json",
+  "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+}

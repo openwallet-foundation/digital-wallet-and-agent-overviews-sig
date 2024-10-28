@@ -110,7 +110,7 @@ const folders = ['case-studies', 'wallets', 'dependencies'];
     counter = 0;
     validFiles = 0;
     invalidFiles = 0;
-    await validateFolder('../' + folder);
+    await validateFolder('../data/' + folder);
     console.log(`Total unreachable links in ${folder}: ${counter}`);
     console.log(`Valid JSON files in ${folder}: ${validFiles}`);
     console.log(`Invalid JSON files in ${folder}: ${invalidFiles}`);

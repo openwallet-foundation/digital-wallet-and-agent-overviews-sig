@@ -1,8 +1,0 @@
-{
-  "capability": ["holder"],
-  "company": "Thales",
-  "name": "Digital ID Wallet",
-  "$schema": "../viewer/src/assets/schema.json",
-  "openSource": false,
-  "urlWebsite": "https://www.thalesgroup.com/en/markets/digital-identity-and-security/government/identity/digital-identity-services/digital-id-wallet"
-}

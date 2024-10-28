@@ -1,0 +1,6 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "did:peer",
+  "Implementation Support": "https://identity.foundation/peer-did-method-spec/index.html",
+  "Party": ["holder"]
+}

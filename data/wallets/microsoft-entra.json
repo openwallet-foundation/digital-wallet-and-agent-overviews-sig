@@ -1,0 +1,14 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Microsoft",
+  "credentialFormats": ["JWT-VC"],
+  "keyManagements": ["did:web"],
+  "logo": "logos/microsoft-entra.png",
+  "name": "Microsoft Entra Verified ID",
+  "openSource": false,
+  "presentationProtocols": ["OpenID4VP"],
+  "$schema": "../../schemas/wallet.json",
+  "statusManagements": ["Status List 2021"],
+  "type": "cloud",
+  "urlWebsite": "https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-verified-id"
+}

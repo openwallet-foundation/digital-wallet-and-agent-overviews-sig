@@ -2,10 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { FieldResponse, Resource, ResourceType, Wallet } from './types';
-import schema from '../../assets/schema.json';
+import schema from '../../assets/schemas/wallet.json';
 import { walletData } from './wallets-data';
 import { CaseStudiesService } from '../case-studies/case-studies.service';
 import { DependenciesService } from '../dependencies/dependencies.service';
+import fields from '../../assets/schemas/fields.json';
+import { AppService } from '../credential-profiles/app.service';
 
 type ErrorFile = Record<
   'wallets' | 'case-studies' | 'dependencies',
@@ -64,12 +66,18 @@ export class WalletsService {
   constructor(
     private httpClient: HttpClient,
     private caseStudiesService: CaseStudiesService,
-    private depenciesService: DependenciesService
-  ) {}
+    private depenciesService: DependenciesService,
+    private appService: AppService
+  ) {
+    this.errors = {};
+    this.init();
+  }
 
   async init() {
-    this.errors = await this.getErrors();
-    console.log(this.errors);
+    this.getErrors().then(
+      (errors) => (this.errors = errors),
+      (err) => console.log(err)
+    );
   }
 
   /**
@@ -77,6 +85,26 @@ export class WalletsService {
    * @returns
    */
   loadWallets() {
+    // can be optimized
+    walletData.map((data) => {
+      // loop over the profiles and add the values to the resource if not included yet
+      data.credentialProfiles?.forEach((profileName) => {
+        const profile = this.appService.getProfile(profileName);
+        this.appService.extraValues.forEach((resourceKey) => {
+          const resource = profile[resourceKey] as string;
+          const mappedKey = this.appService.mappedValues[resourceKey];
+          let values = data[mappedKey as keyof Wallet] as string[];
+          if (values === undefined) {
+            values = [];
+          }
+          if (!values.includes(resource)) {
+            values.push(resource);
+          }
+          (data[mappedKey as keyof Wallet] as string[]) = values;
+        });
+      });
+      return data;
+    });
     return walletData;
   }
 
@@ -112,11 +140,7 @@ export class WalletsService {
    * @returns
    */
   async getDefinitions() {
-    return firstValueFrom(
-      this.httpClient.get<FieldResponse>(
-        'https://openwallet-foundation.github.io/credential-format-comparison-sig/assets/schemas/fields.json'
-      )
-    );
+    return fields as FieldResponse;
   }
 
   find(id: string) {
@@ -130,11 +154,10 @@ export class WalletsService {
    * @returns
    */
   getLink(resourceType: ResourceType, key: string) {
-    const url =
-      'https://openwallet-foundation.github.io/credential-format-comparison-sig/#';
+    const url = '';
     switch (resourceType) {
       case 'credentialProfiles':
-        return `${url}/profiles/${key}`;
+        return `${url}/credential-profiles/${key}`;
       case 'credentialFormats':
         return `${url}/resources/Credential%20Format/${key}`;
       case 'issuanceProtocols':

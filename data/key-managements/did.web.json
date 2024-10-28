@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "did:web",
+  "Implementation Support": "https://github.com/w3c-ccg/did-method-web",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "web server"
+  },
+  "Key Rotation": true,
+  "Key History": false,
+  "Party": ["holder", "issuer"]
+}

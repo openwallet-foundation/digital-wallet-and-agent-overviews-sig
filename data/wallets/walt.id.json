@@ -1,0 +1,20 @@
+{
+  "capability": ["holder", "issuer", "verifier"],
+  "company": "walt.id",
+  "credentialFormats": ["JWT", "LDP-VC", "SD-JWT"],
+  "credentialProfiles": ["EBSI"],
+  "downloadSource": "https://github.com/walt-id/waltid-identity",
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:key", "did:web", "did:ebsi", "did:jwk", "did:cheqd"],
+  "license": "Apache 2.0",
+  "logo": "logos/walt-id.png",
+  "name": "walt.id",
+  "openSource": true,
+  "presentationProtocols": ["OpenID4VP"],
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["ECDSA", "EdDSA", "RSA"],
+  "statusManagements": ["Status List 2021"],
+  "type": "cloud",
+  "urlWebApp": "https://wallet.walt.id/",
+  "urlWebsite": "https://walt.id/"
+}

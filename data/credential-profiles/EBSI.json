@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/credential-profile.json",
+  "Name": "EBSI",
+  "Credential Profile Description": "[Profile description goes here]",
+  "Credential Format": "JWT-VC",
+  "Signing Algorithm": "ECDSA",
+  "Status Algorithm": "Status List 2021",
+  "Key Management (Issuer)": "did:ebsi",
+  "Key Management (Holder)": "did:key",
+  "Trust Management": "EBSI Trust Registries"
+}

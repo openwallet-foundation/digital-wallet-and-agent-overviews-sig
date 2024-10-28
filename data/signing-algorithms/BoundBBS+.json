@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/signing-algorithm.json",
+  "Name": "BoundBBS+",
+  "IPR Policy": "barely",
+  "Standardization (Body, Process)": "DIF (intention to transfer to IRTF CFRG)",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": false,
+    "Description": "not acknowledged"
+  },
+  "Hardware support": false,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": true,
+  "Post-quantum security": false
+}

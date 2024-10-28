@@ -4,6 +4,8 @@ import { Observable, of } from 'rxjs';
 import { WalletsService } from './wallets/wallets.service';
 import { CaseStudiesService } from './case-studies/case-studies.service';
 import { DependenciesService } from './dependencies/dependencies.service';
+import { AppService } from './credential-profiles/app.service';
+import { IProfile, Resources } from './credential-profiles/resources';
 
 export interface SeoInformation {
   title: string;
@@ -18,7 +20,8 @@ export class SeoResolver implements Resolve<SeoInformation> {
   constructor(
     private walletsService: WalletsService,
     private caseStudiesService: CaseStudiesService,
-    private dependenciesService: DependenciesService
+    private dependenciesService: DependenciesService,
+    private appService: AppService
   ) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<SeoInformation> {
@@ -59,6 +62,25 @@ export class SeoResolver implements Resolve<SeoInformation> {
           ? { title: dependency.name, description: dependency.description }
           : { title: 'Dependency Not Found' }
       );
+    } else if (path?.startsWith('credential-profiles')) {
+      const profile: IProfile = this.appService.getProfile(id!);
+      return of(
+        profile ? { title: profile.Name } : { title: 'Profile Not Found' }
+      );
+    } else if (path?.startsWith('resources')) {
+      const resource = route.paramMap.get('resource') as string;
+      if (!id) {
+        return of({ title: resource });
+      } else {
+        const res = this.appService.getValues(resource as keyof Resources)?.[
+          id
+        ];
+        return of(
+          res
+            ? { title: `${resource}: ${res['Name']}` }
+            : { title: 'Resource Not Found' }
+        );
+      }
     }
 
     return of({ title: 'Not Found' });

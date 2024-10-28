@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/dependency.json",
+  "name": "Credo",
+  "url": "https://github.com/openwallet-foundation/credo-ts",
+  "description": "Typescript framework for building decentralized identity and verifiable credential solutions",
+  "community": "https://discord.gg/openwalletfoundation",
+  "language": "TypeScript",
+  "license": "Apache 2.0"
+}

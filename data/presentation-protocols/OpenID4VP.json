@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/presentation-protocol.json",
+  "Name": "OpenID4VP",
+  "Specification": "https://openid.net/specs/openid-4-verifiable-presentations-1_0.html"
+}

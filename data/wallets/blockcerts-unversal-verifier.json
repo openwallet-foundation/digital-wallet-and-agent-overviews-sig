@@ -1,0 +1,12 @@
+{
+  "capability": ["holder"],
+  "company": "Hyland Credentials",
+  "downloadSource": "https://github.com/blockchain-certificates/blockcerts-verifier",
+  "logo": "logos/blockcerts-unversal-verifier.png",
+  "name": "Blockcerts Universal Verifier",
+  "openSource": true,
+  "$schema": "../../schemas/wallet.json",
+  "type": "cloud",
+  "urlWebApp": "https://www.blockcerts.org/",
+  "urlWebsite": "https://www.blockcerts.org/about.html"
+}

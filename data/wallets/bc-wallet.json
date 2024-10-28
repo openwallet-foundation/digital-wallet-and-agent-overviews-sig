@@ -1,0 +1,18 @@
+{
+  "capability": ["holder"],
+  "company": "Government of BC",
+  "credentialFormats": ["AnonCred"],
+  "credentialProfiles": ["AnonCreds with did:indy"],
+  "downloadSource": "https://github.com/bcgov/bc-wallet-mobile",
+  "license": "Apache 2.0",
+  "logo": "logos/bc-wallet.png",
+  "name": "BC Wallet",
+  "openSource": true,
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["CL"],
+  "type": "edge",
+  "urlAppStore": "https://apps.apple.com/us/app/bc-wallet/id1587380443",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ca.bc.gov.BCWallet",
+  "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet",
+  "dependencies": ["bifold", "credo", "sd-jwt-js"]
+}

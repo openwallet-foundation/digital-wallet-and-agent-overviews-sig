@@ -1,0 +1,17 @@
+{
+  "$schema": "../../schemas/credential-format.json",
+  "Name": "AnonCred",
+  "Implementation Support": "https://github.com/hyperledger/anoncreds-rs",
+  "Specification": "https://hyperledger.github.io/anoncreds-spec/",
+  "Standardization (Body, Process)": "Community Spec (draft)",
+  "Encoding Scheme": "JSON",
+  "Rich Schemas-Semantic": false,
+  "Crypto Agility": false,
+  "Selective Disclosure": true,
+  "Predicates": true,
+  "Compatibility with Signing Algorithms": "CL",
+  "Compatibility with Key Management Methods (Issuer)": [
+    "did:indy",
+    "did:cheqd"
+  ]
+}

@@ -67,7 +67,7 @@ export interface Definition {
 export interface FieldResponse {
   $schema: 'http://json-schema.org/draft-06/schema#';
   type: 'object';
-  additionalProperties: boolean;
+  additionalProperties?: boolean;
   definitions: Record<string, Definition>;
 }
 

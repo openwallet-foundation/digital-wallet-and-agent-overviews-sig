@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/credential-format.json",
+  "Name": "MDOC",
+  "Specification": "ISO 18013-5",
+  "Standardization (Body, Process)": "ISO",
+  "Encoding Scheme": "CBOR",
+  "Rich Schemas-Semantic": false,
+  "Crypto Agility": true,
+  "Selective Disclosure": {
+    "Value": true,
+    "Description": "salted hashes"
+  },
+  "Predicates": false,
+  "Compatibility with Signing Algorithms": "ECDSA(NIST and Brainpool curves), EdDSA, RSA"
+}

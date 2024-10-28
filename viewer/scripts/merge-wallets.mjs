@@ -1,12 +1,13 @@
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs';
+import { mergeProfiles } from './profiles/merge.mjs';
 
 // URL for the folder containing the wallet files in the GitHub repo
 const commitHistoryBase = 'https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/';
 
 // Paths
-const DEPENDENCIES_PATH = '../dependencies';
-const CASE_STUDIES_PATH = '../case-studies';
-const WALLETS_PATH = '../wallets';
+const DEPENDENCIES_PATH = '../data/dependencies';
+const CASE_STUDIES_PATH = '../data/case-studies';
+const WALLETS_PATH = '../data/wallets';
 const OUTPUT_PATH = 'src/app';
 
 // Function to read and process JSON files from a directory
@@ -61,3 +62,5 @@ const writeTsFile = (filename, content) => {
 writeTsFile('wallets/wallets-data.ts', generateTsContent('Wallet', wallets));
 writeTsFile('dependencies/dependencies-data.ts', generateTsContent('Dependency', dependencies));
 writeTsFile('case-studies/case-studies-data.ts', generateTsContent('CaseStudy', caseStudies));
+
+mergeProfiles();

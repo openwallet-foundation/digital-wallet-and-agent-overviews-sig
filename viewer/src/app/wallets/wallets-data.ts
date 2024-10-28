@@ -480,37 +480,45 @@ export const walletData: Wallet[] = [
     "capability": [
       "holder"
     ],
-    "company": "Entidad",
-    "name": "Farmworker WalletOS",
-    "companyUrl": "https://www.entidad.io/",
+    "type": "edge",
+    "name": "Farmworker Wallet OS",
+    "logo": "https://cdn.prod.website-files.com/6520979d785cc136404a270d/65237d6a3505e25d76ed58c7_wallet-p-1080.png",
+    "company": " Entidad",
+    "companyUrl": "https://www.entidad.io",
+    "urlWebsite": "https://www.farmworkerwalletos.community/",
+    "downloadSource": "https://github.com/openwallet-foundation-labs/farmworker-wallet-os",
+    "openSource": true,
+    "license": "Apache 2.0",
+    "portability": false,
+    "credentialProfiles": [
+      "AnonCreds with did:indy",
+      "AnonCreds with did:web"
+    ],
     "credentialFormats": [
       "AnonCred"
     ],
-    "credentialProfiles": [
-      "AnonCreds with did:cheqd",
-      "AnonCreds with did:indy"
-    ],
-    "issuanceProtocols": [
-      "Issue Credential v2"
-    ],
+    "issuanceProtocols": [],
     "keyManagements": [
-      "did:cheqd",
       "did:indy",
+      "did:jwk",
+      "did:key",
       "did:peer",
       "did:web",
-      "link secrets"
+      "raw public keys (jwk)"
     ],
-    "license": "Apache 2.0",
-    "openSource": true,
-    "portability": false,
+    "presentationProtocols": [
+      "Present Proof v2",
+      "Present Proof v1.0"
+    ],
     "signingAlgorithms": [
       "CL",
+      "ECDSA",
       "EdDSA"
     ],
-    "type": "edge",
-    "urlWebsite": "https://www.farmworkerwalletos.community/",
-    "id": "farmworker-walletos",
-    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/farmworker-walletos.json"
+    "statusManagements": [],
+    "trustManagements": [],
+    "id": "farmworker-wallet-os",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/farmworker-wallet-os.json"
   },
   {
     "capability": [
@@ -1027,9 +1035,35 @@ export const walletData: Wallet[] = [
     "contact": "info@lissi.id",
     "companyUrl": "https://www.lissi.id/",
     "credentialProfiles": [
-      "HAIP"
+      "HAIP",
+      "ISO mDL",
+      "SD-JWT VCs (w/ X.509 for Issuers)"
     ],
-    "logo": "logos/lissi-wallet.png",
+    "credentialFormats": [
+      "MDOC",
+      "SD-JWT-VC"
+    ],
+    "issuanceProtocols": [
+      "OpenID4VCI"
+    ],
+    "keyManagements": [
+      ".well-known/jwt-issuer",
+      "pub key in X.509 cert"
+    ],
+    "presentationProtocols": [
+      "OpenID4VP"
+    ],
+    "signingAlgorithms": [
+      "ECDSA"
+    ],
+    "statusManagements": [
+      "JWT/CWT status list"
+    ],
+    "trustManagements": [
+      "Verifier knows Issuers",
+      "X.509 certificates"
+    ],
+    "logo": "logos/lissi.png",
     "name": "Lissi EUDI-Wallet Connector",
     "openSource": false,
     "type": "cloud",
@@ -1045,13 +1079,34 @@ export const walletData: Wallet[] = [
     "company": "Lissi GmbH",
     "companyUrl": "https://www.lissi.id/",
     "contact": "info@lissi.id",
+    "portability": false,
     "credentialProfiles": [
-      "HAIP"
+      "HAIP",
+      "ISO mDL",
+      "SD-JWT VCs (w/ X.509 for Issuers)"
+    ],
+    "credentialFormats": [
+      "MDOC",
+      "SD-JWT-VC"
     ],
     "issuanceProtocols": [
       "OpenID4VCI"
     ],
-    "logo": "logos/lissi-wallet.png",
+    "keyManagements": [
+      ".well-known/jwt-issuer",
+      "pub key in X.509 cert"
+    ],
+    "signingAlgorithms": [
+      "ECDSA"
+    ],
+    "statusManagements": [
+      "JWT/CWT status list"
+    ],
+    "trustManagements": [
+      "Verifier knows Issuers",
+      "X.509 certificates"
+    ],
+    "logo": "logos/lissi.png",
     "name": "Lissi Wallet",
     "openSource": false,
     "presentationProtocols": [

@@ -212,12 +212,26 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
       .subscribe(async (res: WalletFilter) => {
         this.router.navigate([], {
           relativeTo: this.route,
-          fragment: JSON.stringify(res),
+          fragment: this.reduceObject(res ?? {}),
           replaceUrl: false,
         });
         this.filter = res;
         this.loadWallets();
       });
+  }
+
+  /**
+   * Removes all elements from the object that are undefined
+   * @param object
+   */
+  private reduceObject(object: any) {
+    Object.keys(object).forEach((key) => {
+      if (object[key] === null) {
+        delete object[key];
+      }
+    });
+    if (Object.keys(object).length === 0) return undefined;
+    return JSON.stringify(object);
   }
 
   /**

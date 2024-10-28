@@ -3,7 +3,7 @@ import { CaseStudy } from './types';
 import { Wallet } from '../wallets/types';
 import { casestudyData } from './case-studies-data';
 import { walletData } from '../wallets/wallets-data';
-import schema from '../../assets/case-study.schema.json';
+import schema from '../../assets/schemas/case-study.json';
 
 @Injectable({
   providedIn: 'root',

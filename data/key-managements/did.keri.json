@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "did:keri",
+  "Implementation Support": "https://weboftrust.github.io/did-keri/",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "witness network"
+  },
+  "Key Rotation": true,
+  "Key History": true,
+  "Party": ["holder", "issuer"]
+}

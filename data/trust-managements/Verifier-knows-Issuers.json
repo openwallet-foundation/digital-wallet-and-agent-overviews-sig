@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/trust-management.json",
+  "Name": "Verifier knows Issuers",
+  "Implementation Support": "Manual / bespoke",
+  "IPR Policy": "None",
+  "Standardization (Body, Process)": "None",
+  "Specification": "None",
+  "Description": "The verifier knows which issuers he trusts for issuing certain credentials, organizational solution"
+}

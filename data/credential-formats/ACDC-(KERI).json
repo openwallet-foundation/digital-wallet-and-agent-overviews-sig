@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/credential-format.json",
+  "Name": "ACDC",
+  "Specification": "https://trustoverip.github.io/tswg-acdc-specification/",
+  "Standardization (Body, Process)": "",
+  "Encoding Scheme": "CESR",
+  "Rich Schemas-Semantic": false,
+  "Crypto Agility": true,
+  "Selective Disclosure": true,
+  "Predicates": false
+}

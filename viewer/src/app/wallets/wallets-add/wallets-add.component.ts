@@ -92,7 +92,7 @@ export class WalletsAddComponent implements OnInit {
 
     const json = {
       ...formValue,
-      $schema: '../viewer/src/assets/schema.json',
+      $schema: '../../schemas/wallet.json',
     };
     json.openSource = json.openSource == 'true' ? true : false;
     json.portability = json.portability == 'true' ? true : false;

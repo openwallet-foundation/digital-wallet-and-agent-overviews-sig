@@ -1,0 +1,7 @@
+{
+  "$schema": "../../schemas/status-algorithm.json",
+  "Name": "VB20 - cryptographic accumulator based on pairings",
+  "Recognition by government authorities (NIST, BSI, ...)": false,
+  "Category": "Accumulator",
+  "Observability": false
+}

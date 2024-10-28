@@ -1,0 +1,8 @@
+{
+  "capability": ["holder"],
+  "company": "Gimly",
+  "logo": "logos/gimly.svg",
+  "name": "Gimly ID",
+  "$schema": "../../schemas/wallet.json",
+  "urlWebsite": "https://gimly.io/"
+}

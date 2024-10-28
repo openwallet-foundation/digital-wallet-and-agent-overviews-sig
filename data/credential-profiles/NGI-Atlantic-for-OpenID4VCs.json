@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schemas/credential-profile.json",
+  "Name": "NGI Atlantic for OpenID4VCs",
+  "Credential Profile Description": "https://ngiatlantic.info\nhttps://ngiatlantic.eu/funded-experiments/next-generation-ssi-standards",
+  "Credential Format": "JWT-VC",
+  "Signing Algorithm": "ECDSA",
+  "Status Algorithm": "short-term expiration",
+  "Key Management (Issuer)": "did:key",
+  "Key Management (Holder)": "did:key",
+  "Trust Management": "TRAIN",
+  "Formal Specification": "https://ngiatlantic.info"
+}

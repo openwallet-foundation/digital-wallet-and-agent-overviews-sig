@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/signing-algorithm.json",
+  "Name": "BBS+ with public key binding",
+  "Implementation Support": "https://github.com/mattrglobal/bbs-signatures",
+  "Specification": "https://datatracker.ietf.org/doc/draft-looker-cfrg-bbs-signatures/",
+  "Standardization (Body, Process)": "DIF (intention to transfer to IRTF CFRG)",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": false,
+    "Description": "not acknowledged"
+  },
+  "Hardware support": false,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": false,
+  "Security strength": "381 bit curve",
+  "Post-quantum security": false
+}

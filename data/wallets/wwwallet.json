@@ -1,0 +1,14 @@
+{
+  "capability": ["holder"],
+  "company": "GUnet",
+  "credentialFormats": ["JWT-VC"],
+  "credentialProfiles": ["EBSI"],
+  "downloadSource": "https://github.com/wwWallet",
+  "logo": "logos/wwwallet.png",
+  "name": "wwWallet",
+  "openSource": true,
+  "$schema": "../../schemas/wallet.json",
+  "type": "cloud",
+  "urlWebApp": "https://demo.wwwallet.org/",
+  "urlWebsite": "https://wwwallet.github.io/wallet-docs/"
+}

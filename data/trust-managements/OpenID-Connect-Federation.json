@@ -1,0 +1,7 @@
+{
+  "$schema": "../../schemas/trust-management.json",
+  "Name": "OpenID Connect Federation",
+  "Standardization (Body, Process)": "OpenID Foundation",
+  "Specification": "https://openid.net/specs/openid-connect-federation-1_0.html",
+  "Description": "Uses JWTs and REST APIs to represent trust chains and trust marks"
+}

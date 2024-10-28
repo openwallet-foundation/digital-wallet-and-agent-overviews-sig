@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/credential-profile.json",
+  "Name": "IRMA (Yivi) wallet",
+  "Credential Profile Description": "https://dominoweb.draco.res.ibm.com/reports/rz3730_revised.pdf",
+  "Credential Format": "Idemix attribute-based credential",
+  "Signing Algorithm": "CL",
+  "Status Algorithm": "RSA-B - cryptographic accumulator based on RSA",
+  "Key Management (Issuer)": "raw public keys (none jwk)",
+  "Key Management (Holder)": "link secrets",
+  "Trust Management": "IRMA (Yivi) Schemes"
+}

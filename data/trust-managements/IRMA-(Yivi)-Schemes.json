@@ -1,0 +1,6 @@
+{
+  "$schema": "../../schemas/trust-management.json",
+  "Name": "IRMA (Yivi) Schemes",
+  "Specification": "https://irma.app/docs/schemes/",
+  "Description": "every issuer publishes its keys at a certain URL, the whole structure is signed by a trusted authority"
+}

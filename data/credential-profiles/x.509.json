@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/credential-profile.json",
+  "Name": "x.509",
+  "Credential Profile Description": "[Profile description goes here]",
+  "Credential Format": "x509",
+  "Signing Algorithm": "ECDSA",
+  "Status Algorithm": "CRL - certificate revocation list",
+  "Key Management (Issuer)": "raw public keys (none jwk)",
+  "Key Management (Holder)": "raw public keys (none jwk)",
+  "Trust Management": "X.509 certificates"
+}

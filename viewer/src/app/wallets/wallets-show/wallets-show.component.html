@@ -118,12 +118,9 @@
       </div>
       @for (element of wallet[resource.id]; track element) {
       <mat-list-item>
-        <a
-          mat-button
-          target="_blank"
-          [href]="walletsService.getLink(resource.id, element)"
-          >{{ element }}</a
-        >
+        <a mat-button [href]="walletsService.getLink(resource.id, element)">{{
+          element
+        }}</a>
       </mat-list-item>
       }
       <mat-divider></mat-divider>

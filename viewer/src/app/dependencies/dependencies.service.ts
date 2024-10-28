@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Wallet } from '../wallets/types';
 import { dependencyData } from './dependencies-data';
-import schema from '../../assets/dependency.schema.json';
+import schema from '../../assets/schemas/dependency.json';
 import { Dependency } from './types';
 import { walletData } from '../wallets/wallets-data';
 import { HttpClient } from '@angular/common/http';

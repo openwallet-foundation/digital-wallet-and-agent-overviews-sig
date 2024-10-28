@@ -1,0 +1,9 @@
+{
+  "capability": ["holder"],
+  "company": "AceBlock",
+  "name": "AceID Wallet",
+  "$schema": "../../schemas/wallet.json",
+  "openSource": false,
+  "type": "cloud",
+  "urlWebsite": "https://www.aceblock.com/modules/aceid/"
+}

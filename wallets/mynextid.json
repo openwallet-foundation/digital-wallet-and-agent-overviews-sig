@@ -1,8 +1,0 @@
-{
-  "capability": ["issuer", "holder", "verifier"],
-  "company": "MyNextID",
-  "contact": "info@mynext.id",
-  "name": "MyNextID",
-  "$schema": "../viewer/src/assets/schema.json",
-  "urlWebsite": "https://mynext.id/"
-}

@@ -18,7 +18,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { DependenciesService } from '../dependencies.service';
 import { Dependency } from '../types';
-import schema from '../../../assets/dependency.schema.json';
+import schema from '../../../assets/schemas/dependency.json';
 import {
   DependenciesFilterComponent,
   DependencyFilter,

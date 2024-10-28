@@ -1,0 +1,17 @@
+{
+  "capability": ["holder"],
+  "company": "Privacy by Design Foundation",
+  "credentialFormats": ["Idemix attribute-based credential"],
+  "credentialProfiles": ["IRMA (Yivi) wallet"],
+  "downloadSource": "https://github.com/privacybydesign/irmamobile/",
+  "license": "GPLv3",
+  "logo": "logos/yivi.png",
+  "name": "Yivi",
+  "openSource": true,
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["CL"],
+  "type": "edge",
+  "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=org.irmacard.cardemu",
+  "urlWebsite": "https://irma.app/docs/yivi-app/"
+}

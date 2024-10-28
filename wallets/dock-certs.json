@@ -1,9 +1,0 @@
-{
-  "capability": ["issuer", "verifier"],
-  "company": "Dock",
-  "contact": "marketing@dock.io",
-  "downloadSource": "https://github.com/orgs/docknetwork/",
-  "name": "Dock Certs",
-  "$schema": "../viewer/src/assets/schema.json",
-  "urlWebsite": "https://www.dock.io/feature/issue-verifiable-credentials"
-}

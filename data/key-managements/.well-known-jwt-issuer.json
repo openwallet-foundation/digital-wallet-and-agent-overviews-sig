@@ -1,0 +1,4 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": ".well-known/jwt-issuer"
+}

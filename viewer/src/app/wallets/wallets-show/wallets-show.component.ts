@@ -57,7 +57,7 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
   ) {}
 
   async ngOnInit(): Promise<void> {
-    await this.walletsService.getErrors();
+    this.walletsService.getErrors();
     this.routerSubscription = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {

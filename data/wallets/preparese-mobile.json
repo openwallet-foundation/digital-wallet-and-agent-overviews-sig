@@ -1,0 +1,25 @@
+{
+  "capability": ["holder"],
+  "company": "UFW Foundation",
+  "companyUrl": "https://ufwfoundation.org/",
+  "credentialFormats": ["AnonCred"],
+  "credentialProfiles": ["AnonCreds with did:cheqd", "AnonCreds with did:indy"],
+  "issuanceProtocols": ["Issue Credential v2"],
+  "keyManagements": [
+    "did:cheqd",
+    "did:indy",
+    "did:peer",
+    "did:web",
+    "link secrets"
+  ],
+  "license": "Proprietary",
+  "name": "Preparese Mobile",
+  "openSource": false,
+  "portability": false,
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["CL", "EdDSA"],
+  "statusManagements": [],
+  "trustManagements": ["Verifier knows Issuers"],
+  "type": "edge",
+  "urlWebsite": "https://www.preparese.info/"
+}

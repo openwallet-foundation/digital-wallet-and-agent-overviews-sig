@@ -1,0 +1,8 @@
+{
+  "capability": ["issuer", "holder", "verifier"],
+  "company": "MyNextID",
+  "contact": "info@mynext.id",
+  "name": "MyNextID",
+  "$schema": "../../schemas/wallet.json",
+  "urlWebsite": "https://mynext.id/"
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/status-algorithm.json",
+  "Name": "Indy Revocation",
+  "Implementation Support": "Indy SDK",
+  "Standardization (Body, Process)": "AnonCreds",
+  "Recognition by government authorities (NIST, BSI, ...)": false,
+  "Category": "Accumulator",
+  "Observability": false,
+  "Scalability": {
+    "Value": false,
+    "Description": "limitations by accumulator size"
+  }
+}

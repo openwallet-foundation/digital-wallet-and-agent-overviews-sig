@@ -1,0 +1,33 @@
+{
+  "capability": ["holder"],
+  "type": "edge",
+  "name": "Identfy",
+  "logo": "logos/izertis-identfy-logo-blue.png",
+  "company": "Izertis, S.A.",
+  "companyUrl": "https://www.izertis.com/en/",
+  "urlWebsite": "https://github.com/izertis/identfy-holder-wallet",
+  "urlAppStore": "https://apps.apple.com/do/app/identfy/id6476503276",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.identfywallet.app",
+  "downloadSource": "https://github.com/izertis/identfy-holder-wallet",
+  "openSource": true,
+  "license": "Dual: AGPL-3.0 and Commercial License",
+  "portability": false,
+  "credentialProfiles": [
+    "EBSI",
+    "JWT VC Presentation Profile 2",
+    "JWT VC Presentation Profile"
+  ],
+  "credentialFormats": ["JWT-VC", "JWT", "VC (1.1)"],
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:key"],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA"],
+  "statusManagements": [
+    "Status List 2021",
+    "Validity Credential",
+    "medium-term expiration",
+    "short-term expiration"
+  ],
+  "trustManagements": ["EBSI Trust Registries"],
+  "$schema": "../../schemas/wallet.json"
+}

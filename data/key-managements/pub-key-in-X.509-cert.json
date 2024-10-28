@@ -1,0 +1,4 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "pub key in X.509 cert"
+}

@@ -1,0 +1,12 @@
+{
+  "capability": ["holder"],
+  "company": "SelfKey",
+  "downloadSource": "https://github.com/SelfKeyFoundation/Identity-Wallet",
+  "license": "MIT",
+  "name": "SelfKey Wallet",
+  "$schema": "../../schemas/wallet.json",
+  "type": "edge",
+  "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+  "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
+  "urlWebsite": "https://selfkey.org/selfkey-wallet/"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/trust-management.json",
+  "Name": "TRAIN",
+  "Implementation Support": "https://gitlab.cc-asp.fraunhofer.de/train",
+  "IPR Policy": "Apache 2.0",
+  "Standardization (Body, Process)": "none",
+  "Specification": "none",
+  "Description": "Uses DNS records and ETSI Trusted Lists for trust management, developed in the EU Project NGI ESSIF-Lab, https://train.trust-scheme.de/info/"
+}

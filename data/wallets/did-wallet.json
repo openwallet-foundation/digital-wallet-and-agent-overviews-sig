@@ -1,0 +1,10 @@
+{
+  "capability": ["holder"],
+  "company": "ArcBlock",
+  "name": "DID Wallet",
+  "$schema": "../../schemas/wallet.json",
+  "urlAppStore": "https://itunes.apple.com/app/id1460083542",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.arcblock.wallet.app.product",
+  "urlWebApp": "https://www.didwallet.io/",
+  "urlWebsite": "https://www.arcblock.io/content/collections/en/did-wallet"
+}

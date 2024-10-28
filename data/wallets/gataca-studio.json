@@ -1,0 +1,17 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Gataca Inc.",
+  "credentialFormats": ["LDP-VC", "JWT-VC"],
+  "credentialProfiles": ["EBSI"],
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:key"],
+  "logo": "logos/gataca.png",
+  "name": "Gataca Studio",
+  "openSource": false,
+  "presentationProtocols": ["OpenID4VP"],
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["EdDSA", "RSA"],
+  "statusManagements": ["Status List 2021"],
+  "type": "cloud",
+  "urlWebsite": "https://gataca.io/products/gatacaStudio/"
+}

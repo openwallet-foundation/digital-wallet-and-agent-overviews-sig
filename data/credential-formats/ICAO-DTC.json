@@ -1,0 +1,6 @@
+{
+  "$schema": "../../schemas/credential-format.json",
+  "Name": "ICAO DTC",
+  "Standardization (Body, Process)": "ICAO",
+  "Selective Disclosure": true
+}

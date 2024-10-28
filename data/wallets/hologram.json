@@ -1,0 +1,21 @@
+{
+  "capability": ["holder"],
+  "company": "2060",
+  "contact": "a@2060.io",
+  "companyUrl": "https://2060.io",
+  "credentialFormats": ["AnonCred"],
+  "credentialProfiles": ["AnonCreds with did:indy", "AnonCreds with did:web"],
+  "openSource": false,
+  "issuanceProtocols": ["Issue Credential v1", "Issue Credential v2"],
+  "keyManagements": ["did:key", "did:peer", "did:web", "did:indy"],
+  "logo": "logos/hologram.png",
+  "name": "Hologram",
+  "presentationProtocols": ["Present Proof v1.0", "Present Proof v2"],
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["ECDSA", "EdDSA", "CL"],
+  "statusManagements": ["Indy Revocation"],
+  "type": "edge",
+  "urlAppStore": "https://apps.apple.com/co/app/hologram-messaging/id6474701855",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.twentysixty.mobileagent.m",
+  "urlWebsite": "https://2060.io/#download"
+}

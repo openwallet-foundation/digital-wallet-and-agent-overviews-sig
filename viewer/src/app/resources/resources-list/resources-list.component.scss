@@ -1,0 +1,16 @@
+.container {
+  max-height: calc(100vh - 113px);
+  overflow: auto;
+}
+
+.mat-mdc-table-sticky-border-elem-left {
+    border-right: 1px solid #e0e0e0;
+}
+
+.highlight {
+  background-color: #ECECEC;
+}
+
+.mat-mdc-paginator {
+  border-top: 1px solid #E0E0E0;
+}

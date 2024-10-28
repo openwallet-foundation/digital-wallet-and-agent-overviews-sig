@@ -1,0 +1,18 @@
+{
+  "capability": ["holder"],
+  "company": "Validated ID",
+  "credentialFormats": ["JWT-VC", "LDP-VC", "JWT"],
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:key", "did:jwk", "did:ebsi"],
+  "logo": "logos/VIDwallet.png",
+  "name": "VIDwallet",
+  "openSource": false,
+  "presentationProtocols": ["OpenID4VP"],
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["ECDSA", "EdDSA"],
+  "statusManagements": ["Status List 2021"],
+  "type": "edge",
+  "urlAppStore": "https://apps.apple.com/si/app/vidwallet/id1554340592",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.validatedid.wallet&hl=en_US&gl=US",
+  "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+}

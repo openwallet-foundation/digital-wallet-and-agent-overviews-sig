@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/signing-algorithm.json",
+  "Name": "Schnorr",
+  "Implementation Support": "many mature implementations",
+  "IPR Policy": "patents expired",
+  "Specification": "different curves-different specs",
+  "Standardization (Body, Process)": "different curves-different standards",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": true,
+    "Description": "NIST with Curve25519"
+  },
+  "Performance": "high",
+  "Hardware support": false,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": false,
+  "Post-quantum security": false
+}

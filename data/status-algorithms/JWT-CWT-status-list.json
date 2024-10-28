@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schemas/status-algorithm.json",
+  "Name": "JWT/CWT status list",
+  "Implementation Support": "https://github.com/vcstuff/draft-looker-oauth-jwt-cwt-status-list",
+  "Specification": "https://datatracker.ietf.org/doc/draft-terbu-oauth-sd-jwt-vc/",
+  "Standardization (Body, Process)": "IETF Individual",
+  "Recognition by government authorities (NIST, BSI, ...)": false,
+  "Category": "Bitstring",
+  "Observability": true,
+  "Traceability": {
+    "Value": true,
+    "Description": "potentially possible with malicious issuer by providing a revocation list with a single entry"
+  }
+}

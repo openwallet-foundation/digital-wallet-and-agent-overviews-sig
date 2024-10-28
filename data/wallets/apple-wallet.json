@@ -1,0 +1,10 @@
+{
+  "capability": ["holder"],
+  "company": "Apple",
+  "logo": "logos/apple-wallet.png",
+  "name": "Apple Wallet",
+  "openSource": false,
+  "$schema": "../../schemas/wallet.json",
+  "type": "edge",
+  "urlWebsite": "https://www.apple.com/wallet/"
+}

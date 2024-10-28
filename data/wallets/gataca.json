@@ -1,0 +1,19 @@
+{
+  "capability": ["holder"],
+  "company": "Gataca Inc.",
+  "credentialFormats": ["LDP-VC", "JWT-VC"],
+  "credentialProfiles": ["EBSI"],
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:key"],
+  "logo": "logos/gataca.png",
+  "name": "Gataca Wallet",
+  "openSource": false,
+  "presentationProtocols": ["OpenID4VP"],
+  "$schema": "../../schemas/wallet.json",
+  "signingAlgorithms": ["EdDSA", "RSA"],
+  "statusManagements": ["Status List 2021"],
+  "type": "edge",
+  "urlAppStore": "https://apps.apple.com/us/app/gataca/id1498607616",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.gataca.identity",
+  "urlWebsite": "https://gataca.io/products/wallet/"
+}

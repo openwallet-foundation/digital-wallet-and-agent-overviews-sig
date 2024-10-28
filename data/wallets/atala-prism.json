@@ -1,0 +1,11 @@
+{
+  "capability": ["holder"],
+  "company": "IOHK",
+  "credentialFormats": ["JWT-VC"],
+  "logo": "logos/atala-prism.png",
+  "name": "Atala PRISM",
+  "openSource": false,
+  "signingAlgorithms": ["ECDSA"],
+  "urlWebsite": "https://atalaprism.io/",
+  "$schema": "../../schemas/wallet.json"
+}

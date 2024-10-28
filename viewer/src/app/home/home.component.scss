@@ -29,3 +29,29 @@
     display: none;
   }
 }
+
+mat-card {
+  cursor: pointer;
+}
+
+.icon {
+  width: 100px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 20px;
+  img {
+    height: 50px;
+  }
+
+  width: 100vw;
+
+  .info {
+    font-size: 14px;
+  }
+}
