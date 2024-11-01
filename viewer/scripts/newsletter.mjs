@@ -4,14 +4,17 @@ import handlebars from 'handlebars';
 import { execSync } from 'child_process';
 import {createTransport, createTestAccount, getTestMessageUrl} from 'nodemailer'
 import Mailjet from 'node-mailjet';
+import {join} from 'path';
 
 config();
 
-const walletFiles = fs.readdirSync('../wallets');
+const walletsFolder = '../data/wallets';
+
+const walletFiles = fs.readdirSync(walletsFolder);
 const walletCounter = walletFiles.length;
 
 const wallets = walletFiles.map(walletFile => {
-  const content = JSON.parse(fs.readFileSync(`../wallets/${walletFile}`, 'utf8'));
+  const content = JSON.parse(fs.readFileSync(join(walletsFolder, walletFile), 'utf8'));
   content.id = walletFile.slice(0, -5);
   return content;
 });
@@ -29,6 +32,8 @@ if (!fromDate || !untilDate) {
   untilDate = untilDate || lastDayOfLastMonth.toISOString().split('T')[0];
 }
 
+const caseStudiesFolder = '../data/case-studies';
+
 // Get the list of files added in the specified date range
 let caseStudyFiles = execSync(`git log --diff-filter=A --since="${fromDate}" --until="${untilDate}" --name-only --pretty=format:`, { encoding: 'utf8' })
   .split('\n')
@@ -36,7 +41,7 @@ let caseStudyFiles = execSync(`git log --diff-filter=A --since="${fromDate}" --u
 
 if(process.env.LOCAL) {
   //use all files that are included in the folder
-  caseStudyFiles = fs.readdirSync('../case-studies').map(file => `case-studies/${file}`);
+  caseStudyFiles = fs.readdirSync(caseStudiesFolder).map(file => `case-studies/${file}`);
 }
 
 console.log(`Found ${caseStudyFiles.length} new case ${caseStudyFiles.length === 1 ? 'study' : 'studies'}: ${caseStudyFiles.join(', ')}`);
@@ -46,7 +51,7 @@ const url = process.env.LOCATION ?? 'https://openwallet-foundation.github.io/dig
 // format the case studies
 const caseStudies = caseStudyFiles.map(caseStudy => {
   const id = caseStudy.split('/')[1].slice(0, -5);
-  const content = JSON.parse(fs.readFileSync(`../${caseStudy}`, 'utf8'));
+  const content = JSON.parse(fs.readFileSync(join('../data', caseStudy), 'utf8'));
   delete content['$schema'];
 
   content.wallets = wallets.filter(w =>content.references.includes(w.id)).map(wallet => ({
