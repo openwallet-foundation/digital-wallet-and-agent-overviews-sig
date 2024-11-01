@@ -3,14 +3,14 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "endorser-mobile": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
-    },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
+    "endorser-mobile": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
@@ -20,30 +20,30 @@
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
     "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/",
-      "urlWebsite": "https://www.preparese.info/"
+      "urlWebsite": "https://www.preparese.info/",
+      "companyUrl": "https://ufwfoundation.org/"
     },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
-    },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
-    "vidua": {
-      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
-      "urlWebsite": "https://vidua.nl/english/"
+    "trisic-id": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
     },
     "vidcredentials": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+    },
+    "vidua": {
+      "urlWebsite": "https://vidua.nl/english/",
+      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104"
     },
     "selfkey-wallet": {
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
