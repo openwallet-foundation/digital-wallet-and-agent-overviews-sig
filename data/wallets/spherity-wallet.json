@@ -1,15 +1,15 @@
 {
   "capability": ["issuer", "holder", "verifier"],
   "company": "Spherity GmbH",
-  "credentialFormats": ["AnonCred", "LDP-VC"],
-  "issuanceProtocols": ["OpenID4VCI", "Issue Credential v2"],
+  "credentialFormats": ["LDP-VC"],
+  "issuanceProtocols": ["Issue Credential v3"],
   "logo": "logos/spherity-wallet.png",
   "name": "Spherity Wallet",
   "openSource": false,
-  "presentationProtocols": ["OpenID4VP"],
+  "presentationProtocols": ["Presentation Exchange v1"],
   "$schema": "../../schemas/wallet.json",
-  "signingAlgorithms": ["CL", "BBS+ with public key binding", "EdDSA"],
+  "signingAlgorithms": ["BBS+ with public key binding", "ECDSA", "EdDSA", "RSA"],
   "statusManagements": ["Status List 2021"],
-  "type": "edge",
+  "type": "cloud",
   "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
 }

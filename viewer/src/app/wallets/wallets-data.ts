@@ -1754,28 +1754,27 @@ export const walletData: Wallet[] = [
     ],
     "company": "Spherity GmbH",
     "credentialFormats": [
-      "AnonCred",
       "LDP-VC"
     ],
     "issuanceProtocols": [
-      "OpenID4VCI",
-      "Issue Credential v2"
+      "Issue Credential v3"
     ],
     "logo": "logos/spherity-wallet.png",
     "name": "Spherity Wallet",
     "openSource": false,
     "presentationProtocols": [
-      "OpenID4VP"
+      "Presentation Exchange v1"
     ],
     "signingAlgorithms": [
-      "CL",
       "BBS+ with public key binding",
-      "EdDSA"
+      "ECDSA",
+      "EdDSA",
+      "RSA"
     ],
     "statusManagements": [
       "Status List 2021"
     ],
-    "type": "edge",
+    "type": "cloud",
     "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet",
     "id": "spherity-wallet",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/spherity-wallet.json"
