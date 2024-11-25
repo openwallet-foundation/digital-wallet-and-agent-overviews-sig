@@ -89,6 +89,7 @@
         "ISO 23220-3",
         "Issue Credential v1",
         "Issue Credential v2",
+        "Issue Credential v3",
         "OpenID4VCI"
       ]
     },
@@ -98,7 +99,8 @@
       "enum": [
         "OpenID4VP",
         "Present Proof v2",
-        "Present Proof v1.0"
+        "Present Proof v1.0",
+        "Presentation Exchange v1"
       ]
     },
     "Trust-Management": {
