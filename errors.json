@@ -6,14 +6,15 @@
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
+    },
     "identry": {
-      "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919"
+      "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
+      "urlWebsite": "https://identry.io/"
     },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
@@ -22,37 +23,90 @@
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
     "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/",
-      "urlWebsite": "https://www.preparese.info/"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+      "urlWebsite": "https://www.preparese.info/",
+      "companyUrl": "https://ufwfoundation.org/"
     },
     "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
+      "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "vidcredentials": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
-    },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     },
-    "selfkey-wallet": {
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
+    "vidcredentials": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
+    },
+    "authenticator": {
+      "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409"
+    },
+    "did-wallet": {
+      "urlAppStore": "https://itunes.apple.com/app/id1460083542",
+      "urlWebApp": "https://www.didwallet.io/"
+    },
+    "esatus-wallet": {
+      "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
     },
+    "hightrust.id": {
+      "urlWebsite": "https://www.hightrust.id"
+    },
+    "igrant.io-data-wallet": {
+      "urlAppStore": "https://apple.co/2Mz9nJp"
+    },
     "kaytrust-wallet": {
+      "urlAppStore": "https://apps.apple.com/us/app/mytrust-wallet/id1477073898",
       "urlWebsite": "https://kaytrust.id/"
+    },
+    "learner-credential-wallet": {
+      "downloadSource": "https://github.com/digitalcredentials/learner-credential-wallet"
+    },
+    "meeco-holder-wallet": {
+      "companyUrl": "https://meeco.me/",
+      "urlWebsite": "https://meeco.me/"
+    },
+    "meeco-organisation-wallet": {
+      "companyUrl": "https://meeco.me/",
+      "urlWebsite": "https://meeco.me/"
+    },
+    "mykeepin": {
+      "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844"
+    },
+    "orbit-edge-wallet": {
+      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
+    },
+    "orbit-enterprise": {
+      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+    },
+    "sphereon-wallet": {
+      "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet"
+    },
+    "talao": {
+      "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone"
+    },
+    "verida": {
+      "urlWebsite": "https://www.verida.io/"
+    },
+    "wwwallet": {
+      "urlWebApp": "https://demo.wwwallet.org/"
+    },
+    "yivi": {
+      "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994"
+    },
+    "zada": {
+      "urlWebsite": "https://zada.io/"
     }
   }
 }
