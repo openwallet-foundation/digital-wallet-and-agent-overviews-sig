@@ -15,31 +15,32 @@
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919"
     },
+    "izertis-identfy": {
+      "urlAppStore": "https://apps.apple.com/do/app/identfy/id6476503276"
+    },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
-    },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/",
-      "companyUrl": "https://ufwfoundation.org/"
+      "companyUrl": "https://ufwfoundation.org/",
+      "urlWebsite": "https://www.preparese.info/"
+    },
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
     },
     "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
-    "vidcredentials": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
+    },
+    "vidcredentials": {
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
@@ -50,9 +51,6 @@
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
-    },
-    "kaytrust-wallet": {
-      "urlWebsite": "https://kaytrust.id/"
     }
   }
 }
