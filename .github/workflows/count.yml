@@ -19,7 +19,7 @@ jobs:
       - name: Count files in wallet folder
         id: file_count
         run: |
-          file_count=$(find wallets -type f | wc -l)
+          file_count=$(find data/wallets -type f | wc -l)
           echo "wallet-count=$file_count" >> $GITHUB_OUTPUT
 
       - name: Create JSON file
