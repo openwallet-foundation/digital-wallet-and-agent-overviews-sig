@@ -102,11 +102,14 @@ export const walletData: Wallet[] = [
     "credentialFormats": [
       "AnonCred",
       "LDP-VC",
-      "VC (1.1)"
+      "VC (1.1)",
+      "SD-JWT-VC",
+      "SD-JWT"
     ],
     "issuanceProtocols": [
       "Issue Credential v1",
-      "Issue Credential v2"
+      "Issue Credential v2",
+      "OpenID4VCI"
     ],
     "keyManagements": [
       "did:indy",
@@ -116,7 +119,8 @@ export const walletData: Wallet[] = [
     ],
     "presentationProtocols": [
       "Present Proof v2",
-      "Present Proof v1.0"
+      "Present Proof v1.0",
+      "OpenID4VP"
     ],
     "signingAlgorithms": [
       "BBS+ with public key binding",
