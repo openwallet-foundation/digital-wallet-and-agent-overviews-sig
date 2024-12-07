@@ -1,0 +1,9 @@
+{
+  "name": "farmworker-wallet-os",
+  "description": "Farmworker Wallet OS, the low-code wallet engine framework",
+  "url": "https://github.com/openwallet-foundation-labs/farmworker-wallet-os",
+  "community": "https://discord.com/channels/1022962884864643214/1138937641123987466",
+  "license": "Apache 2.0",
+  "language": "Mendix",
+  "$schema": "../../schemas/dependency.json"
+}

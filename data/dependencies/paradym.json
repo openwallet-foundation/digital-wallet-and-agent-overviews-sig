@@ -1,0 +1,8 @@
+{
+  "name": "Paradym",
+  "description": "Create and manage your digital identity infrastructure exactly how you want it with the Paradym API. Paradym provides hosted infrastructure and straightforward API endpoints.",
+  "url": "https://paradym.id",
+  "license": "Commercial",
+  "language": "REST",
+  "$schema": "../../schemas/dependency.json"
+}
