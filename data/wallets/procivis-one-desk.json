@@ -5,7 +5,7 @@
   "companyUrl": "https://www.procivis.ch",
   "type": "cloud",
   "openSource": false,
-  "license": "Apache-2.0",
+  "license": "Commercial",
   "capability": ["issuer", "verifier"],
   "portability": true,
   "urlWebsite": "https://www.procivis.ch/en/procivis-one",
