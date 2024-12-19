@@ -1,19 +1,44 @@
 {
   "capability": ["holder"],
   "company": "Talao",
-  "credentialFormats": ["JWT-VC", "LDP-VC"],
-  "credentialProfiles": ["EBSI"],
+  "credentialFormats": [
+    "JWT-VC",
+    "JWT",
+    "LDP-VC",
+    "SD-JWT-VC",
+    "SD-JWT",
+    "x509"
+  ],
+  "credentialProfiles": [
+    "EBSI",
+    "HAIP",
+    "SD-JWT VCs (w/ X.509 for Issuers)",
+    "x.509"
+  ],
   "downloadSource": "https://github.com/TalaoDAO/talao-wallet",
   "issuanceProtocols": ["OpenID4VCI"],
-  "keyManagements": ["did:ebsi", "did:web", "did:key"],
+  "keyManagements": [
+    ".well-known/jwt-issuer",
+    "did:ebsi",
+    "did:key",
+    "did:jwk",
+    "did:web",
+    "jwks_uri",
+    "pub key in X.509 cert"
+  ],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA", "EdDSA"],
+  "statusManagements": ["JWT/CWT status list", "Status List 2021"],
+  "trustManagements": [
+    "EBSI Trust Registries",
+    "Verifier knows Issuers",
+    "X.509 certificates"
+  ],
   "license": "Apache 2.0",
   "logo": "logos/talao.png",
   "name": "Talao Wallet",
   "openSource": true,
-  "presentationProtocols": ["OpenID4VP"],
   "$schema": "../../schemas/wallet.json",
-  "signingAlgorithms": ["ECDSA"],
-  "statusManagements": ["Status List 2021"],
   "type": "edge",
   "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.talao.wallet",
