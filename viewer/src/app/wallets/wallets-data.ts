@@ -440,6 +440,110 @@ export const walletData: Wallet[] = [
     "capability": [
       "holder"
     ],
+    "type": "edge",
+    "name": "Unmio mobile",
+    "logo": "https://unmio-ecosystem-assets.s3.us-west-1.amazonaws.com/images/Unmio_Logo_Green-Color.png",
+    "company": "Entidad",
+    "companyUrl": "https://www.entidad.io",
+    "contact": "info@unmio.com",
+    "urlWebsite": "https://www.unmio.com",
+    "urlAppStore": "https://apps.apple.com/us/app/unmio/id6581480643",
+    "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.entidad.app.unmio",
+    "openSource": false,
+    "license": "Commercial",
+    "portability": false,
+    "credentialProfiles": [
+      "AnonCreds with did:indy",
+      "AnonCreds with did:web"
+    ],
+    "credentialFormats": [
+      "AnonCred"
+    ],
+    "issuanceProtocols": [
+      "Issue Credential v2"
+    ],
+    "keyManagements": [
+      "did:indy",
+      "did:jwk",
+      "did:key",
+      "did:peer",
+      "did:web",
+      "raw public keys (jwk)"
+    ],
+    "presentationProtocols": [
+      "Present Proof v2",
+      "Present Proof v1.0"
+    ],
+    "dependencies": [
+      "credo",
+      "farmworker-wallet-os"
+    ],
+    "signingAlgorithms": [
+      "CL",
+      "ECDSA",
+      "EdDSA"
+    ],
+    "statusManagements": [
+      "Indy Revocation"
+    ],
+    "trustManagements": [],
+    "id": "entidad-unmio-mobile",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/entidad-unmio-mobile.json"
+  },
+  {
+    "capability": [
+      "issuer",
+      "verifier"
+    ],
+    "type": "cloud",
+    "name": "Unmio",
+    "logo": "https://unmio-ecosystem-assets.s3.us-west-1.amazonaws.com/images/Unmio_Logo_Green-Color.png",
+    "company": "Entidad",
+    "companyUrl": "https://www.entidad.io",
+    "contact": "info@unmio.com",
+    "urlWebsite": "https://www.unmio.com",
+    "openSource": false,
+    "license": "Commercial",
+    "portability": false,
+    "credentialProfiles": [
+      "AnonCreds with did:indy",
+      "AnonCreds with did:web"
+    ],
+    "credentialFormats": [
+      "AnonCred"
+    ],
+    "issuanceProtocols": [
+      "Issue Credential v2"
+    ],
+    "keyManagements": [
+      "did:key",
+      "did:web",
+      "did:peer"
+    ],
+    "presentationProtocols": [
+      "Present Proof v2",
+      "Present Proof v1.0"
+    ],
+    "dependencies": [
+      "paradym",
+      "farmworker-wallet-os"
+    ],
+    "signingAlgorithms": [
+      "CL",
+      "ECDSA",
+      "EdDSA"
+    ],
+    "statusManagements": [
+      "Indy Revocation"
+    ],
+    "trustManagements": [],
+    "id": "entidad-unmio",
+    "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/entidad-unmio.json"
+  },
+  {
+    "capability": [
+      "holder"
+    ],
     "company": "esatus AG",
     "credentialFormats": [
       "AnonCred"
@@ -521,6 +625,9 @@ export const walletData: Wallet[] = [
     ],
     "statusManagements": [],
     "trustManagements": [],
+    "dependencies": [
+      "credo"
+    ],
     "id": "farmworker-wallet-os",
     "commitHistory": "https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/commits/main/wallets/farmworker-wallet-os.json"
   },

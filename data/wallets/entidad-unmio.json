@@ -1,0 +1,49 @@
+{
+  "capability": [
+    "issuer",
+    "verifier"
+  ],
+  "type": "cloud",
+  "name": "Unmio",
+  "logo": "https://unmio-ecosystem-assets.s3.us-west-1.amazonaws.com/images/Unmio_Logo_Green-Color.png",
+  "company": "Entidad",
+  "companyUrl": "https://www.entidad.io",
+  "contact": "info@unmio.com",
+  "urlWebsite": "https://www.unmio.com",
+  "openSource": false,
+  "license": "Commercial",
+  "portability": false,
+  "credentialProfiles": [
+    "AnonCreds with did:indy",
+    "AnonCreds with did:web"
+  ],
+  "credentialFormats": [
+    "AnonCred"
+  ],
+  "issuanceProtocols": [
+    "Issue Credential v2"
+  ],
+  "keyManagements": [
+    "did:key",
+    "did:web",
+    "did:peer"
+  ],
+  "presentationProtocols": [
+    "Present Proof v2",
+    "Present Proof v1.0"
+  ],
+  "dependencies": [
+    "paradym",
+    "farmworker-wallet-os"
+  ],
+  "signingAlgorithms": [
+    "CL",
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [
+    "Indy Revocation"
+  ],
+  "trustManagements": [],
+  "$schema": "../../schemas/wallet.json"
+}
