@@ -15,23 +15,22 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-  selector: 'app-case-studies-show',
-  standalone: true,
-  imports: [
-    MatCardModule,
-    CommonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatDividerModule,
-    MatChipsModule,
-    RouterModule,
-    MatListModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSnackBarModule,
-  ],
-  templateUrl: './case-studies-show.component.html',
-  styleUrl: './case-studies-show.component.scss',
+    selector: 'app-case-studies-show',
+    imports: [
+        MatCardModule,
+        CommonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatDividerModule,
+        MatChipsModule,
+        RouterModule,
+        MatListModule,
+        MatButtonModule,
+        MatIconModule,
+        MatSnackBarModule,
+    ],
+    templateUrl: './case-studies-show.component.html',
+    styleUrl: './case-studies-show.component.scss'
 })
 export class CaseStudiesShowComponent implements OnInit {
   caseStudy?: CaseStudy;

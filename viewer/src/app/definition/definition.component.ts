@@ -14,18 +14,17 @@ interface HeadingNode {
 }
 
 @Component({
-  selector: 'app-definition',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MarkdownModule,
-    MatTreeModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-  ],
-  templateUrl: './definition.component.html',
-  styleUrl: './definition.component.scss',
+    selector: 'app-definition',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MarkdownModule,
+        MatTreeModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+    ],
+    templateUrl: './definition.component.html',
+    styleUrl: './definition.component.scss'
 })
 export class DefinitionComponent implements OnInit {
   headings?: NodeListOf<Element>;

@@ -29,19 +29,18 @@ export interface ColumnHeader {
 type Res = keyof Resources;
 
 @Component({
-  selector: 'app-resources-list',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatTableModule,
-    MatPaginatorModule,
-    FormatPipe,
-    MatIconModule,
-    MatTooltipModule,
-    RouterModule,
-  ],
-  templateUrl: './resources-list.component.html',
-  styleUrls: ['./resources-list.component.scss'],
+    selector: 'app-resources-list',
+    imports: [
+        CommonModule,
+        MatTableModule,
+        MatPaginatorModule,
+        FormatPipe,
+        MatIconModule,
+        MatTooltipModule,
+        RouterModule,
+    ],
+    templateUrl: './resources-list.component.html',
+    styleUrls: ['./resources-list.component.scss']
 })
 export class ResourcesListComponent implements OnInit, AfterViewInit {
   @Input() data!: Format;

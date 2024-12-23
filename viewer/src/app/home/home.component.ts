@@ -11,21 +11,20 @@ import { AppService } from '../credential-profiles/app.service';
 import { MatListModule } from '@angular/material/list';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatButtonModule,
-    CommonModule,
-    RouterModule,
-    MatDividerModule,
-    MatCardModule,
-    MatRippleModule,
-    MatListModule,
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    imports: [
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatButtonModule,
+        CommonModule,
+        RouterModule,
+        MatDividerModule,
+        MatCardModule,
+        MatRippleModule,
+        MatListModule,
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
   leftTabs: string[] = [];

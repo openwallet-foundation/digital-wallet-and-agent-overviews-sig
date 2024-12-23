@@ -4,11 +4,10 @@ import { DependenciesService } from '../dependencies.service';
 import { DependencyListEmbeddedComponent } from '../dependencies-list-embedded/dependencies-list-embedded.component';
 
 @Component({
-  selector: 'app-dependencies-list',
-  standalone: true,
-  imports: [CommonModule, DependencyListEmbeddedComponent],
-  templateUrl: './dependencies-list.component.html',
-  styleUrl: './dependencies-list.component.scss',
+    selector: 'app-dependencies-list',
+    imports: [CommonModule, DependencyListEmbeddedComponent],
+    templateUrl: './dependencies-list.component.html',
+    styleUrl: './dependencies-list.component.scss'
 })
 export class DependenciesListComponent {
   constructor(public dependenciesService: DependenciesService) {}

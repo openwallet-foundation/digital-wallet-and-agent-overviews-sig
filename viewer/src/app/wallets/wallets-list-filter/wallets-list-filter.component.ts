@@ -26,21 +26,20 @@ export interface WalletFilter {
 }
 
 @Component({
-  selector: 'app-wallets-list-filter',
-  standalone: true,
-  imports: [
-    MatDialogModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatIconModule,
-  ],
-  providers: [WalletsService],
-  templateUrl: './wallets-list-filter.component.html',
-  styleUrl: './wallets-list-filter.component.scss',
+    selector: 'app-wallets-list-filter',
+    imports: [
+        MatDialogModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSelectModule,
+        MatIconModule,
+    ],
+    providers: [WalletsService],
+    templateUrl: './wallets-list-filter.component.html',
+    styleUrl: './wallets-list-filter.component.scss'
 })
 export class WalletsListFilterComponent implements OnInit {
   form!: FormGroup;

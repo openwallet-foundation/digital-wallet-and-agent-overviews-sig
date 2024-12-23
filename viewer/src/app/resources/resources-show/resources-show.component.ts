@@ -12,20 +12,19 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-  selector: 'app-resources-show',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatIconModule,
-    RouterModule,
-    MatListModule,
-    MatCardModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-  ],
-  templateUrl: './resources-show.component.html',
-  styleUrl: './resources-show.component.scss',
+    selector: 'app-resources-show',
+    imports: [
+        CommonModule,
+        MatIconModule,
+        RouterModule,
+        MatListModule,
+        MatCardModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+    ],
+    templateUrl: './resources-show.component.html',
+    styleUrl: './resources-show.component.scss'
 })
 export class ResourcesShowComponent implements OnInit {
   values: { type: string; key: string; value: string }[] = [];

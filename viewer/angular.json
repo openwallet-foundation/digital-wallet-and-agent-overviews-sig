@@ -34,7 +34,8 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "fileReplacements": []
           },
           "configurations": {
             "production": {
@@ -51,7 +52,21 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/app/wallets/wallets-data.ts",
+                  "with": "src/app/wallets/wallets-data.generated.ts"
+                },
+                {
+                  "replace": "src/app/dependencies/dependencies-data.ts",
+                  "with": "src/app/dependencies/dependencies-data.generated.ts"
+                },
+                {
+                  "replace": "src/app/case-studies/case-studies-data.ts",
+                  "with": "src/app/case-studies/case-studies-data.generated.ts"
+                }
+              ]
             },
             "ssr": {
               "budgets": [
@@ -71,6 +86,18 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.ssr.ts"
+                },
+                {
+                  "replace": "src/app/wallets/wallets-data.ts",
+                  "with": "src/app/wallets/wallets-data.generated.ts"
+                },
+                {
+                  "replace": "src/app/dependencies/dependencies-data.ts",
+                  "with": "src/app/dependencies/dependencies-data.generated.ts"
+                },
+                {
+                  "replace": "src/app/case-studies/case-studies-data.ts",
+                  "with": "src/app/case-studies/case-studies-data.generated.ts"
                 }
               ]
             },
@@ -82,6 +109,18 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.development.ts"
+                },
+                {
+                  "replace": "src/app/wallets/wallets-data.ts",
+                  "with": "src/app/wallets/wallets-data.generated.ts"
+                },
+                {
+                  "replace": "src/app/dependencies/dependencies-data.ts",
+                  "with": "src/app/dependencies/dependencies-data.generated.ts"
+                },
+                {
+                  "replace": "src/app/case-studies/case-studies-data.ts",
+                  "with": "src/app/case-studies/case-studies-data.generated.ts"
                 }
               ]
             }

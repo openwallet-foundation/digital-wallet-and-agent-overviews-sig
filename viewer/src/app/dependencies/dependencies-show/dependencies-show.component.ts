@@ -20,25 +20,24 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-dependencies-show',
-  standalone: true,
-  imports: [
-    MatSnackBarModule,
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    MatListModule,
-    MatTooltipModule,
-    MatButtonModule,
-    MatChipsModule,
-    WalletsListComponent,
-    MarkdownModule,
-    MatTabsModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-  ],
-  templateUrl: './dependencies-show.component.html',
-  styleUrl: './dependencies-show.component.scss',
+    selector: 'app-dependencies-show',
+    imports: [
+        MatSnackBarModule,
+        CommonModule,
+        RouterModule,
+        MatIconModule,
+        MatListModule,
+        MatTooltipModule,
+        MatButtonModule,
+        MatChipsModule,
+        WalletsListComponent,
+        MarkdownModule,
+        MatTabsModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+    ],
+    templateUrl: './dependencies-show.component.html',
+    styleUrl: './dependencies-show.component.scss'
 })
 export class DependenciesShowComponent {
   dependency?: Dependency;

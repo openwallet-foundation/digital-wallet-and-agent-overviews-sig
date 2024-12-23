@@ -22,23 +22,22 @@ class ColumnHeader {
 }
 
 @Component({
-  selector: 'app-credential-profile-list',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatPaginatorModule,
-    MatIconModule,
-    FormatPipe,
-    MatChipsModule,
-    MatTableModule,
-    RouterModule,
-    MatTooltipModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-  ],
-  templateUrl: './credential-profile-list.component.html',
-  styleUrls: ['./credential-profile-list.component.scss'],
+    selector: 'app-credential-profile-list',
+    imports: [
+        CommonModule,
+        MatPaginatorModule,
+        MatIconModule,
+        FormatPipe,
+        MatChipsModule,
+        MatTableModule,
+        RouterModule,
+        MatTooltipModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+    ],
+    templateUrl: './credential-profile-list.component.html',
+    styleUrls: ['./credential-profile-list.component.scss']
 })
 export class CredentialProfileListComponent implements OnInit, AfterViewInit {
   data!: Format;

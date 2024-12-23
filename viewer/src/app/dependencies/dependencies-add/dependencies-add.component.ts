@@ -22,24 +22,23 @@ import { GithubRepo } from '../github-response';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-  selector: 'app-dependencies-add',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    MatIconModule,
-    MatDialogModule,
-    MatInputModule,
-    MatDividerModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatAutocompleteModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatSnackBarModule,
-    ClipboardModule,
-  ],
-  templateUrl: './dependencies-add.component.html',
-  styleUrl: './dependencies-add.component.scss',
+    selector: 'app-dependencies-add',
+    imports: [
+        ReactiveFormsModule,
+        MatIconModule,
+        MatDialogModule,
+        MatInputModule,
+        MatDividerModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatAutocompleteModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatSnackBarModule,
+        ClipboardModule,
+    ],
+    templateUrl: './dependencies-add.component.html',
+    styleUrl: './dependencies-add.component.scss'
 })
 export class DependenciesAddComponent implements OnInit {
   form!: FormGroup;
