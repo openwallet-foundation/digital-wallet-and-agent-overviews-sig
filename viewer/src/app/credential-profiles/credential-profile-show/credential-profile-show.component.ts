@@ -12,20 +12,19 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-  selector: 'app-credential-profile-show',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatIconModule,
-    MatListModule,
-    MatButtonModule,
-    RouterModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-  ],
-  templateUrl: './credential-profile-show.component.html',
-  styleUrl: './credential-profile-show.component.scss',
+    selector: 'app-credential-profile-show',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatIconModule,
+        MatListModule,
+        MatButtonModule,
+        RouterModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+    ],
+    templateUrl: './credential-profile-show.component.html',
+    styleUrl: './credential-profile-show.component.scss'
 })
 export class CredentialProfileShowComponent implements OnInit {
   profile?: IProfile;

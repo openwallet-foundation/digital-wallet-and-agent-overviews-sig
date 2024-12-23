@@ -1,4 +1,4 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -30,7 +30,6 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
 
 @Component({
   selector: 'app-dependency-list-embedded',
-  standalone: true,
   imports: [
     CommonModule,
     RouterModule,
@@ -44,7 +43,6 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
     FlexLayoutServerModule,
     MatDialogModule,
     MatChipsModule,
-    NgOptimizedImage,
     MatButtonModule,
     MatDialogModule,
   ],

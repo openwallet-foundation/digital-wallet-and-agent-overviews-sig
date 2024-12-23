@@ -21,22 +21,21 @@ import { SeoInformation } from './seo-resolver';
 import { AppService } from './credential-profiles/app.service';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterModule,
-    CommonModule,
-    MatToolbarModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatMenuModule,
-    MatDividerModule,
-    MatIconModule,
-    MatMenuModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        RouterModule,
+        CommonModule,
+        MatToolbarModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatMenuModule,
+        MatDividerModule,
+        MatIconModule,
+        MatMenuModule,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 /**
  * The main component of the application

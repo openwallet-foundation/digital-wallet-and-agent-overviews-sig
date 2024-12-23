@@ -17,11 +17,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { Wallet } from '../types';
 import { WalletsService } from '../wallets.service';
-import {
-  CommonModule,
-  isPlatformBrowser,
-  NgOptimizedImage,
-} from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MatChipsModule } from '@angular/material/chips';
 import {
@@ -48,7 +44,6 @@ type Colums =
 
 @Component({
   selector: 'app-wallets-list',
-  standalone: true,
   imports: [
     CommonModule,
     RouterModule,
@@ -62,7 +57,6 @@ type Colums =
     FlexLayoutServerModule,
     MatDialogModule,
     MatChipsModule,
-    NgOptimizedImage,
     MatButtonModule,
   ],
   providers: [WalletsService],

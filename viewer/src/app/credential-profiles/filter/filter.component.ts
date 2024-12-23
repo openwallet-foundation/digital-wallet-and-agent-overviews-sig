@@ -22,20 +22,19 @@ interface FilterElement {
 }
 
 @Component({
-  selector: 'app-filter',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatTooltipModule,
-    ReactiveFormsModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-  ],
-  templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.scss'],
+    selector: 'app-filter',
+    imports: [
+        CommonModule,
+        MatTooltipModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+    ],
+    templateUrl: './filter.component.html',
+    styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent implements OnInit {
   selectionColumns: {

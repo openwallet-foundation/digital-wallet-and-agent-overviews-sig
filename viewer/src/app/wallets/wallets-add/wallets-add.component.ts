@@ -19,24 +19,23 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-  selector: 'app-wallets-add',
-  standalone: true,
-  imports: [
-    MatDialogModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatIconModule,
-    MatDividerModule,
-    ClipboardModule,
-    MatSnackBarModule,
-  ],
-  providers: [WalletsService],
-  templateUrl: './wallets-add.component.html',
-  styleUrl: './wallets-add.component.scss',
+    selector: 'app-wallets-add',
+    imports: [
+        MatDialogModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatSelectModule,
+        MatIconModule,
+        MatDividerModule,
+        ClipboardModule,
+        MatSnackBarModule,
+    ],
+    providers: [WalletsService],
+    templateUrl: './wallets-add.component.html',
+    styleUrl: './wallets-add.component.scss'
 })
 export class WalletsAddComponent implements OnInit {
   form!: FormGroup;

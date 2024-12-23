@@ -3,10 +3,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-info',
-  standalone: true,
-  imports: [MatDialogModule, MatButtonModule],
-  templateUrl: './info.component.html',
-  styleUrl: './info.component.scss',
+    selector: 'app-info',
+    imports: [MatDialogModule, MatButtonModule],
+    templateUrl: './info.component.html',
+    styleUrl: './info.component.scss'
 })
 export class InfoComponent {}

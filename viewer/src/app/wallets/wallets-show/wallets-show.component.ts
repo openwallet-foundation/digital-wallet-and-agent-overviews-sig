@@ -22,26 +22,25 @@ import { DependencyListEmbeddedComponent } from '../../dependencies/dependencies
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-  selector: 'app-wallets-show',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatSnackBarModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatIconModule,
-    MatListModule,
-    MatTooltipModule,
-    MatChipsModule,
-    MatCardModule,
-    CaseStudiesListEmbeddedComponent,
-    DependencyListEmbeddedComponent,
-  ],
-  providers: [WalletsService],
-  templateUrl: './wallets-show.component.html',
-  styleUrl: './wallets-show.component.scss',
+    selector: 'app-wallets-show',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatSnackBarModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatIconModule,
+        MatListModule,
+        MatTooltipModule,
+        MatChipsModule,
+        MatCardModule,
+        CaseStudiesListEmbeddedComponent,
+        DependencyListEmbeddedComponent,
+    ],
+    providers: [WalletsService],
+    templateUrl: './wallets-show.component.html',
+    styleUrl: './wallets-show.component.scss'
 })
 export class WalletsShowComponent implements OnInit, OnDestroy {
   wallet?: Wallet;

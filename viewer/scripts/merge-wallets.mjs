@@ -59,8 +59,8 @@ const writeTsFile = (filename, content) => {
 };
 
 // Generate and write TypeScript content
-writeTsFile('wallets/wallets-data.ts', generateTsContent('Wallet', wallets));
-writeTsFile('dependencies/dependencies-data.ts', generateTsContent('Dependency', dependencies));
-writeTsFile('case-studies/case-studies-data.ts', generateTsContent('CaseStudy', caseStudies));
+writeTsFile('wallets/wallets-data.generated.ts', generateTsContent('Wallet', wallets));
+writeTsFile('dependencies/dependencies-data.generated.ts', generateTsContent('Dependency', dependencies));
+writeTsFile('case-studies/case-studies-data.generated.ts', generateTsContent('CaseStudy', caseStudies));
 
 mergeProfiles();

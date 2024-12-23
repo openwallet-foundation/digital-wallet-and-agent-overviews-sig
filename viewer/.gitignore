@@ -3,6 +3,10 @@
 .env
 newsletter.html
 
+src/app/wallets/wallets-data.generated.ts
+src/app/dependencies/dependencies-data.generated.ts
+src/app/case-studies/case-studies-data.generated.ts
+
 # Compiled output
 /dist
 /tmp

@@ -30,27 +30,26 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { CaseStudy, CaseStudySage } from '../types';
 
 @Component({
-  selector: 'app-case-studies-add',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    MatIconModule,
-    MatDialogModule,
-    MatInputModule,
-    MatDividerModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatAutocompleteModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatSnackBarModule,
-    ClipboardModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    FormsModule,
-  ],
-  templateUrl: './case-studies-add.component.html',
-  styleUrl: './case-studies-add.component.scss',
+    selector: 'app-case-studies-add',
+    imports: [
+        ReactiveFormsModule,
+        MatIconModule,
+        MatDialogModule,
+        MatInputModule,
+        MatDividerModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatAutocompleteModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatSnackBarModule,
+        ClipboardModule,
+        MatChipsModule,
+        MatDatepickerModule,
+        FormsModule,
+    ],
+    templateUrl: './case-studies-add.component.html',
+    styleUrl: './case-studies-add.component.scss'
 })
 export class CaseStudiesAddComponent implements OnInit {
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];

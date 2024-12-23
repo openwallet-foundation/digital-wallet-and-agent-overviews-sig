@@ -13,18 +13,17 @@ export interface DependencyFilter {
 }
 
 @Component({
-  selector: 'app-dependencies-filter',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatDialogModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatButtonModule,
-  ],
-  templateUrl: './dependencies-filter.component.html',
-  styleUrl: './dependencies-filter.component.scss',
+    selector: 'app-dependencies-filter',
+    imports: [
+        ReactiveFormsModule,
+        MatSelectModule,
+        MatDialogModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatButtonModule,
+    ],
+    templateUrl: './dependencies-filter.component.html',
+    styleUrl: './dependencies-filter.component.scss'
 })
 export class DependenciesFilterComponent implements OnInit {
   form!: FormGroup;

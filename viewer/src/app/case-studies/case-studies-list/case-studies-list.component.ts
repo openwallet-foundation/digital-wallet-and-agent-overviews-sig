@@ -17,22 +17,21 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-case-studies-list',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatDividerModule,
-    MatChipsModule,
-    RouterModule,
-    MatListModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    CaseStudiesListEmbeddedComponent,
-  ],
-  templateUrl: './case-studies-list.component.html',
-  styleUrl: './case-studies-list.component.scss',
+    selector: 'app-case-studies-list',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatDividerModule,
+        MatChipsModule,
+        RouterModule,
+        MatListModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        CaseStudiesListEmbeddedComponent,
+    ],
+    templateUrl: './case-studies-list.component.html',
+    styleUrl: './case-studies-list.component.scss'
 })
 export class CaseStudiesListComponent implements OnInit, OnDestroy {
   subscribeLink = 'https://sgzwn.mjt.lu/wgt/sgzwn/xvm0/form?c=29dfe052';

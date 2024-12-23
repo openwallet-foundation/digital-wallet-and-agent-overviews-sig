@@ -11,20 +11,19 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-case-studies-list-embedded',
-  standalone: true,
-  imports: [
-    MatChipsModule,
-    RouterModule,
-    CommonModule,
-    MatDividerModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule,
-    MatButtonModule,
-    MatCardModule,
-  ],
-  templateUrl: './case-studies-list-embedded.component.html',
-  styleUrl: './case-studies-list-embedded.component.scss',
+    selector: 'app-case-studies-list-embedded',
+    imports: [
+        MatChipsModule,
+        RouterModule,
+        CommonModule,
+        MatDividerModule,
+        FlexLayoutModule,
+        FlexLayoutServerModule,
+        MatButtonModule,
+        MatCardModule,
+    ],
+    templateUrl: './case-studies-list-embedded.component.html',
+    styleUrl: './case-studies-list-embedded.component.scss'
 })
 export class CaseStudiesListEmbeddedComponent {
   @Input() caseStudies: CaseStudy[] = [];
