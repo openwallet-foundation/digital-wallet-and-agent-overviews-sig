@@ -18,18 +18,18 @@
     "kaytrust-wallet": {
       "urlWebsite": "https://kaytrust.id/"
     },
-    "paradym-wallet": {
-      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
-    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "paradym-wallet": {
+      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
     "preparese-mobile": {
       "companyUrl": "https://ufwfoundation.org/",
       "urlWebsite": "https://www.preparese.info/"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
