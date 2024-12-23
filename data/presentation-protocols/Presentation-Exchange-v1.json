@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/presentation-protocol.json",
+  "Name": "Presentation Exchange v1",
+  "Specification": "https://identity.foundation/presentation-exchange/spec/v1.0.0/"
+}
