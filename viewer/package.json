@@ -7,6 +7,7 @@
     "prebuild": "npm run merge",
     "start": "ng serve",
     "build": "ng build",
+    "build:ssr": "npm run prebuild && ng build --configuration ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "validate": "node scripts/validate.mjs",
