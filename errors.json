@@ -21,15 +21,14 @@
     "kaytrust-wallet": {
       "urlWebsite": "https://kaytrust.id/"
     },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
-    },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
     "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/",
       "companyUrl": "https://ufwfoundation.org/"
+    },
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
@@ -38,15 +37,15 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728"
     },
-    "vidua": {
-      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
-      "urlWebsite": "https://vidua.nl/english/"
-    },
     "vidcredentials": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+    },
+    "vidua": {
+      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
+      "urlWebsite": "https://vidua.nl/english/"
     },
     "selfkey-wallet": {
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
@@ -55,11 +54,8 @@
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
     },
-    "orbit-enterprise": {
-      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
-    },
-    "talao": {
-      "urlWebsite": "https://talao.io/"
+    "orbit-edge-wallet": {
+      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
     }
   }
 }
