@@ -1,5 +1,7 @@
 {
-  "capability": ["holder"],
+  "capability": [
+    "holder"
+  ],
   "type": "edge",
   "name": "Farmworker Wallet OS",
   "logo": "https://cdn.prod.website-files.com/6520979d785cc136404a270d/65237d6a3505e25d76ed58c7_wallet-p-1080.png",
@@ -10,8 +12,13 @@
   "openSource": true,
   "license": "Apache 2.0",
   "portability": false,
-  "credentialProfiles": ["AnonCreds with did:indy", "AnonCreds with did:web"],
-  "credentialFormats": ["AnonCred"],
+  "credentialProfiles": [
+    "AnonCreds with did:indy",
+    "AnonCreds with did:web"
+  ],
+  "credentialFormats": [
+    "AnonCred"
+  ],
   "issuanceProtocols": [],
   "keyManagements": [
     "did:indy",
@@ -21,9 +28,19 @@
     "did:web",
     "raw public keys (jwk)"
   ],
-  "presentationProtocols": ["Present Proof v2", "Present Proof v1.0"],
-  "signingAlgorithms": ["CL", "ECDSA", "EdDSA"],
+  "presentationProtocols": [
+    "Present Proof v2",
+    "Present Proof v1.0"
+  ],
+  "signingAlgorithms": [
+    "CL",
+    "ECDSA",
+    "EdDSA"
+  ],
   "statusManagements": [],
   "trustManagements": [],
+  "dependencies": [
+    "credo"
+  ],
   "$schema": "../../schemas/wallet.json"
 }
