@@ -31,11 +31,8 @@
       "urlWebsite": "https://orgwallet.de/en/"
     },
     "paradym-wallet": {
-      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
-    },
-    "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/",
-      "urlWebsite": "https://www.preparese.info/"
+      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet",
+      "downloadSource": "https://github.com/animo/paradym-wallet"
     },
     "altme": {
       "urlAppStore": "https://apps.apple.com/fr/app/altme/id1633216869"
@@ -101,6 +98,14 @@
     },
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+    },
+    "passivebolt-keyshare": {
+      "companyUrl": "https://passivebolt.com",
+      "urlWebsite": "https://passivebolt.com"
+    },
+    "preparese-mobile": {
+      "companyUrl": "https://ufwfoundation.org/",
+      "urlWebsite": "https://www.preparese.info/"
     },
     "procivis-one-core": {
       "companyUrl": "https://www.procivis.ch",
