@@ -11,6 +11,7 @@
         "AnonCred",
         "CESR/CESR Proof",
         "CWT",
+        "Coconut",
         "Gordian Envelope",
         "ICAO DTC",
         "Idemix attribute-based credential",
@@ -31,9 +32,12 @@
       "enum": [
         "BBS+ with public key binding",
         "BoundBBS+",
+        "Coconut",
         "CL",
         "ECDSA",
         "EdDSA",
+        "Ethereum",
+        "ML-DSA",
         "PS",
         "RSA",
         "Schnorr"
@@ -65,6 +69,7 @@
         "cose key",
         "credential as secret",
         "did:cheqd",
+        "did:dyne",
         "did:ebsi",
         "did:indy",
         "did:ion (long form)",
@@ -86,6 +91,7 @@
       "type": "string",
       "enum": [
         "ACDC",
+        "Coconut",
         "ISO 23220-3",
         "Issue Credential v1",
         "Issue Credential v2",
