@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/signing-algorithm.json",
+  "Name": "Coconut",
+  "Implementation Support": "https://dev.zenroom.org/#/pages/zencode-crypto?id=zero-knowledge-proof-and-attribute-based-credentials",
+  "IPR Policy": "Apache License 2.0",
+  "Specification": "different curves-different specs",
+  "Standardization (Body, Process)": "different curves-different standards",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": true,
+    "Description": "NIST with Curve25519"
+  },
+  "Performance": "high",
+  "Hardware support": false,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": false,
+  "Post-quantum security": false
+}

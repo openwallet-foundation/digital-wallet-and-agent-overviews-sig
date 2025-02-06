@@ -21,7 +21,7 @@
   "issuanceProtocols": ["OpenID4VCI", "Coconut"],
   "keyManagements": ["did:web","did:dyne", "did:jwk", ".well-known/jwt-issuer", "pub key in X.509 cert", "raw public keys (none jwk)", "raw public keys (jwk)" ],
   "presentationProtocols": ["OpenID4VP"],
-  "signingAlgorithms": ["ECDSA", "EdDSA", "ML-DSA", "BBS+ with public key binding", "RSA", "Coconut", "Ethereum"],
+  "signingAlgorithms": ["ECDSA", "EdDSA", "ML-DSA", "BBS+ with public key binding", "RSA", "Coconut"],
   "statusManagements": [],
   "trustManagements": ["Verifier knows Issuers"],
   "$schema": "../../schemas/wallet.json"
