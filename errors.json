@@ -3,6 +3,9 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
+    "anonyome-wallet": {
+      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
@@ -13,23 +16,20 @@
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
-    "anonyome-wallet": {
-      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
-    },
-    "identry": {
-      "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919"
-    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
+    "preparese-mobile": {
+      "companyUrl": "https://ufwfoundation.org/"
+    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
-    "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/"
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -42,15 +42,15 @@
     "selfkey-wallet": {
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
     },
+    "entidad-unmio-mobile": {
+      "companyUrl": "https://www.entidad.io"
+    },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
     },
-    "hightrust.id": {
-      "urlWebsite": "https://www.hightrust.id"
-    },
-    "passivebolt-keyshare": {
-      "companyUrl": "https://passivebolt.com"
+    "meeco-holder-wallet": {
+      "companyUrl": "https://meeco.me/"
     }
   }
 }
