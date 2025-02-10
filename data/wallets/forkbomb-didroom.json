@@ -1,0 +1,28 @@
+{
+  "capability": [
+    "issuer",
+    "holder",
+    "verifier"
+  ],
+  "type": "cloud",
+  "name": "DIDroom",
+  "logo": "https://forkbomb.solutions/wp-content/uploads/2023/05/DIDroom_logo.svg",
+  "company": "Forkbomb",
+  "urlWebsite": "https://didroom.com/",
+  "urlAppStore": "https://apps.apple.com/app/6670396049",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.didroom.wallet",
+  "urlWebApp": "https://dashboard.didroom.com/",
+  "downloadSource": "https://github.com/topics/didroom",
+  "openSource": true,
+  "license": "Dual: AGPL-3.0 and Commercial License",
+  "portability": true,
+  "credentialProfiles": [],
+  "credentialFormats": ["SD-JWT","JWT-VC", "Coconut" ],
+  "issuanceProtocols": ["OpenID4VCI", "Coconut"],
+  "keyManagements": ["did:web","did:dyne", "did:jwk", ".well-known/jwt-issuer", "pub key in X.509 cert", "raw public keys (none jwk)", "raw public keys (jwk)" ],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA", "EdDSA", "ML-DSA", "BBS+ with public key binding", "RSA", "Coconut"],
+  "statusManagements": [],
+  "trustManagements": ["Verifier knows Issuers"],
+  "$schema": "../../schemas/wallet.json"
+}

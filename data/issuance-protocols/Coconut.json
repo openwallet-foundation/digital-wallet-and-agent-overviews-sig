@@ -1,0 +1,5 @@
+{
+  "$schema": "../../schemas/issuance-protocol.json",
+  "Name": "Coconut",
+  "Specification": "https://arxiv.org/pdf/1802.07344"
+}

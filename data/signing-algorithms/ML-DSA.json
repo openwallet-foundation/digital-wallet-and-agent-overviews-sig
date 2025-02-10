@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/signing-algorithm.json",
+  "Name": "ML-DSA",
+  "Implementation Support": "https://dev.zenroom.org/#/pages/zencode-scenarios-post-quantum-cryptography?id=ml-dsa-44",
+  "Specification": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf",
+  "Standardization (Body, Process)": "NIST",
+  "Recognition by government authorities (NIST, BSI, ...)": {
+    "Value": true,
+    "Description": "NIST (FIPS204)"
+  },
+  "Performance": "high",
+  "Hardware support": true,
+  "Unlinkability-Uncorrelatability-Blind signatures possible": true,
+  "Post-quantum security": true
+}

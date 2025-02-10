@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "did:dyne",
+  "Implementation Support": "https://forkbomb.solutions/component/w3c-did-federate-service/",
+  "IPR Policy": "GNU Affero General Public License v3.0",
+  "Specification": "https://dyne.org/W3C-DID/",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "git"
+  },
+  "Key Rotation": false,
+  "Key History": true,
+  "Party": ["holder", "issuer"]
+}

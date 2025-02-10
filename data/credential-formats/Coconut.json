@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schemas/credential-format.json",
+  "Name": "Coconut",
+  "Implementation Support": "https://dev.zenroom.org/#/pages/zencode-crypto?id=zero-knowledge-proof-and-attribute-based-credentials",
+  "Specification": "https://arxiv.org/pdf/1802.07344",
+  "Standardization (Body, Process)": "Community spec (draft)",
+  "Encoding Scheme": "JSON",
+  "Rich Schemas-Semantic": true,
+  "Crypto Agility": true,
+  "Selective Disclosure": true,
+  "Predicates": false,
+  "Compatibility with Key Management Methods (Issuer)": [
+    "did:dyne",
+    "did:web"
+  ]
+}
