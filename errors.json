@@ -7,14 +7,14 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
       "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
     },
+    "endorser-mobile": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
+    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
-    "endorser-mobile": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
@@ -25,15 +25,15 @@
     "preparese-mobile": {
       "companyUrl": "https://ufwfoundation.org/"
     },
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728"
-    },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
@@ -42,15 +42,15 @@
     "selfkey-wallet": {
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
     },
-    "zada": {
-      "urlWebsite": "https://zada.io/"
-    },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
     },
-    "procivis-one-wallet": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
+    "identry": {
+      "urlWebsite": "https://identry.io/"
+    },
+    "lissi-eudi-wallet-connector": {
+      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
     }
   }
 }
