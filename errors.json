@@ -25,21 +25,18 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
-    "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/"
-    },
-    "procivis-one-wallet": {
-      "companyUrl": "https://www.procivis.ch"
-    },
-    "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
-      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "preparese-mobile": {
+      "companyUrl": "https://ufwfoundation.org/"
+    },
+    "trisic-id": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728"
     },
     "verida": {
       "urlWebsite": "https://www.verida.io/"
@@ -51,12 +48,12 @@
     "selfkey-wallet": {
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
     },
+    "entidad-unmio-mobile": {
+      "companyUrl": "https://www.entidad.io"
+    },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
-    },
-    "procivis-one-desk": {
-      "companyUrl": "https://www.procivis.ch"
     }
   }
 }
