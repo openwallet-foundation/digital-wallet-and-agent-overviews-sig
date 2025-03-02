@@ -7,8 +7,8 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=app.sis.mydid.net"
     },
     "dock-wallet": {
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -16,23 +16,23 @@
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
-    "anonyome-wallet": {
-      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
-    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
+    },
+    "anonyome-wallet": {
+      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "preparese-mobile": {
+      "companyUrl": "https://ufwfoundation.org/"
     },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
-    "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -46,10 +46,11 @@
       "urlWebsite": "https://vidua.nl/english/"
     },
     "selfkey-wallet": {
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
     },
-    "entidad-unmio-mobile": {
-      "companyUrl": "https://www.entidad.io"
+    "aceid-wallet": {
+      "urlWebsite": "https://www.aceblock.com/modules/aceid/"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
