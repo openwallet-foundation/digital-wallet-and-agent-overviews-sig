@@ -3,11 +3,11 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
       "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
@@ -19,15 +19,14 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    "preparese-mobile": {
+      "companyUrl": "https://ufwfoundation.org/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
-    "preparese-mobile": {
-      "companyUrl": "https://ufwfoundation.org/",
-      "urlWebsite": "https://www.preparese.info/"
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -44,11 +43,8 @@
       "urlWebsite": "https://vidua.nl/english/"
     },
     "selfkey-wallet": {
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
-    },
-    "yivi": {
-      "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994"
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
