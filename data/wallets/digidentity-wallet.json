@@ -1,0 +1,43 @@
+{
+  "capability": [
+    "issuer",
+    "holder"
+  ],
+  "type": "edge",
+  "name": "Digidentity Wallet",
+  "logo": "https://eu-digidentity-production-sdk-consumer-app-logos.s3.eu-west-1.amazonaws.com/49f0b9f1-2f7f-45bd-a104-34ce09b15a7e-Icon-App-60x60%402x.png",
+  "company": "Digidentity",
+  "companyUrl": "https://digidentity.eu",
+  "urlWebsite": "https://digidentity.eu",
+  "urlAppStore": "https://apps.apple.com/app/id916749732",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.digidentity",
+  "openSource": false,
+  "portability": false,
+  "credentialProfiles": [],
+  "credentialFormats": [
+    "JWT-VC",
+    "SD-JWT-VC"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "did:ebsi",
+    "did:key",
+    "did:jwk",
+    "did:web"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "EdDSA",
+    "ECDSA"
+  ],
+  "statusManagements": [],
+  "trustManagements": [
+    "EBSI Trust Registries",
+    "Verifier knows Issuers"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
