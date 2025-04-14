@@ -3,11 +3,11 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
       "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
@@ -25,6 +25,9 @@
     "preparese-mobile": {
       "companyUrl": "https://ufwfoundation.org/"
     },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
@@ -32,9 +35,6 @@
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
-    },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "verida": {
       "urlWebsite": "https://www.verida.io/"
@@ -47,8 +47,8 @@
       "urlWebsite": "https://vidua.nl/english/"
     },
     "selfkey-wallet": {
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
