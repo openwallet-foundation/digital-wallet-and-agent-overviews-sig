@@ -10,8 +10,8 @@
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -30,25 +30,25 @@
     },
     "trisic-id": {
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
-      "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
+      "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "verida": {
       "urlWebsite": "https://www.verida.io/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "vidcredentials": {
+      "urlWebApp": "https://try.vidchain.net/demo"
     },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "vidcredentials": {
-      "urlWebApp": "https://try.vidchain.net/demo"
-    },
     "selfkey-wallet": {
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download"
+      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
+      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
