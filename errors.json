@@ -3,15 +3,15 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
+    "dock-wallet": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
+    },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
-    },
-    "dock-wallet": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -28,23 +28,23 @@
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
-    "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
-      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
-      "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
-    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
+    "trisic-id": {
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
+      "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile"
     },
     "verida": {
       "urlWebsite": "https://www.verida.io/"
     },
+    "vidcredentials": {
+      "urlWebApp": "https://try.vidchain.net/demo"
+    },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
-    },
-    "vidcredentials": {
-      "urlWebApp": "https://try.vidchain.net/demo"
     },
     "selfkey-wallet": {
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
