@@ -1,5 +1,5 @@
 # Stage 1: Build the Angular application
-FROM node:18-alpine AS build
+FROM node:slim AS build
 
 # Set the working directory
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN cd viewer && npm run build:ssr
 
 # Stage 2: Serve the application using Node.js
-FROM node:18-alpine
+FROM node:slim
 
 # Set the working directory
 WORKDIR /app
