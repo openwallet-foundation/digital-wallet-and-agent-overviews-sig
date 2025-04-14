@@ -40,9 +40,9 @@ export class CaseStudiesListEmbeddedComponent {
    * @param caseStudy
    */
   getCompanies(caseStudy: CaseStudy) {
-    return this.caseStudiesService
+    const companies = this.caseStudiesService
       .getWallets(caseStudy)
-      .map((wallet) => wallet.company)
-      .join(', ');
+      .map((wallet) => wallet.company)      
+    return Array.from(new Set(companies)).join(', ');
   }
 }
