@@ -25,6 +25,9 @@
     "preparese-mobile": {
       "companyUrl": "https://ufwfoundation.org/"
     },
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
@@ -42,9 +45,6 @@
     },
     "vidcredentials": {
       "urlWebApp": "https://try.vidchain.net/demo"
-    },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "selfkey-wallet": {
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
