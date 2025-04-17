@@ -106,7 +106,7 @@ jobs:
         run: cd viewer && npm ci
 
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: cd viewer && npx playwright install --with-deps
 
       - name: Run Playwright End-to-End Tests
         run: cd viewer && npm run e2e
