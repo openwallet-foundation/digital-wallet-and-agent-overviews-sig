@@ -32,7 +32,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
 
       - name: Cache npm dependencies
         uses: actions/cache@v4
@@ -57,7 +57,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
       
       - name: Cache npm dependencies
         uses: actions/cache@v4
@@ -82,10 +82,46 @@ jobs:
           name: viewer
           path: viewer/dist/browser
 
+  e2e:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: viewer/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: cd viewer && npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright End-to-End Tests
+        run: cd viewer && npm run e2e
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: viewer/playwright-report/
+          retention-days: 30
+
   publish:
     # only run on the main branch
     if: github.ref == 'refs/heads/main'
-    needs: [validate, build]
+    needs: e2e
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -112,7 +148,7 @@ jobs:
   docker:
     # only run on the main branch
     if: github.ref == 'refs/heads/main'
-    needs: [validate, build]
+    needs: e2e
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

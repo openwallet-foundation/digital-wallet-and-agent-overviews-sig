@@ -16,7 +16,8 @@
     "newsletter": "node scripts/newsletter.mjs",
     "serve:ssr:viewer": "node dist/server/server.mjs",
     "docker:build": "docker build -t wallet-agent-overview .",
-    "docker:run": "docker run -p 4000:4000 wallet-agent-overview"
+    "docker:run": "docker run -p 4000:4000 wallet-agent-overview",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +48,7 @@
     "@angular-devkit/build-angular": "^19.2.7",
     "@angular/cli": "^19.2.7",
     "@angular/compiler-cli": "^19.2.6",
+    "@playwright/test": "1.51.1",
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^22.10.2",
@@ -63,6 +65,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "nodemailer": "^6.9.14",
+    "playwright-ng-schematics": "^2.0.2",
     "sharp": "^0.34.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.18.1"
