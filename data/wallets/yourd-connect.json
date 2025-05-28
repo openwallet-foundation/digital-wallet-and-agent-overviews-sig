@@ -1,0 +1,40 @@
+{
+    "capability": [
+        "holder"
+    ],
+    "type": "edge",
+    "name": "YourD Connect",
+    "logo": "https://cdn.yourd.xyz/yourDLogo.png",
+    "company": "YourD",
+    "companyUrl": "https://www.yourd.xyz",
+    "urlWebsite": "https://www.yourd.xyz/yourd_app",
+    "openSource": false,
+    "portability": true,
+    "credentialProfiles": [
+        "EBSI",
+        "Decentralized Identity Interop Profile",
+        "SD-JWT VCs (w/ X.509 for Issuers)"
+    ],
+    "credentialFormats": [
+        "JWT-VC",
+        "LDP-VC",
+        "SD-JWT-VC"
+    ],
+    "keyManagements": [
+        "did:key",
+        "did:cheqd",
+        "did:web",
+        "did:jwk"
+    ],
+    "issuanceProtocols": [
+        "OpenID4VCI"
+    ],
+    "presentationProtocols": [
+        "OpenID4VP"
+    ],
+    "signingAlgorithms": [
+        "ECDSA",
+        "EdDSA"
+    ],
+    "$schema": "../../schemas/wallet.json"
+}
