@@ -1,5 +1,6 @@
 {
-  "urlWebsite": "https://selfkey.org/selfkey-wallet/",
+  "downloadSource": "https://github.com/SelfKeyFoundation/Identity-Wallet",
   "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
-  "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
+  "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
+  "urlWebsite": "https://selfkey.org/selfkey-wallet/"
 }
