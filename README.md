@@ -100,10 +100,9 @@ When dealing with digital credentials, it is important to know which credential 
 
 This SIG is an open group and we welcome new participants. There is no requirement to be a member of the OpenWallet Foundation to participate.
 
-If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/openwalletfoundation) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.gg/openwalletfoundation) channel.
+If you are interested in participating, please join the [OpenWallet Foundation Discord](https://discord.gg/fYEbfjWAkP) and participate in the discussion in the [#digital-wallet-and-agent-overviews-sig](https://discord.gg/fYEbfjWAkP) channel.
 
 **Upcoming meetings:**
-We meet every second Thursday via Zoom, the next date and time plus a calendar invitation can be found via this [link](https://zoom-lfx.platform.linuxfoundation.org/meeting/92821499615?password=bfd9bdad-249d-454e-97a5-727bc5fc2190).
 
 In case you have an [openprofile](https://openprofile.dev/) with the same mail address as your calendar invitation, you can access all the recordings of the past meetings.
 
