@@ -3,15 +3,15 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "dock-wallet": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
       "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -26,10 +26,6 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
-    "passivebolt-keyshare": {
-      "urlWebsite": "https://passivebolt.com",
-      "companyUrl": "https://passivebolt.com"
-    },
     "preparese-mobile": {
       "companyUrl": "https://ufwfoundation.org/"
     },
@@ -37,13 +33,13 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
+    "verida": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
+      "urlWebsite": "https://www.verida.io/"
+    },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
-    },
-    "verida": {
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
-      "urlWebsite": "https://www.verida.io/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
@@ -61,6 +57,9 @@
     },
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+    },
+    "yivi": {
+      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
