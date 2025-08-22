@@ -4,7 +4,7 @@
   "logo": "logos/icef.png",
   "name": "ICEF Certificate Verifier",
   "$schema": "../../schemas/wallet.json",
-  "type": "cloud",
+  "executionEnvironment":"cloud",
   "urlWebApp": "https://verifier.nextid.com/",
   "urlWebsite": "https://nextid.com/"
 }

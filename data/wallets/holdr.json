@@ -6,7 +6,7 @@
   "logo": "logos/holdr.png",
   "name": "Holdr+",
   "$schema": "../../schemas/wallet.json",
-  "type": "edge",
+  "executionEnvironment":"edge",
   "urlAppStore": "https://apps.apple.com/us/app/holdr/id1620628623",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=tech.indicio.holdrplus",
   "urlWebsite": "https://indicio.tech/holdr/"

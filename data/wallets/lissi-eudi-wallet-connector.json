@@ -19,7 +19,7 @@
   "name": "Lissi EUDI-Wallet Connector",
   "openSource": false,
   "$schema": "../../schemas/wallet.json",
-  "type": "cloud",
+  "executionEnvironment":"cloud",
   "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
   "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
 }

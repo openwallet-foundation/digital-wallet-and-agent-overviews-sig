@@ -1,6 +1,6 @@
 {
   "capability": ["holder", "verifier"],
-  "type": "edge",
+  "executionEnvironment":"edge",
   "name": "KeyShare",
   "logo": "logos/passivebolt-keyshare.webp",
   "company": "PassiveBolt",

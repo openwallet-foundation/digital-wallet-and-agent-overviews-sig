@@ -33,7 +33,7 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 type Colums =
   | 'name'
   | 'company'
-  | 'type'
+  | 'executionEnvironment'
   | 'openSource'
   | 'license'
   | 'capability'
@@ -73,7 +73,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   columns: string[] = [
     'name',
     'company',
-    'type',
+    'executionEnvironment',
     'openSource',
     'license',
     'capability',
@@ -136,7 +136,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     this.dataSource.sortingDataAccessor = (item, property) => {
       switch (property as Colums) {
         case 'license':
-        case 'type':
+        case 'executionEnvironment':
         case 'company':
           return (item[property as keyof Wallet] as string) ?? '\ufff0';
         case 'capability':
@@ -236,7 +236,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     let values = this.wallets ?? this.walletsService.loadWallets();
     if (this.filter) {
       if (this.filter.type) {
-        values = values.filter((wallet) => wallet.type === this.filter!.type);
+        values = values.filter((wallet) => wallet.executionEnvironment === this.filter!.type);
       }
       if (this.filter.openSource) {
         values = values.filter(

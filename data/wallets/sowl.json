@@ -6,6 +6,6 @@
   "logo": "logos/esatus-wallet.png",
   "name": "SOWL",
   "$schema": "../../schemas/wallet.json",
-  "type": "cloud",
+  "executionEnvironment":"cloud",
   "urlWebsite": "https://esatus.com/en/digital-identity/"
 }

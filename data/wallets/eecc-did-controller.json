@@ -3,7 +3,7 @@
   "logo": "logos/eecc-did-controller.png",
   "company": "European EPC Competence Center GmbH",
   "companyUrl": "https://id.eecc.de/products/did_controller.html",
-  "type": "cloud",
+  "executionEnvironment":"cloud",
   "openSource": false,
   "capability": ["issuer", "holder"],
   "portability": false,

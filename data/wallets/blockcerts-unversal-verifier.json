@@ -6,7 +6,7 @@
   "name": "Blockcerts Universal Verifier",
   "openSource": true,
   "$schema": "../../schemas/wallet.json",
-  "type": "cloud",
+  "executionEnvironment":"cloud",
   "urlWebApp": "https://www.blockcerts.org/",
   "urlWebsite": "https://www.blockcerts.org/about.html"
 }

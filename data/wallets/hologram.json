@@ -14,7 +14,7 @@
   "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["ECDSA", "EdDSA", "CL"],
   "statusManagements": ["Indy Revocation"],
-  "type": "edge",
+  "executionEnvironment":"edge",
   "urlAppStore": "https://apps.apple.com/co/app/hologram-messaging/id6474701855",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.twentysixty.mobileagent.m",
   "urlWebsite": "https://2060.io/#download"

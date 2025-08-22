@@ -3,7 +3,7 @@
   "logo": "logos/igrant.io-wallet.png",
   "company": "iGrant.io (Sweden)",
   "companyUrl": "https://igrant.io/",
-  "type": "cloud",
+  "executionEnvironment":"cloud",
   "urlWebApp": "https://business.igrant.io/",
   "urlWebsite": "https://igrant.io",
   "openSource": false,

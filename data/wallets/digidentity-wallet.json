@@ -3,7 +3,7 @@
     "issuer",
     "holder"
   ],
-  "type": "edge",
+  "executionEnvironment":"edge",
   "name": "Digidentity Wallet",
   "logo": "https://eu-digidentity-production-sdk-consumer-app-logos.s3.eu-west-1.amazonaws.com/49f0b9f1-2f7f-45bd-a104-34ce09b15a7e-Icon-App-60x60%402x.png",
   "company": "Digidentity",

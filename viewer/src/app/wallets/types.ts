@@ -28,7 +28,7 @@ export interface Wallet {
   // is the wallet capable of multiple roles
   capability?: Capability[];
   // it is a cloud or mobile wallet
-  type?: WalletType;
+  executionEnvironment?: WalletType;
   // am I able to export my data from the wallet/agent and import them into another device/system
   portability?: boolean;
   // link to the app store from apple

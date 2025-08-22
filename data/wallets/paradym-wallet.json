@@ -12,7 +12,7 @@
   "presentationProtocols": ["OpenID4VP"],
   "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["EdDSA", "ECDSA"],
-  "type": "edge",
+  "executionEnvironment":"edge",
   "license": "Apache 2.0",
   "statusManagements": ["Indy Revocation", "JWT/CWT status list"],
   "dependencies": ["credo", "sd-jwt-js"],

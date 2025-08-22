@@ -2,7 +2,7 @@
   "name": "hightrust.id",
   "logo": "logos/hightrust.png",
   "company": "Megical Oy",
-  "type": "edge",
+  "executionEnvironment":"edge",
   "openSource": false,
   "license": "Commercial software license",
   "capability": ["holder"],

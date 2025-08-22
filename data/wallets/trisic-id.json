@@ -6,7 +6,7 @@
   "name": "Trinsic ID",
   "openSource": true,
   "$schema": "../../schemas/wallet.json",
-  "type": "edge",
+  "executionEnvironment":"edge",
   "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
   "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/"

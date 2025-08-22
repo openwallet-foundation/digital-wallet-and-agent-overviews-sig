@@ -11,7 +11,7 @@
   "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["CL", "RSA"],
   "statusManagements": ["Indy Revocation"],
-  "type": "edge",
+  "executionEnvironment":"edge",
   "urlAppStore": "https://apps.apple.com/us/app/zada-wallet/id1578666669",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.zadanetwork.wallet",
   "urlWebsite": "https://zada.io/"

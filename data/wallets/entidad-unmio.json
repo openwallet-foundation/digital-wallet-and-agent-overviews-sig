@@ -3,7 +3,7 @@
     "issuer",
     "verifier"
   ],
-  "type": "cloud",
+  "executionEnvironment":"cloud",
   "name": "Unmio",
   "logo": "https://unmio-ecosystem-assets.s3.us-west-1.amazonaws.com/images/Unmio_Logo_Green-Color.png",
   "company": "Entidad",
