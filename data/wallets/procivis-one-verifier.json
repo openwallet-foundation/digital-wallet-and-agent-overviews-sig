@@ -3,7 +3,7 @@
   "logo": "logos/procivis-one-verifier.png",
   "company": "Procivis AG",
   "companyUrl": "https://www.procivis.ch",
-  "type": "edge",
+  "executionEnvironment": "edge",
   "openSource": false,
   "license": "Commercial",
   "capability": ["verifier"],

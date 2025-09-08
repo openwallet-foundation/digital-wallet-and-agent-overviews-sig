@@ -14,7 +14,7 @@
   "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["ECDSA", "EdDSA", "RSA"],
   "statusManagements": ["Status List 2021"],
-  "type": "cloud",
+  "executionEnvironment": "cloud",
   "urlWebApp": "https://wallet.walt.id/",
   "urlWebsite": "https://walt.id/"
 }

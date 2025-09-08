@@ -40,7 +40,7 @@
   "name": "Altme",
   "openSource": true,
   "$schema": "../../schemas/wallet.json",
-  "type": "edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://apps.apple.com/fr/app/altme/id1633216869",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.altme.alt.me.altme"
 }

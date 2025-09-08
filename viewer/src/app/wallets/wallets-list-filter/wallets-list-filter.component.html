@@ -8,13 +8,13 @@
 <form [formGroup]="form">
   <mat-dialog-content fxLayout="column" fxLayoutGap="16px">
     <mat-form-field>
-      <mat-label>Type</mat-label>
-      <mat-select formControlName="type">
+      <mat-label>Execution Environment</mat-label>
+      <mat-select formControlName="executionEnvironment">
         <mat-option value=""></mat-option>
         <mat-option value="cloud">cloud</mat-option>
         <mat-option value="edge">edge</mat-option>
       </mat-select>
-      <mat-hint>{{ walletsService.getTooltip('type') }}</mat-hint>
+      <mat-hint>{{ walletsService.getTooltip('executionEnvironment') }}</mat-hint>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Open Source</mat-label>

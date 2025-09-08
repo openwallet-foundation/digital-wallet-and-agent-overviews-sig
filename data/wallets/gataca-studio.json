@@ -12,6 +12,6 @@
   "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["EdDSA", "RSA"],
   "statusManagements": ["Status List 2021"],
-  "type": "cloud",
+  "executionEnvironment": "cloud",
   "urlWebsite": "https://gataca.io/products/gatacaStudio/"
 }

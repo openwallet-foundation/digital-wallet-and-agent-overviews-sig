@@ -3,7 +3,7 @@
   "logo": "logos/eecc-verifier.png",
   "company": "European EPC Competence Center GmbH",
   "companyUrl": "https://id.eecc.de/products/vc_verifier.html",
-  "type": "cloud",
+  "executionEnvironment": "cloud",
   "openSource": true,
   "downloadSource": "https://github.com/european-epc-competence-center/vc-verifier",
   "license": "AGPL-3.0",

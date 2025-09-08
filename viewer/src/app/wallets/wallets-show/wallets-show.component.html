@@ -73,9 +73,9 @@
   <mat-divider></mat-divider>
   <div fxLayout="row" fxLayoutAlign="space-between start">
     <mat-list>
-      <mat-list-item [matTooltip]="walletsService.getTooltip('type')">
-        <div matListItemTitle><b>Type</b></div>
-        <span matListItemLine>{{ wallet.type ?? 'unknown' }}</span>
+      <mat-list-item [matTooltip]="walletsService.getTooltip('executionEnvironment')">
+        <div matListItemTitle><b>Execution Environment</b></div>
+        <span matListItemLine>{{ wallet.executionEnvironment ?? 'unknown' }}</span>
       </mat-list-item>
       <mat-list-item [matTooltip]="walletsService.getTooltip('capability')">
         <div matListItemTitle><b>Capabilities</b></div>

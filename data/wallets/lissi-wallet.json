@@ -20,7 +20,7 @@
   "openSource": false,
   "presentationProtocols": ["OpenID4VP"],
   "$schema": "../../schemas/wallet.json",
-  "type": "edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://apps.apple.com/de/app/lissi-id-wallet/id6475958390",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.lissi.mobile.android&hl=de",
   "urlWebsite": "https://www.lissi.id/for-users"

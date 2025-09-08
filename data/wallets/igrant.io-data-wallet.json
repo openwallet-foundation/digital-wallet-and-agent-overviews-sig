@@ -3,7 +3,7 @@
   "logo": "logos/igrant.io-wallet.png",
   "company": "iGrant.io (Sweden)",
   "companyUrl": "https://igrant.io/",
-  "type": "edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://apple.co/2Mz9nJp",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.igrant.mobileagent",
   "urlWebApp": "https://business.igrant.io/",

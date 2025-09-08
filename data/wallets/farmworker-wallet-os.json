@@ -2,7 +2,7 @@
   "capability": [
     "holder"
   ],
-  "type": "edge",
+  "executionEnvironment": "edge",
   "name": "Farmworker Wallet OS",
   "logo": "https://cdn.prod.website-files.com/6520979d785cc136404a270d/65237d6a3505e25d76ed58c7_wallet-p-1080.png",
   "company": " Entidad",

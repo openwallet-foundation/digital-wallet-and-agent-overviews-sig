@@ -1,6 +1,6 @@
 {
   "capability": ["holder"],
-  "type": "edge",
+  "executionEnvironment": "edge",
   "name": "Identfy",
   "logo": "logos/izertis-identfy-logo-blue.png",
   "company": "Izertis, S.A.",

@@ -12,7 +12,7 @@
   "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["EdDSA", "RSA"],
   "statusManagements": ["Status List 2021"],
-  "type": "edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/gataca/id1498607616",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.gataca.identity",
   "urlWebsite": "https://gataca.io/products/wallet/"

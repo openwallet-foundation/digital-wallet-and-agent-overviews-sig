@@ -39,7 +39,7 @@
   "name": "Talao Wallet",
   "openSource": true,
   "$schema": "../../schemas/wallet.json",
-  "type": "edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=co.talao.wallet",
   "urlWebsite": "https://talao.io/"

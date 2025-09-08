@@ -8,7 +8,7 @@
   "name": "wwWallet",
   "openSource": true,
   "$schema": "../../schemas/wallet.json",
-  "type": "cloud",
+  "executionEnvironment": "cloud",
   "urlWebApp": "https://demo.wwwallet.org/",
   "urlWebsite": "https://wwwallet.github.io/wallet-docs/"
 }

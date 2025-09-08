@@ -24,7 +24,7 @@
     "RSA"
   ],
   "statusManagements": ["Status List 2021"],
-  "type": "edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/sphereon-wallet/id1661096796",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.sphereon.ssi.wallet",
   "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"

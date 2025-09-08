@@ -4,6 +4,6 @@
   "name": "AceID Wallet",
   "$schema": "../../schemas/wallet.json",
   "openSource": false,
-  "type": "cloud",
+  "executionEnvironment": "cloud",
   "urlWebsite": "https://www.aceblock.com/modules/aceid/"
 }

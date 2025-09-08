@@ -1,6 +1,6 @@
 {
   "capability": ["issuer", "holder", "verifier"],
-  "type": "cloud",
+  "executionEnvironment": "cloud",
   "name": "Anonyome Enterprise Wallet",
   "logo": "logos/anonyome.png",
   "company": "Anonyome Labs",

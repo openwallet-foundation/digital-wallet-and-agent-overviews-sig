@@ -147,17 +147,17 @@
           </div>
         </td>
       </ng-container>
-      <ng-container matColumnDef="type">
+      <ng-container matColumnDef="executionEnvironment">
         <th
           mat-header-cell
           *matHeaderCellDef
           mat-sort-header
-          [matTooltip]="walletsService.getTooltip('type')"
+          [matTooltip]="walletsService.getTooltip('executionEnvironment')"
         >
-          Type
+          Execution Environment
         </th>
         <td mat-cell *matCellDef="let element">
-          {{ element.type }}
+          {{ element.executionEnvironment }}
         </td>
       </ng-container>
       <ng-container matColumnDef="portability">

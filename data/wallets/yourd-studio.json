@@ -3,7 +3,7 @@
         "issuer",
         "verifier"
     ],
-    "type": "cloud",
+    "executionEnvironment": "cloud",
     "name": "YourD Studio",
     "logo": "https://cdn.yourd.xyz/yourDLogo.png",
     "company": "YourD",
