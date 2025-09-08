@@ -29,8 +29,9 @@ export function updateSchema() {
   resources.forEach((key) => {
     key = key.startsWith('Key Management') ? 'Key Management' : key;
     const enums = getEnum(key);
-    console.log(`key: ${key}, enums: ${enums}`);
     if(enums) {
+      console.log("enums")
+      console.log(enums);
       schema.definitions[key.replace(' ', '-')] = {
         description: `The used ${key}`,
         type: "string",
@@ -54,6 +55,7 @@ function getEnum(subFolder) {
             );
         }
     } catch (e) {
+      console.log(e);
         return null;
     }
 }

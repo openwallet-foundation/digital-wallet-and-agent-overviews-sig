@@ -41,11 +41,9 @@ function checkFilesInFolder(folder) {
 
 // Validate JSON files against a schema
 function validateFiles(files, folder, schemaPath, idArray, additionalChecks = () => true) {
-  console.log(`Validating files in ${folder} against schema ${schemaPath}`);
   const validate = ajv.compile(JSON.parse(readFileSync(schemaPath)));
   let success = true;
   files.forEach(file => {
-    console.log(`Validating ${file}...`);
     const data = JSON.parse(readFileSync(`${folder}/${file}`));
     if (!validate(data)) {
       console.error(`Error validating ${file}:`);
@@ -77,8 +75,6 @@ function validateDependencies() {
 function validateWallets() {
   const files = checkFilesInFolder(WALLETS_PATH).map(normalizeFilename);
   const profileSIGSchema = JSON.parse(readFileSync(PROFILE_SIG_SCHEMA_URL));
-  console.log("profileSIGSchema:");
-  console.log(profileSIGSchema);
   ajv.addSchema(profileSIGSchema, 'viewer/src/assets/schemas/fields.json');
   console.log("Added profileSIGSchema to AJV");
   const success = validateFiles(files, WALLETS_PATH, WALLET_SCHEMA_PATH, walletIds, (wallet, fileName) => {
