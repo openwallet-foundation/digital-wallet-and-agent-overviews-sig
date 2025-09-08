@@ -2,6 +2,7 @@ import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import { existsSync, readFileSync, readdirSync } from 'fs';
 import { validateProfiles } from './profiles/validate.mjs';
+import './merge-wallets.mjs';
 
 const ajv = new Ajv({ allowUnionTypes: true });
 addFormats(ajv);
