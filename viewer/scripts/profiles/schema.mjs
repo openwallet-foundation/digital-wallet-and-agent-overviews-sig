@@ -23,12 +23,13 @@ export function updateSchema() {
     type: "object",
     definitions: {}
   }
-
+  console.log(file);
   const resources = Object.keys(file.properties);
   resources.push('Credential Profile');
   resources.forEach((key) => {
     key = key.startsWith('Key Management') ? 'Key Management' : key;
     const enums = getEnum(key);
+    console.log(`key: ${key}, enums: ${enums}`);
     if(enums) {
       schema.definitions[key.replace(' ', '-')] = {
         description: `The used ${key}`,
