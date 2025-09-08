@@ -23,15 +23,12 @@ export function updateSchema() {
     type: "object",
     definitions: {}
   }
-  console.log(file);
   const resources = Object.keys(file.properties);
   resources.push('Credential Profile');
   resources.forEach((key) => {
     key = key.startsWith('Key Management') ? 'Key Management' : key;
     const enums = getEnum(key);
     if(enums) {
-      console.log("enums")
-      console.log(enums);
       schema.definitions[key.replace(' ', '-')] = {
         description: `The used ${key}`,
         type: "string",
@@ -40,7 +37,6 @@ export function updateSchema() {
     }
   });
   writeFileSync(join(generatedFolder, 'fields.json'), JSON.stringify(schema, null, 2), 'utf8');
-  console.log("writing schema to src/assets/schemas/fields.json");
   copySchema();
 }
 
@@ -49,14 +45,12 @@ function getEnum(subFolder) {
   try {
       const s = (subFolder.replace(' ', '-')).toLowerCase() + 's';
         const info = lstatSync(`${folder}/${s}`);
-        console.log(`${folder}/${s}`);
         if(info.isDirectory()) {
             return readdirSync(`${folder}/${s}`).map((file) =>
                 JSON.parse(readFileSync(`${folder}/${s}/${file}`, 'utf8')).Name
             );
         }
     } catch (e) {
-      console.log(e);
         return null;
     }
 }

@@ -76,7 +76,6 @@ function validateWallets() {
   const files = checkFilesInFolder(WALLETS_PATH).map(normalizeFilename);
   const profileSIGSchema = JSON.parse(readFileSync(PROFILE_SIG_SCHEMA_URL));
   ajv.addSchema(profileSIGSchema, 'viewer/src/assets/schemas/fields.json');
-  console.log("Added profileSIGSchema to AJV");
   const success = validateFiles(files, WALLETS_PATH, WALLET_SCHEMA_PATH, walletIds, (wallet, fileName) => {
     if (wallet.dependencies) {
       for (const dependency of wallet.dependencies) {
