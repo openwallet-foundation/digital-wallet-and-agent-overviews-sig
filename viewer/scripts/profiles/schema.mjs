@@ -47,8 +47,9 @@ export function updateSchema() {
 function getEnum(subFolder) {
   // adds the resources to the schema file of the profile
   try {
-      const s = capitalizeWords(subFolder.replace(' ', '-')) + 's';
+      const s = (subFolder.replace(' ', '-')).toLowerCase() + 's';
         const info = lstatSync(`${folder}/${s}`);
+        console.log(`${folder}/${s}`);
         if(info.isDirectory()) {
             return readdirSync(`${folder}/${s}`).map((file) =>
                 JSON.parse(readFileSync(`${folder}/${s}/${file}`, 'utf8')).Name
@@ -58,10 +59,4 @@ function getEnum(subFolder) {
       console.log(e);
         return null;
     }
-}
-
-function capitalizeWords(str) {
-  return str.split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }
