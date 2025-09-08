@@ -23,7 +23,6 @@ export function updateSchema() {
     type: "object",
     definitions: {}
   }
-
   const resources = Object.keys(file.properties);
   resources.push('Credential Profile');
   resources.forEach((key) => {
@@ -44,7 +43,7 @@ export function updateSchema() {
 function getEnum(subFolder) {
   // adds the resources to the schema file of the profile
   try {
-      const s = capitalizeWords(subFolder.replace(' ', '-')) + 's';
+      const s = (subFolder.replace(' ', '-')).toLowerCase() + 's';
         const info = lstatSync(`${folder}/${s}`);
         if(info.isDirectory()) {
             return readdirSync(`${folder}/${s}`).map((file) =>
@@ -54,10 +53,4 @@ function getEnum(subFolder) {
     } catch (e) {
         return null;
     }
-}
-
-function capitalizeWords(str) {
-  return str.split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }

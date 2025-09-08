@@ -10,7 +10,7 @@
     "build:ssr": "npm run prebuild && ng build --configuration ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "validate": "npm run merge && node scripts/validate.mjs",
+    "validate": "node scripts/validate.mjs",
     "merge": "node scripts/merge-wallets.mjs",
     "lint": "ng lint",
     "newsletter": "node scripts/newsletter.mjs",
