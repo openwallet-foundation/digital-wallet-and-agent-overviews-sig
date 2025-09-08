@@ -1,0 +1,27 @@
+{
+  "capability": [
+    "holder"
+  ],
+  "type": "edge",
+  "name": "SwissSign Wallet",
+  "company": "SwissSign",
+  "logo": "https://www.swisssign.com/.resources/swisssign-base/webresources/favicon_SwissSign/apple-touch-icon.png",
+  "companyUrl": "https://swisssign.com",
+  "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
+  "urlAppStore": "https://apps.apple.com/us/app/swisssign-wallet/id6748002550",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.swisssign.wallet",
+  "openSource": false,
+  "portability": false,
+  "credentialProfiles": [],
+  "credentialFormats": ["SD-JWT-VC"],
+  "issuanceProtocols": ["OpenID4VCI"],
+  "keyManagements": ["did:web"],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA"],
+  "statusManagements": [],
+  "trustManagements": [],
+  "dependencies": [
+    "eudi-wallet"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
