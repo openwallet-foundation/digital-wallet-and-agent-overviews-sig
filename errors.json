@@ -22,9 +22,6 @@
     "gimly": {
       "urlWebsite": "https://gimly.io/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
@@ -36,6 +33,9 @@
     },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
@@ -66,18 +66,6 @@
     },
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
-    },
-    "procivis-one-desk": {
-      "urlWebApp": "https://docs.procivis.ch/trial/intro"
-    },
-    "talao": {
-      "urlWebsite": "https://talao.io/"
-    },
-    "vidcredentials": {
-      "urlWebApp": "https://try.vidchain.net/demo"
-    },
-    "yivi": {
-      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
