@@ -44,6 +44,7 @@ function validateFiles(files, folder, schemaPath, idArray, additionalChecks = ()
   const validate = ajv.compile(JSON.parse(readFileSync(schemaPath)));
   let success = true;
   files.forEach(file => {
+    console.log(`Validating ${file}...`);
     const data = JSON.parse(readFileSync(`${folder}/${file}`));
     if (!validate(data)) {
       console.error(`Error validating ${file}:`);
