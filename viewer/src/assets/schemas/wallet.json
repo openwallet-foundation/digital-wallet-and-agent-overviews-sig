@@ -55,7 +55,7 @@
         "enum": ["holder", "issuer", "verifier"]
       }
     },
-    "executionEnvironment": {
+    "executionEnvironment":  {
       "type": "string",
       "description": "Execution environment of an agent is the place where the agent is intended to be run",
       "enum": ["cloud", "edge"]

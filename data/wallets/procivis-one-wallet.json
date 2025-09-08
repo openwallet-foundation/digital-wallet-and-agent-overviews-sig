@@ -3,7 +3,7 @@
   "logo": "logos/procivis-one-wallet.png",
   "company": "Procivis AG",
   "companyUrl": "https://www.procivis.ch",
-  "executionEnvironment":"edge",
+  "executionEnvironment": "edge",
   "openSource": true,
   "license": "Apache-2.0",
   "capability": ["holder"],

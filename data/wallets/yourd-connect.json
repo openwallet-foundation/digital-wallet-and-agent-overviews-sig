@@ -2,7 +2,7 @@
     "capability": [
         "holder"
     ],
-    "executionEnvironment":"edge",
+    "executionEnvironment": "edge",
     "name": "YourD Connect",
     "logo": "https://cdn.yourd.xyz/yourDLogo.png",
     "company": "YourD",

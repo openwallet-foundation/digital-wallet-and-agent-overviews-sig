@@ -2,7 +2,7 @@
   "capability": [
     "holder"
   ],
-  "type": "edge",
+  "executionEnvironment":  "edge",
   "name": "SwissSign Wallet",
   "company": "SwissSign",
   "logo": "https://www.swisssign.com/.resources/swisssign-base/webresources/favicon_SwissSign/apple-touch-icon.png",

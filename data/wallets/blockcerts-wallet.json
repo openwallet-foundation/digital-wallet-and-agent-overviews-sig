@@ -6,7 +6,7 @@
   "name": "Blockcerts Wallet",
   "openSource": true,
   "$schema": "../../schemas/wallet.json",
-  "executionEnvironment":"edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.learningmachine.android.app&hl=en",
   "urlWebsite": "https://www.blockcerts.org/about.html"

@@ -14,6 +14,6 @@
   "statusManagements": ["Indy Revocation", "JWT/CWT status list"],
   "dependencies": ["credo", "sd-jwt-js"],
   "credentialProfiles": ["AnonCreds with did:cheqd"],
-  "executionEnvironment":"cloud",
+  "executionEnvironment": "cloud",
   "urlWebsite": "https://paradym.id"
 }

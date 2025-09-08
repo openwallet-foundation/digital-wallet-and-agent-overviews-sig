@@ -5,6 +5,6 @@
   "openSource": false,
   "logo": "logos/proven.png",
   "$schema": "../../schemas/wallet.json",
-  "executionEnvironment":"cloud",
+  "executionEnvironment": "cloud",
   "urlWebsite": "https://indicio.tech/indicio-proven/"
 }

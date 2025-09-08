@@ -5,6 +5,6 @@
   "name": "Apple Wallet",
   "openSource": false,
   "$schema": "../../schemas/wallet.json",
-  "executionEnvironment":"edge",
+  "executionEnvironment": "edge",
   "urlWebsite": "https://www.apple.com/wallet/"
 }

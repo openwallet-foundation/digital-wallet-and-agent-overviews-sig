@@ -4,7 +4,7 @@
     "holder",
     "verifier"
   ],
-  "executionEnvironment":"cloud",
+  "executionEnvironment": "cloud",
   "name": "DIDroom",
   "logo": "https://forkbomb.solutions/wp-content/uploads/2023/05/DIDroom_logo.svg",
   "company": "Forkbomb",

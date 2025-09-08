@@ -1,6 +1,6 @@
 {
   "capability": ["holder"],
-  "executionEnvironment":"edge",
+  "executionEnvironment": "edge",
   "name": "Anonyome Mobile Wallet",
   "logo": "logos/anonyome.png",
   "company": "Anonyome Labs",

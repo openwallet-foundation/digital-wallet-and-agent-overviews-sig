@@ -4,6 +4,6 @@
   "logo": "logos/trisic-platform.png",
   "name": "Trinsic Platform",
   "$schema": "../../schemas/wallet.json",
-  "executionEnvironment":"cloud",
+  "executionEnvironment": "cloud",
   "urlWebsite": "https://trinsic.id/platform/"
 }

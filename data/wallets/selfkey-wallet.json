@@ -5,7 +5,7 @@
   "license": "MIT",
   "name": "SelfKey Wallet",
   "$schema": "../../schemas/wallet.json",
-  "executionEnvironment":"edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
   "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
   "urlWebsite": "https://selfkey.org/selfkey-wallet/"

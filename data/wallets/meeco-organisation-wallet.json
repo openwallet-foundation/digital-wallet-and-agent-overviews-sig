@@ -27,5 +27,5 @@
   "signingAlgorithms": ["EdDSA", "ECDSA"],
   "statusManagements": ["Status List 2021"],
   "trustManagements": ["X.509 certificates"],
-  "executionEnvironment":"cloud"
+  "executionEnvironment": "cloud"
 }

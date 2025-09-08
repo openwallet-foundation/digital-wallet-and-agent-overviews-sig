@@ -10,7 +10,7 @@
   "$schema": "../../schemas/wallet.json",
   "signingAlgorithms": ["CL"],
   "statusManagements": ["Indy Revocation"],
-  "executionEnvironment":"edge",
+  "executionEnvironment": "edge",
   "urlAppStore": "https://apps.apple.com/us/app/esatus-wallet/id1496769057?itsct=apps_box&itscg=30200",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.esatus.wallet&hl=de_DE&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
   "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html"

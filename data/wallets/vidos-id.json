@@ -2,7 +2,7 @@
     "capability": [
       "verifier"
     ],
-    "executionEnvironment":"cloud",
+    "executionEnvironment": "cloud",
     "name": "Vidos Verifier",
     "logo": "https://vidos-id.github.io/static-assets/openwallet_foundation/vidos-logo-onwhite.png",
     "company": "Vidos",

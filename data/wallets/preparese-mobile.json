@@ -20,6 +20,6 @@
   "signingAlgorithms": ["CL", "EdDSA"],
   "statusManagements": [],
   "trustManagements": ["Verifier knows Issuers"],
-  "executionEnvironment":"edge",
+  "executionEnvironment": "edge",
   "urlWebsite": "https://www.preparese.info/"
 }
