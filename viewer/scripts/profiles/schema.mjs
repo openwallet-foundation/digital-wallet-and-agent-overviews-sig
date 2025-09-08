@@ -38,6 +38,7 @@ export function updateSchema() {
     }
   });
   writeFileSync(join(generatedFolder, 'fields.json'), JSON.stringify(schema, null, 2), 'utf8');
+  console.log("writing schema to src/assets/schemas/fields.json");
   copySchema();
 }
 
