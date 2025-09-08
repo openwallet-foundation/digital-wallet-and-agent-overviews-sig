@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/dependency.json",
+  "name": "EUDI Wallet reference implementation",
+  "url": "https://github.com/eu-digital-identity-wallet",
+  "description": "The EUDI Wallet Reference Implementation aims at showcasing a robust and interoperable platform for digital identification, authentication and electronic signatures based on common standards across the European Union.",
+  "language": "Swift/Kotlin",
+  "license": "Apache 2.0"
+}
