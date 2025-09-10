@@ -57,7 +57,7 @@
     },
     "executionEnvironment":  {
       "type": "string",
-      "description": "The deployment model of the agent (e.g., cloud service or mobile app)",
+      "description": "Execution environment of an agent is the place where the agent is intended to be run",
       "enum": ["cloud", "edge"]
     },
     "portability": {
