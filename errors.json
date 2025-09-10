@@ -6,15 +6,15 @@
     "atala-prism": {
       "urlWebsite": "https://atalaprism.io/"
     },
-    "anonyome-wallet": {
-      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    "dock-wallet": {
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
     },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
-    "dock-wallet": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
+    "anonyome-wallet": {
+      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -28,6 +28,9 @@
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
     "preparese-mobile": {
       "companyUrl": "https://ufwfoundation.org/"
     },
@@ -35,27 +38,24 @@
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
       "companyUrl": "https://swisssign.com"
     },
-    "verida": {
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
-      "urlWebsite": "https://www.verida.io/"
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
-    },
-    "vidua": {
-      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
-      "urlWebsite": "https://vidua.nl/english/"
+    "verida": {
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
+      "urlWebsite": "https://www.verida.io/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    "vidua": {
+      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
+      "urlWebsite": "https://vidua.nl/english/"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
