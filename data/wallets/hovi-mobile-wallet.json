@@ -1,0 +1,69 @@
+{
+  "capability": [
+    "holder"
+  ],
+  "name": "Hovi Mobile Wallet",
+  "logo": "https://cdn.prod.website-files.com/659dad70ef0ae858f66ae208/65db78ccab39073a88d86104_hovi-color.svg",
+  "company": "Hovi",
+  "companyUrl": "https://hovi.id",
+  "urlWebsite": "https://www.hovi.id/wallet",
+  "urlAppStore": "https://apps.apple.com/us/app/hovi-wallet/id6736700908",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=droidwallet.hovi.id",
+  "openSource": false,
+  "executionEnvironment": "cloud",
+  "license": "Commercial",
+  "portability": true,
+  "credentialProfiles": [
+    "AnonCreds with did:cheqd",
+    "AnonCreds with did:indy",
+    "Decentralized Identity Interop Profile",
+    "ISO mDL",
+    "SD-JWT VCs (w/ X.509 for Issuers)",
+    "x.509"
+  ],
+  "credentialFormats": [
+    "AnonCred",
+    "JWT-VC",
+    "LDP-VC",
+    "MDOC",
+    "SD-JWT-VC",
+    "SD-JWT",
+    "VC (1.1)",
+    "x509"
+  ],
+  "issuanceProtocols": [
+    "Issue Credential v2",
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    ".well-known/jwt-issuer",
+    "did:cheqd",
+    "did:indy",
+    "did:jwk",
+    "did:key",
+    "did:peer",
+    "did:web",
+    "link secrets",
+    "pub key in X.509 cert",
+    "raw public keys (jwk)"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP",
+    "Present Proof v2"
+  ],
+  "signingAlgorithms": [
+    "CL",
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [
+    "Indy Revocation",
+    "JWT/CWT status list",
+    "Status List 2021"
+  ],
+  "trustManagements": [
+    "Verifier knows Issuers",
+    "X.509 certificates"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
