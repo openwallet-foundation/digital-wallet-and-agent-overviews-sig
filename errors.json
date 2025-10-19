@@ -3,14 +3,14 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "atala-prism": {
-      "urlWebsite": "https://atalaprism.io/"
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
+    "atala-prism": {
+      "urlWebsite": "https://atalaprism.io/"
     },
     "dock-wallet": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
@@ -37,15 +37,13 @@
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
     "verida": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
-    },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
@@ -54,8 +52,8 @@
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "authenticator": {
-      "urlWebsite": "https://www.microsoft.com/en-us/security/mobile-authenticator-app"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
@@ -66,9 +64,6 @@
     },
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
-    },
-    "passivebolt-keyshare": {
-      "companyUrl": "https://passivebolt.com"
     }
   }
 }
