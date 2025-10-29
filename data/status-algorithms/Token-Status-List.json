@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/status-algorithm.json",
+  "Name": "Token Status List (TSL)",
+  "Specification": "https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/",
+  "Standardization (Body, Process)": "IETF",
+  "Recognition by government authorities (NIST, BSI, ...)": false,
+  "Category": "Bitstring",
+  "Observability": true,
+  "Traceability": {
+    "Value": true,
+    "Description": "potentially possible with malicious issuer by providing a revocation list with a single entry"
+  }
+}
