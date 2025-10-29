@@ -1,9 +1,9 @@
 {
   "$schema": "../../schemas/credential-format.json",
-  "Name": "VC (1.1)",
+  "Name": "VCDM 1.1",
   "Implementation Support": "https://jwt.io/libraries",
   "IPR Policy": "https://www.w3.org/Consortium/Patent-Policy-20200915/#sec-Requirements",
-  "Specification": "https://www.w3.org/TR/vc-data-model/",
+  "Specification": "https://www.w3.org/TR/vc-data-model-1.1/",
   "Standardization (Body, Process)": "W3C",
   "Encoding Scheme": "JSON, JSON-LD",
   "Rich Schemas-Semantic": true,
