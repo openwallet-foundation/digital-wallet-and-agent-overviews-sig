@@ -2,7 +2,7 @@
   "capability": ["holder"],
   "company": "Animo Solutions",
   "contact": "ana@animo.id",
-  "credentialFormats": ["JWT-VC", "AnonCred", "SD-JWT-VC"],
+  "credentialFormats": ["JWT-VC", "AnonCred", "SD-JWT VC"],
   "downloadSource": "https://github.com/animo/paradym-wallet",
   "issuanceProtocols": ["OpenID4VCI", "Issue Credential v2"],
   "keyManagements": ["did:jwk", "did:key", "did:web", "did:cheqd", "did:indy"],

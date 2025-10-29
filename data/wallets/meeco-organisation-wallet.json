@@ -2,7 +2,7 @@
   "capability": ["issuer", "verifier"],
   "company": "Meeco Group Pty Ltd",
   "companyUrl": "https://meeco.me/",
-  "credentialFormats": ["JWT-VC", "SD-JWT-VC"],
+  "credentialFormats": ["JWT-VC", "SD-JWT VC"],
   "credentialProfiles": [
     "HAIP",
     "JWT VC Presentation Profile",

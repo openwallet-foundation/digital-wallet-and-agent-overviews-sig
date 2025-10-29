@@ -9,7 +9,7 @@
     "ISO mDL",
     "SD-JWT VCs (w/ X.509 for Issuers)"
   ],
-  "credentialFormats": ["MDOC", "SD-JWT-VC"],
+  "credentialFormats": ["MDOC", "SD-JWT VC"],
   "issuanceProtocols": ["OpenID4VCI"],
   "keyManagements": [".well-known/jwt-issuer", "pub key in X.509 cert"],
   "signingAlgorithms": ["ECDSA"],

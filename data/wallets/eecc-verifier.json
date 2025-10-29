@@ -11,7 +11,7 @@
   "portability": true,
   "urlWebsite": "https://ssi.eecc.de/verifier/",
   "credentialProfiles": [],
-  "credentialFormats": ["LDP-VC", "SD-JWT-VC", "SD-JWT"],
+  "credentialFormats": ["LDP-VC", "SD-JWT VC", "SD-JWT"],
   "issuanceProtocols": [],
   "keyManagements": ["did:jwk", "did:key", "did:web"],
   "presentationProtocols": ["OpenID4VP"],

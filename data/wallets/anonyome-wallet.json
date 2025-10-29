@@ -9,7 +9,7 @@
   "openSource": false,
   "license": "",
   "credentialProfiles": ["AnonCreds with did:indy"],
-  "credentialFormats": ["AnonCred", "LDP-VC", "VC (1.1)", "SD-JWT-VC", "SD-JWT"],
+  "credentialFormats": ["AnonCred", "LDP-VC", "VC (1.1)", "SD-JWT VC", "SD-JWT"],
   "issuanceProtocols": ["Issue Credential v1", "Issue Credential v2", "OpenID4VCI"],
   "keyManagements": ["did:indy", "did:key", "did:peer", "link secrets"],
   "presentationProtocols": ["Present Proof v2", "Present Proof v1.0", "OpenID4VP"],

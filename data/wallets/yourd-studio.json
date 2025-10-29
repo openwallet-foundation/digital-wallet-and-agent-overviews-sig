@@ -18,7 +18,7 @@
     "credentialFormats": [
         "JWT-VC",
         "LDP-VC",
-        "SD-JWT-VC"
+        "SD-JWT VC"
     ],
     "keyManagements": [
         "did:key",
