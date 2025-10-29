@@ -12,7 +12,7 @@
     "portability": true,
     "credentialProfiles": [
         "EBSI",
-        "Decentralized Identity Interop Profile",
+        "DIIP",
         "SD-JWT VCs (w/ X.509 for Issuers)"
     ],
     "credentialFormats": [
