@@ -27,7 +27,7 @@
     "MDOC",
     "SD-JWT VC",
     "SD-JWT",
-    "VC (1.1)"
+    "VCDM 1.1"
   ],
   "issuanceProtocols": ["ISO 23220-3", "OpenID4VCI"],
   "keyManagements": [],

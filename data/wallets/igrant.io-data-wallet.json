@@ -28,7 +28,7 @@
     "JWT",
     "SD-JWT VC",
     "SD-JWT",
-    "VC (1.1)",
+    "VCDM 1.1",
     "x509"
   ],
   "issuanceProtocols": ["OpenID4VCI"],

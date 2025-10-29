@@ -17,7 +17,7 @@
     "JWT VC Presentation Profile 2",
     "JWT VC Presentation Profile"
   ],
-  "credentialFormats": ["JWT-VC", "JWT", "VC (1.1)"],
+  "credentialFormats": ["JWT-VC", "JWT", "VCDM 1.1"],
   "issuanceProtocols": ["OpenID4VCI"],
   "keyManagements": ["did:key"],
   "presentationProtocols": ["OpenID4VP"],
