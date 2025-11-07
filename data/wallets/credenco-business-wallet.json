@@ -1,0 +1,60 @@
+{
+  "capability": [
+    "issuer",
+    "holder",
+    "verifier"
+  ],
+  "name": "Credenco Business Wallet",
+  "logo": "https://static.wixstatic.com/media/fadea3_d2eed032fe264705991b1a51381d6e30~mv2.png/v1/fill/w_74,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20credenco.png",
+  "company": "Credenco B.V.",
+  "companyUrl": "https://www.credenco.com",
+  "urlWebsite": "https://docs.acc.credenco.com",
+  "urlWebApp": "https://wallet.acc.credenco.com",
+  "openSource": false,
+  "portability": true,
+  "credentialProfiles": [
+    "DIIP",
+    "EBSI",
+    "JWT VC Presentation Profile",
+    "SD-JWT VCs (w/ X.509 for Issuers)"
+  ],
+  "credentialFormats": [
+    "JWT-VC",
+    "JWT",
+    "LDP-VC",
+    "SD-JWT VC",
+    "SD-JWT",
+    "VCDM 1.1",
+    "VCDM 2.0"
+  ],
+  "executionEnvironment": "cloud",
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "did:ebsi",
+    "did:jwk",
+    "did:web"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP",
+    "Presentation Exchange v1"
+  ],
+  "signingAlgorithms": [
+    "ECDSA",
+    "EdDSA",
+    "RSA"
+  ],
+  "statusManagements": [
+    "Status List 2021",
+    "Token Status List (TSL)",
+    "medium-term expiration",
+    "short-term expiration"
+  ],
+  "trustManagements": [
+    "EBSI Trust Registries",
+    "Trusted Lists",
+    "Verifier knows Issuers"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
