@@ -16,7 +16,7 @@
   "credentialProfiles": [
     "AnonCreds with did:cheqd",
     "AnonCreds with did:indy",
-    "Decentralized Identity Interop Profile",
+    "DIIP",
     "ISO mDL",
     "SD-JWT VCs (w/ X.509 for Issuers)",
     "x.509"
@@ -26,9 +26,9 @@
     "JWT-VC",
     "LDP-VC",
     "MDOC",
-    "SD-JWT-VC",
+    "SD-JWT VC",
     "SD-JWT",
-    "VC (1.1)",
+    "VCDM 1.1",
     "x509"
   ],
   "issuanceProtocols": [

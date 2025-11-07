@@ -1,0 +1,15 @@
+{
+  "$schema": "../../schemas/credential-format.json",
+  "Name": "VCDM 2.0",
+  "Implementation Support": "https://jwt.io/libraries",
+  "IPR Policy": "https://www.w3.org/Consortium/Patent-Policy-20200915/#sec-Requirements",
+  "Specification": "https://www.w3.org/TR/vc-data-model/",
+  "Standardization (Body, Process)": "W3C",
+  "Encoding Scheme": "JSON-LD",
+  "Rich Schemas-Semantic": true,
+  "Crypto Agility": true,
+  "Selective Disclosure": true,
+  "Predicates": false,
+  "Compatibility with Signing Algorithms": "ECDSA, EdDSA, RSA",
+  "Compatibility with Key Management Methods (Issuer)": ["x509", "did methods"]
+}

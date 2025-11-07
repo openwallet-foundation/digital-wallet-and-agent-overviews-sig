@@ -2,7 +2,7 @@
   "capability": ["holder"],
   "company": "Animo Solutions",
   "contact": "ana@animo.id",
-  "credentialFormats": ["JWT-VC", "AnonCred", "SD-JWT-VC"],
+  "credentialFormats": ["JWT-VC", "AnonCred", "SD-JWT VC"],
   "downloadSource": "https://github.com/animo/paradym-wallet",
   "issuanceProtocols": ["OpenID4VCI", "Issue Credential v2"],
   "keyManagements": ["did:jwk", "did:key", "did:web", "did:cheqd", "did:indy"],
@@ -19,7 +19,7 @@
   "credentialProfiles": [
     "AnonCreds with did:cheqd",
     "AnonCreds with did:indy",
-    "Decentralized Identity Interop Profile"
+    "DIIP"
   ],
   "urlAppStore": "https://apps.apple.com/nl/app/paradym-wallet/id6449846111?l=en",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.paradym.wallet",

@@ -12,7 +12,7 @@
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.procivis.one.verifier.trial",
   "urlAppStore": "https://apps.apple.com/at/app/procivis-one-mobile-verifier/id6648778109",
   "credentialProfiles": ["ISO mDL", "JSON-LD VCs with BBS (Holder DID)"],
-  "credentialFormats": ["JWT-VC", "JWT", "LDP-VC", "MDOC", "SD-JWT", "SD-JWT-VC", "VC (1.1)"],
+  "credentialFormats": ["JWT-VC", "JWT", "LDP-VC", "MDOC", "SD-JWT", "SD-JWT VC", "VCDM 1.1"],
   "keyManagements": ["did:jwk", "did:key", "did:web", "pub key in X.509 cert"],
   "presentationProtocols": ["OpenID4VP"],
   "signingAlgorithms": ["BBS+ with public key binding", "ECDSA", "EdDSA"],

@@ -13,7 +13,7 @@
   "openSource": false,
   "portability": false,
   "credentialProfiles": [],
-  "credentialFormats": ["SD-JWT-VC"],
+  "credentialFormats": ["SD-JWT VC"],
   "issuanceProtocols": ["OpenID4VCI"],
   "keyManagements": ["did:web"],
   "presentationProtocols": ["OpenID4VP"],

@@ -20,7 +20,7 @@
       "JWT-VC",
       "JWT",
       "LDP-VC",
-      "VC (1.1)"
+      "VCDM 1.1"
     ],
     "issuanceProtocols": [],
     "keyManagements": [

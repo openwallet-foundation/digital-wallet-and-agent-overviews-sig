@@ -2,7 +2,7 @@
   "$schema": "../../schemas/credential-profile.json",
   "Name": "SD-JWT VCs (w/ X.509 for Issuers)",
   "Credential Profile Description": "[Profile description goes here]",
-  "Credential Format": "SD-JWT-VC",
+  "Credential Format": "SD-JWT VC",
   "Signing Algorithm": "ECDSA",
   "Status Algorithm": "JWT/CWT status list",
   "Key Management (Issuer)": "raw public keys (none jwk)",

@@ -12,13 +12,13 @@
     "openSource": false,
     "credentialProfiles": [
         "EBSI",
-        "Decentralized Identity Interop Profile",
+        "DIIP",
         "SD-JWT VCs (w/ X.509 for Issuers)"
     ],
     "credentialFormats": [
         "JWT-VC",
         "LDP-VC",
-        "SD-JWT-VC"
+        "SD-JWT VC"
     ],
     "keyManagements": [
         "did:key",

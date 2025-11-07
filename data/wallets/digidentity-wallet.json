@@ -16,7 +16,7 @@
   "credentialProfiles": [],
   "credentialFormats": [
     "JWT-VC",
-    "SD-JWT-VC"
+    "SD-JWT VC"
   ],
   "issuanceProtocols": [
     "OpenID4VCI"
