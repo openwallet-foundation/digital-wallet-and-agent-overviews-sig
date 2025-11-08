@@ -15,7 +15,6 @@
   "credentialProfiles": [
     "DIIP",
     "EBSI",
-    "JWT VC Presentation Profile",
     "SD-JWT VCs (w/ X.509 for Issuers)"
   ],
   "credentialFormats": [
