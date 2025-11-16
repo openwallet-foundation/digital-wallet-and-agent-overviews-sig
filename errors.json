@@ -6,11 +6,11 @@
     "atala-prism": {
       "urlWebsite": "https://atalaprism.io/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
@@ -25,19 +25,15 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet",
-      "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844"
-    },
     "swisssign-wallet": {
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
-      "companyUrl": "https://swisssign.com"
+      "companyUrl": "https://swisssign.com",
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -46,86 +42,21 @@
     },
     "verida": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632"
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
+      "urlWebsite": "https://www.verida.io/"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "vidua": {
-      "urlWebsite": "https://vidua.nl/english/",
-      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104"
-    },
-    "authenticator": {
-      "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409"
-    },
-    "did-wallet": {
-      "urlAppStore": "https://itunes.apple.com/app/id1460083542"
-    },
-    "digidentity-wallet": {
-      "companyUrl": "https://digidentity.eu",
-      "urlWebsite": "https://digidentity.eu"
+      "urlWebsite": "https://vidua.nl/english/"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
-    },
-    "igrant.io-data-wallet": {
-      "urlAppStore": "https://apple.co/2Mz9nJp"
-    },
-    "learner-credential-wallet": {
-      "downloadSource": "https://github.com/digitalcredentials/learner-credential-wallet"
-    },
-    "orbit-edge-wallet": {
-      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
-    },
-    "orbit-enterprise": {
-      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
-    },
-    "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/"
-    },
-    "procivis-one-core": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
-    },
-    "procivis-one-desk": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one",
-      "urlWebApp": "https://docs.procivis.ch/trial/intro"
-    },
-    "procivis-one-verifier": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one",
-      "urlAppStore": "https://apps.apple.com/at/app/procivis-one-mobile-verifier/id6648778109"
-    },
-    "procivis-one-wallet": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
-    },
-    "selfkey-wallet": {
-      "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
-      "urlWebsite": "https://selfkey.org/selfkey-wallet/"
-    },
-    "sphereon-wallet": {
-      "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet"
-    },
-    "talao": {
-      "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone",
-      "urlWebsite": "https://talao.io/"
-    },
-    "vidcredentials": {
-      "urlWebApp": "https://try.vidchain.net/demo",
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
-    },
-    "vidwallet": {
-      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
-    },
-    "walt.id": {
-      "urlWebApp": "https://wallet.walt.id/"
-    },
-    "yivi": {
-      "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
-      "urlWebsite": "https://irma.app/docs/yivi-app/"
-    },
-    "zada": {
-      "urlWebsite": "https://zada.io/"
     }
   }
 }
