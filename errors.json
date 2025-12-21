@@ -13,8 +13,8 @@
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "dock-wallet": {
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -28,15 +28,27 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "paradym-wallet": {
-      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
+    "orbit-enterprise": {
+      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+    },
+    "orbit-edge-wallet": {
+      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
     },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
+    "paradym-wallet": {
+      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
     "swisssign-wallet": {
-      "companyUrl": "https://swisssign.com",
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
+      "companyUrl": "https://swisssign.com"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -48,30 +60,51 @@
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "esatus-wallet": {
-      "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html"
+    "authenticator": {
+      "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409"
+    },
+    "did-wallet": {
+      "urlAppStore": "https://itunes.apple.com/app/id1460083542"
+    },
+    "digidentity-wallet": {
+      "companyUrl": "https://digidentity.eu",
+      "urlWebsite": "https://digidentity.eu"
     },
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
     },
-    "orbit-edge-wallet": {
-      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
+    "hightrust.id": {
+      "urlWebsite": "https://www.hightrust.id"
     },
-    "orbit-enterprise": {
-      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+    "igrant.io-data-wallet": {
+      "urlAppStore": "https://apple.co/2Mz9nJp"
     },
-    "sowl": {
-      "urlWebsite": "https://esatus.com/en/digital-identity/"
+    "procivis-one-core": {
+      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
+    },
+    "procivis-one-desk": {
+      "urlWebsite": "https://www.procivis.ch/en/procivis-one",
+      "urlWebApp": "https://docs.procivis.ch/trial/intro"
+    },
+    "procivis-one-verifier": {
+      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
+    },
+    "procivis-one-wallet": {
+      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
+    },
+    "vidcredentials": {
+      "urlWebApp": "https://try.vidchain.net/demo"
+    },
+    "walt.id": {
+      "urlWebApp": "https://wallet.walt.id/"
+    },
+    "yivi": {
+      "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
+      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
