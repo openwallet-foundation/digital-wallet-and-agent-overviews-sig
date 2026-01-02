@@ -13,9 +13,7 @@
         "AnonCred",
         "MDOC",
         "SD-JWT",
-        "VC (1.1)",
-        "VCDM 2.0",
-        "x509"
+        "VCDM-1.1"
     ],
     "credentialProfiles": [
         "AnonCreds with did:indy",
@@ -23,7 +21,7 @@
         "ISO mDL",
         "JWT VC Presentation Profile 2",
         "SD-JWT VCs (w/ X.509 for Issuers)",
-        "x.509"
+        "JSON-LD-VCs-with-secp256k1"
     ],
     "issuanceProtocols": [
         "Issue Credential v2",
