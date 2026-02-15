@@ -1,7 +1,4 @@
 {
-  "logo": "https://www.swisssign.com/.resources/swisssign-base/webresources/favicon_SwissSign/apple-touch-icon.png",
   "companyUrl": "https://swisssign.com",
-  "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
-  "urlAppStore": "https://apps.apple.com/us/app/swisssign-wallet/id6748002550",
-  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.swisssign.wallet"
+  "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
 }

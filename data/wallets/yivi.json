@@ -1,6 +1,3 @@
 {
-  "downloadSource": "https://github.com/privacybydesign/irmamobile/",
-  "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
-  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=org.irmacard.cardemu",
-  "urlWebsite": "https://irma.app/docs/yivi-app/"
+  "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994"
 }
