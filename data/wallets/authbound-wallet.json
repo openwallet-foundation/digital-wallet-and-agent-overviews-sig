@@ -1,0 +1,26 @@
+{
+    "capability": ["holder", "verifier"],
+    "name": "Authbound Wallet",
+    "logo": "https://www.google.com/s2/favicons?domain=authbound.io&sz=128",
+    "company": "Authbound",
+    "companyUrl": "https://authbound.io",
+    "contact": "info@authbound.io",
+    "urlWebsite": "https://authbound.io",
+    "openSource": true,
+    "downloadSource": "https://github.com/Authbound/eudi-app-android-wallet",
+    "license": "EUPL-1.2",
+    "executionEnvironment": "edge",
+    "credentialProfiles": [
+      "ISO mDL",
+      "SD-JWT VCs (w/ X.509 for Issuers)"
+    ],
+    "credentialFormats": ["MDOC", "SD-JWT VC"],
+    "issuanceProtocols": ["OpenID4VCI"],
+    "keyManagements": ["pub key in X.509 cert"],
+    "presentationProtocols": ["OpenID4VP"],
+    "signingAlgorithms": ["ECDSA"],
+    "statusManagements": ["JWT/CWT status list"],
+    "trustManagements": ["X.509 certificates"],
+    "$schema": "../../schemas/wallet.json"
+  }
+  
