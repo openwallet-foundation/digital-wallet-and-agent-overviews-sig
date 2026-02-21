@@ -7,16 +7,47 @@ import './merge-wallets.mjs';
 const ajv = new Ajv({ allowUnionTypes: true });
 addFormats(ajv);
 
+const DATA_PATH = '../data';
 const DEPENDENCIES_PATH = '../data/dependencies';
 const WALLETS_PATH = '../data/wallets';
 const CASE_STUDIES_PATH = '../data/case-studies';
 const DEPENDENCY_SCHEMA_PATH = '../schemas/dependency.json';
 const WALLET_SCHEMA_PATH = '../schemas/wallet.json';
 const CASE_STUDY_SCHEMA_PATH = '../schemas/case-study.json';
-const PROFILE_SIG_SCHEMA_URL = '../viewer/src/assets/schemas/fields.json';
 
 const dependencyIds = [];
 const walletIds = [];
+
+// Mapping from wallet property names to data folder names
+const RESOURCE_FOLDERS = {
+  credentialProfiles: 'credential-profiles',
+  credentialFormats: 'credential-formats',
+  signingAlgorithms: 'signing-algorithms',
+  statusManagements: 'status-algorithms',
+  keyManagements: 'key-managements',
+  issuanceProtocols: 'issuance-protocols',
+  presentationProtocols: 'presentation-protocols',
+  trustManagements: 'trust-managements',
+};
+
+// Cache for valid names from data folders
+const validNames = {};
+
+// Get valid names from a data folder
+function getValidNames(folderName) {
+  if (validNames[folderName]) {
+    return validNames[folderName];
+  }
+  const folderPath = `${DATA_PATH}/${folderName}`;
+  if (!existsSync(folderPath)) {
+    validNames[folderName] = [];
+    return validNames[folderName];
+  }
+  validNames[folderName] = readdirSync(folderPath)
+    .filter(file => file.endsWith('.json'))
+    .map(file => JSON.parse(readFileSync(`${folderPath}/${file}`, 'utf8')).Name);
+  return validNames[folderName];
+}
 
 // Helper function to normalize filenames
 function normalizeFilename(filename) {
@@ -74,18 +105,33 @@ function validateDependencies() {
 // Validate wallets
 function validateWallets() {
   const files = checkFilesInFolder(WALLETS_PATH).map(normalizeFilename);
-  const profileSIGSchema = JSON.parse(readFileSync(PROFILE_SIG_SCHEMA_URL));
-  ajv.addSchema(profileSIGSchema, 'viewer/src/assets/schemas/fields.json');
   const success = validateFiles(files, WALLETS_PATH, WALLET_SCHEMA_PATH, walletIds, (wallet, fileName) => {
+    let isValid = true;
+
+    // Check dependencies
     if (wallet.dependencies) {
       for (const dependency of wallet.dependencies) {
         if (!dependencyIds.includes(dependency)) {
-          console.error(`[${fileName}]: dependency ${dependency} not found in dependencies`);
-          return false;
+          console.error(`[${fileName}]: dependency "${dependency}" not found in dependencies`);
+          isValid = false;
         }
       }
     }
-    return true;
+
+    // Check all resource references
+    for (const [property, folder] of Object.entries(RESOURCE_FOLDERS)) {
+      if (wallet[property]) {
+        const validValues = getValidNames(folder);
+        for (const value of wallet[property]) {
+          if (!validValues.includes(value)) {
+            console.error(`[${fileName}]: ${property} value "${value}" not found in ${folder}`);
+            isValid = false;
+          }
+        }
+      }
+    }
+
+    return isValid;
   });
   if (success) {
     console.info('All wallets are valid');
