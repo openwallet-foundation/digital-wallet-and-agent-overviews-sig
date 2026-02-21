@@ -30,9 +30,6 @@
               "node_modules/prismjs/themes/prism-okaidia.css"
             ],
             "scripts": ["node_modules/prismjs/prism.js"],
-            "server": "src/main.server.ts",
-            "prerender": false,
-            "ssr": false,
             "fileReplacements": []
           },
           "configurations": {
