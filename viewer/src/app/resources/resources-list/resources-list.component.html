@@ -31,23 +31,10 @@
     </mat-chip-grid>
   </mat-form-field> -->
   <section class="container" id="table">
-    <table
-      mat-table
-      [dataSource]="dataSource"
-      matSort
-      (contentChanged)="jumpTo()"
-      >
+    <table mat-table [dataSource]="dataSource" matSort (contentChanged)="jumpTo()">
       @for (column of columns; track column; let indexOfElement = $index) {
-        <ng-container
-          [matColumnDef]="column.header"
-          [sticky]="indexOfElement === 0"
-          >
-          <th
-            mat-header-cell
-            *matHeaderCellDef
-            [matTooltip]="column.tooltip"
-            mat-sort-header
-            >
+        <ng-container [matColumnDef]="column.header" [sticky]="indexOfElement === 0">
+          <th mat-header-cell *matHeaderCellDef [matTooltip]="column.tooltip" mat-sort-header>
             {{ column.header }}
           </th>
           <td mat-cell *matCellDef="let element">
@@ -57,57 +44,49 @@
               </div>
             }
             @if (column.header !== 'Name') {
-              <div
-                fxLayoutAlign="space-around center"
-                >
+              <div fxLayoutAlign="space-around center">
                 @switch (elementType(element[column.header])) {
                   @case ('icon') {
                     <div>
-                      <mat-icon>{{
-                        element[column.header] ? 'done' : 'close'
-                      }}</mat-icon>
+                      <mat-icon>{{ element[column.header] ? 'done' : 'close' }}</mat-icon>
                     </div>
                   }
                   @case ('icon-tooltip') {
                     <div>
                       <mat-icon [matTooltip]="element[column.header].Description"
-                        >{{
-                        element[column.header].Value ? 'done' : 'close'
-                        }} </mat-icon
-                        >*
-                      </div>
-                    }
-                    @case ('undefined') {
-                      <div>
-                        <mat-icon>question_mark</mat-icon>
-                      </div>
-                    }
-                    @default {
-                      <div
-                        [innerHTML]="element[column.header] | format"
-                      ></div>
-                    }
+                        >{{ element[column.header].Value ? 'done' : 'close' }} </mat-icon
+                      >*
+                    </div>
                   }
-                </div>
-              }
-            </td>
-          </ng-container>
-        }
+                  @case ('undefined') {
+                    <div>
+                      <mat-icon>question_mark</mat-icon>
+                    </div>
+                  }
+                  @default {
+                    <div [innerHTML]="element[column.header] | format"></div>
+                  }
+                }
+              </div>
+            }
+          </td>
+        </ng-container>
+      }
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-        <tr
-          mat-row
-          *matRowDef="let row; columns: displayedColumns"
-          [ngClass]="{ highlight: isSelected(row) }"
-          [attr.id]="isSelected(row) ? 'jumpto' : null"
-        ></tr>
-      </table>
-    </section>
-  </div>
-  <mat-paginator
-    [pageSizeOptions]="[10, 20, 50]"
-    [pageSize]="50"
-    showFirstLastButtons
-    aria-label="Select page of periodic elements"
-    >
-  </mat-paginator>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"
+        [ngClass]="{ highlight: isSelected(row) }"
+        [attr.id]="isSelected(row) ? 'jumpto' : null"
+      ></tr>
+    </table>
+  </section>
+</div>
+<mat-paginator
+  [pageSizeOptions]="[10, 20, 50]"
+  [pageSize]="50"
+  showFirstLastButtons
+  aria-label="Select page of periodic elements"
+>
+</mat-paginator>

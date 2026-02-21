@@ -8,7 +8,7 @@ describe('CredentialProfileListComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CredentialProfileListComponent]
+      declarations: [CredentialProfileListComponent],
     });
     fixture = TestBed.createComponent(CredentialProfileListComponent);
     component = fixture.componentInstance;

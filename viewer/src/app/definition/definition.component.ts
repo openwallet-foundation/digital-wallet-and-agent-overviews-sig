@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID, OnInit, DOCUMENT } from '@angular/core';
+import { Component, PLATFORM_ID, OnInit, DOCUMENT, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { MarkdownModule } from 'ngx-markdown';
@@ -14,43 +14,35 @@ interface HeadingNode {
 }
 
 @Component({
-    selector: 'app-definition',
-    imports: [
-    RouterModule,
-    MarkdownModule,
-    MatTreeModule,
-    FlexLayoutModule,
-    FlexLayoutServerModule
-],
-    templateUrl: './definition.component.html',
-    styleUrl: './definition.component.scss'
+  selector: 'app-definition',
+  imports: [RouterModule, MarkdownModule, MatTreeModule, FlexLayoutModule, FlexLayoutServerModule],
+  templateUrl: './definition.component.html',
+  styleUrl: './definition.component.scss',
 })
 export class DefinitionComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+  private platformId = inject(PLATFORM_ID);
+  private document = inject<Document>(DOCUMENT);
+
   headings?: NodeListOf<Element>;
   private isBrowser: boolean;
   headingNodes: HeadingNode[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    @Inject(PLATFORM_ID) private platformId: string,
-    @Inject(DOCUMENT) private document: Document
-  ) {
+  constructor() {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   ngOnInit() {
     // `setTimeout` is needed to avoid exception `ExpressionChangedAfterItHasBeenCheckedError`
     setTimeout(() => {
-      this.headings = this.document
-        .getElementById('md')!
-        .querySelectorAll('h2, h3, h4, h5, h6');
+      this.headings = this.document.getElementById('md')!.querySelectorAll('h2, h3, h4, h5, h6');
       //TODO: render navigation tree
       this.headingNodes = this.buildHeadingTree(this.headings);
     });
   }
 
   buildHeadingTree(headings: NodeListOf<Element>): HeadingNode[] {
-    const headingArray: HeadingNode[] = Array.from(headings).map((heading) => ({
+    const headingArray: HeadingNode[] = Array.from(headings).map(heading => ({
       name: heading.textContent || '',
       level: parseInt(heading.tagName[1], 10),
       id: heading.id,
@@ -60,11 +52,8 @@ export class DefinitionComponent implements OnInit {
     const root: HeadingNode[] = [];
     const stack: HeadingNode[] = [];
 
-    headingArray.forEach((heading) => {
-      while (
-        stack.length > 0 &&
-        stack[stack.length - 1].level >= heading.level
-      ) {
+    headingArray.forEach(heading => {
+      while (stack.length > 0 && stack[stack.length - 1].level >= heading.level) {
         stack.pop();
       }
       if (stack.length === 0) {
@@ -93,7 +82,7 @@ export class DefinitionComponent implements OnInit {
     }
     const resource = this.route.snapshot.paramMap.get('resource');
     if (resource) {
-      document.querySelectorAll('h2').forEach((el) => {
+      document.querySelectorAll('h2').forEach(el => {
         if (el.textContent?.includes(resource)) {
           el.scrollIntoView({ behavior: 'smooth' });
         }
@@ -102,7 +91,7 @@ export class DefinitionComponent implements OnInit {
     //TODO: in case there is an id multiple times (like in different resources), we need to find the correct by first going to the h2 and then to the h3.
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      document.querySelectorAll('h3').forEach((el) => {
+      document.querySelectorAll('h3').forEach(el => {
         if (el.textContent?.includes(id)) {
           el.scrollIntoView({ behavior: 'smooth' });
         }

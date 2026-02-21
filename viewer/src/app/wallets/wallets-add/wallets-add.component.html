@@ -1,193 +1,177 @@
-@if(form) {
-<div fxLayout="row" fxLayoutAlign="space-between center">
-  <h1 mat-dialog-title>Add wallet</h1>
-  <button mat-icon-button mat-dialog-close>
-    <mat-icon>close</mat-icon>
-  </button>
-</div>
-<mat-dialog-content fxLayout="column" fxLayoutGap="16px">
-  <p>
-    With the following steps you are able to add your wallet or agent to this
-    list. You need a Github Account to do so, every entry can be updated in the
-    future.
-  </p>
-  <ul>
-    <li>
-      Use this form to generate a JSON file for the entry. One all required
-      fields with a * are filled, you can copy the content to your clipboard.
-    </li>
-    <li>
-      <a
-        href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/fork"
-        target="_blank"
-        >Fork the Github repo</a
-      >
-      to your own account and add the content of the file to the
-      <code>wallets</code> folder. The name should be unique like
-      <code>yourCompany-walletName.json</code>.
-    </li>
-    <li>
-      Test the changes: run
-      <code>npm install && cd viewer && npm start</code>
-      and see the updated overview at <code>http://localhost:4200/</code>.
-    </li>
-    <li>
-      Create a new branch, commit the changes (using the <code>-s</code> flag to
-      sign off your changes) and start a pull request.
-    </li>
-    <li>After a positive review we will accept your request.</li>
-    <li>
-      If you need help or if you want to influence in the overview, please see
-      OpenWallet Foundation's
-      <a href="https://openwallet.foundation/participate/" target="_blank"
-        >participation instructions</a
-      >.
-    </li>
-  </ul>
+@if (form) {
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h1 mat-dialog-title>Add wallet</h1>
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-dialog-content fxLayout="column" fxLayoutGap="16px">
+    <p>
+      With the following steps you are able to add your wallet or agent to this list. You need a
+      Github Account to do so, every entry can be updated in the future.
+    </p>
+    <ul>
+      <li>
+        Use this form to generate a JSON file for the entry. One all required fields with a * are
+        filled, you can copy the content to your clipboard.
+      </li>
+      <li>
+        <a
+          href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/fork"
+          target="_blank"
+          >Fork the Github repo</a
+        >
+        to your own account and add the content of the file to the
+        <code>wallets</code> folder. The name should be unique like
+        <code>yourCompany-walletName.json</code>.
+      </li>
+      <li>
+        Test the changes: run
+        <code>npm install && cd viewer && npm start</code>
+        and see the updated overview at <code>http://localhost:4200/</code>.
+      </li>
+      <li>
+        Create a new branch, commit the changes (using the <code>-s</code> flag to sign off your
+        changes) and start a pull request.
+      </li>
+      <li>After a positive review we will accept your request.</li>
+      <li>
+        If you need help or if you want to influence in the overview, please see OpenWallet
+        Foundation's
+        <a href="https://openwallet.foundation/participate/" target="_blank"
+          >participation instructions</a
+        >.
+      </li>
+    </ul>
 
-  <p>
-    This form will help you to generate the required JSON file that needs to be
-    added to the GitHub Repository
-  </p>
+    <p>
+      This form will help you to generate the required JSON file that needs to be added to the
+      GitHub Repository
+    </p>
 
-  <form
-    [formGroup]="form"
-    fxLayout="column"
-    fxLayoutAlign="start stretch"
-    fxLayoutGap="16px"
-  >
-    <mat-form-field>
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Wallet Name" formControlName="name" />
-      <mat-hint>{{ walletsService.getTooltip('name') }}</mat-hint>
-      @if(form.get('name')?.hasError('required')) {
-      <mat-error> Wallet name is required </mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Logo</mat-label>
-      <input matInput placeholder="Wallet logo" formControlName="logo" />
-      <mat-hint>{{ walletsService.getTooltip('logo') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Company</mat-label>
-      <input matInput placeholder="Company" formControlName="company" />
-      <mat-hint>{{ walletsService.getTooltip('company') }}</mat-hint>
-      @if(form.get('company')?.hasError('required')) {
-      <mat-error> Company name is required </mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Company URL</mat-label>
-      <input matInput placeholder="Company URL" formControlName="companyUrl" />
-      <mat-hint>{{ walletsService.getTooltip('companyUrl') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Execution Environment</mat-label>
-      <mat-select formControlName="executionEnvironment">
-        <mat-option value="edge">Edge</mat-option>
-        <mat-option value="cloud">Cloud</mat-option>
-      </mat-select>
-      <mat-hint>{{ walletsService.getTooltip('executionEnvironment') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Capability</mat-label>
-      <mat-select formControlName="capability" multiple>
-        <mat-option value="issuer">Issuer</mat-option>
-        <mat-option value="holder">Holder</mat-option>
-        <mat-option value="verifier">Verifier</mat-option>
-      </mat-select>
-      <mat-hint>{{ walletsService.getTooltip('capability') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Web site URL</mat-label>
-      <input matInput placeholder="https://..." formControlName="urlWebsite" />
-      <mat-hint>{{ walletsService.getTooltip('urlWebsite') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>AppStore URL</mat-label>
-      <input
-        matInput
-        placeholder="https://apple.co/..."
-        formControlName="urlAppStore"
-      />
-      <mat-hint>{{ walletsService.getTooltip('urlAppStore') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Google Play Store URL</mat-label>
-      <input
-        matInput
-        placeholder="https://play.google.com/store/apps/..."
-        formControlName="urlGooglePlayStore"
-      />
-      <mat-hint>{{ walletsService.getTooltip('urlGooglePlayStore') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Web app URL</mat-label>
-      <input matInput placeholder="https://..." formControlName="urlWebApp" />
-      <mat-hint>{{ walletsService.getTooltip('urlWebApp') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Open source?</mat-label>
-      <mat-select formControlName="openSource">
-        <mat-option value="true">Yes</mat-option>
-        <mat-option value="false">No</mat-option>
-      </mat-select>
-      <mat-hint>{{ walletsService.getTooltip('openSource') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>License</mat-label>
-      <input matInput placeholder="License" formControlName="license" />
-      <mat-hint>{{ walletsService.getTooltip('license') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Source code</mat-label>
-      <input
-        matInput
-        placeholder="https://github.com/..."
-        formControlName="downloadSource"
-      />
-      <mat-hint>{{ walletsService.getTooltip('downloadSource') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Portability</mat-label>
-      <mat-select formControlName="portability">
-        <mat-option value="true">Yes</mat-option>
-        <mat-option value="false">No</mat-option>
-      </mat-select>
-      <mat-hint>{{ walletsService.getTooltip('portability') }}</mat-hint>
-    </mat-form-field>
-    @for (resource of walletsService.resources; track resource) {
-    <mat-form-field>
-      <mat-label>{{ resource.name }}</mat-label>
-      <mat-select formControlName="{{ resource.id }}" multiple>
-        @for (option of getValues(resource.schemaId); track option) {
-        <mat-option value="{{ option }}">{{ option }}</mat-option>
+    <form [formGroup]="form" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="16px">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Wallet Name" formControlName="name" />
+        <mat-hint>{{ walletsService.getTooltip('name') }}</mat-hint>
+        @if (form.get('name')?.hasError('required')) {
+          <mat-error> Wallet name is required </mat-error>
         }
-      </mat-select>
-      <mat-hint>{{ walletsService.getTooltip(resource.id) }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Logo</mat-label>
+        <input matInput placeholder="Wallet logo" formControlName="logo" />
+        <mat-hint>{{ walletsService.getTooltip('logo') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Company</mat-label>
+        <input matInput placeholder="Company" formControlName="company" />
+        <mat-hint>{{ walletsService.getTooltip('company') }}</mat-hint>
+        @if (form.get('company')?.hasError('required')) {
+          <mat-error> Company name is required </mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Company URL</mat-label>
+        <input matInput placeholder="Company URL" formControlName="companyUrl" />
+        <mat-hint>{{ walletsService.getTooltip('companyUrl') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Execution Environment</mat-label>
+        <mat-select formControlName="executionEnvironment">
+          <mat-option value="edge">Edge</mat-option>
+          <mat-option value="cloud">Cloud</mat-option>
+        </mat-select>
+        <mat-hint>{{ walletsService.getTooltip('executionEnvironment') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Capability</mat-label>
+        <mat-select formControlName="capability" multiple>
+          <mat-option value="issuer">Issuer</mat-option>
+          <mat-option value="holder">Holder</mat-option>
+          <mat-option value="verifier">Verifier</mat-option>
+        </mat-select>
+        <mat-hint>{{ walletsService.getTooltip('capability') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Web site URL</mat-label>
+        <input matInput placeholder="https://..." formControlName="urlWebsite" />
+        <mat-hint>{{ walletsService.getTooltip('urlWebsite') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>AppStore URL</mat-label>
+        <input matInput placeholder="https://apple.co/..." formControlName="urlAppStore" />
+        <mat-hint>{{ walletsService.getTooltip('urlAppStore') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Google Play Store URL</mat-label>
+        <input
+          matInput
+          placeholder="https://play.google.com/store/apps/..."
+          formControlName="urlGooglePlayStore"
+        />
+        <mat-hint>{{ walletsService.getTooltip('urlGooglePlayStore') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Web app URL</mat-label>
+        <input matInput placeholder="https://..." formControlName="urlWebApp" />
+        <mat-hint>{{ walletsService.getTooltip('urlWebApp') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Open source?</mat-label>
+        <mat-select formControlName="openSource">
+          <mat-option value="true">Yes</mat-option>
+          <mat-option value="false">No</mat-option>
+        </mat-select>
+        <mat-hint>{{ walletsService.getTooltip('openSource') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>License</mat-label>
+        <input matInput placeholder="License" formControlName="license" />
+        <mat-hint>{{ walletsService.getTooltip('license') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Source code</mat-label>
+        <input matInput placeholder="https://github.com/..." formControlName="downloadSource" />
+        <mat-hint>{{ walletsService.getTooltip('downloadSource') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Portability</mat-label>
+        <mat-select formControlName="portability">
+          <mat-option value="true">Yes</mat-option>
+          <mat-option value="false">No</mat-option>
+        </mat-select>
+        <mat-hint>{{ walletsService.getTooltip('portability') }}</mat-hint>
+      </mat-form-field>
+      @for (resource of walletsService.resources; track resource) {
+        <mat-form-field>
+          <mat-label>{{ resource.name }}</mat-label>
+          <mat-select formControlName="{{ resource.id }}" multiple>
+            @for (option of getValues(resource.schemaId); track option) {
+              <mat-option value="{{ option }}">{{ option }}</mat-option>
+            }
+          </mat-select>
+          <mat-hint>{{ walletsService.getTooltip(resource.id) }}</mat-hint>
+        </mat-form-field>
+      }
+    </form>
+    <mat-divider></mat-divider>
+    <mat-form-field>
+      <mat-label>JSON</mat-label>
+      <textarea
+        matInput
+        placeholder="JSON file to be added to the GitHub Repository"
+        [value]="getJSON()"
+        readonly
+        rows="10"
+        cols="50"
+      ></textarea>
     </mat-form-field>
-    }
-  </form>
-  <mat-divider></mat-divider>
-  <mat-form-field>
-    <mat-label>JSON</mat-label>
-    <textarea
-      matInput
-      placeholder="JSON file to be added to the GitHub Repository"
-      [value]="getJSON()"
-      readonly
-      rows="10"
-      cols="50"
-    ></textarea>
-  </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button [disabled]="form.invalid" (click)="downloadFile()">
-    Download file
-  </button>
-  <button mat-button [disabled]="form.invalid" (click)="copy()">
-    Copy to clipboard
-  </button></mat-dialog-actions
->
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button [disabled]="form.invalid" (click)="downloadFile()">Download file</button>
+    <button mat-button [disabled]="form.invalid" (click)="copy()">
+      Copy to clipboard
+    </button></mat-dialog-actions
+  >
 }

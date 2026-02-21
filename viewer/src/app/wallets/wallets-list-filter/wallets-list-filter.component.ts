@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
@@ -26,29 +26,27 @@ export interface WalletFilter {
 }
 
 @Component({
-    selector: 'app-wallets-list-filter',
-    imports: [
-        MatDialogModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        ReactiveFormsModule,
-        MatInputModule,
-        MatSelectModule,
-        MatIconModule,
-    ],
-    providers: [WalletsService],
-    templateUrl: './wallets-list-filter.component.html',
-    styleUrl: './wallets-list-filter.component.scss'
+  selector: 'app-wallets-list-filter',
+  imports: [
+    MatDialogModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule,
+  ],
+  providers: [WalletsService],
+  templateUrl: './wallets-list-filter.component.html',
+  styleUrl: './wallets-list-filter.component.scss',
 })
 export class WalletsListFilterComponent implements OnInit {
+  private filter = inject<WalletFilter>(MAT_DIALOG_DATA);
+  walletsService = inject(WalletsService);
+
   form!: FormGroup;
   values!: FieldResponse;
-
-  constructor(
-    @Inject(MAT_DIALOG_DATA) private filter: WalletFilter,
-    public walletsService: WalletsService
-  ) {}
   async ngOnInit(): Promise<void> {
     this.values = await this.walletsService.getDefinitions();
     this.form = new FormGroup({
@@ -57,7 +55,7 @@ export class WalletsListFilterComponent implements OnInit {
       capability: new FormControl(),
       portability: new FormControl(),
     });
-    this.walletsService.resources.forEach((resource) =>
+    this.walletsService.resources.forEach(resource =>
       this.form.addControl(resource.id, new FormControl())
     );
     if (this.filter) {

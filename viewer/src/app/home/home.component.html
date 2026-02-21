@@ -15,10 +15,9 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          The Wallet and Agent Overview is a special interest group of the
-          OpenWallet Foundation. We aim to provide a comprehensive overview of
-          all wallets and agents, including their supported credential profiles
-          and dependencies.
+          The Wallet and Agent Overview is a special interest group of the OpenWallet Foundation. We
+          aim to provide a comprehensive overview of all wallets and agents, including their
+          supported credential profiles and dependencies.
         </p>
       </mat-card-content>
     </mat-card>
@@ -28,8 +27,8 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          Explore a detailed list of all dependencies used by the wallets and
-          agents, providing you with a clear understanding of their ecosystem.
+          Explore a detailed list of all dependencies used by the wallets and agents, providing you
+          with a clear understanding of their ecosystem.
         </p>
       </mat-card-content>
     </mat-card>
@@ -40,10 +39,7 @@
         <h1 mat-card-title>Case Studies</h1>
       </mat-card-header>
       <mat-card-content>
-        <p>
-          Discover real-world applications and success stories of wallets and
-          agents in action.
-        </p>
+        <p>Discover real-world applications and success stories of wallets and agents in action.</p>
       </mat-card-content>
     </mat-card>
     <mat-card matRipple routerLink="credential-profiles" fxFlex="50">
@@ -52,8 +48,8 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          Get an overview of all the credential profiles supported by the
-          wallets with their supported features and tradeoffs.
+          Get an overview of all the credential profiles supported by the wallets with their
+          supported features and tradeoffs.
         </p>
       </mat-card-content>
     </mat-card>
@@ -63,54 +59,48 @@
   <div fxLayout="row" fxLayoutGap="16px">
     <mat-nav-list fxFlex="50">
       @for (tab of leftTabs; track tab) {
-        <a
-          mat-list-item
-          [routerLink]="['resources', tab]"
-          routerLinkActive="active-link"
-          >{{ tab }}</a
-          >
-        }
-      </mat-nav-list>
-      <mat-nav-list fxFlex="50">
-        @for (tab of rightTabs; track tab) {
-          <a
-            mat-list-item
-            [routerLink]="['resources', tab]"
-            routerLinkActive="active-link"
-            >{{ tab }}</a
-            >
-          }
-        </mat-nav-list>
-      </div>
-      <mat-divider></mat-divider>
-      <h3>Participate</h3>
-      <div fxLayout="row" fxLayoutAlign="center space-between" fxLayoutGap="16px">
-        <a
-          href="https://discord.gg/fYEbfjWAkP"
-          fxLayout="column"
-          fxLayoutAlign="start center"
-          class="link"
-          >
-          <img src="assets/discord-icon.svg" class="icon" alt="Discord" />
-          <b>Discord</b>
-          <span>Join our Discord server to participate in discussions.</span>
-        </a>
-        <a
-          href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
-          fxLayout="column"
-          fxLayoutAlign="start center"
-          class="link"
-          >
-          <img src="assets/github-mark.svg" class="icon" alt="Discord" />
-          <b>Github</b>
-          <span>Review the data and the overview.</span>
-        </a>
-      </div>
-    </div>
-    <mat-divider></mat-divider>
-    <div class="footer" fxLayout="row" fxLayoutAlign="space-between center">
-      <a href="https://openwallet.foundation" target="_blank">
-        <img src="assets/openwallet-foundation.svg" alt="OpenWallet Foundation" />
-      </a>
-      <p class="info">Code Licensed under an Apache 2.0 License.</p>
-    </div>
+        <a mat-list-item [routerLink]="['resources', tab]" routerLinkActive="active-link">{{
+          tab
+        }}</a>
+      }
+    </mat-nav-list>
+    <mat-nav-list fxFlex="50">
+      @for (tab of rightTabs; track tab) {
+        <a mat-list-item [routerLink]="['resources', tab]" routerLinkActive="active-link">{{
+          tab
+        }}</a>
+      }
+    </mat-nav-list>
+  </div>
+  <mat-divider></mat-divider>
+  <h3>Participate</h3>
+  <div fxLayout="row" fxLayoutAlign="center space-between" fxLayoutGap="16px">
+    <a
+      href="https://discord.gg/fYEbfjWAkP"
+      fxLayout="column"
+      fxLayoutAlign="start center"
+      class="link"
+    >
+      <img src="assets/discord-icon.svg" class="icon" alt="Discord" />
+      <b>Discord</b>
+      <span>Join our Discord server to participate in discussions.</span>
+    </a>
+    <a
+      href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
+      fxLayout="column"
+      fxLayoutAlign="start center"
+      class="link"
+    >
+      <img src="assets/github-mark.svg" class="icon" alt="Discord" />
+      <b>Github</b>
+      <span>Review the data and the overview.</span>
+    </a>
+  </div>
+</div>
+<mat-divider></mat-divider>
+<div class="footer" fxLayout="row" fxLayoutAlign="space-between center">
+  <a href="https://openwallet.foundation" target="_blank">
+    <img src="assets/openwallet-foundation.svg" alt="OpenWallet Foundation" />
+  </a>
+  <p class="info">Code Licensed under an Apache 2.0 License.</p>
+</div>

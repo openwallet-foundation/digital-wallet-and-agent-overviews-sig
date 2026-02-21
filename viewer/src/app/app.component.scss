@@ -1,18 +1,18 @@
 .github {
+  display: flex;
+  align-items: center;
+
+  img {
+    float: left;
+    padding: 4px 8px;
+  }
+
+  a {
     display: flex;
     align-items: center;
-
-    img {
-        float: left;
-        padding: 4px 8px;
-    }
-
-    a {
-        display: flex;
-        align-items: center;
-    }
+  }
 }
 
 .active-link {
-    background-color: #C3D4F6;
+  background-color: #c3d4f6;
 }

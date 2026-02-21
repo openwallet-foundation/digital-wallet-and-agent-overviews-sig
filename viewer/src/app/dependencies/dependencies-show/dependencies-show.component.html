@@ -32,7 +32,7 @@
               <mat-icon matListItemIcon>link</mat-icon>
               {{ dependency.url }}
             </a>
-            @if(dependency.community) {
+            @if (dependency.community) {
               <h4>Community</h4>
               <a mat-button [href]="dependency.community" target="_blank">
                 <mat-icon>forum</mat-icon>
@@ -42,18 +42,14 @@
           </mat-tab>
           <mat-tab label="README">
             @if (readme) {
-              <markdown lineNumbers [start]="5">{{
-                readme
-              }}</markdown>
+              <markdown lineNumbers [start]="5">{{ readme }}</markdown>
             }
           </mat-tab>
           <mat-tab
-          [label]="
-            wallets.length + ' Dependent' + (wallets.length === 1 ? '' : 's')
-          "
+            [label]="wallets.length + ' Dependent' + (wallets.length === 1 ? '' : 's')"
             [disabled]="wallets.length === 0"
-            >
-            @if(wallets.length > 0) {
+          >
+            @if (wallets.length > 0) {
               <app-wallets-list [wallets]="wallets"></app-wallets-list>
             } @else {
               <p>No linked wallets or agents</p>
@@ -83,7 +79,7 @@
           <mat-icon matListItemIcon>link</mat-icon>
           {{ dependency.url }}
         </a>
-        @if(dependency.community) {
+        @if (dependency.community) {
           <h4>Community</h4>
           <a mat-button [href]="dependency.community" target="_blank">
             <mat-icon>forum</mat-icon>

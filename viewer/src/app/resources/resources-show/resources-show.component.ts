@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AppService } from '../../credential-profiles/app.service';
@@ -12,43 +12,40 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-    selector: 'app-resources-show',
-    imports: [
+  selector: 'app-resources-show',
+  imports: [
     MatIconModule,
     RouterModule,
     MatListModule,
     MatCardModule,
     MatButtonModule,
     FlexLayoutModule,
-    FlexLayoutServerModule
-],
-    templateUrl: './resources-show.component.html',
-    styleUrl: './resources-show.component.scss'
+    FlexLayoutServerModule,
+  ],
+  templateUrl: './resources-show.component.html',
+  styleUrl: './resources-show.component.scss',
 })
 export class ResourcesShowComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+  private snachBar = inject(MatSnackBar);
+  private router = inject(Router);
+  appService = inject(AppService);
+
   values: { type: string; key: string; value: string }[] = [];
   resource!: string;
   res?: Record<string, string | { Value: string; Description: string }>;
-  constructor(
-    private route: ActivatedRoute,
-    private snachBar: MatSnackBar,
-    private router: Router,
-    public appService: AppService
-  ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id') as string;
     this.resource = this.route.snapshot.paramMap.get('resource') as string;
-    this.res = this.appService.getValues(this.resource as keyof Resources)?.[
-      id
-    ];
+    this.res = this.appService.getValues(this.resource as keyof Resources)?.[id];
     if (!this.res) {
       this.router.navigate(['/']);
       this.snachBar.open(`Resource ${id} not found`, 'Close');
     }
     this.values = Object.keys(this.res)
-      .filter((key) => key !== '$schema')
-      .map((key) => {
+      .filter(key => key !== '$schema')
+      .map(key => {
         let value = this.res![key];
         let type = 'text';
         if (typeof value === 'string' && value.startsWith('http')) {

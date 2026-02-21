@@ -9,12 +9,27 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
     "validate": "node scripts/validate.mjs",
     "merge": "node scripts/merge-wallets.mjs",
     "lint": "ng lint",
+    "format": "prettier --write \"src/**/*.{ts,html,scss}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,html,scss}\"",
+    "analyze": "ng build --configuration production --source-map && source-map-explorer dist/browser/*.js",
     "serve:ssr:viewer": "node dist/server/server.mjs",
     "docker:build": "docker build -t wallet-agent-overview .",
-    "docker:run": "docker run -p 4000:4000 wallet-agent-overview"
+    "docker:run": "docker run -p 4000:4000 wallet-agent-overview",
+    "prepare": "cd .. && git config core.hooksPath .husky || true"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,html}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "src/**/*.scss": [
+      "prettier --write"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -44,6 +59,7 @@
     "@angular/build": "^21.1.4",
     "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^21.1.5",
+    "@playwright/test": "^1.58.2",
     "@types/express": "^5.0.1",
     "@types/jasmine": "^6.0.0",
     "@types/node": "^25.3.0",
@@ -52,13 +68,19 @@
     "axios": "^1.6.7",
     "dotenv": "^17.3.1",
     "eslint": "^9.9.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
     "jasmine-core": "^6.0.1",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.2.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
     "sharp": "^0.34.1",
+    "source-map-explorer": "^2.5.3",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.56.0"
   }

@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
@@ -13,28 +13,28 @@ export interface DependencyFilter {
 }
 
 @Component({
-    selector: 'app-dependencies-filter',
-    imports: [
-        ReactiveFormsModule,
-        MatSelectModule,
-        MatDialogModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatButtonModule,
-    ],
-    templateUrl: './dependencies-filter.component.html',
-    styleUrl: './dependencies-filter.component.scss'
+  selector: 'app-dependencies-filter',
+  imports: [
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatDialogModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatButtonModule,
+  ],
+  templateUrl: './dependencies-filter.component.html',
+  styleUrl: './dependencies-filter.component.scss',
 })
 export class DependenciesFilterComponent implements OnInit {
+  private filter = inject<DependencyFilter>(MAT_DIALOG_DATA);
+  dependenciesService = inject(DependenciesService);
+
   form!: FormGroup;
 
   licenses: string[] = [];
   languages: string[] = [];
 
-  constructor(
-    @Inject(MAT_DIALOG_DATA) private filter: DependencyFilter,
-    public dependenciesService: DependenciesService
-  ) {
+  constructor() {
     this.licenses = this.dependenciesService.getLicenses();
     this.languages = this.dependenciesService.getLaguages();
   }

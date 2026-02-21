@@ -5,6 +5,7 @@ import {
   Input,
   OnInit,
   ViewChild,
+  inject,
 } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -29,32 +30,35 @@ export interface ColumnHeader {
 type Res = keyof Resources;
 
 @Component({
-    selector: 'app-resources-list',
-    imports: [
-        CommonModule,
-        MatTableModule,
-        MatPaginatorModule,
-        FormatPipe,
-        MatIconModule,
-        MatTooltipModule,
-        RouterModule,
-    ],
-    templateUrl: './resources-list.component.html',
-    styleUrls: ['./resources-list.component.scss']
+  selector: 'app-resources-list',
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    FormatPipe,
+    MatIconModule,
+    MatTooltipModule,
+    RouterModule,
+  ],
+  templateUrl: './resources-list.component.html',
+  styleUrls: ['./resources-list.component.scss'],
 })
 export class ResourcesListComponent implements OnInit, AfterViewInit {
+  private route = inject(ActivatedRoute);
+  private appService = inject(AppService);
+
   @Input() data!: Format;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   @ViewChild(MatSort) sort!: MatSort;
   selectedRowIndex = 2;
 
-  constructor(private route: ActivatedRoute, private appService: AppService) {
+  constructor() {
     const resource: Res = this.route.snapshot.paramMap.get('resource') as Res;
     if (resource) {
       this.data = this.appService.getFormat(resource);
     }
-    this.route.params.subscribe((params) => {
+    this.route.params.subscribe(params => {
       this.data = this.appService.getFormat(params['resource'] as Res);
       this.ngOnInit();
       this.ngAfterViewInit();
@@ -73,22 +77,20 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
   async ngOnInit(): Promise<void> {
     this.displayedColumns = this.getNames();
     this.allColumns = this.getNames();
-    this.columns = this.getNames().map((key) => ({
+    this.columns = this.getNames().map(key => ({
       header: key,
       tooltip: this.appService.getTooltip(this.data.structure.properties[key]),
     }));
     this.dataSource.data = Object.keys(this.data.values)
-      .filter((key) => key !== 'structure')
-      .map((key) => this.data.values[key]);
+      .filter(key => key !== 'structure')
+      .map(key => this.data.values[key]);
 
     this.filteredRows = this.rowCtrl.valueChanges.pipe(
       startWith(null),
       map((row: string | null) =>
         row
           ? this._filter(row)
-          : this.allColumns
-              .slice()
-              .filter((row) => this.displayedColumns.indexOf(row) < 0)
+          : this.allColumns.slice().filter(row => this.displayedColumns.indexOf(row) < 0)
       )
     );
   }
@@ -99,17 +101,13 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
   }
 
   private getNames(): string[] {
-    return Object.keys(this.data.structure.properties).filter(
-      (key) => key !== '$schema'
-    );
+    return Object.keys(this.data.structure.properties).filter(key => key !== '$schema');
   }
 
   jumpTo() {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      const rectRow = document
-        .getElementById('jumpto')
-        ?.getBoundingClientRect();
+      const rectRow = document.getElementById('jumpto')?.getBoundingClientRect();
       const table = document.getElementById('table');
       const rectTable = table?.getBoundingClientRect();
       if (rectRow && table && rectTable) {
@@ -135,9 +133,7 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
   }
 
   remove(value: string) {
-    this.displayedColumns = this.displayedColumns.filter(
-      (row) => row !== value
-    );
+    this.displayedColumns = this.displayedColumns.filter(row => row !== value);
   }
 
   add(event: MatChipInputEvent): void {
@@ -158,8 +154,8 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
     const filterValue = value.toLowerCase();
 
     return this.allColumns
-      .filter((row) => row.toLowerCase().includes(filterValue))
-      .filter((row) => this.displayedColumns.indexOf(row) < 0);
+      .filter(row => row.toLowerCase().includes(filterValue))
+      .filter(row => this.displayedColumns.indexOf(row) < 0);
   }
 
   elementType(value: { Value: string; Description: string }) {

@@ -7,14 +7,8 @@
         @for (element of group.elements; track element) {
           <div>
             @if (isCheckbox(element)) {
-              <mat-checkbox
-                [formControlName]="element.show"
-                >
-                <div
-                  fxLayout="row"
-                  fxLayoutAlign="space-between center"
-                  fxLayoutGap="8px"
-                  >
+              <mat-checkbox [formControlName]="element.show">
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="8px">
                   <span>{{ element.show }}</span>
                   <mat-icon [matTooltip]="element.tooltip">info</mat-icon>
                 </div>

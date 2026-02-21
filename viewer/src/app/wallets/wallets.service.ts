@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { FieldResponse, Resource, ResourceType, Wallet } from './types';
 import schema from '../../assets/schemas/wallet.json';
@@ -18,6 +18,11 @@ type ErrorFile = Record<
   providedIn: 'root',
 })
 export class WalletsService {
+  private httpClient = inject(HttpClient);
+  private caseStudiesService = inject(CaseStudiesService);
+  private depenciesService = inject(DependenciesService);
+  private appService = inject(AppService);
+
   resources: Resource[] = [
     {
       id: 'credentialProfiles',
@@ -63,20 +68,15 @@ export class WalletsService {
 
   errors!: Record<string, Record<string, string>>;
 
-  constructor(
-    private httpClient: HttpClient,
-    private caseStudiesService: CaseStudiesService,
-    private depenciesService: DependenciesService,
-    private appService: AppService
-  ) {
+  constructor() {
     this.errors = {};
     this.init();
   }
 
   async init() {
     this.getErrors().then(
-      (errors) => (this.errors = errors),
-      (err) => console.log(err)
+      errors => (this.errors = errors),
+      err => console.log(err)
     );
   }
 
@@ -86,11 +86,11 @@ export class WalletsService {
    */
   loadWallets() {
     // can be optimized
-    walletData.map((data) => {
+    walletData.map(data => {
       // loop over the profiles and add the values to the resource if not included yet
-      data.credentialProfiles?.forEach((profileName) => {
+      data.credentialProfiles?.forEach(profileName => {
         const profile = this.appService.getProfile(profileName);
-        this.appService.extraValues.forEach((resourceKey) => {
+        this.appService.extraValues.forEach(resourceKey => {
           const resource = profile[resourceKey] as string;
           const mappedKey = this.appService.mappedValues[resourceKey];
           let values = data[mappedKey as keyof Wallet] as string[];
@@ -132,7 +132,7 @@ export class WalletsService {
    * @returns
    */
   getCompany(id: string) {
-    return this.loadWallets().find((wallet) => wallet.id === id)?.company;
+    return this.loadWallets().find(wallet => wallet.id === id)?.company;
   }
 
   /**
@@ -144,7 +144,7 @@ export class WalletsService {
   }
 
   find(id: string) {
-    return this.loadWallets().find((wallet) => wallet.id === id);
+    return this.loadWallets().find(wallet => wallet.id === id);
   }
 
   /**
@@ -202,7 +202,7 @@ export class WalletsService {
   invalidEntry(id: string) {
     if (!this.errors || !this.errors[id]) return '';
     return Object.keys(this.errors[id])
-      .map((key) => `${key}: ${this.errors[id][key]}`)
+      .map(key => `${key}: ${this.errors[id][key]}`)
       .join(', ');
   }
 
@@ -218,6 +218,6 @@ export class WalletsService {
           this.httpClient.get<ErrorFile>(
             `https://raw.githubusercontent.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/refs/heads/errors/errors.json`
           )
-        ).then((res) => (this.errors = res.wallets));
+        ).then(res => (this.errors = res.wallets));
   }
 }

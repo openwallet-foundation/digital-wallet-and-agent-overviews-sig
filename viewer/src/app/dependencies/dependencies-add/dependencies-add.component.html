@@ -1,140 +1,121 @@
-@if(form) {
-<div fxLayout="row" fxLayoutAlign="space-between center">
-  <h1 mat-dialog-title>Add wallet</h1>
-  <button mat-icon-button mat-dialog-close>
-    <mat-icon>close</mat-icon>
-  </button>
-</div>
-<mat-dialog-content fxLayout="column" fxLayoutGap="16px">
-  <p>
-    With the following steps you are able to add your dependency to this list.
-    You need a Github Account to do so, every entry can be updated in the
-    future.
-  </p>
-  <ul>
-    <li>
-      Use this form to generate a JSON file for the entry. One all required
-      fields with a * are filled, you can copy the content to your clipboard.
-    </li>
-    <li>
-      <a
-        href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/fork"
-        target="_blank"
-        >Fork the Github repo</a
-      >
-      to your own account and add the content of the file to the
-      <code>dependencies</code> folder. The name should be unique.
-    </li>
-    <li>
-      Test the changes: run
-      <code>npm install && cd viewer && npm start</code>
-      and see the updated overview at <code>http://localhost:4200/</code>.
-    </li>
-    <li>
-      Create a new branch, commit the changes (using the <code>-s</code> flag to
-      sign off your changes) and start a pull request.
-    </li>
-    <li>After a positive review we will accept your request.</li>
-    <li>
-      If you need help or if you want to influence in the overview, please see
-      OpenWallet Foundation's
-      <a href="https://openwallet.foundation/participate/" target="_blank"
-        >participation instructions</a
-      >.
-    </li>
-  </ul>
+@if (form) {
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h1 mat-dialog-title>Add wallet</h1>
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-dialog-content fxLayout="column" fxLayoutGap="16px">
+    <p>
+      With the following steps you are able to add your dependency to this list. You need a Github
+      Account to do so, every entry can be updated in the future.
+    </p>
+    <ul>
+      <li>
+        Use this form to generate a JSON file for the entry. One all required fields with a * are
+        filled, you can copy the content to your clipboard.
+      </li>
+      <li>
+        <a
+          href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig/fork"
+          target="_blank"
+          >Fork the Github repo</a
+        >
+        to your own account and add the content of the file to the
+        <code>dependencies</code> folder. The name should be unique.
+      </li>
+      <li>
+        Test the changes: run
+        <code>npm install && cd viewer && npm start</code>
+        and see the updated overview at <code>http://localhost:4200/</code>.
+      </li>
+      <li>
+        Create a new branch, commit the changes (using the <code>-s</code> flag to sign off your
+        changes) and start a pull request.
+      </li>
+      <li>After a positive review we will accept your request.</li>
+      <li>
+        If you need help or if you want to influence in the overview, please see OpenWallet
+        Foundation's
+        <a href="https://openwallet.foundation/participate/" target="_blank"
+          >participation instructions</a
+        >.
+      </li>
+    </ul>
 
-  <p>
-    This form will help you to generate the required JSON file that needs to be
-    added to the GitHub Repository. If the autocomplete options do not include
-    your value, just type it in.
-  </p>
+    <p>
+      This form will help you to generate the required JSON file that needs to be added to the
+      GitHub Repository. If the autocomplete options do not include your value, just type it in.
+    </p>
 
-  <form
-    [formGroup]="form"
-    fxLayout="column"
-    fxLayoutAlign="start stretch"
-    fxLayoutGap="16px"
+    <form [formGroup]="form" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="16px">
+      <mat-form-field>
+        <mat-label>URL</mat-label>
+        <input matInput title="Wallet Name" formControlName="url" />
+        <mat-hint>{{ dependenciesService.getTooltip('url') }}</mat-hint>
+        @if (form.get('url')?.hasError('required')) {
+          <mat-error>URL is required </mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput title="Name" formControlName="name" />
+        <mat-hint>{{ dependenciesService.getTooltip('name') }}</mat-hint>
+        @if (form.get('name')?.hasError('required')) {
+          <mat-error>Name is required </mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput title="Description" formControlName="description" />
+        <mat-hint>{{ dependenciesService.getTooltip('description') }}</mat-hint>
+        @if (form.get('description')?.hasError('required')) {
+          <mat-error>Description is required </mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Community</mat-label>
+        <input matInput title="Community" formControlName="community" />
+        <mat-hint>{{ dependenciesService.getTooltip('community') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>License</mat-label>
+        <input type="text" matInput formControlName="license" [matAutocomplete]="licenseAuto" />
+        <mat-autocomplete #licenseAuto="matAutocomplete">
+          @for (license of licenses; track license) {
+            <mat-option [value]="license">{{ license }}</mat-option>
+          }
+        </mat-autocomplete>
+        <mat-hint>{{ dependenciesService.getTooltip('license') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Programming language</mat-label>
+        <input type="text" matInput formControlName="language" [matAutocomplete]="languageAuto" />
+        <mat-autocomplete #languageAuto="matAutocomplete">
+          @for (language of languages; track language) {
+            <mat-option [value]="language">{{ language }}</mat-option>
+          }
+        </mat-autocomplete>
+        <mat-hint>{{ dependenciesService.getTooltip('language') }}</mat-hint>
+      </mat-form-field>
+    </form>
+    <mat-divider></mat-divider>
+    <mat-form-field>
+      <mat-label>JSON</mat-label>
+      <textarea
+        matInput
+        placeholder="JSON file to be added to the GitHub Repository"
+        [value]="getJSON()"
+        readonly
+        rows="10"
+        cols="50"
+      ></textarea>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button [disabled]="form.invalid" (click)="downloadFile()">Download file</button>
+    <button mat-button [disabled]="form.invalid" (click)="copy()">
+      Copy to clipboard
+    </button></mat-dialog-actions
   >
-    <mat-form-field>
-      <mat-label>URL</mat-label>
-      <input matInput title="Wallet Name" formControlName="url" />
-      <mat-hint>{{ dependenciesService.getTooltip('url') }}</mat-hint>
-      @if(form.get('url')?.hasError('required')) {
-      <mat-error>URL is required </mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Name</mat-label>
-      <input matInput title="Name" formControlName="name" />
-      <mat-hint>{{ dependenciesService.getTooltip('name') }}</mat-hint>
-      @if(form.get('name')?.hasError('required')) {
-      <mat-error>Name is required </mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Description</mat-label>
-      <input matInput title="Description" formControlName="description" />
-      <mat-hint>{{ dependenciesService.getTooltip('description') }}</mat-hint>
-      @if(form.get('description')?.hasError('required')) {
-      <mat-error>Description is required </mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Community</mat-label>
-      <input matInput title="Community" formControlName="community" />
-      <mat-hint>{{ dependenciesService.getTooltip('community') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>License</mat-label>
-      <input
-        type="text"
-        matInput
-        formControlName="license"
-        [matAutocomplete]="licenseAuto"
-      />
-      <mat-autocomplete #licenseAuto="matAutocomplete">
-        @for(license of licenses; track license) {
-        <mat-option [value]="license">{{ license }}</mat-option>
-        }
-      </mat-autocomplete>
-      <mat-hint>{{ dependenciesService.getTooltip('license') }}</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Programming language</mat-label>
-      <input
-        type="text"
-        matInput
-        formControlName="language"
-        [matAutocomplete]="languageAuto"
-      />
-      <mat-autocomplete #languageAuto="matAutocomplete">
-        @for(language of languages; track language) {
-        <mat-option [value]="language">{{ language }}</mat-option>
-        }
-      </mat-autocomplete>
-      <mat-hint>{{ dependenciesService.getTooltip('language') }}</mat-hint>
-    </mat-form-field>
-  </form>
-  <mat-divider></mat-divider>
-  <mat-form-field>
-    <mat-label>JSON</mat-label>
-    <textarea
-      matInput
-      placeholder="JSON file to be added to the GitHub Repository"
-      [value]="getJSON()"
-      readonly
-      rows="10"
-      cols="50"
-    ></textarea>
-  </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button [disabled]="form.invalid" (click)="downloadFile()">
-    Download file
-  </button>
-  <button mat-button [disabled]="form.invalid" (click)="copy()">
-    Copy to clipboard
-  </button></mat-dialog-actions
->
 }

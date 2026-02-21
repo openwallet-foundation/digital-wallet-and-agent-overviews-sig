@@ -1,15 +1,8 @@
-<div
-  fxLayout="row"
-  fxLayout.lt-sm="column-reverse"
-  fxLayoutGap="16px"
-  class="content"
->
+<div fxLayout="row" fxLayout.lt-sm="column-reverse" fxLayoutGap="16px" class="content">
   <div fxFlex="70" fxFlex.xs="100">
-    <app-case-studies-list-embedded
-      [caseStudies]="caseStudies"
-    ></app-case-studies-list-embedded>
-    @if(caseStudies.length === 0) {
-    <h4>No case studies found.</h4>
+    <app-case-studies-list-embedded [caseStudies]="caseStudies"></app-case-studies-list-embedded>
+    @if (caseStudies.length === 0) {
+      <h4>No case studies found.</h4>
     }
   </div>
   <div fxFlex fxLayout="column" fxLayoutGap="16px">
@@ -17,12 +10,10 @@
     <mat-divider></mat-divider>
     <h4>Tags</h4>
     <mat-chip-listbox>
-      @for(tag of caseStudiesService.getTags(); track tag) {
-      <mat-chip-option
-        (click)="filterByTag(tag)"
-        [selected]="isSelected(tag)"
-        >{{ tag }}</mat-chip-option
-      >
+      @for (tag of caseStudiesService.getTags(); track tag) {
+        <mat-chip-option (click)="filterByTag(tag)" [selected]="isSelected(tag)">{{
+          tag
+        }}</mat-chip-option>
       }
     </mat-chip-listbox>
   </div>

@@ -10,7 +10,7 @@ import schema from '../../assets/schemas/case-study.json';
 })
 export class CaseStudiesService {
   find(id: string) {
-    return casestudyData.find((caseStudy) => caseStudy.id === id);
+    return casestudyData.find(caseStudy => caseStudy.id === id);
   }
 
   /**
@@ -30,7 +30,7 @@ export class CaseStudiesService {
 
   getWallets(caseStudy: CaseStudy) {
     return (caseStudy.references as string[]).map(
-      (id) => walletData.find((wallet) => wallet.id === id) as Wallet
+      id => walletData.find(wallet => wallet.id === id) as Wallet
     );
   }
 
@@ -40,13 +40,12 @@ export class CaseStudiesService {
    */
   getCaseStudies() {
     return casestudyData.sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   }
 
   getCaseStudy(id: string) {
-    return this.getCaseStudies().find((caseStudy) => caseStudy.id === id);
+    return this.getCaseStudies().find(caseStudy => caseStudy.id === id);
   }
 
   /**
@@ -54,8 +53,8 @@ export class CaseStudiesService {
    */
   getTags() {
     const tags: Record<string, number> = {};
-    casestudyData.forEach((caseStudy) => {
-      caseStudy.hashTags?.forEach((tag) => {
+    casestudyData.forEach(caseStudy => {
+      caseStudy.hashTags?.forEach(tag => {
         if (tags[tag]) {
           tags[tag]++;
         } else {
