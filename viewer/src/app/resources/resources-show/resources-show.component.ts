@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AppService } from '../../credential-profiles/app.service';
 import { Resources } from '../../credential-profiles/resources';
-import { CommonModule } from '@angular/common';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -14,15 +14,14 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 @Component({
     selector: 'app-resources-show',
     imports: [
-        CommonModule,
-        MatIconModule,
-        RouterModule,
-        MatListModule,
-        MatCardModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
+    MatIconModule,
+    RouterModule,
+    MatListModule,
+    MatCardModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule
+],
     templateUrl: './resources-show.component.html',
     styleUrl: './resources-show.component.scss'
 })

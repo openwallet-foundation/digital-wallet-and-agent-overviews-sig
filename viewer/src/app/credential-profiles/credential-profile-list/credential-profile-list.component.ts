@@ -6,7 +6,7 @@ import { AppService, Resource } from '../app.service';
 import { Format, Resources } from '../resources';
 import { Filter, FilterComponent } from '../filter/filter.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { CommonModule } from '@angular/common';
+
 import { MatIconModule } from '@angular/material/icon';
 import { FormatPipe } from '../format.pipe';
 import { MatChipsModule } from '@angular/material/chips';
@@ -24,18 +24,17 @@ class ColumnHeader {
 @Component({
     selector: 'app-credential-profile-list',
     imports: [
-        CommonModule,
-        MatPaginatorModule,
-        MatIconModule,
-        FormatPipe,
-        MatChipsModule,
-        MatTableModule,
-        RouterModule,
-        MatTooltipModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
+    MatPaginatorModule,
+    MatIconModule,
+    FormatPipe,
+    MatChipsModule,
+    MatTableModule,
+    RouterModule,
+    MatTooltipModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule
+],
     templateUrl: './credential-profile-list.component.html',
     styleUrls: ['./credential-profile-list.component.scss']
 })

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -23,17 +23,16 @@ import { AppService } from './credential-profiles/app.service';
 @Component({
     selector: 'app-root',
     imports: [
-        RouterModule,
-        CommonModule,
-        MatToolbarModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatMenuModule,
-        MatDividerModule,
-        MatIconModule,
-        MatMenuModule,
-    ],
+    RouterModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatIconModule,
+    MatMenuModule
+],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

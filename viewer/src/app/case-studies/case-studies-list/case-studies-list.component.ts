@@ -5,7 +5,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatChipsModule } from '@angular/material/chips';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
-import { CommonModule } from '@angular/common';
+
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { Subscription } from 'rxjs';
@@ -19,17 +19,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
     selector: 'app-case-studies-list',
     imports: [
-        CommonModule,
-        MatCardModule,
-        MatDividerModule,
-        MatChipsModule,
-        RouterModule,
-        MatListModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        CaseStudiesListEmbeddedComponent,
-    ],
+    MatCardModule,
+    MatDividerModule,
+    MatChipsModule,
+    RouterModule,
+    MatListModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    CaseStudiesListEmbeddedComponent
+],
     templateUrl: './case-studies-list.component.html',
     styleUrl: './case-studies-list.component.scss'
 })

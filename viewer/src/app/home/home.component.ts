@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -13,16 +13,15 @@ import { MatListModule } from '@angular/material/list';
 @Component({
     selector: 'app-home',
     imports: [
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatButtonModule,
-        CommonModule,
-        RouterModule,
-        MatDividerModule,
-        MatCardModule,
-        MatRippleModule,
-        MatListModule,
-    ],
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatButtonModule,
+    RouterModule,
+    MatDividerModule,
+    MatCardModule,
+    MatRippleModule,
+    MatListModule
+],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss'
 })

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AppService } from '../app.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IProfile, Resources } from '../resources';
-import { CommonModule } from '@angular/common';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -14,15 +14,14 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 @Component({
     selector: 'app-credential-profile-show',
     imports: [
-        CommonModule,
-        MatCardModule,
-        MatIconModule,
-        MatListModule,
-        MatButtonModule,
-        RouterModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+    RouterModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule
+],
     templateUrl: './credential-profile-show.component.html',
     styleUrl: './credential-profile-show.component.scss'
 })

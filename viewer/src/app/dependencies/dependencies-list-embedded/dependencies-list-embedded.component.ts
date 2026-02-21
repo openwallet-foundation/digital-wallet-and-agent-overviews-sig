@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import {
   AfterViewInit,
   Component,
@@ -31,7 +31,6 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
 @Component({
   selector: 'app-dependency-list-embedded',
   imports: [
-    CommonModule,
     RouterModule,
     MatTableModule,
     MatButtonModule,
@@ -44,8 +43,8 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
     MatDialogModule,
     MatChipsModule,
     MatButtonModule,
-    MatDialogModule,
-  ],
+    MatDialogModule
+],
   templateUrl: './dependencies-list-embedded.component.html',
   styleUrl: './dependencies-list-embedded.component.scss',
 })

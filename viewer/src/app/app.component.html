@@ -4,106 +4,107 @@
       <a mat-button routerLink="/"
         ><img src="assets/project-icon.png" alt="logo" height="20" />
         <span>Home</span></a
-      >
-    </div>
-    <button mat-button [routerLink]="'/wallets'" routerLinkActive="active-link">
-      Wallets & Agents
-    </button>
-    <button
-      mat-button
-      [routerLink]="'/dependencies'"
-      routerLinkActive="active-link"
-    >
-      Dependencies
-    </button>
-    <button
-      mat-button
-      [routerLink]="'/case-studies'"
-      routerLinkActive="active-link"
-    >
-      Case Studies
-    </button>
-    <button
-      mat-button
-      [routerLink]="'/credential-profiles'"
-      routerLinkActive="active-link"
-    >
-      Credential Profiles
-    </button>
-    <button mat-button [matMenuTriggerFor]="resourceMenu">Resources</button>
-    <mat-menu #resourceMenu="matMenu">
-      <a
-        [routerLink]="['resources', tab]"
-        mat-menu-item
-        *ngFor="let tab of tabs"
-        >{{ tab }}</a
-      >
-    </mat-menu>
-    <a
-      mat-button
-      [routerLink]="['/definitions']"
-      routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >Definitions</a
-    >
-  </div>
-  <div class="spacer"></div>
-  <div fxLayout="row" fxLayoutAlign="start center" fxHide.lt-md="true">
-    <button mat-button (click)="showInfo()">Info</button>
-    <div class="github">
-      <a
+        >
+      </div>
+      <button mat-button [routerLink]="'/wallets'" routerLinkActive="active-link">
+        Wallets & Agents
+      </button>
+      <button
         mat-button
-        href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
-        ><img src="assets/github.svg" alt="Github" /> <span>Github</span></a
-      >
-    </div>
-  </div>
-  <button mat-icon-button [matMenuTriggerFor]="menu" fxHide.gt-sm="true">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/">Home</button>
-    <button
-      mat-menu-item
-      [routerLink]="'/wallets'"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Wallets & Agents
-    </button>
-    <button
-      mat-menu-item
-      [routerLink]="'/dependencies'"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Dependencies
-    </button>
-    <button
-      mat-menu-item
-      [routerLink]="'/case-studies'"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Case Studies
-    </button>
-    <button
-      mat-menu-item
-      [routerLink]="'/credential-profiles'"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-    >
-      Credential Profiles
-    </button>
-    <button mat-menu-item [matMenuTriggerFor]="resourceMenu">Resources</button>
-    <mat-divider></mat-divider>
-    <button mat-menu-item (click)="showInfo()">Info</button>
-    <a
-      mat-menu-item
-      href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
-    >
-      <span>Github</span>
-    </a>
-  </mat-menu>
-</mat-toolbar>
-<router-outlet></router-outlet>
+        [routerLink]="'/dependencies'"
+        routerLinkActive="active-link"
+        >
+        Dependencies
+      </button>
+      <button
+        mat-button
+        [routerLink]="'/case-studies'"
+        routerLinkActive="active-link"
+        >
+        Case Studies
+      </button>
+      <button
+        mat-button
+        [routerLink]="'/credential-profiles'"
+        routerLinkActive="active-link"
+        >
+        Credential Profiles
+      </button>
+      <button mat-button [matMenuTriggerFor]="resourceMenu">Resources</button>
+      <mat-menu #resourceMenu="matMenu">
+        @for (tab of tabs; track tab) {
+          <a
+            [routerLink]="['resources', tab]"
+            mat-menu-item
+            >{{ tab }}</a
+            >
+          }
+        </mat-menu>
+        <a
+          mat-button
+          [routerLink]="['/definitions']"
+          routerLinkActive="router-link-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Definitions</a
+          >
+        </div>
+        <div class="spacer"></div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxHide.lt-md="true">
+          <button mat-button (click)="showInfo()">Info</button>
+          <div class="github">
+            <a
+              mat-button
+              href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
+              ><img src="assets/github.svg" alt="Github" /> <span>Github</span></a
+              >
+            </div>
+          </div>
+          <button mat-icon-button [matMenuTriggerFor]="menu" fxHide.gt-sm="true">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/">Home</button>
+            <button
+              mat-menu-item
+              [routerLink]="'/wallets'"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >
+              Wallets & Agents
+            </button>
+            <button
+              mat-menu-item
+              [routerLink]="'/dependencies'"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >
+              Dependencies
+            </button>
+            <button
+              mat-menu-item
+              [routerLink]="'/case-studies'"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >
+              Case Studies
+            </button>
+            <button
+              mat-menu-item
+              [routerLink]="'/credential-profiles'"
+              routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >
+              Credential Profiles
+            </button>
+            <button mat-menu-item [matMenuTriggerFor]="resourceMenu">Resources</button>
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="showInfo()">Info</button>
+            <a
+              mat-menu-item
+              href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
+              >
+              <span>Github</span>
+            </a>
+          </mat-menu>
+        </mat-toolbar>
+        <router-outlet></router-outlet>

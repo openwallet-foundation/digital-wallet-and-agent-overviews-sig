@@ -1,6 +1,6 @@
-import { Component, Inject, PLATFORM_ID, OnInit } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, OnInit, DOCUMENT } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 import { MarkdownModule } from 'ngx-markdown';
 import { MatTreeModule } from '@angular/material/tree';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
@@ -16,13 +16,12 @@ interface HeadingNode {
 @Component({
     selector: 'app-definition',
     imports: [
-        CommonModule,
-        RouterModule,
-        MarkdownModule,
-        MatTreeModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
+    RouterModule,
+    MarkdownModule,
+    MatTreeModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule
+],
     templateUrl: './definition.component.html',
     styleUrl: './definition.component.scss'
 })

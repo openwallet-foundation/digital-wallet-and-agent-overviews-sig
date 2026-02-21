@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { DependenciesService } from '../dependencies.service';
 import { DependencyListEmbeddedComponent } from '../dependencies-list-embedded/dependencies-list-embedded.component';
 
 @Component({
     selector: 'app-dependencies-list',
-    imports: [CommonModule, DependencyListEmbeddedComponent],
+    imports: [DependencyListEmbeddedComponent],
     templateUrl: './dependencies-list.component.html',
     styleUrl: './dependencies-list.component.scss'
 })

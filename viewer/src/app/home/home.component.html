@@ -4,7 +4,7 @@
     <h4>A special interests group of the OpenWallet Foundation</h4>
   </div>
   <!--   <a mat-raised-button routerLink="wallets">Show table</a>
- -->
+  -->
 </div>
 
 <div class="content" fxLayout="column" fxLayoutGap="32px">
@@ -62,55 +62,55 @@
   <h3>Resources</h3>
   <div fxLayout="row" fxLayoutGap="16px">
     <mat-nav-list fxFlex="50">
-      <ng-container *ngFor="let tab of leftTabs">
+      @for (tab of leftTabs; track tab) {
         <a
           mat-list-item
           [routerLink]="['resources', tab]"
           routerLinkActive="active-link"
           >{{ tab }}</a
-        >
-      </ng-container>
-    </mat-nav-list>
-    <mat-nav-list fxFlex="50">
-      <ng-container *ngFor="let tab of rightTabs">
+          >
+        }
+      </mat-nav-list>
+      <mat-nav-list fxFlex="50">
+        @for (tab of rightTabs; track tab) {
+          <a
+            mat-list-item
+            [routerLink]="['resources', tab]"
+            routerLinkActive="active-link"
+            >{{ tab }}</a
+            >
+          }
+        </mat-nav-list>
+      </div>
+      <mat-divider></mat-divider>
+      <h3>Participate</h3>
+      <div fxLayout="row" fxLayoutAlign="center space-between" fxLayoutGap="16px">
         <a
-          mat-list-item
-          [routerLink]="['resources', tab]"
-          routerLinkActive="active-link"
-          >{{ tab }}</a
-        >
-      </ng-container>
-    </mat-nav-list>
-  </div>
-  <mat-divider></mat-divider>
-  <h3>Participate</h3>
-  <div fxLayout="row" fxLayoutAlign="center space-between" fxLayoutGap="16px">
-    <a
-      href="https://discord.gg/fYEbfjWAkP"
-      fxLayout="column"
-      fxLayoutAlign="start center"
-      class="link"
-    >
-      <img src="assets/discord-icon.svg" class="icon" alt="Discord" />
-      <b>Discord</b>
-      <span>Join our Discord server to participate in discussions.</span>
-    </a>
-    <a
-      href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
-      fxLayout="column"
-      fxLayoutAlign="start center"
-      class="link"
-    >
-      <img src="assets/github-mark.svg" class="icon" alt="Discord" />
-      <b>Github</b>
-      <span>Review the data and the overview.</span>
-    </a>
-  </div>
-</div>
-<mat-divider></mat-divider>
-<div class="footer" fxLayout="row" fxLayoutAlign="space-between center">
-  <a href="https://openwallet.foundation" target="_blank">
-    <img src="assets/openwallet-foundation.svg" alt="OpenWallet Foundation" />
-  </a>
-  <p class="info">Code Licensed under an Apache 2.0 License.</p>
-</div>
+          href="https://discord.gg/fYEbfjWAkP"
+          fxLayout="column"
+          fxLayoutAlign="start center"
+          class="link"
+          >
+          <img src="assets/discord-icon.svg" class="icon" alt="Discord" />
+          <b>Discord</b>
+          <span>Join our Discord server to participate in discussions.</span>
+        </a>
+        <a
+          href="https://github.com/openwallet-foundation/digital-wallet-and-agent-overviews-sig"
+          fxLayout="column"
+          fxLayoutAlign="start center"
+          class="link"
+          >
+          <img src="assets/github-mark.svg" class="icon" alt="Discord" />
+          <b>Github</b>
+          <span>Review the data and the overview.</span>
+        </a>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="footer" fxLayout="row" fxLayoutAlign="space-between center">
+      <a href="https://openwallet.foundation" target="_blank">
+        <img src="assets/openwallet-foundation.svg" alt="OpenWallet Foundation" />
+      </a>
+      <p class="info">Code Licensed under an Apache 2.0 License.</p>
+    </div>

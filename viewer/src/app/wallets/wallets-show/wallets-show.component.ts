@@ -7,7 +7,7 @@ import {
   RouterModule,
 } from '@angular/router';
 import { Wallet } from '../types';
-import { CommonModule } from '@angular/common';
+
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatIconModule } from '@angular/material/icon';
@@ -24,20 +24,19 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 @Component({
     selector: 'app-wallets-show',
     imports: [
-        CommonModule,
-        RouterModule,
-        MatSnackBarModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatIconModule,
-        MatListModule,
-        MatTooltipModule,
-        MatChipsModule,
-        MatCardModule,
-        CaseStudiesListEmbeddedComponent,
-        DependencyListEmbeddedComponent,
-    ],
+    RouterModule,
+    MatSnackBarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatIconModule,
+    MatListModule,
+    MatTooltipModule,
+    MatChipsModule,
+    MatCardModule,
+    CaseStudiesListEmbeddedComponent,
+    DependencyListEmbeddedComponent
+],
     providers: [WalletsService],
     templateUrl: './wallets-show.component.html',
     styleUrl: './wallets-show.component.scss'

@@ -6,7 +6,7 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { CommonModule } from '@angular/common';
+
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -24,15 +24,14 @@ interface FilterElement {
 @Component({
     selector: 'app-filter',
     imports: [
-        CommonModule,
-        MatTooltipModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        MatButtonModule,
-        MatCheckboxModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
+    MatTooltipModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule
+],
     templateUrl: './filter.component.html',
     styleUrls: ['./filter.component.scss']
 })
