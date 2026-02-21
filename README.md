@@ -90,8 +90,6 @@ The dependencies will be add as a new object in the `dependencies` folder and th
 
 We are looking for case studies of the use of wallets and agents in the field. These case studies can be used to show the applicability of the wallets and agents in real life situations. The case studies will be added as a new object in the `case-studies` folder, referencing the wallets or agents by their filename. To generate the JSON object, you can use the form provided when clicking "Add Case Study" in the upper right corner of the overview.
 
-There is also the chance to subscribe to our newsletter that will be sent out every month. The newsletter will contain the latest submitted case studies to this overview. You can subscribe to the newsletter by clicking [here](https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/#/case-studies).
-
 ### Credential profiles
 
 When dealing with digital credentials, it is important to know which credential profiles are supported by the wallet or agent. Each profile is based on specific formats, algorithms or protocols. These resources can be compared objectify in an overview to pick the right profile and therefore the best fitting wallet or agent for a specific use case. The content is based on the  [credential format comparison SIG](https://github.com/openwallet-foundation/credential-format-comparison-sig) that got merged into this overview.

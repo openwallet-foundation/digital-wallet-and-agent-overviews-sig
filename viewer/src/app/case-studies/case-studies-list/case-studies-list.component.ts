@@ -33,8 +33,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     styleUrl: './case-studies-list.component.scss'
 })
 export class CaseStudiesListComponent implements OnInit, OnDestroy {
-  subscribeLink = 'https://sgzwn.mjt.lu/wgt/sgzwn/xvm0/form?c=29dfe052';
-
   routerSub?: Subscription;
 
   caseStudies: CaseStudy[] = [];

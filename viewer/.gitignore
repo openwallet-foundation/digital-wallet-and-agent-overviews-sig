@@ -1,7 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 .env
-newsletter.html
 
 src/app/wallets/wallets-data.generated.ts
 src/app/dependencies/dependencies-data.generated.ts
