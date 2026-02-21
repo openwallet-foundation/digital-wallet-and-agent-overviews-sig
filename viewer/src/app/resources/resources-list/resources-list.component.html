@@ -1,86 +1,77 @@
 <div class="content">
   <!-- <div fxLayout="row" fxLayoutAlign="space-between center" class="table-header">
-    <mat-form-field class="full">
-      <mat-label>Rows</mat-label>
-      <mat-chip-grid #chipGrid>
-        <mat-chip-row
-          *ngFor="let column of displayedColumns"
-          (removed)="remove(column)"
+  <mat-form-field class="full">
+    <mat-label>Rows</mat-label>
+    <mat-chip-grid #chipGrid>
+      <mat-chip-row
+        *ngFor="let column of displayedColumns"
+        (removed)="remove(column)"
         >
-          {{ column }}
-          <button matChipRemove [attr.aria-label]="'remove ' + column">
-            <mat-icon>cancel</mat-icon>
-          </button>
-        </mat-chip-row>
-        <input
-          placeholder="New Row..."
-          #rowInput
-          [formControl]="rowCtrl"
-          [matChipInputFor]="chipGrid"
-          [matAutocomplete]="auto"
-          (matChipInputTokenEnd)="add($event)"
+        {{ column }}
+        <button matChipRemove [attr.aria-label]="'remove ' + column">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+      <input
+        placeholder="New Row..."
+        #rowInput
+        [formControl]="rowCtrl"
+        [matChipInputFor]="chipGrid"
+        [matAutocomplete]="auto"
+        (matChipInputTokenEnd)="add($event)"
         />
-        <mat-autocomplete
-          #auto="matAutocomplete"
-          (optionSelected)="selected($event)"
+      <mat-autocomplete
+        #auto="matAutocomplete"
+        (optionSelected)="selected($event)"
         >
-          <mat-option *ngFor="let row of filteredRows | async" [value]="row">
-            {{ row }}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-chip-grid>
-    </mat-form-field> -->
+        <mat-option *ngFor="let row of filteredRows | async" [value]="row">
+          {{ row }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-chip-grid>
+  </mat-form-field> -->
   <section class="container" id="table">
-    <table
-      mat-table
-      [dataSource]="dataSource"
-      matSort
-      (contentChanged)="jumpTo()"
-    >
-      <ng-container
-        [matColumnDef]="column.header"
-        *ngFor="let column of columns; let indexOfElement = index"
-        [sticky]="indexOfElement === 0"
-      >
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          [matTooltip]="column.tooltip"
-          mat-sort-header
-        >
-          {{ column.header }}
-        </th>
-        <td mat-cell *matCellDef="let element">
-          <div *ngIf="column.header === 'Name'">
-            <a [routerLink]="element['Name']"> {{ element[column.header] }}</a>
-          </div>
-          <div
-            *ngIf="column.header !== 'Name'"
-            [ngSwitch]="elementType(element[column.header])"
-            fxLayoutAlign="space-around center"
-          >
-            <div *ngSwitchCase="'icon'">
-              <mat-icon>{{
-                element[column.header] ? 'done' : 'close'
-              }}</mat-icon>
-            </div>
-            <div *ngSwitchCase="'icon-tooltip'">
-              <mat-icon [matTooltip]="element[column.header].Description"
-                >{{
-                  element[column.header].Value ? 'done' : 'close'
-                }} </mat-icon
-              >*
-            </div>
-            <div *ngSwitchCase="'undefined'">
-              <mat-icon>question_mark</mat-icon>
-            </div>
-            <div
-              *ngSwitchDefault
-              [innerHTML]="element[column.header] | format"
-            ></div>
-          </div>
-        </td>
-      </ng-container>
+    <table mat-table [dataSource]="dataSource" matSort (contentChanged)="jumpTo()">
+      @for (column of columns; track column; let indexOfElement = $index) {
+        <ng-container [matColumnDef]="column.header" [sticky]="indexOfElement === 0">
+          <th mat-header-cell *matHeaderCellDef [matTooltip]="column.tooltip" mat-sort-header>
+            {{ column.header }}
+          </th>
+          <td mat-cell *matCellDef="let element">
+            @if (column.header === 'Name') {
+              <div>
+                <a [routerLink]="element['Name']"> {{ element[column.header] }}</a>
+              </div>
+            }
+            @if (column.header !== 'Name') {
+              <div fxLayoutAlign="space-around center">
+                @switch (elementType(element[column.header])) {
+                  @case ('icon') {
+                    <div>
+                      <mat-icon>{{ element[column.header] ? 'done' : 'close' }}</mat-icon>
+                    </div>
+                  }
+                  @case ('icon-tooltip') {
+                    <div>
+                      <mat-icon [matTooltip]="element[column.header].Description"
+                        >{{ element[column.header].Value ? 'done' : 'close' }} </mat-icon
+                      >*
+                    </div>
+                  }
+                  @case ('undefined') {
+                    <div>
+                      <mat-icon>question_mark</mat-icon>
+                    </div>
+                  }
+                  @default {
+                    <div [innerHTML]="element[column.header] | format"></div>
+                  }
+                }
+              </div>
+            }
+          </td>
+        </ng-container>
+      }
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
       <tr

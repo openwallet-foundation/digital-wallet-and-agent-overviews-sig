@@ -1,13 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { WalletsService } from '../wallets.service';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  Router,
-  RouterModule,
-} from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { Wallet } from '../types';
-import { CommonModule } from '@angular/common';
+
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,43 +17,40 @@ import { DependencyListEmbeddedComponent } from '../../dependencies/dependencies
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-    selector: 'app-wallets-show',
-    imports: [
-        CommonModule,
-        RouterModule,
-        MatSnackBarModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatIconModule,
-        MatListModule,
-        MatTooltipModule,
-        MatChipsModule,
-        MatCardModule,
-        CaseStudiesListEmbeddedComponent,
-        DependencyListEmbeddedComponent,
-    ],
-    providers: [WalletsService],
-    templateUrl: './wallets-show.component.html',
-    styleUrl: './wallets-show.component.scss'
+  selector: 'app-wallets-show',
+  imports: [
+    RouterModule,
+    MatSnackBarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatIconModule,
+    MatListModule,
+    MatTooltipModule,
+    MatChipsModule,
+    MatCardModule,
+    CaseStudiesListEmbeddedComponent,
+    DependencyListEmbeddedComponent,
+  ],
+  providers: [WalletsService],
+  templateUrl: './wallets-show.component.html',
+  styleUrl: './wallets-show.component.scss',
 })
 export class WalletsShowComponent implements OnInit, OnDestroy {
+  walletsService = inject(WalletsService);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private snachBar = inject(MatSnackBar);
+
   wallet?: Wallet;
   logoError = true;
   private routerSubscription?: Subscription;
   invalid?: string;
 
-  constructor(
-    public walletsService: WalletsService,
-    private route: ActivatedRoute,
-    private router: Router,
-    private snachBar: MatSnackBar
-  ) {}
-
   async ngOnInit(): Promise<void> {
     this.walletsService.getErrors();
     this.routerSubscription = this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
+      .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
         this.loadWallet();
       });
@@ -75,9 +67,7 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
     const id = this.route.snapshot.paramMap.get('id') as string;
     this.wallet = await this.walletsService.find(id);
     if (!this.wallet) {
-      this.router
-        .navigate(['/'])
-        .then(() => this.snachBar.open(`${id} not found`));
+      this.router.navigate(['/']).then(() => this.snachBar.open(`${id} not found`));
     }
     this.invalid = await this.walletsService.invalidEntry(id);
   }
@@ -94,9 +84,7 @@ export class WalletsShowComponent implements OnInit, OnDestroy {
    * @returns
    */
   filterReferences(references: string[]) {
-    return references.filter(
-      (reference) => reference !== (this.wallet as Wallet).name
-    );
+    return references.filter(reference => reference !== (this.wallet as Wallet).name);
   }
 
   /**

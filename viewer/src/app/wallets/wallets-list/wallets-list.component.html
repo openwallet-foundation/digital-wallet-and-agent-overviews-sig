@@ -6,23 +6,17 @@
       </button>
       <mat-chip-listbox>
         @for (filter of getFilterValues(); track filter) {
-        <mat-chip-option selectable="false">{{ filter }}</mat-chip-option>
+          <mat-chip-option selectable="false">{{ filter }}</mat-chip-option>
         }
       </mat-chip-listbox>
     </div>
     <div class="spacer"></div>
-    @if(!wallets) {
-    <button mat-button (click)="addWallet()">Add Wallet</button>
+    @if (!wallets) {
+      <button mat-button (click)="addWallet()">Add Wallet</button>
     }
   </div>
   <section class="container">
-    <table
-      mat-table
-      [dataSource]="dataSource"
-      matSort
-      matSortActive="name"
-      matSortDirection="asc"
-    >
+    <table mat-table [dataSource]="dataSource" matSort matSortActive="name" matSortDirection="asc">
       <ng-container matColumnDef="name" [sticky]="true">
         <th
           mat-header-cell
@@ -39,11 +33,11 @@
               [src]="walletsService.getLogo(element.logo)"
               class="logo"
               alt="Logo of the wallet"
-              onerror="this.src='assets/default-image.png';"
+              onerror="this.src = 'assets/default-image.png'"
             />
             <a [routerLink]="['/wallets', element.id]">{{ element.name }}</a>
-            @if(isInvalid(element)) {
-            <mat-icon matTooltip="entry is invalid">warning</mat-icon>
+            @if (isInvalid(element)) {
+              <mat-icon matTooltip="entry is invalid">warning</mat-icon>
             }
           </div>
         </td>
@@ -58,13 +52,12 @@
           Company
         </th>
         <td mat-cell *matCellDef="let element">
-          <a
-            *ngIf="element.companyUrl"
-            [href]="element.companyUrl"
-            target="_blank"
-            >{{ element.company }}</a
-          >
-          <span *ngIf="!element.companyUrl">{{ element.company }}</span>
+          @if (element.companyUrl) {
+            <a [href]="element.companyUrl" target="_blank">{{ element.company }}</a>
+          }
+          @if (!element.companyUrl) {
+            <span>{{ element.company }}</span>
+          }
         </td>
       </ng-container>
       <ng-container matColumnDef="openSource">
@@ -81,37 +74,26 @@
         </td>
       </ng-container>
       <ng-container matColumnDef="linkToApp">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          matTooltip="Link to the app stores"
-        >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header matTooltip="Link to the app stores">
           Link to app
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row">
-            <a
-              *ngIf="element.urlGooglePlayStore"
-              mat-icon-button
-              [href]="element.urlGooglePlayStore"
-              target="_blank"
-              ><mat-icon>android</mat-icon></a
-            >
-            <a
-              *ngIf="element.urlAppStore"
-              mat-icon-button
-              [href]="element.urlAppStore"
-              target="_blank"
-              ><mat-icon>phone_iphone</mat-icon></a
-            >
-            <a
-              *ngIf="element.urlWebApp"
-              mat-icon-button
-              [href]="element.urlWebApp"
-              target="_blank"
-              ><mat-icon>desktop_windows</mat-icon></a
-            >
+            @if (element.urlGooglePlayStore) {
+              <a mat-icon-button [href]="element.urlGooglePlayStore" target="_blank"
+                ><mat-icon>android</mat-icon></a
+              >
+            }
+            @if (element.urlAppStore) {
+              <a mat-icon-button [href]="element.urlAppStore" target="_blank"
+                ><mat-icon>phone_iphone</mat-icon></a
+              >
+            }
+            @if (element.urlWebApp) {
+              <a mat-icon-button [href]="element.urlWebApp" target="_blank"
+                ><mat-icon>desktop_windows</mat-icon></a
+              >
+            }
           </div>
         </td>
       </ng-container>
@@ -139,11 +121,15 @@
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row" fxLayoutGap="8px">
-            <span *ngIf="element.capability?.includes('holder')">Holder</span>
-            <span *ngIf="element.capability?.includes('issuer')">Issuer</span>
-            <span *ngIf="element.capability?.includes('verifier')"
-              >Verifier</span
-            >
+            @if (element.capability?.includes('holder')) {
+              <span>Holder</span>
+            }
+            @if (element.capability?.includes('issuer')) {
+              <span>Issuer</span>
+            }
+            @if (element.capability?.includes('verifier')) {
+              <span>Verifier</span>
+            }
           </div>
         </td>
       </ng-container>
@@ -184,13 +170,10 @@
         </th>
         <td mat-cell *matCellDef="let element">
           <div fxLayout="column" fxLayoutGap="16px">
-            @for (dependency of walletsService.getDependencies(element); track
-            dependency) {
-            <a
-              matListItemLine
-              [routerLink]="['/dependencies/', dependency.id]"
-              >{{ dependency.name }}</a
-            >
+            @for (dependency of walletsService.getDependencies(element); track dependency) {
+              <a matListItemLine [routerLink]="['/dependencies/', dependency.id]">{{
+                dependency.name
+              }}</a>
             }
           </div>
         </td>
@@ -205,31 +188,29 @@
           Case Studies
         </th>
         <td mat-cell *matCellDef="let element">
-          <span *ngIf="countCaseStudies(element) > 0">{{
-            countCaseStudies(element)
-          }}</span>
-        </td>
-      </ng-container>
-      @for (resource of walletsService.resources; track resource) {
-      <ng-container [matColumnDef]="resource.id">
-        <th
-          mat-header-cell
-          *matHeaderCellDef
-          mat-sort-header
-          [matTooltip]="walletsService.getTooltip(resource.id)"
-        >
-          {{ resource.name }}
-        </th>
-        <td mat-cell *matCellDef="let element">
-          @for (profile of element[resource.id]; track profile) {
-          <a
-            class="link-list"
-            [href]="walletsService.getLink(resource.id, profile)"
-            >{{ profile }}</a
-          >
+          @if (countCaseStudies(element) > 0) {
+            <span>{{ countCaseStudies(element) }}</span>
           }
         </td>
       </ng-container>
+      @for (resource of walletsService.resources; track resource) {
+        <ng-container [matColumnDef]="resource.id">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            [matTooltip]="walletsService.getTooltip(resource.id)"
+          >
+            {{ resource.name }}
+          </th>
+          <td mat-cell *matCellDef="let element">
+            @for (profile of element[resource.id]; track profile) {
+              <a class="link-list" [href]="walletsService.getLink(resource.id, profile)">{{
+                profile
+              }}</a>
+            }
+          </td>
+        </ng-container>
       }
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

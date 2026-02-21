@@ -8,10 +8,9 @@ describe('WalletsShowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WalletsShowComponent]
-    })
-    .compileComponents();
-    
+      imports: [WalletsShowComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(WalletsShowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

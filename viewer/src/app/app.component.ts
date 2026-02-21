@@ -1,11 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {
-  ActivatedRoute,
-  NavigationEnd,
-  Router,
-  RouterModule,
-} from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+
+import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoComponent } from './info/info.component';
@@ -21,36 +16,33 @@ import { SeoInformation } from './seo-resolver';
 import { AppService } from './credential-profiles/app.service';
 
 @Component({
-    selector: 'app-root',
-    imports: [
-        RouterModule,
-        CommonModule,
-        MatToolbarModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatMenuModule,
-        MatDividerModule,
-        MatIconModule,
-        MatMenuModule,
-    ],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  imports: [
+    RouterModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatIconModule,
+    MatMenuModule,
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
 /**
  * The main component of the application
  */
 export class AppComponent implements OnInit {
-  tabs: string[] = [];
+  private titleService = inject(Title);
+  private metaService = inject(Meta);
+  private router = inject(Router);
+  private activatedRoute = inject(ActivatedRoute);
+  private dialog = inject(MatDialog);
+  private appService = inject(AppService);
 
-  constructor(
-    private titleService: Title,
-    private metaService: Meta,
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private dialog: MatDialog,
-    private appService: AppService
-  ) {}
+  tabs: string[] = [];
 
   showInfo() {
     this.dialog.open(InfoComponent);
@@ -59,7 +51,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events
       .pipe(
-        filter((event) => event instanceof NavigationEnd),
+        filter(event => event instanceof NavigationEnd),
         switchMap(() => {
           let route = this.activatedRoute;
           while (route.firstChild) {
@@ -67,9 +59,9 @@ export class AppComponent implements OnInit {
           }
           return route.data;
         }),
-        map((data) => (data['seo'] as SeoInformation) ?? data)
+        map(data => (data['seo'] as SeoInformation) ?? data)
       )
-      .subscribe((information) => {
+      .subscribe(information => {
         if (information) {
           this.titleService.setTitle(information.title);
           if (information.description) {
@@ -107,7 +99,7 @@ export class AppComponent implements OnInit {
       });
     this.appService.getElements();
     this.tabs = Object.keys(this.appService.getElements()).filter(
-      (key) => key !== 'Credential Profile' && key !== 'defs'
+      key => key !== 'Credential Profile' && key !== 'defs'
     );
   }
 }

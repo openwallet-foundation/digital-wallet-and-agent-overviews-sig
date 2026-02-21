@@ -8,10 +8,9 @@ describe('CredentialProfileShowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CredentialProfileShowComponent]
-    })
-    .compileComponents();
-    
+      imports: [CredentialProfileShowComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CredentialProfileShowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

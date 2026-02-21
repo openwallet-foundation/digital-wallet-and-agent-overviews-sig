@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -6,7 +6,7 @@ import { AppService, Resource } from '../app.service';
 import { Format, Resources } from '../resources';
 import { Filter, FilterComponent } from '../filter/filter.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { CommonModule } from '@angular/common';
+
 import { MatIconModule } from '@angular/material/icon';
 import { FormatPipe } from '../format.pipe';
 import { MatChipsModule } from '@angular/material/chips';
@@ -22,24 +22,26 @@ class ColumnHeader {
 }
 
 @Component({
-    selector: 'app-credential-profile-list',
-    imports: [
-        CommonModule,
-        MatPaginatorModule,
-        MatIconModule,
-        FormatPipe,
-        MatChipsModule,
-        MatTableModule,
-        RouterModule,
-        MatTooltipModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
-    templateUrl: './credential-profile-list.component.html',
-    styleUrls: ['./credential-profile-list.component.scss']
+  selector: 'app-credential-profile-list',
+  imports: [
+    MatPaginatorModule,
+    MatIconModule,
+    FormatPipe,
+    MatChipsModule,
+    MatTableModule,
+    RouterModule,
+    MatTooltipModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+  ],
+  templateUrl: './credential-profile-list.component.html',
+  styleUrls: ['./credential-profile-list.component.scss'],
 })
 export class CredentialProfileListComponent implements OnInit, AfterViewInit {
+  private dialog = inject(MatDialog);
+  appService = inject(AppService);
+
   data!: Format;
   allColumns: ColumnHeader[] = [];
   displayedColumns: string[] = [];
@@ -55,8 +57,6 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private dialog: MatDialog, public appService: AppService) {}
-
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource<any>();
     this.data = this.appService.getFormat('Credential Profile');
@@ -66,18 +66,15 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
       if (value === '$schema') return;
       this.allColumns.push({
         key: value,
-        tooltip: this.appService.getTooltip(
-          this.data.structure.properties[value]
-        ),
+        tooltip: this.appService.getTooltip(this.data.structure.properties[value]),
       });
     });
     for (const key of this.appService.extraValues) {
       const elements: { value: string; show: string }[] = [];
 
-      const subValues = this.appService.getFormat(this.appService.getKey(key))
-        .structure.properties;
+      const subValues = this.appService.getFormat(this.appService.getKey(key)).structure.properties;
       Object.keys(subValues)
-        .filter((value) => value !== '$schema')
+        .filter(value => value !== '$schema')
         .forEach((value: string) => {
           this.allColumns.push({
             key: `${key} - ${value}`,
@@ -94,7 +91,7 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
       });
     }
 
-    this.displayedColumns = this.allColumns.map((value) => value.key);
+    this.displayedColumns = this.allColumns.map(value => value.key);
     this.columns = this.allColumns;
 
     this.addData();
@@ -102,19 +99,15 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
 
   private addData() {
     this.dataSource.data = Object.values(this.data.values)
-      .map((value) => {
+      .map(value => {
         Object.keys(value)
-          .filter((value) =>
-            this.appService.extraValues.includes(value as Resource)
-          )
-          .forEach((key) => {
-            const subValues = this.appService.getValues(
-              this.appService.getKey(key)
-            )[value[key]];
+          .filter(value => this.appService.extraValues.includes(value as Resource))
+          .forEach(key => {
+            const subValues = this.appService.getValues(this.appService.getKey(key))[value[key]];
             if (subValues) {
               Object.keys(subValues)
-                .filter((subKey) => subKey !== '$schema')
-                .forEach((subKey) => {
+                .filter(subKey => subKey !== '$schema')
+                .forEach(subKey => {
                   value[`${key} - ${subKey}`] = subValues[subKey];
                 });
             }
@@ -122,7 +115,7 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
         return value;
       })
       // filter out the columns that do not match with the filter
-      .filter((value) => {
+      .filter(value => {
         if (Object.keys(this.filter).length === 0) return true;
         for (const category in this.filter) {
           for (const key in this.filter[category]) {
@@ -132,9 +125,7 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
                 console.log(value);
               }
               if (
-                typeof res === 'object'
-                  ? !res.Value
-                  : res === false || typeof res === 'undefined'
+                typeof res === 'object' ? !res.Value : res === false || typeof res === 'undefined'
               ) {
                 return false;
               }
@@ -173,7 +164,7 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
   }
 
   getLink(values: string[]) {
-    return values.map((value) => this.appService.getKey(value));
+    return values.map(value => this.appService.getKey(value));
   }
 
   openFilter() {
@@ -184,7 +175,7 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
         data: this.filter,
       })
       .afterClosed()
-      .subscribe((value) => {
+      .subscribe(value => {
         if (!value) return;
         this.filter = value;
         this.addData();

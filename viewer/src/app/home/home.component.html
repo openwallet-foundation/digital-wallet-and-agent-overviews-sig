@@ -4,7 +4,7 @@
     <h4>A special interests group of the OpenWallet Foundation</h4>
   </div>
   <!--   <a mat-raised-button routerLink="wallets">Show table</a>
- -->
+  -->
 </div>
 
 <div class="content" fxLayout="column" fxLayoutGap="32px">
@@ -15,10 +15,9 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          The Wallet and Agent Overview is a special interest group of the
-          OpenWallet Foundation. We aim to provide a comprehensive overview of
-          all wallets and agents, including their supported credential profiles
-          and dependencies.
+          The Wallet and Agent Overview is a special interest group of the OpenWallet Foundation. We
+          aim to provide a comprehensive overview of all wallets and agents, including their
+          supported credential profiles and dependencies.
         </p>
       </mat-card-content>
     </mat-card>
@@ -28,8 +27,8 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          Explore a detailed list of all dependencies used by the wallets and
-          agents, providing you with a clear understanding of their ecosystem.
+          Explore a detailed list of all dependencies used by the wallets and agents, providing you
+          with a clear understanding of their ecosystem.
         </p>
       </mat-card-content>
     </mat-card>
@@ -40,10 +39,7 @@
         <h1 mat-card-title>Case Studies</h1>
       </mat-card-header>
       <mat-card-content>
-        <p>
-          Discover real-world applications and success stories of wallets and
-          agents in action.
-        </p>
+        <p>Discover real-world applications and success stories of wallets and agents in action.</p>
       </mat-card-content>
     </mat-card>
     <mat-card matRipple routerLink="credential-profiles" fxFlex="50">
@@ -52,8 +48,8 @@
       </mat-card-header>
       <mat-card-content>
         <p>
-          Get an overview of all the credential profiles supported by the
-          wallets with their supported features and tradeoffs.
+          Get an overview of all the credential profiles supported by the wallets with their
+          supported features and tradeoffs.
         </p>
       </mat-card-content>
     </mat-card>
@@ -62,24 +58,18 @@
   <h3>Resources</h3>
   <div fxLayout="row" fxLayoutGap="16px">
     <mat-nav-list fxFlex="50">
-      <ng-container *ngFor="let tab of leftTabs">
-        <a
-          mat-list-item
-          [routerLink]="['resources', tab]"
-          routerLinkActive="active-link"
-          >{{ tab }}</a
-        >
-      </ng-container>
+      @for (tab of leftTabs; track tab) {
+        <a mat-list-item [routerLink]="['resources', tab]" routerLinkActive="active-link">{{
+          tab
+        }}</a>
+      }
     </mat-nav-list>
     <mat-nav-list fxFlex="50">
-      <ng-container *ngFor="let tab of rightTabs">
-        <a
-          mat-list-item
-          [routerLink]="['resources', tab]"
-          routerLinkActive="active-link"
-          >{{ tab }}</a
-        >
-      </ng-container>
+      @for (tab of rightTabs; track tab) {
+        <a mat-list-item [routerLink]="['resources', tab]" routerLinkActive="active-link">{{
+          tab
+        }}</a>
+      }
     </mat-nav-list>
   </div>
   <mat-divider></mat-divider>

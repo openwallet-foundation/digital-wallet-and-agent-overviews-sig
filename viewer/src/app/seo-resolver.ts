@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { WalletsService } from './wallets/wallets.service';
@@ -17,12 +17,10 @@ export interface SeoInformation {
   providedIn: 'root',
 })
 export class SeoResolver implements Resolve<SeoInformation> {
-  constructor(
-    private walletsService: WalletsService,
-    private caseStudiesService: CaseStudiesService,
-    private dependenciesService: DependenciesService,
-    private appService: AppService
-  ) {}
+  private walletsService = inject(WalletsService);
+  private caseStudiesService = inject(CaseStudiesService);
+  private dependenciesService = inject(DependenciesService);
+  private appService = inject(AppService);
 
   resolve(route: ActivatedRouteSnapshot): Observable<SeoInformation> {
     const id = route.paramMap.get('id');
@@ -64,22 +62,14 @@ export class SeoResolver implements Resolve<SeoInformation> {
       );
     } else if (path?.startsWith('credential-profiles')) {
       const profile: IProfile = this.appService.getProfile(id!);
-      return of(
-        profile ? { title: profile.Name } : { title: 'Profile Not Found' }
-      );
+      return of(profile ? { title: profile.Name } : { title: 'Profile Not Found' });
     } else if (path?.startsWith('resources')) {
       const resource = route.paramMap.get('resource') as string;
       if (!id) {
         return of({ title: resource });
       } else {
-        const res = this.appService.getValues(resource as keyof Resources)?.[
-          id
-        ];
-        return of(
-          res
-            ? { title: `${resource}: ${res['Name']}` }
-            : { title: 'Resource Not Found' }
-        );
+        const res = this.appService.getValues(resource as keyof Resources)?.[id];
+        return of(res ? { title: `${resource}: ${res['Name']}` } : { title: 'Resource Not Found' });
       }
     }
 

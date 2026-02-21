@@ -1,11 +1,4 @@
-import { CommonModule } from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  Input,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -31,7 +24,6 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
 @Component({
   selector: 'app-dependency-list-embedded',
   imports: [
-    CommonModule,
     RouterModule,
     MatTableModule,
     MatButtonModule,
@@ -50,19 +42,18 @@ type DependenciesColumn = keyof typeof schema.properties | 'wallets';
   styleUrl: './dependencies-list-embedded.component.scss',
 })
 export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
+  dependenciesService = inject(DependenciesService);
+  private dialog = inject(MatDialog);
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+
   @Input() dependencies: Dependency[] = [];
 
   //reference to the MatTableDataSource
   dataSource = new MatTableDataSource<Dependency>();
 
   // columns that should be displayed in the table
-  columns: DependenciesColumn[] = [
-    'name',
-    'description',
-    'license',
-    'language',
-    'wallets',
-  ];
+  columns: DependenciesColumn[] = ['name', 'description', 'license', 'language', 'wallets'];
 
   //reference to the paginator to be added to the table
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -71,17 +62,10 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
 
   filter?: DependencyFilter;
 
-  constructor(
-    public dependenciesService: DependenciesService,
-    private dialog: MatDialog,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
-
   ngOnInit(): void {
     this.loadDependencies();
     //subscribe to the fragment of the route, if it changes, update the filter and load the wallets
-    this.route.fragment.subscribe(async (fragment) => {
+    this.route.fragment.subscribe(async fragment => {
       if (fragment === 'add') {
         this.addDependency();
       } else {
@@ -100,12 +84,12 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
     if (this.filter) {
       if (this.filter.language) {
         dependencies = dependencies.filter(
-          (dependency) => dependency.language === this.filter?.language
+          dependency => dependency.language === this.filter?.language
         );
       }
       if (this.filter.license) {
         dependencies = dependencies.filter(
-          (dependency) => dependency.license === this.filter?.license
+          dependency => dependency.license === this.filter?.license
         );
       }
     }
@@ -117,10 +101,10 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
    */
   openFilter() {
     this.dialog
-      .open<DependenciesFilterComponent, DependencyFilter>(
-        DependenciesFilterComponent,
-        { data: this.filter, disableClose: true }
-      )
+      .open<DependenciesFilterComponent, DependencyFilter>(DependenciesFilterComponent, {
+        data: this.filter,
+        disableClose: true,
+      })
       .afterClosed()
       .subscribe(async (res: DependencyFilter) => {
         this.router.navigate([], {
@@ -140,7 +124,7 @@ export class DependencyListEmbeddedComponent implements OnInit, AfterViewInit {
   getFilterValues() {
     if (!this.filter) return [];
     const filtered: string[] = [];
-    Object.keys(this.filter).forEach((key) => {
+    Object.keys(this.filter).forEach(key => {
       const k = key as keyof DependencyFilter;
       if (this.filter?.[k]) {
         if (typeof this.filter[k] === 'string') {

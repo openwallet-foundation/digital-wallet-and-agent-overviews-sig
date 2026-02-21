@@ -8,72 +8,68 @@ The goal of this SIG is to continuously develop and maintain a comprehensive ove
 
 This repository is holding multiple JSON files that are used to generate the overview. The elements are each defined with a JSON Schema that is used to validate the input. The JSON Schema can be found in the `schemas` folder. The resources are stored in the `data` folder, where each resource has its own folder.
 
-```plantuml
-@startuml
-title Overview
+```mermaid
+---
+title: Overview
+---
+classDiagram
+    direction TB
 
-' Define colors for different types of entities
-skinparam class {
-  BackgroundColor<<WalletAndAgent>> LightBlue
-  BackgroundColor<<CredentialProfile>> LightGreen
-  BackgroundColor<<Dependency>> LightYellow
-  BackgroundColor<<CaseStudy>> LightCoral
-}
+    class WalletAndAgent["Wallet and Agent"] {
+    }
 
-' Define entities
-class "Wallet and Agent" <<WalletAndAgent>> {
-}
+    class Dependency {
+    }
 
-class Dependency <<Dependency>> {
-}
+    class CaseStudy["Case Study"] {
+    }
 
-class "Case Study" <<CaseStudy>> {
-}
+    class CredentialProfile["Credential Profile"] {
+    }
 
-class "Credential Profile" <<CredentialProfile>> {
-}
+    class CredentialFormat["Credential Format"] {
+    }
 
-class "Credential Format" {
-}
+    class SigningAlgorithm["Signing Algorithm"] {
+    }
 
-class "Signing Algorithm" {
-}
+    class StatusManagement["Status Management"] {
+    }
 
-class "Status Management" {
-}
+    class KeyManagement["Key Management"] {
+    }
 
-class "Key Management" {
-}
+    class IssuanceProtocol["Issuance Protocol"] {
+    }
 
-class "Issuance Protocol" {
-}
+    class PresentationProtocol["Presentation Protocol"] {
+    }
 
-class "Presentation Protocol" {
-}
+    class TrustManagement["Trust Management"] {
+    }
 
-class "Trust Management" {
-}
+    WalletAndAgent --> Dependency : 1..*
+    CaseStudy --> WalletAndAgent : 1..*
+    WalletAndAgent --> CredentialProfile : 1..*
+    WalletAndAgent --> CredentialFormat : 1..*
+    WalletAndAgent --> SigningAlgorithm : 1..*
+    WalletAndAgent --> StatusManagement : 1..*
+    WalletAndAgent --> KeyManagement : 1..*
+    WalletAndAgent --> IssuanceProtocol : 1..*
+    WalletAndAgent --> PresentationProtocol : 1..*
+    WalletAndAgent --> TrustManagement : 1..*
+    CredentialProfile --> CredentialFormat : 1..*
+    CredentialProfile --> SigningAlgorithm : 1..*
+    CredentialProfile --> StatusManagement : 1..*
+    CredentialProfile --> KeyManagement : 1..*
+    CredentialProfile --> IssuanceProtocol : 1..*
+    CredentialProfile --> PresentationProtocol : 1..*
+    CredentialProfile --> TrustManagement : 1..*
 
-' Define relationships
-"Wallet and Agent" --> Dependency : "1..*"
-"Case Study" --> "Wallet and Agent" : "1..*"
-"Wallet and Agent" --> "Credential Profile" : "1..*"
-"Wallet and Agent" --> "Credential Format" : "1..*"
-"Wallet and Agent" --> "Signing Algorithm" : "1..*"
-"Wallet and Agent" --> "Status Management" : "1..*"
-"Wallet and Agent" --> "Key Management" : "1..*"
-"Wallet and Agent" --> "Issuance Protocol" : "1..*"
-"Wallet and Agent" --> "Presentation Protocol" : "1..*"
-"Wallet and Agent" --> "Trust Management" : "1..*"
-"Credential Profile" --> "Credential Format" : "1..*"
-"Credential Profile" --> "Signing Algorithm" : "1..*"
-"Credential Profile" --> "Status Management" : "1..*"
-"Credential Profile" --> "Key Management" : "1..*"
-"Credential Profile" --> "Issuance Protocol" : "1..*"
-"Credential Profile" --> "Presentation Protocol" : "1..*"
-"Credential Profile" --> "Trust Management" : "1..*"
-
-@enduml
+    style WalletAndAgent fill:#add8e6
+    style CredentialProfile fill:#90ee90
+    style Dependency fill:#ffffe0
+    style CaseStudy fill:#f08080
 ```
 
 ### Wallet and Agent Overview
@@ -89,8 +85,6 @@ The dependencies will be add as a new object in the `dependencies` folder and th
 ### Case Studies
 
 We are looking for case studies of the use of wallets and agents in the field. These case studies can be used to show the applicability of the wallets and agents in real life situations. The case studies will be added as a new object in the `case-studies` folder, referencing the wallets or agents by their filename. To generate the JSON object, you can use the form provided when clicking "Add Case Study" in the upper right corner of the overview.
-
-There is also the chance to subscribe to our newsletter that will be sent out every month. The newsletter will contain the latest submitted case studies to this overview. You can subscribe to the newsletter by clicking [here](https://openwallet-foundation.github.io/digital-wallet-and-agent-overviews-sig/#/case-studies).
 
 ### Credential profiles
 

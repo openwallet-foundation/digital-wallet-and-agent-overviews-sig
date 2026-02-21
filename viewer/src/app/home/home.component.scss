@@ -22,7 +22,8 @@
 }
 
 @media (max-width: 600px) {
-  .header, .content {
+  .header,
+  .content {
     text-align: center; /* Center text for small screens */
   }
   #logo {

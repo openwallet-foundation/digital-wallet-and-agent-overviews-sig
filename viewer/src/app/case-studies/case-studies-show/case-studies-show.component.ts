@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CaseStudiesService } from '../case-studies.service';
 import { CaseStudy } from '../types';
@@ -15,32 +15,30 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-    selector: 'app-case-studies-show',
-    imports: [
-        MatCardModule,
-        CommonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatDividerModule,
-        MatChipsModule,
-        RouterModule,
-        MatListModule,
-        MatButtonModule,
-        MatIconModule,
-        MatSnackBarModule,
-    ],
-    templateUrl: './case-studies-show.component.html',
-    styleUrl: './case-studies-show.component.scss'
+  selector: 'app-case-studies-show',
+  imports: [
+    MatCardModule,
+    CommonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatDividerModule,
+    MatChipsModule,
+    RouterModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSnackBarModule,
+  ],
+  templateUrl: './case-studies-show.component.html',
+  styleUrl: './case-studies-show.component.scss',
 })
 export class CaseStudiesShowComponent implements OnInit {
-  caseStudy?: CaseStudy;
+  private route = inject(ActivatedRoute);
+  private caseStudyiesService = inject(CaseStudiesService);
+  walletsService = inject(WalletsService);
+  private snackBar = inject(MatSnackBar);
 
-  constructor(
-    private route: ActivatedRoute,
-    private caseStudyiesService: CaseStudiesService,
-    public walletsService: WalletsService,
-    private snackBar: MatSnackBar
-  ) {}
+  caseStudy?: CaseStudy;
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'] as string;

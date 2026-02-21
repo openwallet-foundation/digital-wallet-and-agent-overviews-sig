@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { Component, OnInit, inject } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,37 +17,35 @@ import { GithubRepo } from '../github-response';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-    selector: 'app-dependencies-add',
-    imports: [
-        ReactiveFormsModule,
-        MatIconModule,
-        MatDialogModule,
-        MatInputModule,
-        MatDividerModule,
-        MatSelectModule,
-        MatButtonModule,
-        MatAutocompleteModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatSnackBarModule,
-        ClipboardModule,
-    ],
-    templateUrl: './dependencies-add.component.html',
-    styleUrl: './dependencies-add.component.scss'
+  selector: 'app-dependencies-add',
+  imports: [
+    ReactiveFormsModule,
+    MatIconModule,
+    MatDialogModule,
+    MatInputModule,
+    MatDividerModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatAutocompleteModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatSnackBarModule,
+    ClipboardModule,
+  ],
+  templateUrl: './dependencies-add.component.html',
+  styleUrl: './dependencies-add.component.scss',
 })
 export class DependenciesAddComponent implements OnInit {
+  dependenciesService = inject(DependenciesService);
+  private clipboard = inject(Clipboard);
+  private snackBar = inject(MatSnackBar);
+  private http = inject(HttpClient);
+
   form!: FormGroup;
 
   languages: string[] = [];
 
   licenses: string[] = [];
-
-  constructor(
-    public dependenciesService: DependenciesService,
-    private clipboard: Clipboard,
-    private snackBar: MatSnackBar,
-    private http: HttpClient
-  ) {}
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -82,7 +75,7 @@ export class DependenciesAddComponent implements OnInit {
     const apiUrl = `https://api.github.com/repos/${repoPath}`;
 
     firstValueFrom(this.http.get<GithubRepo>(apiUrl)).then(
-      (data) => {
+      data => {
         this.form.patchValue({
           name: data.name,
           description: data.description,
@@ -90,7 +83,7 @@ export class DependenciesAddComponent implements OnInit {
           language: data.language,
         });
       },
-      (error) => {
+      error => {
         console.error('Error fetching GitHub repo info:', error);
       }
     );
@@ -98,7 +91,7 @@ export class DependenciesAddComponent implements OnInit {
 
   getJSON() {
     const removeEmptyStrings = (obj: Record<string, unknown>) => {
-      Object.keys(obj).forEach((key) => {
+      Object.keys(obj).forEach(key => {
         if (obj[key] && typeof obj[key] === 'object') {
           removeEmptyStrings(obj[key] as Record<string, unknown>);
         } else if (obj[key] === '') {

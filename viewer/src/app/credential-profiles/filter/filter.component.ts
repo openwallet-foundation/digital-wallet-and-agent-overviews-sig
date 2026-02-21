@@ -1,12 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { AppService } from '../app.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import {
-  MAT_DIALOG_DATA,
-  MatDialogModule,
-  MatDialogRef,
-} from '@angular/material/dialog';
-import { CommonModule } from '@angular/common';
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -22,40 +18,36 @@ interface FilterElement {
 }
 
 @Component({
-    selector: 'app-filter',
-    imports: [
-        CommonModule,
-        MatTooltipModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        MatButtonModule,
-        MatCheckboxModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
-    templateUrl: './filter.component.html',
-    styleUrls: ['./filter.component.scss']
+  selector: 'app-filter',
+  imports: [
+    MatTooltipModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+  ],
+  templateUrl: './filter.component.html',
+  styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent implements OnInit {
+  private appService = inject(AppService);
+  dialogRef = inject<MatDialogRef<FilterComponent>>(MatDialogRef);
+  data = inject<Filter>(MAT_DIALOG_DATA);
+
   selectionColumns: {
     key: string;
     elements: FilterElement[];
   }[] = [];
   public form!: FormGroup;
 
-  constructor(
-    private appService: AppService,
-    public dialogRef: MatDialogRef<FilterComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Filter
-  ) {}
-
   ngOnInit(): void {
     this.form = new FormGroup({});
     for (const key of this.appService.extraValues) {
       const group = new FormGroup({});
       const elements: FilterElement[] = [];
-      const subValues = this.appService.getFormat(this.appService.getKey(key))
-        .structure.properties;
+      const subValues = this.appService.getFormat(this.appService.getKey(key)).structure.properties;
       Object.keys(subValues).forEach((value: string) => {
         if (value === '$schema') return;
         const type = this.appService.getType(subValues[value]);

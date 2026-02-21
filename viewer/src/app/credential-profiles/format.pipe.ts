@@ -11,9 +11,7 @@ export class FormatPipe implements PipeTransform {
     // check if there is a filter object, transform it to a string
     if (typeof text === 'object') {
       if ('Value' in text) {
-        text = text['Description']
-          ? `${text['Value']} (${text['Description']})`
-          : text['Value'];
+        text = text['Description'] ? `${text['Value']} (${text['Description']})` : text['Value'];
       } else {
         return text;
       }
@@ -29,7 +27,7 @@ export class FormatPipe implements PipeTransform {
 
     // Iterate over the URLs and wrap each one with an <a> tag
     if (urls) {
-      urls.forEach((url) => {
+      urls.forEach(url => {
         const link = `<a href="${url}" target="blank">${url}</a>`;
         text = text.replace(url, link);
       });

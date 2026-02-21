@@ -58,9 +58,7 @@ export class AppService {
   }
 
   getKey(key: string): keyof Resources {
-    return key.startsWith('Key Management')
-      ? 'Key Management'
-      : (key as keyof Resources);
+    return key.startsWith('Key Management') ? 'Key Management' : (key as keyof Resources);
   }
 
   getElements(): Resources {

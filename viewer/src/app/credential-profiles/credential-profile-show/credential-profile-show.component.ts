@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AppService } from '../app.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IProfile, Resources } from '../resources';
-import { CommonModule } from '@angular/common';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -12,28 +12,26 @@ import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-    selector: 'app-credential-profile-show',
-    imports: [
-        CommonModule,
-        MatCardModule,
-        MatIconModule,
-        MatListModule,
-        MatButtonModule,
-        RouterModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
-    templateUrl: './credential-profile-show.component.html',
-    styleUrl: './credential-profile-show.component.scss'
+  selector: 'app-credential-profile-show',
+  imports: [
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+    RouterModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+  ],
+  templateUrl: './credential-profile-show.component.html',
+  styleUrl: './credential-profile-show.component.scss',
 })
 export class CredentialProfileShowComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+  private snachBar = inject(MatSnackBar);
+  private router = inject(Router);
+  appService = inject(AppService);
+
   profile?: IProfile;
-  constructor(
-    private route: ActivatedRoute,
-    private snachBar: MatSnackBar,
-    private router: Router,
-    public appService: AppService
-  ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id') as string;
@@ -53,8 +51,8 @@ export class CredentialProfileShowComponent implements OnInit {
     if (!name) return [];
     if (values) {
       return Object.keys(values)
-        .filter((key) => key !== '$schema')
-        .map((key) => {
+        .filter(key => key !== '$schema')
+        .map(key => {
           let value = values[key];
           let type = 'text';
           if (typeof value === 'string' && value.startsWith('http')) {

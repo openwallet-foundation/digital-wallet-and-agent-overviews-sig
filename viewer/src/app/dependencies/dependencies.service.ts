@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Wallet } from '../wallets/types';
 import { dependencyData } from './dependencies-data';
 import schema from '../../assets/schemas/dependency.json';
@@ -12,14 +12,14 @@ import { GithubRepo, GithubRepoFile } from './github-response';
   providedIn: 'root',
 })
 export class DependenciesService {
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   getDependencies(): Dependency[] {
     return dependencyData;
   }
 
   find(id: string) {
-    return dependencyData.find((dependency) => dependency.id === id);
+    return dependencyData.find(dependency => dependency.id === id);
   }
 
   /**
@@ -27,7 +27,7 @@ export class DependenciesService {
    */
   getLicenses(): string[] {
     const licenses: string[] = [];
-    this.getDependencies().forEach((dependency) => {
+    this.getDependencies().forEach(dependency => {
       if (dependency.license && !licenses.includes(dependency.license)) {
         licenses.push(dependency.license);
       }
@@ -41,7 +41,7 @@ export class DependenciesService {
    */
   getLaguages(): string[] {
     const languages: string[] = [];
-    this.getDependencies().forEach((dependency) => {
+    this.getDependencies().forEach(dependency => {
       if (dependency.language && !languages.includes(dependency.language)) {
         languages.push(dependency.language);
       }
@@ -56,7 +56,7 @@ export class DependenciesService {
    */
   getByWallet(wallet: Wallet) {
     if (!wallet.dependencies) return [];
-    return dependencyData.filter((dependency) =>
+    return dependencyData.filter(dependency =>
       (wallet.dependencies as string[]).includes(dependency.id)
     );
   }
@@ -67,9 +67,7 @@ export class DependenciesService {
    * @returns
    */
   getWallets(name: string) {
-    return walletData.filter((wallet) =>
-      (wallet.dependencies as string[])?.includes(name)
-    );
+    return walletData.filter(wallet => (wallet.dependencies as string[])?.includes(name));
   }
 
   /**
@@ -93,13 +91,9 @@ export class DependenciesService {
 
   fetchReadme(githubRepo: GithubRepo): Promise<string> {
     return firstValueFrom(
-      this.http.get<GithubRepoFile>(
-        `https://api.github.com/repos/${githubRepo.full_name}/readme`
-      )
-    ).then((response) =>
-      firstValueFrom(
-        this.http.get(response.download_url, { responseType: 'text' })
-      ).then((content) =>
+      this.http.get<GithubRepoFile>(`https://api.github.com/repos/${githubRepo.full_name}/readme`)
+    ).then(response =>
+      firstValueFrom(this.http.get(response.download_url, { responseType: 'text' })).then(content =>
         this.updateRelativeLinks(
           `${githubRepo.html_url}/tree/${githubRepo.default_branch}`,
           content

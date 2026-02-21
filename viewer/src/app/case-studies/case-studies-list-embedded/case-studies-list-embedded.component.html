@@ -1,61 +1,50 @@
 <div fxLayout="column" fxLayoutGap="16px">
-  @for(caseStudy of caseStudies; track caseStudy; let last = $last) {
-  <mat-card fxHide.gt-xs>
-    <mat-card-header>
-      <mat-card-title>{{ caseStudy.headline }}</mat-card-title>
-      <mat-card-subtitle>by {{ getCompanies(caseStudy) }}</mat-card-subtitle>
-    </mat-card-header>
-    <img
-      mat-card-image
-      [src]="caseStudy.imageUrl"
-      alt=""
-      *ngIf="caseStudy.imageUrl"
-    />
-    <mat-card-content>
-      <mat-chip-set>
-        @for(wallet of caseStudiesService.getWallets(caseStudy); track wallet) {
-        <a mat-chip [routerLink]="['/wallets', wallet.id]">{{ wallet.name }}</a>
-        }
-      </mat-chip-set>
-    </mat-card-content>
-    <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
-      <span>{{ caseStudy.createdAt | date }}</span>
-      <a mat-button [routerLink]="['/case-studies', caseStudy.id]">Read more</a>
-    </mat-card-actions>
-  </mat-card>
-  <div
-    fxLayout="row"
-    fxLayoutAlign="space-between center"
-    class="entry"
-    fxHide.xs
-  >
-    <div>
-      <h2>{{ caseStudy.headline }}</h2>
-      <h5>by {{ getCompanies(caseStudy) }}</h5>
-      <div
-        *ngIf="caseStudy.hashTags && caseStudy.hashTags.length > 0"
-        fxLayout="column"
-        fxLayoutGap="16px"
-      >
+  @for (caseStudy of caseStudies; track caseStudy; let last = $last) {
+    <mat-card fxHide.gt-xs>
+      <mat-card-header>
+        <mat-card-title>{{ caseStudy.headline }}</mat-card-title>
+        <mat-card-subtitle>by {{ getCompanies(caseStudy) }}</mat-card-subtitle>
+      </mat-card-header>
+      @if (caseStudy.imageUrl) {
+        <img mat-card-image [src]="caseStudy.imageUrl" alt="" />
+      }
+      <mat-card-content>
         <mat-chip-set>
-          @for(wallet of caseStudiesService.getWallets(caseStudy); track wallet)
-          {
-          <a mat-chip [routerLink]="['/wallets', wallet.id]">{{
-            wallet.name
-          }}</a>
+          @for (wallet of caseStudiesService.getWallets(caseStudy); track wallet) {
+            <a mat-chip [routerLink]="['/wallets', wallet.id]">{{ wallet.name }}</a>
           }
         </mat-chip-set>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
+        <span>{{ caseStudy.createdAt | date }}</span>
+        <a mat-button [routerLink]="['/case-studies', caseStudy.id]">Read more</a>
+      </mat-card-actions>
+    </mat-card>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="entry" fxHide.xs>
+      <div>
+        <h2>{{ caseStudy.headline }}</h2>
+        <h5>by {{ getCompanies(caseStudy) }}</h5>
+        @if (caseStudy.hashTags && caseStudy.hashTags.length > 0) {
+          <div fxLayout="column" fxLayoutGap="16px">
+            <mat-chip-set>
+              @for (wallet of caseStudiesService.getWallets(caseStudy); track wallet) {
+                <a mat-chip [routerLink]="['/wallets', wallet.id]">{{ wallet.name }}</a>
+              }
+            </mat-chip-set>
+          </div>
+        }
+        <span>{{ caseStudy.createdAt | date }}</span> |
+        <a mat-button [routerLink]="['/case-studies', caseStudy.id]">Read more</a>
       </div>
-      <span>{{ caseStudy.createdAt | date }}</span> |
-      <a mat-button [routerLink]="['/case-studies', caseStudy.id]">Read more</a>
+      @if (caseStudy.imageUrl) {
+        <div
+          [ngStyle]="{ 'background-image': 'url(' + caseStudy.imageUrl + ')' }"
+          class="img"
+        ></div>
+      }
     </div>
-    <div
-      *ngIf="caseStudy.imageUrl"
-      [ngStyle]="{ 'background-image': 'url(' + caseStudy.imageUrl + ')' }"
-      class="img"
-    ></div>
-  </div>
-  @if(!last) {
-  <mat-divider fxHide.xs></mat-divider>
-  } }
+    @if (!last) {
+      <mat-divider fxHide.xs></mat-divider>
+    }
+  }
 </div>

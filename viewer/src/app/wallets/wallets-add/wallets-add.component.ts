@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { Component, OnInit, inject } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,33 +14,31 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
 @Component({
-    selector: 'app-wallets-add',
-    imports: [
-        MatDialogModule,
-        MatButtonModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        ReactiveFormsModule,
-        MatInputModule,
-        MatSelectModule,
-        MatIconModule,
-        MatDividerModule,
-        ClipboardModule,
-        MatSnackBarModule,
-    ],
-    providers: [WalletsService],
-    templateUrl: './wallets-add.component.html',
-    styleUrl: './wallets-add.component.scss'
+  selector: 'app-wallets-add',
+  imports: [
+    MatDialogModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule,
+    MatDividerModule,
+    ClipboardModule,
+    MatSnackBarModule,
+  ],
+  providers: [WalletsService],
+  templateUrl: './wallets-add.component.html',
+  styleUrl: './wallets-add.component.scss',
 })
 export class WalletsAddComponent implements OnInit {
+  walletsService = inject(WalletsService);
+  private clipboard = inject(Clipboard);
+  private snackBar = inject(MatSnackBar);
+
   form!: FormGroup;
   values!: FieldResponse;
-
-  constructor(
-    public walletsService: WalletsService,
-    private clipboard: Clipboard,
-    private snackBar: MatSnackBar
-  ) {}
 
   async ngOnInit(): Promise<void> {
     this.values = await this.walletsService.getDefinitions();
@@ -66,7 +59,7 @@ export class WalletsAddComponent implements OnInit {
       portability: new FormControl(false),
     });
 
-    this.walletsService.resources.forEach((resource) => {
+    this.walletsService.resources.forEach(resource => {
       this.form.addControl(resource.id, new FormControl([]));
     });
   }
@@ -77,7 +70,7 @@ export class WalletsAddComponent implements OnInit {
 
   getJSON() {
     const removeEmptyStrings = (obj: Record<string, unknown>) => {
-      Object.keys(obj).forEach((key) => {
+      Object.keys(obj).forEach(key => {
         if (obj[key] && typeof obj[key] === 'object') {
           removeEmptyStrings(obj[key] as Record<string, unknown>);
         } else if (obj[key] === '') {

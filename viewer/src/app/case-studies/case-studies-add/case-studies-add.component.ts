@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   FormGroup,
   FormControl,
@@ -30,28 +30,33 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { CaseStudy, CaseStudySage } from '../types';
 
 @Component({
-    selector: 'app-case-studies-add',
-    imports: [
-        ReactiveFormsModule,
-        MatIconModule,
-        MatDialogModule,
-        MatInputModule,
-        MatDividerModule,
-        MatSelectModule,
-        MatButtonModule,
-        MatAutocompleteModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatSnackBarModule,
-        ClipboardModule,
-        MatChipsModule,
-        MatDatepickerModule,
-        FormsModule,
-    ],
-    templateUrl: './case-studies-add.component.html',
-    styleUrl: './case-studies-add.component.scss'
+  selector: 'app-case-studies-add',
+  imports: [
+    ReactiveFormsModule,
+    MatIconModule,
+    MatDialogModule,
+    MatInputModule,
+    MatDividerModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatAutocompleteModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatSnackBarModule,
+    ClipboardModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    FormsModule,
+  ],
+  templateUrl: './case-studies-add.component.html',
+  styleUrl: './case-studies-add.component.scss',
 })
 export class CaseStudiesAddComponent implements OnInit {
+  caseStudiesService = inject(CaseStudiesService);
+  private clipboard = inject(Clipboard);
+  private snackBar = inject(MatSnackBar);
+  private walletsService = inject(WalletsService);
+
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
   getFormArray(value: unknown): FormArray {
@@ -67,23 +72,10 @@ export class CaseStudiesAddComponent implements OnInit {
 
   caseStudiesStages: CaseStudySage[] = ['poc', 'production', 'retired'];
 
-  constructor(
-    public caseStudiesService: CaseStudiesService,
-    private clipboard: Clipboard,
-    private snackBar: MatSnackBar,
-    private walletsService: WalletsService
-  ) {}
-
   ngOnInit(): void {
     this.form = new FormGroup({
-      headline: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(60),
-      ]),
-      summary: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(1000),
-      ]),
+      headline: new FormControl('', [Validators.required, Validators.maxLength(60)]),
+      summary: new FormControl('', [Validators.required, Validators.maxLength(1000)]),
       createdAt: new FormControl('', Validators.required),
       imageUrl: new FormControl(''),
       url: new FormControl('', Validators.required),
@@ -131,9 +123,8 @@ export class CaseStudiesAddComponent implements OnInit {
 
   setFilter(input: string) {
     this.filteredHashTags = this.allHashTags.filter(
-      (tag) =>
-        !this.getHashTags().includes(tag) &&
-        tag.toLowerCase().includes(input.toLowerCase().trim())
+      tag =>
+        !this.getHashTags().includes(tag) && tag.toLowerCase().includes(input.toLowerCase().trim())
     );
   }
 
@@ -149,10 +140,7 @@ export class CaseStudiesAddComponent implements OnInit {
     event.chipInput!.clear();
   }
 
-  selectedHashTag(
-    event: MatAutocompleteSelectedEvent,
-    input: HTMLInputElement
-  ): void {
+  selectedHashTag(event: MatAutocompleteSelectedEvent, input: HTMLInputElement): void {
     this.form.patchValue({
       hashTags: [...this.getHashTags(), event.option.viewValue],
     });
@@ -173,7 +161,7 @@ export class CaseStudiesAddComponent implements OnInit {
 
   getJSON() {
     const removeEmptyStrings = (obj: Record<string, unknown>) => {
-      Object.keys(obj).forEach((key) => {
+      Object.keys(obj).forEach(key => {
         if (obj[key] && typeof obj[key] === 'object') {
           removeEmptyStrings(obj[key] as Record<string, unknown>);
         } else if (obj[key] === '') {
@@ -209,11 +197,7 @@ export class CaseStudiesAddComponent implements OnInit {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    const name = this.form
-      .get('headline')
-      ?.value.split(' ')
-      .join('-')
-      .toLowerCase();
+    const name = this.form.get('headline')?.value.split(' ').join('-').toLowerCase();
     a.download = `${name}.json`;
     document.body.appendChild(a);
     a.click();

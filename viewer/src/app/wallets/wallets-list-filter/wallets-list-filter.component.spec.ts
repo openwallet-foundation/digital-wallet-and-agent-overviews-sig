@@ -8,10 +8,9 @@ describe('WalletsListFilterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WalletsListFilterComponent]
-    })
-    .compileComponents();
-    
+      imports: [WalletsListFilterComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(WalletsListFilterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

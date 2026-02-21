@@ -1,11 +1,11 @@
 import {
   AfterViewInit,
   Component,
-  Inject,
   Input,
   OnInit,
   PLATFORM_ID,
   ViewChild,
+  inject,
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -64,6 +64,15 @@ type Colums =
   styleUrl: './wallets-list.component.scss',
 })
 export class WalletsListComponent implements OnInit, AfterViewInit {
+  walletsService = inject(WalletsService);
+  private dialog = inject(MatDialog);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private breakpointObserver = inject(BreakpointObserver);
+  dependenciesService = inject(DependenciesService);
+  caseStudiesService = inject(CaseStudiesService);
+  private platformId = inject(PLATFORM_ID);
+
   @Input() wallets?: Wallet[];
 
   //reference to the MatTableDataSource
@@ -93,21 +102,12 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   filter?: WalletFilter;
   mobile = true;
 
-  constructor(
-    public walletsService: WalletsService,
-    private dialog: MatDialog,
-    private route: ActivatedRoute,
-    private router: Router,
-    private breakpointObserver: BreakpointObserver,
-    public dependenciesService: DependenciesService,
-    public caseStudiesService: CaseStudiesService,
-    @Inject(PLATFORM_ID) private platformId: object
-  ) {
+  constructor() {
     const isBrowser = isPlatformBrowser(this.platformId);
     if (isBrowser) {
       this.breakpointObserver
         .observe([Breakpoints.XSmall])
-        .subscribe((res) => (this.mobile = res.matches));
+        .subscribe(res => (this.mobile = res.matches));
     }
   }
 
@@ -116,7 +116,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
    */
   async ngOnInit(): Promise<void> {
     //subscribe to the fragment of the route, if it changes, update the filter and load the wallets
-    this.route.fragment.subscribe(async (fragment) => {
+    this.route.fragment.subscribe(async fragment => {
       if (fragment === 'add') {
         this.addWallet();
       } else {
@@ -124,7 +124,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
       }
       this.loadWallets();
     });
-    this.walletsService.resources.forEach((res) => this.columns.push(res.id));
+    this.walletsService.resources.forEach(res => this.columns.push(res.id));
     this.displayedColumns = this.columns;
   }
 
@@ -140,9 +140,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
         case 'company':
           return (item[property as keyof Wallet] as string) ?? '\ufff0';
         case 'capability':
-          return (
-            (item[property as keyof Wallet] as string[])?.join(', ') ?? '\ufff0'
-          );
+          return (item[property as keyof Wallet] as string[])?.join(', ') ?? '\ufff0';
         case 'linkToApp':
           return item.urlGooglePlayStore ?? item.urlAppStore ?? '\ufff0';
         case 'openSource':
@@ -168,10 +166,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
         } else if (!emptyA && emptyB) {
           return -1; // Always place emptyB at the end
         } else if (typeof valueA === 'string' && typeof valueB === 'string') {
-          return (
-            valueA.toLowerCase().localeCompare(valueB.toLowerCase()) *
-            (isAsc ? 1 : -1)
-          );
+          return valueA.toLowerCase().localeCompare(valueB.toLowerCase()) * (isAsc ? 1 : -1);
         } else {
           return (valueA < valueB ? -1 : 1) * (isAsc ? 1 : -1);
         }
@@ -198,10 +193,9 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
    */
   openFilter() {
     this.dialog
-      .open<WalletsListFilterComponent, WalletFilter>(
-        WalletsListFilterComponent,
-        { data: this.filter }
-      )
+      .open<WalletsListFilterComponent, WalletFilter>(WalletsListFilterComponent, {
+        data: this.filter,
+      })
       .afterClosed()
       .subscribe(async (res: WalletFilter) => {
         this.router.navigate([], {
@@ -219,7 +213,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
    * @param object
    */
   private reduceObject(object: any) {
-    Object.keys(object).forEach((key) => {
+    Object.keys(object).forEach(key => {
       if (object[key] === null) {
         delete object[key];
       }
@@ -236,36 +230,31 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     let values = this.wallets ?? this.walletsService.loadWallets();
     if (this.filter) {
       if (this.filter.type) {
-        values = values.filter((wallet) => wallet.executionEnvironment === this.filter!.type);
+        values = values.filter(wallet => wallet.executionEnvironment === this.filter!.type);
       }
       if (this.filter.openSource) {
         values = values.filter(
-          (wallet) => wallet.openSource === (this.filter!.openSource === 'true')
+          wallet => wallet.openSource === (this.filter!.openSource === 'true')
         );
       }
       if (this.filter.capability && this.filter.capability.length > 0) {
         values = values.filter(
-          (wallet) =>
+          wallet =>
             wallet.capability &&
-            this.filter!.capability?.every((cap) =>
-              wallet.capability?.includes(cap)
-            )
+            this.filter!.capability?.every(cap => wallet.capability?.includes(cap))
         );
       }
       if (this.filter.portability) {
         values = values.filter(
-          (wallet) =>
-            wallet.portability === (this.filter!.portability === 'true')
+          wallet => wallet.portability === (this.filter!.portability === 'true')
         );
       }
 
-      const resources = this.walletsService.resources.map((res) => res.id);
-      resources.forEach((resource) => {
+      const resources = this.walletsService.resources.map(res => res.id);
+      resources.forEach(resource => {
         if (this.filter![resource]) {
-          values = values.filter((wallet) =>
-            this.filter![resource]?.every((res) =>
-              wallet[resource]?.includes(res)
-            )
+          values = values.filter(wallet =>
+            this.filter![resource]?.every(res => wallet[resource]?.includes(res))
           );
         }
       });
@@ -280,15 +269,12 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   getFilterValues() {
     if (!this.filter) return [];
     const filtered: string[] = [];
-    Object.keys(this.filter).forEach((key) => {
+    Object.keys(this.filter).forEach(key => {
       const k = key as keyof WalletFilter;
       if (this.filter?.[k]) {
         if (typeof this.filter[k] === 'string') {
           filtered.push(`${key}: ${this.filter[k] as string}`);
-        } else if (
-          this.filter[k] instanceof Array &&
-          (this.filter[k] as string[]).length > 0
-        ) {
+        } else if (this.filter[k] instanceof Array && (this.filter[k] as string[]).length > 0) {
           filtered.push(`${key}: ${(this.filter[k] as string[]).join(', ')}`);
         }
       }

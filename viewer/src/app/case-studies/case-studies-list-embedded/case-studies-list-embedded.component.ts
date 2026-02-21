@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CaseStudy } from '../types';
 import { CaseStudiesService } from '../case-studies.service';
 import { MatChipsModule } from '@angular/material/chips';
@@ -11,27 +11,28 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
-    selector: 'app-case-studies-list-embedded',
-    imports: [
-        MatChipsModule,
-        RouterModule,
-        CommonModule,
-        MatDividerModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-        MatButtonModule,
-        MatCardModule,
-    ],
-    templateUrl: './case-studies-list-embedded.component.html',
-    styleUrl: './case-studies-list-embedded.component.scss'
+  selector: 'app-case-studies-list-embedded',
+  imports: [
+    MatChipsModule,
+    RouterModule,
+    CommonModule,
+    MatDividerModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+    MatButtonModule,
+    MatCardModule,
+  ],
+  templateUrl: './case-studies-list-embedded.component.html',
+  styleUrl: './case-studies-list-embedded.component.scss',
 })
 export class CaseStudiesListEmbeddedComponent {
+  caseStudiesService = inject(CaseStudiesService);
+
   @Input() caseStudies: CaseStudy[] = [];
 
-  constructor(public caseStudiesService: CaseStudiesService) {
+  constructor() {
     this.caseStudies = this.caseStudies.sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   }
 
@@ -40,9 +41,7 @@ export class CaseStudiesListEmbeddedComponent {
    * @param caseStudy
    */
   getCompanies(caseStudy: CaseStudy) {
-    const companies = this.caseStudiesService
-      .getWallets(caseStudy)
-      .map((wallet) => wallet.company)      
+    const companies = this.caseStudiesService.getWallets(caseStudy).map(wallet => wallet.company);
     return Array.from(new Set(companies)).join(', ');
   }
 }

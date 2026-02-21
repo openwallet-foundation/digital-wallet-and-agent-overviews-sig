@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, PLATFORM_ID, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { dependencyData } from '../dependencies-data';
 import { Dependency } from '../types';
@@ -20,48 +20,49 @@ import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
-    selector: 'app-dependencies-show',
-    imports: [
-        MatSnackBarModule,
-        CommonModule,
-        RouterModule,
-        MatIconModule,
-        MatListModule,
-        MatTooltipModule,
-        MatButtonModule,
-        MatChipsModule,
-        WalletsListComponent,
-        MarkdownModule,
-        MatTabsModule,
-        FlexLayoutModule,
-        FlexLayoutServerModule,
-    ],
-    templateUrl: './dependencies-show.component.html',
-    styleUrl: './dependencies-show.component.scss'
+  selector: 'app-dependencies-show',
+  imports: [
+    MatSnackBarModule,
+    CommonModule,
+    RouterModule,
+    MatIconModule,
+    MatListModule,
+    MatTooltipModule,
+    MatButtonModule,
+    MatChipsModule,
+    WalletsListComponent,
+    MarkdownModule,
+    MatTabsModule,
+    FlexLayoutModule,
+    FlexLayoutServerModule,
+  ],
+  templateUrl: './dependencies-show.component.html',
+  styleUrl: './dependencies-show.component.scss',
 })
 export class DependenciesShowComponent {
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private snackBar = inject(MatSnackBar);
+  dependenciesService = inject(DependenciesService);
+  private platformId = inject(PLATFORM_ID);
+
   dependency?: Dependency;
   github?: GithubRepo;
   readme?: string;
   wallets: Wallet[] = [];
   mobile = true;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private snackBar: MatSnackBar,
-    public dependenciesService: DependenciesService,
-    breakpointObserver: BreakpointObserver,
-    @Inject(PLATFORM_ID) private platformId: object
-  ) {
+  constructor() {
+    const breakpointObserver = inject(BreakpointObserver);
+
     const isBrowser = isPlatformBrowser(this.platformId);
     if (isBrowser) {
       breakpointObserver
         .observe([Breakpoints.XSmall])
-        .subscribe((result) => (this.mobile = result.matches));
+        .subscribe(result => (this.mobile = result.matches));
     }
     const id = this.route.snapshot.params['id'] as string;
-    const dependency = dependencyData.find((d) => d.id === id);
+    const dependency = dependencyData.find(d => d.id === id);
     if (!dependency) {
       this.router
         .navigate(['../'], { relativeTo: this.route })
@@ -73,11 +74,11 @@ export class DependenciesShowComponent {
     if (this.dependency?.url.startsWith('https://github.com')) {
       this.dependenciesService
         .fetchGitHubRepoInfo(this.dependency.url)
-        .then((repo) => (this.github = repo))
+        .then(repo => (this.github = repo))
         .then(() =>
           this.dependenciesService
             .fetchReadme(this.github as GithubRepo)
-            .then((readme) => (this.readme = readme))
+            .then(readme => (this.readme = readme))
         )
         .catch(() => {
           // when there was an error fetching the readme, like rate limiting, show the link to click manually
