@@ -20,8 +20,8 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
     "essif-wallet": {
-      "urlWebsite": "https://docs.essif.sk/en/home-english/",
-      "urlWebApp": "https://wallet.essif.sk/"
+      "urlWebApp": "https://wallet.essif.sk/",
+      "urlWebsite": "https://docs.essif.sk/en/home-english/"
     },
     "gimly": {
       "urlWebsite": "https://gimly.io/"
@@ -29,23 +29,26 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/"
-    },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
+    },
+    "preparese-mobile": {
+      "urlWebsite": "https://www.preparese.info/"
     },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
     "swisssign-wallet": {
-      "companyUrl": "https://swisssign.com",
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
+      "companyUrl": "https://swisssign.com"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
-      "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
-      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728"
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
+      "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
     "verida": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
@@ -54,9 +57,6 @@
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
