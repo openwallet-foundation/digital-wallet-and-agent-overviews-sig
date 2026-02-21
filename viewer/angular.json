@@ -31,10 +31,8 @@
             ],
             "scripts": ["node_modules/prismjs/prism.js"],
             "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            },
+            "prerender": false,
+            "ssr": false,
             "fileReplacements": []
           },
           "configurations": {
