@@ -20,8 +20,8 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
     "essif-wallet": {
-      "urlWebApp": "https://wallet.essif.sk/",
-      "urlWebsite": "https://docs.essif.sk/en/home-english/"
+      "urlWebsite": "https://docs.essif.sk/en/home-english/",
+      "urlWebApp": "https://wallet.essif.sk/"
     },
     "gimly": {
       "urlWebsite": "https://gimly.io/"
@@ -29,22 +29,28 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "paradym-wallet": {
-      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
     },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    "paradym-wallet": {
+      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "swisssign-wallet": {
-      "companyUrl": "https://swisssign.com",
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
+      "companyUrl": "https://swisssign.com"
     },
     "trisic-id": {
-      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
     "verida": {
@@ -52,17 +58,21 @@
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "gataca-studio": {
       "urlWebsite": "https://gataca.io/products/gatacaStudio/"
+    },
+    "corposign-did": {
+      "urlWebsite": "https://sis.lt/"
+    },
+    "digidentity-wallet": {
+      "companyUrl": "https://digidentity.eu",
+      "urlWebsite": "https://digidentity.eu"
+    },
+    "learner-credential-wallet": {
+      "downloadSource": "https://github.com/digitalcredentials/learner-credential-wallet"
     },
     "orbit-edge-wallet": {
       "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
@@ -70,8 +80,17 @@
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
     },
+    "procivis-one-desk": {
+      "urlWebApp": "https://docs.procivis.ch/trial/intro"
+    },
+    "vidcredentials": {
+      "urlWebApp": "https://try.vidchain.net/demo"
+    },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
+    },
+    "yivi": {
+      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
