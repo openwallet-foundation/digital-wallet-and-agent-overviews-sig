@@ -35,6 +35,15 @@ export class CredentialProfileShowComponent implements OnInit {
   profile?: IProfile;
   private elementsCache = new Map<string, { type: string; key: string; value: string }[]>();
 
+  private encodeForRouter(value: string): string {
+    // encodeURIComponent doesn't encode () but Angular router treats them as auxiliary route syntax
+    return encodeURIComponent(value).replace(/\(/g, '%28').replace(/\)/g, '%29');
+  }
+
+  getDefinitionLink(resource: string, key: string): string {
+    return `/definition/${this.encodeForRouter(resource)}/${this.encodeForRouter(key)}`;
+  }
+
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id') as string;
     this.profile = this.appService.getProfile(id) as IProfile;

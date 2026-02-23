@@ -35,9 +35,19 @@ export class ResourcesShowComponent implements OnInit {
   resource!: string;
   res?: Record<string, string | { Value: string; Description: string }>;
 
+  private encodeForRouter(value: string): string {
+    // encodeURIComponent doesn't encode () but Angular router treats them as auxiliary route syntax
+    return encodeURIComponent(value).replace(/\(/g, '%28').replace(/\)/g, '%29');
+  }
+
+  getDefinitionLink(resource: string, key: string): string {
+    return `/definitions/${this.encodeForRouter(resource)}/${this.encodeForRouter(key)}`;
+  }
+
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') as string;
-    this.resource = this.route.snapshot.paramMap.get('resource') as string;
+    const id = decodeURIComponent(this.route.snapshot.paramMap.get('id') as string);
+    console.log(id);
+    this.resource = decodeURIComponent(this.route.snapshot.paramMap.get('resource') as string);
     this.res = this.appService.getValues(this.resource as keyof Resources)?.[id];
     if (!this.res) {
       this.router.navigate(['/']);

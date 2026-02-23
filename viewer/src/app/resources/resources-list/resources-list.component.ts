@@ -21,6 +21,7 @@ import { CommonModule } from '@angular/common';
 import { FormatPipe } from '../../credential-profiles/format.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { EncodeUriPipe } from '../../shared/encode-uri.pipe';
 
 export interface ColumnHeader {
   header: string;
@@ -39,6 +40,7 @@ type Res = keyof Resources;
     MatIconModule,
     MatTooltipModule,
     RouterModule,
+    EncodeUriPipe,
   ],
   templateUrl: './resources-list.component.html',
   styleUrls: ['./resources-list.component.scss'],
@@ -54,12 +56,14 @@ export class ResourcesListComponent implements OnInit, AfterViewInit {
   selectedRowIndex = 2;
 
   constructor() {
-    const resource: Res = this.route.snapshot.paramMap.get('resource') as Res;
+    const resource: Res = decodeURIComponent(
+      this.route.snapshot.paramMap.get('resource') as string
+    ) as Res;
     if (resource) {
       this.data = this.appService.getFormat(resource);
     }
     this.route.params.subscribe(params => {
-      this.data = this.appService.getFormat(params['resource'] as Res);
+      this.data = this.appService.getFormat(decodeURIComponent(params['resource']) as Res);
       this.ngOnInit();
       this.ngAfterViewInit();
     });
