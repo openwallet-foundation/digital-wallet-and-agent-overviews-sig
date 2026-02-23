@@ -25,7 +25,6 @@ import {
   WalletsListFilterComponent,
 } from '../wallets-list-filter/wallets-list-filter.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { DependenciesService } from '../../dependencies/dependencies.service';
 import { CaseStudiesService } from '../../case-studies/case-studies.service';
 import { WalletsAddComponent } from '../wallets-add/wallets-add.component';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
@@ -65,13 +64,12 @@ type Colums =
 })
 export class WalletsListComponent implements OnInit, AfterViewInit {
   walletsService = inject(WalletsService);
-  private dialog = inject(MatDialog);
-  private route = inject(ActivatedRoute);
-  private router = inject(Router);
-  private breakpointObserver = inject(BreakpointObserver);
-  dependenciesService = inject(DependenciesService);
-  caseStudiesService = inject(CaseStudiesService);
-  private platformId = inject(PLATFORM_ID);
+  private readonly dialog = inject(MatDialog);
+  private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  private readonly breakpointObserver = inject(BreakpointObserver);
+  private readonly caseStudiesService = inject(CaseStudiesService);
+  private readonly platformId = inject(PLATFORM_ID);
 
   @Input() wallets?: Wallet[];
 
@@ -101,6 +99,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = [];
   filter?: WalletFilter;
   mobile = true;
+  private isInitialLoad = true;
 
   constructor() {
     const isBrowser = isPlatformBrowser(this.platformId);
@@ -114,7 +113,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
   /**
    * Fetches the wallets from the json file and sets the dataSource to the wallets
    */
-  async ngOnInit(): Promise<void> {
+  ngOnInit() {
     //subscribe to the fragment of the route, if it changes, update the filter and load the wallets
     this.route.fragment.subscribe(async fragment => {
       if (fragment === 'add') {
@@ -153,6 +152,10 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
       }
     };
     this.dataSource.sortData = (data, sort: MatSort) => {
+      // If no sort direction is set, return data as-is (preserves shuffle order)
+      if (!sort.active || sort.direction === '') {
+        return data;
+      }
       const isAsc = sort.direction === 'asc';
       return data.sort((a, b) => {
         const valueA = this.dataSource.sortingDataAccessor(a, sort.active);
@@ -259,7 +262,25 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
         }
       });
     }
+    // Shuffle on initial load to give all wallets equal visibility
+    if (this.isInitialLoad) {
+      values = this.shuffleArray([...values]);
+      this.isInitialLoad = false;
+    }
     this.dataSource.data = values;
+  }
+
+  /**
+   * Shuffles an array using the Fisher-Yates algorithm
+   * @param array The array to shuffle
+   * @returns A new shuffled array
+   */
+  private shuffleArray<T>(array: T[]): T[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
   }
 
   /**
