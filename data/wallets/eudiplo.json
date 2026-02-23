@@ -1,0 +1,31 @@
+{
+  "capability": ["issuer", "verifier"],
+  "company": "Open Wallet Foundation",
+  "companyUrl": "https://openwallet.foundation/",
+  "credentialFormats": [    
+    "SD-JWT VC",
+    "MDOC"    
+  ],
+  "contact": "https://github.com/openwallet-foundation-labs/eudiplo/issues",
+  "urlWebsite": "https://openwallet-foundation-labs.github.io/eudiplo/main/",
+  "credentialProfiles": [    
+    "HAIP"    
+  ],
+  "downloadSource": "https://github.com/openwallet-foundation-labs/eudiplo",
+  "keyManagements": [    
+    "x.509 certificates"
+  ],
+  "presentationProtocols": ["OpenID4VP"],
+  "signingAlgorithms": ["ECDSA", "EdDSA"],
+  "statusManagements": ["Token Status List (TSL)"],
+  "trustManagements": [        
+    "X.509 certificates"
+  ],
+  "license": "Apache 2.0",
+  "logo": "logos/eudiplo.png",
+  "name": "Eudiplo",
+  "openSource": true,
+  "$schema": "../../schemas/wallet.json",
+  "executionEnvironment": "cloud",
+  "issuanceProtocols": ["OpenID4VCI"]  
+}

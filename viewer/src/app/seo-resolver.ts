@@ -64,11 +64,12 @@ export class SeoResolver implements Resolve<SeoInformation> {
       const profile: IProfile = this.appService.getProfile(id!);
       return of(profile ? { title: profile.Name } : { title: 'Profile Not Found' });
     } else if (path?.startsWith('resources')) {
-      const resource = route.paramMap.get('resource') as string;
+      const resource = decodeURIComponent(route.paramMap.get('resource') as string);
       if (!id) {
         return of({ title: resource });
       } else {
-        const res = this.appService.getValues(resource as keyof Resources)?.[id];
+        const decodedId = decodeURIComponent(id);
+        const res = this.appService.getValues(resource as keyof Resources)?.[decodedId];
         return of(res ? { title: `${resource}: ${res['Name']}` } : { title: 'Resource Not Found' });
       }
     }

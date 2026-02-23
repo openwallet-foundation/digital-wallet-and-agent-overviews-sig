@@ -13,8 +13,7 @@
             <mat-list-item>
               <div matListItemTitle>
                 <b>{{ value.key }}</b>
-                <!-- TODO: in case a key includes a /, it will break the logic of the route -->
-                <button mat-icon-button [routerLink]="'/definitions/' + resource + '/' + value.key">
+                <button mat-icon-button [routerLink]="getDefinitionLink(resource, value.key)">
                   <mat-icon>info</mat-icon>
                 </button>
               </div>

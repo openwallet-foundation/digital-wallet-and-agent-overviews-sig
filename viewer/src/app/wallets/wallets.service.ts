@@ -155,23 +155,25 @@ export class WalletsService {
    */
   getLink(resourceType: ResourceType, key: string) {
     const url = '';
+    // encodeURIComponent doesn't encode () but Angular router treats them as auxiliary route syntax
+    const encodedKey = encodeURIComponent(key).replaceAll('(', '%28').replaceAll(')', '%29');
     switch (resourceType) {
       case 'credentialProfiles':
-        return `${url}/credential-profiles/${key}`;
+        return `${url}/credential-profiles/${encodedKey}`;
       case 'credentialFormats':
-        return `${url}/resources/Credential%20Format/${key}`;
+        return `${url}/resources/Credential%20Format/${encodedKey}`;
       case 'issuanceProtocols':
-        return `${url}/resources/Issuance%20Protocol/${key}`;
+        return `${url}/resources/Issuance%20Protocol/${encodedKey}`;
       case 'keyManagements':
-        return `${url}/resources/Key%20Management/${key}`;
+        return `${url}/resources/Key%20Management/${encodedKey}`;
       case 'presentationProtocols':
-        return `${url}/resources/Presentation%20Protocol/${key}`;
+        return `${url}/resources/Presentation%20Protocol/${encodedKey}`;
       case 'signingAlgorithms':
-        return `${url}/resources/Signing%20Algorithm/${key}`;
+        return `${url}/resources/Signing%20Algorithm/${encodedKey}`;
       case 'statusManagements':
-        return `${url}/resources/Status%20Management/${key}`;
+        return `${url}/resources/Status%20Management/${encodedKey}`;
       case 'trustManagements':
-        return `${url}/resources/Trust%20Management/${key}`;
+        return `${url}/resources/Trust%20Management/${encodedKey}`;
     }
   }
 
