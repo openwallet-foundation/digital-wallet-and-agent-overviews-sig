@@ -13,7 +13,7 @@
   ],
   "downloadSource": "https://github.com/openwallet-foundation-labs/eudiplo",
   "keyManagements": [    
-    "x.509 certificates"
+    "pub key in X.509 cert"
   ],
   "presentationProtocols": ["OpenID4VP"],
   "signingAlgorithms": ["ECDSA", "EdDSA"],
