@@ -38,43 +38,31 @@
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "swisssign-wallet": {
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
       "companyUrl": "https://swisssign.com"
     },
     "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
     "verida": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
       "urlWebsite": "https://www.verida.io/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
     },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
     "gataca-studio": {
       "urlWebsite": "https://gataca.io/products/gatacaStudio/"
-    },
-    "digidentity-wallet": {
-      "urlWebsite": "https://digidentity.eu"
-    },
-    "eecc-did-controller": {
-      "urlWebsite": "https://id.eecc.de/products/did_controller.html"
-    },
-    "orbit-edge-wallet": {
-      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
-    },
-    "orbit-enterprise": {
-      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
     },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
