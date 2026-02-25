@@ -1,0 +1,61 @@
+{
+    "$schema": "../../schemas/wallet.json",
+    "capability": [
+        "issuer",
+        "holder",
+        "verifier"
+    ],
+    "company": "Linux Foundation Decentralized Trust",
+    "companyUrl": "https://www.lfdecentralizedtrust.org/",
+    "credentialFormats": [
+        "AnonCred",
+        "MDOC",
+        "SD-JWT",
+        "VCDM-1.1"
+    ],
+    "credentialProfiles": [
+        "AnonCreds with did:indy",
+        "AnonCreds with did:web",
+        "ISO mDL",
+        "JWT VC Presentation Profile 2",
+        "SD-JWT VCs (w/ X.509 for Issuers)",
+        "JSON-LD-VCs-with-secp256k1"
+    ],
+    "downloadSource": "https://github.com/credebl/platform",
+    "issuanceProtocols": [
+        "Issue Credential v2",
+        "OpenID4VCI"
+    ],
+    "keyManagements": [
+        "did:indy",
+        "did:key",
+        "did:peer",
+        "did:web",
+        "did:polygon",
+        "pub key in X.509 cert"
+    ],
+    "license": "Apache-2.0 license",
+    "logo": "https://docs.credebl.id/docs/~gitbook/image?url=https%3A%2F%2F292774163-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnsdydI5ziLfZ8yT3e0r8%252Fuploads%252Fgit-blob-aebb44e64f372d89665a2642d259467d5bb4a39e%252FGitbook%2520Cover%2520Image.png%3Falt%3Dmedia&width=1248&dpr=2&quality=100&sign=5d2292e3&sv=2",
+    "name": "CREDEBL Platform",
+    "openSource": true,
+    "portability": true,
+    "presentationProtocols": [
+        "OpenID4VP",
+        "Present Proof v2"
+    ],
+    "signingAlgorithms": [
+        "CL",
+        "ECDSA",
+        "EdDSA"
+    ],
+    "statusManagements": [
+        "Indy Revocation"
+    ],
+    "trustManagements": [
+        "X.509 certificates"
+    ],
+    "dependencies": [
+        "credo"
+    ],
+    "urlWebsite": "https://credebl.id/"
+}

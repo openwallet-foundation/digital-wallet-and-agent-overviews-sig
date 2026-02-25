@@ -1,0 +1,64 @@
+{
+  "capability": [
+    "holder",
+    "verifier"
+  ],
+  "name": "SOVIO wallet",
+  "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg",
+  "company": "AYANWORKS",
+  "companyUrl": "https://www.ayanworks.com",
+  "urlWebsite": "https://sovio.id/",
+  "urlAppStore": "https://apps.apple.com/in/app/sovio-wallet-adeya-wallet/id6463845498",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.credebl.adeya&hl=en_IN",
+  "openSource": false,
+  "license": "Apache-2.0 license",
+  "portability": true,
+  "credentialProfiles": [
+    "AnonCreds with did:indy",
+    "AnonCreds with did:web",
+    "ISO mDL",
+    "JWT VC Presentation Profile 2",
+    "SD-JWT VCs (w/ X.509 for Issuers)",
+    "x.509"
+  ],
+  "credentialFormats": [
+    "AnonCred",
+    "JWT-VC",
+    "LDP-VC",
+    "MDOC",
+    "SD-JWT VC",
+    "VCDM 2.0",
+    "x509"
+  ],
+  "issuanceProtocols": [
+    "Issue Credential v2",
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "did:indy",
+    "did:key",
+    "did:peer",
+    "did:web",
+    "did:polygon",
+    "pub key in X.509 cert"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP",
+    "Present Proof v2"
+  ],
+  "signingAlgorithms": [
+    "CL",
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [
+    "Indy Revocation"
+  ],
+  "trustManagements": [
+    "X.509 certificates"
+  ],
+  "dependencies": [
+        "credebl-mobile-sdk"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
