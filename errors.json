@@ -13,8 +13,8 @@
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -32,18 +32,15 @@
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
     },
-    "paradym-wallet": {
-      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
-    },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    "paradym-wallet": {
+      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
     "swisssign-wallet": {
-      "companyUrl": "https://swisssign.com",
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
+      "companyUrl": "https://swisssign.com"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -55,6 +52,9 @@
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
     },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
@@ -63,6 +63,9 @@
     },
     "gataca-studio": {
       "urlWebsite": "https://gataca.io/products/gatacaStudio/"
+    },
+    "corposign-did": {
+      "urlWebsite": "https://sis.lt/"
     },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
