@@ -5,7 +5,7 @@
   "logo": "logos/izertis-identfy-logo-blue.png",
   "company": "Izertis, S.A.",
   "companyUrl": "https://www.izertis.com/en/",
-  "urlWebsite": "https://github.com/izertis/identfy-holder-wallet",
+  "urlWebsite": "https://identfy.es/",
   "urlAppStore": "https://apps.apple.com/do/app/identfy/id6476503276",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.identfywallet.app",
   "downloadSource": "https://github.com/izertis/identfy-holder-wallet",
@@ -19,7 +19,7 @@
   ],
   "credentialFormats": ["JWT-VC", "JWT", "VCDM 1.1"],
   "issuanceProtocols": ["OpenID4VCI"],
-  "keyManagements": ["did:key"],
+  "keyManagements": ["did:ebsi","did:jwk","did:key"],
   "presentationProtocols": ["OpenID4VP"],
   "signingAlgorithms": ["ECDSA"],
   "statusManagements": [
