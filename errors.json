@@ -1,8 +1,7 @@
 {
   "data": {
     "battery-passport": {
-      "stakeholders.0.contact": "https://www.rcsglobal.com/",
-      "url": "https://www.spherity.com/newsroom/catena-x-certified-battery-passport-solution"
+      "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
     "atala-prism": {
       "urlWebsite": "https://atalaprism.io/"
@@ -30,11 +29,11 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
-    "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/"
-    },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
+    },
+    "preparese-mobile": {
+      "urlWebsite": "https://www.preparese.info/"
     },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
@@ -44,14 +43,14 @@
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
     },
     "trisic-id": {
-      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
     "verida": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
-      "urlWebsite": "https://www.verida.io/",
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632"
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
+      "urlWebsite": "https://www.verida.io/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
@@ -59,14 +58,30 @@
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "gataca-studio": {
-      "urlWebsite": "https://gataca.io/products/gatacaStudio/"
-    },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
+    "gataca-studio": {
+      "urlWebsite": "https://gataca.io/products/gatacaStudio/"
+    },
+    "digidentity-wallet": {
+      "companyUrl": "https://digidentity.eu",
+      "urlWebsite": "https://digidentity.eu"
+    },
+    "igrant.io-data-wallet": {
+      "urlAppStore": "https://apple.co/2Mz9nJp"
+    },
+    "orbit-edge-wallet": {
+      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
+    },
+    "orbit-enterprise": {
+      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
+    },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
+    },
+    "yivi": {
+      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
