@@ -5,7 +5,7 @@
   "logo": "logos/izertis-identfy-logo-blue.png",
   "company": "Izertis, S.A.",
   "companyUrl": "https://www.izertis.com/en/",
-  "urlWebsite": "https://github.com/izertis/identfy-holder-wallet",
+  "urlWebsite": "https://identfy.es/",
   "urlAppStore": "https://apps.apple.com/do/app/identfy/id6476503276",
   "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.identfywallet.app",
   "downloadSource": "https://github.com/izertis/identfy-holder-wallet",
@@ -13,21 +13,29 @@
   "license": "Dual: AGPL-3.0 and Commercial License",
   "portability": false,
   "credentialProfiles": [
-    "EBSI",
-    "JWT VC Presentation Profile 2",
+    "EBSI JWT VC Presentation Profile 2",
     "JWT VC Presentation Profile"
   ],
-  "credentialFormats": ["JWT-VC", "JWT", "VCDM 1.1"],
+  "credentialFormats": [
+    "JWT-VC",
+    "SD-JWT-VC",
+    "mDL/mDoc"
+  ],
   "issuanceProtocols": ["OpenID4VCI"],
-  "keyManagements": ["did:key"],
-  "presentationProtocols": ["OpenID4VP"],
-  "signingAlgorithms": ["ECDSA"],
+  "keyManagements": [
+    "Secure Enclave (iOS)",
+    "StrongBox (Android)"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP",
+    "SIOPv2",
+    "ISO 18013-5"
+  ],
+  "signingAlgorithms": ["ES256"],
   "statusManagements": [
     "Status List 2021",
-    "Validity Credential",
-    "medium-term expiration",
-    "short-term expiration"
+    "Validity Credential"
   ],
-  "trustManagements": ["EBSI Trust Registries"],
+  "trustManagements": ["EBSI Trust Registries", "ISBE"],
   "$schema": "../../schemas/wallet.json"
 }
