@@ -1,0 +1,45 @@
+{
+  "capability": [
+    "issuer",
+    "holder"
+  ],
+  "name": "Identfy Business Wallet",
+  "logo": "logos/izertis-identfy-logo-blue.png",
+  "company": "Izertis, S.A.",
+  "companyUrl": "https://www.izertis.com/es/",
+  "urlWebsite": "https://identfy.es/",
+  "openSource": false,
+  "portability": false,
+  "credentialProfiles": [
+    "EUDI Wallet ARF",
+    "HAIP v1"
+  ],
+  "credentialFormats": [
+    "JWT-VC",
+    "SD-JWT-VC",
+    "mDL/mDoc"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "HSM"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP",
+    "SIOPv2",
+    "ISO 18013-5"
+  ],
+  "signingAlgorithms": [
+    "ES256"
+  ],
+  "statusManagements": [
+    "BitstringStatusList v1.0"
+  ],
+  "trustManagements": [
+    "W3C VC Data Model 2.0",
+    "W3C DID Core v1.0",
+    "OpenAPI 3.0"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
