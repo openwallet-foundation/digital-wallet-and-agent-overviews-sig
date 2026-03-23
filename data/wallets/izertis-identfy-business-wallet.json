@@ -11,35 +11,34 @@
   "openSource": false,
   "portability": false,
   "credentialProfiles": [
-    "EUDI Wallet ARF",
-    "HAIP v1"
+    "EBSI",
+    "JWT VC Presentation Profile 2",
+    "JWT VC Presentation Profile"
   ],
   "credentialFormats": [
     "JWT-VC",
-    "SD-JWT-VC",
-    "mDL/mDoc"
+    "JWT", 
+    "VCDM 1.1"
   ],
   "issuanceProtocols": [
     "OpenID4VCI"
   ],
   "keyManagements": [
-    "HSM"
+    "did:ebsi",
+    "did:jwk",
+    "did:key"
   ],
   "presentationProtocols": [
-    "OpenID4VP",
-    "SIOPv2",
-    "ISO 18013-5"
+    "OpenID4VP"
   ],
   "signingAlgorithms": [
-    "ES256"
+    "ECDSA"
   ],
   "statusManagements": [
     "BitstringStatusList v1.0"
   ],
   "trustManagements": [
-    "W3C VC Data Model 2.0",
-    "W3C DID Core v1.0",
-    "OpenAPI 3.0"
+    "EBSI Trust Registries"
   ],
   "$schema": "../../schemas/wallet.json"
 }
