@@ -26,21 +26,21 @@
     "gimly": {
       "urlWebsite": "https://gimly.io/"
     },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
-    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
-    },
-    "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
     },
+    "preparese-mobile": {
+      "urlWebsite": "https://www.preparese.info/"
+    },
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
     "swisssign-wallet": {
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
-      "companyUrl": "https://swisssign.com"
+      "companyUrl": "https://swisssign.com",
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -52,11 +52,12 @@
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
     },
+    "vidua": {
+      "urlWebsite": "https://vidua.nl/english/",
+      "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104"
+    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
-    "vidua": {
-      "urlWebsite": "https://vidua.nl/english/"
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
@@ -74,8 +75,14 @@
       "companyUrl": "https://digidentity.eu",
       "urlWebsite": "https://digidentity.eu"
     },
+    "hightrust.id": {
+      "urlWebsite": "https://www.hightrust.id"
+    },
     "igrant.io-data-wallet": {
       "urlAppStore": "https://apple.co/2Mz9nJp"
+    },
+    "learner-credential-wallet": {
+      "downloadSource": "https://github.com/digitalcredentials/learner-credential-wallet"
     },
     "orbit-edge-wallet": {
       "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
@@ -91,7 +98,8 @@
       "urlWebApp": "https://docs.procivis.ch/trial/intro"
     },
     "procivis-one-verifier": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
+      "urlWebsite": "https://www.procivis.ch/en/procivis-one",
+      "urlAppStore": "https://apps.apple.com/at/app/procivis-one-mobile-verifier/id6648778109"
     },
     "procivis-one-wallet": {
       "urlWebsite": "https://www.procivis.ch/en/procivis-one"
@@ -99,17 +107,19 @@
     "sphereon-wallet": {
       "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet"
     },
+    "talao": {
+      "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone",
+      "urlWebsite": "https://talao.io/"
+    },
     "vidcredentials": {
-      "urlWebApp": "https://try.vidchain.net/demo"
+      "urlWebApp": "https://try.vidchain.net/demo",
+      "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
-    },
-    "wwwallet": {
-      "urlWebApp": "https://demo.wwwallet.org/"
     },
     "yivi": {
       "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
