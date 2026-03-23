@@ -17,8 +17,7 @@
   ],
   "credentialFormats": [
     "JWT-VC",
-    "JWT", 
-    "VCDM 1.1"
+    "JWT"
   ],
   "issuanceProtocols": [
     "OpenID4VCI"
@@ -35,7 +34,10 @@
     "ECDSA"
   ],
   "statusManagements": [
-    "BitstringStatusList v1.0"
+    "Status List 2021",
+    "Validity Credential",
+    "medium-term expiration",
+    "short-term expiration"
   ],
   "trustManagements": [
     "EBSI Trust Registries"
