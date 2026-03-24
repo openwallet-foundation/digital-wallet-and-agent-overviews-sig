@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schemas/dependency.json",
+  "name": "CREDEBL mobile SDK",
+  "url": "https://github.com/credebl/mobile-sdk",
+  "description": "React-Native software development kit for issuing and verifying credentials",
+  "community": "https://discord.gg/5XFhAgFF",
+  "language": "React-Native",
+  "license": "Apache-2.0 license"
+}
