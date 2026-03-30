@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/credential-profile.json",
+  "Name": "JSON-LD Verifiable Credentials with secp256k1",
+  "Credential Profile Description": "JSON-LD credential signed with EcdsaSecp256k1Signature2019, using issuer keys anchored on Polygon ledger.",
+  "Credential Format": "LDP-VC",
+  "Signing Algorithm": "EcdsaSecp256k1Signature2019",
+  "Status Algorithm": "",
+  "Key Management (Issuer)": "did:polygon",
+  "Key Management (Holder)": "did:key"
+}
