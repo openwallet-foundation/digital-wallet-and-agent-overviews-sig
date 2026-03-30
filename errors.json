@@ -6,11 +6,11 @@
     "atala-prism": {
       "urlWebsite": "https://atalaprism.io/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
@@ -38,8 +38,8 @@
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "swisssign-wallet": {
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
@@ -52,27 +52,17 @@
     },
     "verida": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
-      "urlWebsite": "https://www.verida.io/"
-    },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+      "urlWebsite": "https://www.verida.io/",
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632"
     },
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
     },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
     "gataca-studio": {
       "urlWebsite": "https://gataca.io/products/gatacaStudio/"
-    },
-    "credenco-business-wallet": {
-      "companyUrl": "https://www.credenco.com"
-    },
-    "digidentity-wallet": {
-      "companyUrl": "https://digidentity.eu",
-      "urlWebsite": "https://digidentity.eu"
-    },
-    "igrant.io-data-wallet": {
-      "urlAppStore": "https://apple.co/2Mz9nJp"
     },
     "orbit-edge-wallet": {
       "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
@@ -80,14 +70,8 @@
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
     },
-    "procivis-one-desk": {
-      "urlWebApp": "https://docs.procivis.ch/trial/intro"
-    },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
-    },
-    "yivi": {
-      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
