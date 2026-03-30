@@ -1,0 +1,47 @@
+{
+  "capability": [
+    "issuer",
+    "verifier"
+  ],
+  "name": "AUTHADA wallet platform",
+  "logo": "https://authada.de/wp-content/uploads/2022/02/authada-logo.svg",
+  "company": "AUTHADA GmbH",
+  "companyUrl": "https://authada.de/",
+  "urlWebsite": "https://authada.de/loesungen/wallet-platform/",
+  "openSource": false,
+  "portability": false,
+  "credentialProfiles": [
+    "HAIP",
+    "ISO mDL",
+    "SD-JWT VCs (w/ X.509 for Issuers)",
+    "x.509"
+  ],
+  "credentialFormats": [
+    "MDOC",
+    "SD-JWT VC",
+    "x509"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "jwks_uri",
+    "pub key in X.509 cert",
+    "raw public keys (jwk)"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "ECDSA"
+  ],
+  "statusManagements": [
+    "Token Status List (TSL)"
+  ],
+  "trustManagements": [
+    "Trusted Lists",
+    "Verified issuer certificate authority list (VICAL)",
+    "X.509 certificates"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}

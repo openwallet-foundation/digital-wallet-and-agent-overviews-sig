@@ -82,8 +82,9 @@ export class DefinitionComponent implements OnInit {
     }
     const resource = this.route.snapshot.paramMap.get('resource');
     if (resource) {
+      const decodedResource = decodeURIComponent(resource);
       document.querySelectorAll('h2').forEach(el => {
-        if (el.textContent?.includes(resource)) {
+        if (el.textContent?.includes(decodedResource)) {
           el.scrollIntoView({ behavior: 'smooth' });
         }
       });
@@ -91,8 +92,9 @@ export class DefinitionComponent implements OnInit {
     //TODO: in case there is an id multiple times (like in different resources), we need to find the correct by first going to the h2 and then to the h3.
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
+      const decodedId = decodeURIComponent(id);
       document.querySelectorAll('h3').forEach(el => {
-        if (el.textContent?.includes(id)) {
+        if (el.textContent?.includes(decodedId)) {
           el.scrollIntoView({ behavior: 'smooth' });
         }
       });

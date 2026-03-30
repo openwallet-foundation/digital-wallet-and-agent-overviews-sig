@@ -29,14 +29,14 @@ export function mergeProfiles() {
       readdirSync(join(folder, subFolder + 's')).filter(file => file !== structureFile).forEach((file) => {
           // write the content of the file to the json object
           const content = JSON.parse(readFileSync(join(folder, subFolder + 's', file), 'utf8'));
-          content['$schema'] = content['$schema'].replace('../..', `/main/${githubPath}`);
+          content['$schema'] = content['$schema'].replace('../..', `${githubPath}/main`);
           const name = capitalizeWords(subFolder.replace(/-/g, ' '));
           input[name].values[content.Name] = content;
       });
   });
   //TODO: think about to separate the structure and the values files in the future so others can query only the information they need
   // write the final json object to a file
-  writeFileSync(mergedStructure, JSON.stringify(input));
+  writeFileSync(mergedStructure, JSON.stringify(input, null, 2));
   updateSchema();
 }
 

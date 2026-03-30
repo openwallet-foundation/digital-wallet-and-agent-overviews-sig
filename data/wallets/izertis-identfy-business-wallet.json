@@ -1,0 +1,46 @@
+{
+  "capability": [
+    "issuer",
+    "holder"
+  ],
+  "name": "Identfy Business Wallet",
+  "logo": "logos/izertis-identfy-logo-blue.png",
+  "company": "Izertis, S.A.",
+  "companyUrl": "https://www.izertis.com/es/",
+  "urlWebsite": "https://identfy.es/",
+  "openSource": false,
+  "portability": false,
+  "credentialProfiles": [
+    "EBSI",
+    "JWT VC Presentation Profile 2",
+    "JWT VC Presentation Profile"
+  ],
+  "credentialFormats": [
+    "JWT-VC",
+    "JWT"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "did:ebsi",
+    "did:jwk",
+    "did:key"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "ECDSA"
+  ],
+  "statusManagements": [
+    "Status List 2021",
+    "Validity Credential",
+    "medium-term expiration",
+    "short-term expiration"
+  ],
+  "trustManagements": [
+    "EBSI Trust Registries"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}

@@ -5,6 +5,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { IMAGE_CONFIG, LocationStrategy } from '@angular/common';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MAT_ICON_DEFAULT_OPTIONS } from '@angular/material/icon';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { provideMarkdown } from 'ngx-markdown';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -29,6 +30,10 @@ export const appConfig: ApplicationConfig = {
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'outline' },
+    },
+    {
+      provide: MAT_ICON_DEFAULT_OPTIONS,
+      useValue: { fontSet: 'material-icons' },
     },
     provideClientHydration(),
   ],

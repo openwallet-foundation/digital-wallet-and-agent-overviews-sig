@@ -1,5 +1,21 @@
-import { Routes } from '@angular/router';
+import { Routes, UrlMatchResult, UrlSegment } from '@angular/router';
 import { SeoResolver } from './seo-resolver';
+
+/**
+ * Custom URL matcher that captures all remaining segments as a single 'id' parameter.
+ * This handles profile names containing forward slashes like "SD-JWT VCs (w/ X.509 for Issuers)".
+ */
+export function profileIdMatcher(segments: UrlSegment[]): UrlMatchResult | null {
+  if (segments.length === 0) {
+    return null;
+  }
+  // Join all segments back together to reconstruct the full profile name
+  const id = segments.map(s => s.path).join('/');
+  return {
+    consumed: segments,
+    posParams: { id: new UrlSegment(id, {}) },
+  };
+}
 
 export const routes: Routes = [
   {
@@ -78,7 +94,7 @@ export const routes: Routes = [
         data: { title: 'Credential Profiles' },
       },
       {
-        path: ':id',
+        matcher: profileIdMatcher,
         loadComponent: () =>
           import('./credential-profiles/credential-profile-show/credential-profile-show.component').then(
             m => m.CredentialProfileShowComponent

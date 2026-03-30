@@ -11,12 +11,13 @@
       </mat-chip-listbox>
     </div>
     <div class="spacer"></div>
+    <span class="neutrality-note"><i>List randomized for neutrality</i></span>
     @if (!wallets) {
       <button mat-button (click)="addWallet()">Add Wallet</button>
     }
   </div>
   <section class="container">
-    <table mat-table [dataSource]="dataSource" matSort matSortActive="name" matSortDirection="asc">
+    <table mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="name" [sticky]="true">
         <th
           mat-header-cell

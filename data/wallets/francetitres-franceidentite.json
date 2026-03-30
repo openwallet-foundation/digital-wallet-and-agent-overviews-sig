@@ -1,0 +1,43 @@
+{
+  "capability": [
+    "issuer",
+    "holder"
+  ],
+  "name": "France Identité",
+  "logo": "https://playground.france-identite.gouv.fr/doc/assets/logo-fin.png",
+  "company": "France Titres (ANTS) - Ministère de l'Intérieur",
+  "companyUrl": "https://ants.gouv.fr",
+  "urlWebsite": "https://france-identite.gouv.fr",
+  "urlAppStore": "https://apps.apple.com/fr/app/france-identit%C3%A9/id1590142959",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=fr.gouv.franceidentite&hl=fr",
+  "openSource": false,
+  "portability": false,
+  "credentialProfiles": [
+    "HAIP",
+    "ISO mDL",
+    "x.509"
+  ],
+  "credentialFormats": [
+    "MDOC"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    ".well-known/jwt-issuer",
+    "pub key in X.509 cert",
+    "raw public keys (jwk)"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [],
+  "statusManagements": [],
+  "trustManagements": [
+    "Trusted Lists",
+    "Verified issuer certificate authority list (VICAL)",
+    "Verifier knows Issuers",
+    "X.509 certificates"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}

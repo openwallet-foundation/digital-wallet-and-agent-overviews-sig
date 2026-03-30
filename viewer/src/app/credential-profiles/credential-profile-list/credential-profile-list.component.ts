@@ -13,6 +13,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { RouterModule } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { EncodeUriPipe } from '../../shared/encode-uri.pipe';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { FlexLayoutServerModule } from '@ngbracket/ngx-layout/server';
 
@@ -34,6 +35,7 @@ class ColumnHeader {
     MatButtonModule,
     FlexLayoutModule,
     FlexLayoutServerModule,
+    EncodeUriPipe,
   ],
   templateUrl: './credential-profile-list.component.html',
   styleUrls: ['./credential-profile-list.component.scss'],
@@ -163,8 +165,16 @@ export class CredentialProfileListComponent implements OnInit, AfterViewInit {
     return this.appService.getFormat(header as keyof Resources)?.values[value];
   }
 
-  getLink(values: string[]) {
-    return values.map(value => this.appService.getKey(value));
+  private encodeForRouter(value: string): string {
+    // encodeURIComponent doesn't encode () but Angular router treats them as auxiliary route syntax
+    return encodeURIComponent(value).replace(/\(/g, '%28').replace(/\)/g, '%29');
+  }
+
+  getLink(values: string[]): string {
+    // values is expected to be ['/resources', resourceType, resourceId]
+    const [base, resourceType, resourceId] = values;
+    const normalizedType = this.appService.getKey(resourceType);
+    return `${base}/${this.encodeForRouter(normalizedType)}/${this.encodeForRouter(resourceId)}`;
   }
 
   openFilter() {
