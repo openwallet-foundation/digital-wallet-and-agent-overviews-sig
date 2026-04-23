@@ -11,7 +11,7 @@
         "AnonCred",
         "MDOC",
         "SD-JWT",
-        "VCDM-1.1"
+        "VCDM 1.1"
     ],
     "credentialProfiles": [
         "AnonCreds with did:indy",
@@ -19,7 +19,7 @@
         "ISO mDL",
         "JWT VC Presentation Profile 2",
         "SD-JWT VCs (w/ X.509 for Issuers)",
-        "JSON-LD-VCs-with-secp256k1"
+        "JSON-LD Verifiable Credentials with secp256k1"
     ],
     "downloadSource": "https://github.com/credebl/platform",
     "issuanceProtocols": [
