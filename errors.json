@@ -3,14 +3,20 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
+    "altme": {
+      "urlAppStore": "https://apps.apple.com/fr/app/altme/id1633216869"
+    },
     "atala-prism": {
       "urlWebsite": "https://atalaprism.io/"
     },
-    "anonyome-wallet": {
-      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    "bc-wallet": {
+      "urlAppStore": "https://apps.apple.com/us/app/bc-wallet/id1587380443"
     },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
+    },
+    "anonyome-wallet": {
+      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "dock-wallet": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
@@ -26,6 +32,23 @@
     "gimly": {
       "urlWebsite": "https://gimly.io/"
     },
+    "izertis-identfy-business-wallet": {
+      "urlWebsite": "https://identfy.es/"
+    },
+    "izertis-identfy": {
+      "urlWebsite": "https://identfy.es/"
+    },
+    "lissi-wallet": {
+      "urlAppStore": "https://apps.apple.com/de/app/lissi-id-wallet/id6475958390"
+    },
+    "mattr-wallet": {
+      "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243",
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
+    "mykeepin": {
+      "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844",
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
@@ -35,18 +58,19 @@
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
     },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
-    },
     "swisssign-wallet": {
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
-      "companyUrl": "https://swisssign.com"
+      "companyUrl": "https://swisssign.com",
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
     },
     "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
       "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/"
+    },
+    "sphereon-wallet": {
+      "urlAppStore": "https://apps.apple.com/us/app/sphereon-wallet/id1661096796",
+      "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"
     },
     "verida": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
@@ -55,12 +79,6 @@
     },
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
-    "sphereon-wallet": {
-      "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"
-    },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
     },
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
