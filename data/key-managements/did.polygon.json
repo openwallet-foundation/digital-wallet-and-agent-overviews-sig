@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "did:polygon",
+  "Implementation Support": "https://github.com/ayanworks/polygon-did-modules",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "Polygon blockchain"
+  },
+  "Party": ["issuer"]
+}
