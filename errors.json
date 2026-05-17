@@ -13,8 +13,8 @@
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -22,6 +22,9 @@
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
+    },
+    "eudiplo": {
+      "urlWebsite": "https://openwallet-foundation-labs.github.io/eudiplo/main/"
     },
     "gimly": {
       "urlWebsite": "https://gimly.io/"
@@ -43,89 +46,47 @@
       "companyUrl": "https://www.ayanworks.com"
     },
     "sovio-wallet": {
-      "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg",
-      "companyUrl": "https://www.ayanworks.com"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+      "companyUrl": "https://www.ayanworks.com",
+      "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg"
     },
     "swisssign-wallet": {
       "companyUrl": "https://swisssign.com",
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
-    },
     "trisic-id": {
-      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
       "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/"
     },
     "verida": {
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
+    },
+    "sowl": {
+      "urlWebsite": "https://esatus.com/en/digital-identity/"
     },
     "sphereon-wallet": {
       "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"
     },
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
+    },
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "gataca-studio": {
       "urlWebsite": "https://gataca.io/products/gatacaStudio/"
     },
-    "authenticator": {
-      "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409"
-    },
-    "did-wallet": {
-      "urlAppStore": "https://itunes.apple.com/app/id1460083542"
-    },
-    "digidentity-wallet": {
-      "companyUrl": "https://digidentity.eu",
-      "urlWebsite": "https://digidentity.eu"
-    },
-    "hightrust.id": {
-      "urlWebsite": "https://www.hightrust.id"
-    },
-    "igrant.io-data-wallet": {
-      "urlAppStore": "https://apple.co/2Mz9nJp"
-    },
-    "orbit-edge-wallet": {
-      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
-    },
-    "orbit-enterprise": {
-      "urlWebsite": "https://northernblock.io/orbit-enterprise/"
-    },
-    "procivis-one-core": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
-    },
-    "procivis-one-desk": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one",
-      "urlWebApp": "https://docs.procivis.ch/trial/intro"
-    },
-    "procivis-one-verifier": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
-    },
-    "procivis-one-wallet": {
-      "urlWebsite": "https://www.procivis.ch/en/procivis-one"
-    },
-    "selfkey-wallet": {
-      "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download"
-    },
     "trisic-platform": {
       "urlWebsite": "https://trinsic.id/platform/"
     },
-    "vidcredentials": {
-      "urlWebApp": "https://try.vidchain.net/demo"
-    },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
-    },
-    "yivi": {
-      "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
-      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
