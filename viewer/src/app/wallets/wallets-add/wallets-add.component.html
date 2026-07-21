@@ -94,6 +94,15 @@
         <mat-hint>{{ walletsService.getTooltip('capability') }}</mat-hint>
       </mat-form-field>
       <mat-form-field>
+        <mat-label>Operator model</mat-label>
+        <mat-select formControlName="operatorModel" multiple>
+          <mat-option value="user-operated">User-operated</mat-option>
+          <mat-option value="agent-operable">Agent-operable</mat-option>
+          <mat-option value="autonomous">Autonomous</mat-option>
+        </mat-select>
+        <mat-hint>{{ walletsService.getTooltip('operatorModel') }}</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
         <mat-label>Web site URL</mat-label>
         <input matInput placeholder="https://..." formControlName="urlWebsite" />
         <mat-hint>{{ walletsService.getTooltip('urlWebsite') }}</mat-hint>

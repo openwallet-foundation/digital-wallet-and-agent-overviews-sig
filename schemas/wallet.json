@@ -55,6 +55,14 @@
         "enum": ["holder", "issuer", "verifier"]
       }
     },
+    "operatorModel": {
+      "type": "array",
+      "description": "Who operates the agent: a person, another agent, or nothing (it runs by itself)",
+      "items": {
+        "type": "string",
+        "enum": ["user-operated", "agent-operable", "autonomous"]
+      }
+    },
     "executionEnvironment":  {
       "type": "string",
       "description": "Execution environment of an agent is the place where the agent is intended to be run",

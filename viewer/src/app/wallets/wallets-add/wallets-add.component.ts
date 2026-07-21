@@ -44,6 +44,7 @@ export class WalletsAddComponent implements OnInit {
     this.values = await this.walletsService.getDefinitions();
     this.form = new FormGroup({
       capability: new FormControl([], [Validators.required]),
+      operatorModel: new FormControl([]),
       type: new FormControl(''),
       name: new FormControl('', [Validators.required]),
       logo: new FormControl(''),

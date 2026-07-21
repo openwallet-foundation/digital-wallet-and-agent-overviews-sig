@@ -4,6 +4,8 @@ export type Capability = 'holder' | 'issuer' | 'verifier';
 
 export type WalletType = 'cloud' | 'edge';
 
+export type OperatorModel = 'user-operated' | 'agent-operable' | 'autonomous';
+
 export interface Wallet {
   // unique identifier based on the filename
   id: string;
@@ -27,6 +29,8 @@ export interface Wallet {
   license?: string;
   // is the wallet capable of multiple roles
   capability?: Capability[];
+  // who operates it: a person per action, an API caller, or an autonomous process
+  operatorModel?: OperatorModel[];
   // it is a cloud or mobile wallet
   executionEnvironment?: WalletType;
   // am I able to export my data from the wallet/agent and import them into another device/system

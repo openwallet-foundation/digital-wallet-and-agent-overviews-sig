@@ -36,6 +36,7 @@ type Colums =
   | 'openSource'
   | 'license'
   | 'capability'
+  | 'operatorModel'
   | 'portability'
   | 'linkToApp'
   | 'dependencies'
@@ -84,6 +85,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
     'openSource',
     'license',
     'capability',
+    'operatorModel',
     'portability',
     'linkToApp',
     'dependencies',
@@ -139,6 +141,7 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
         case 'company':
           return (item[property as keyof Wallet] as string) ?? '\ufff0';
         case 'capability':
+        case 'operatorModel':
           return (item[property as keyof Wallet] as string[])?.join(', ') ?? '\ufff0';
         case 'linkToApp':
           return item.urlGooglePlayStore ?? item.urlAppStore ?? '\ufff0';
@@ -245,6 +248,13 @@ export class WalletsListComponent implements OnInit, AfterViewInit {
           wallet =>
             wallet.capability &&
             this.filter!.capability?.every(cap => wallet.capability?.includes(cap))
+        );
+      }
+      if (this.filter.operatorModel && this.filter.operatorModel.length > 0) {
+        values = values.filter(
+          wallet =>
+            wallet.operatorModel &&
+            this.filter!.operatorModel?.every(model => wallet.operatorModel?.includes(model))
         );
       }
       if (this.filter.portability) {
