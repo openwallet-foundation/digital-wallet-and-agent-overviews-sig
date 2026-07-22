@@ -57,7 +57,7 @@
     },
     "operatorModel": {
       "type": "array",
-      "description": "Who operates the agent: a person, another agent, or nothing (it runs by itself)",
+      "description": "Modes of operation this entry supports, as a capability of the wallet or agent (an entry may support more than one, hence an array). The three values sit on one axis, degree of human involvement at the moment of operation: user-operated (a person drives each action), agent-operable (an agent may act, with a human remaining the accountable real-time context), autonomous (an agent acts with no human involvement at that moment). This describes what the entry is designed to support, not what happened in a specific transaction; see the IETF operator-of-record claim (opr, draft-aravind-oauth-operator-of-record) for the per-event marker.",
       "items": {
         "type": "string",
         "enum": ["user-operated", "agent-operable", "autonomous"]
