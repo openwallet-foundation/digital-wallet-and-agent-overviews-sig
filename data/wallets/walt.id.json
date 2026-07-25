@@ -1,3 +1,4 @@
 {
-  "urlWebApp": "https://wallet.walt.id/"
+  "urlWebApp": "https://wallet.walt.id/",
+  "downloadSource": "https://github.com/walt-id/waltid-identity"
 }
