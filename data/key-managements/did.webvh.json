@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/key-management.json",
+  "Name": "did:webvh",
+  "Implementation Support": "https://didwebvh.info",
+  "Specification": "https://identity.foundation/didwebvh/v1.0",
+  "Infrastructure for Key Resolution": {
+    "Value": true,
+    "Description": "web server"
+  },
+  "Key Rotation": true,
+  "Key History": true,
+  "Party": ["holder", "issuer"]
+}
