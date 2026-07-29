@@ -1,3 +1,6 @@
 {
-  "urlWebsite": "https://www.procivis.ch/en/procivis-one"
+  "companyUrl": "https://www.procivis.ch",
+  "urlWebsite": "https://www.procivis.ch/en/procivis-one",
+  "urlWebApp": "https://docs.procivis.ch",
+  "downloadSource": "https://github.com/procivis/one-core"
 }
