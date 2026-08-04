@@ -1,0 +1,55 @@
+{
+  "capability": [
+    "holder"
+  ],
+    "executionEnvironment": "edge",
+  "name": "Frosch Wallet",
+  "logo": "https://www.js-soft.com/wp-content/uploads/2022/03/Logo-js-soft.png",
+  "company": "j&s-soft AG",
+  "companyUrl": "https://www.js-soft.com/",
+  "urlWebsite": "https://www.js-soft.com/wallets/",
+  "urlAppStore": "https://apps.apple.com/es/app/frosch-wallet/id6756783868?l=en-GB",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=app.frosch.prod&hl=de",
+  "openSource": false,
+  "portability": true,
+  "credentialProfiles": [
+    "SD-JWT VCs (w/ X.509 for Issuers)",
+    "x.509"
+  ],
+  "credentialFormats": [
+    "MDOC",
+    "SD-JWT VC",
+    "SD-JWT"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    "did:cheqd",
+    "did:jwk",
+    "did:key",
+    "did:web",
+    "did:webvh",
+    "pub key in X.509 cert",
+    "raw public keys (jwk)",
+    "raw public keys (none jwk)"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "ECDSA",
+    "EdDSA"
+  ],
+  "statusManagements": [
+    "Token Status List (TSL)"
+  ],
+  "trustManagements": [
+    "Verifier knows Issuers",
+    "X.509 certificates"
+  ],
+  "dependencies": [
+    "credo"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
