@@ -134,6 +134,29 @@
           </div>
         </td>
       </ng-container>
+      <ng-container matColumnDef="operatorModel">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          [matTooltip]="walletsService.getTooltip('operatorModel')"
+        >
+          Operator model
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <div fxLayout="row" fxLayoutGap="8px">
+            @if (element.operatorModel?.includes('user-operated')) {
+              <span>User-operated</span>
+            }
+            @if (element.operatorModel?.includes('agent-operable')) {
+              <span>Agent-operable</span>
+            }
+            @if (element.operatorModel?.includes('autonomous')) {
+              <span>Autonomous</span>
+            }
+          </div>
+        </td>
+      </ng-container>
       <ng-container matColumnDef="executionEnvironment">
         <th
           mat-header-cell

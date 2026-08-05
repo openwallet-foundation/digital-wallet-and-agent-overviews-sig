@@ -14,6 +14,7 @@ export interface WalletFilter {
   type?: 'cloud' | 'edge';
   openSource?: 'true' | 'false';
   capability?: ('holder' | 'issuer' | 'verifier')[];
+  operatorModel?: ('user-operated' | 'agent-operable' | 'autonomous')[];
   portability?: 'true' | 'false';
   credentialFormats?: string[];
   credentialProfiles?: string[];
@@ -53,6 +54,7 @@ export class WalletsListFilterComponent implements OnInit {
       type: new FormControl(),
       openSource: new FormControl(),
       capability: new FormControl(),
+      operatorModel: new FormControl(),
       portability: new FormControl(),
     });
     this.walletsService.resources.forEach(resource =>

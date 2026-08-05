@@ -71,6 +71,10 @@
           <div matListItemTitle><b>Capabilities</b></div>
           <span matListItemLine>{{ wallet.capability?.join(', ') }}</span>
         </mat-list-item>
+        <mat-list-item [matTooltip]="walletsService.getTooltip('operatorModel')">
+          <div matListItemTitle><b>Operator model</b></div>
+          <span matListItemLine>{{ wallet.operatorModel?.join(', ') || 'unknown' }}</span>
+        </mat-list-item>
         <mat-list-item [matTooltip]="walletsService.getTooltip('portability')">
           <div matListItemTitle><b>Portability</b></div>
           <span matListItemLine>{{ wallet.portability ?? 'unknown' }}</span>
