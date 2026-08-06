@@ -3,10 +3,11 @@
     "issuer",
     "verifier"
   ],
-  "operatorModel": [],
-  "executionEnvironment": "cloud",
-  "logo": "https://wallet-demo.namirial.com/static/img/namirial-wallet-logo-no-background-.png",
-  "name": "Namirial Wallet Gateway",
+  "operatorModel": [
+    "user-operated"
+  ],
+  "name": "Gateway",
+  "logo": "https://wallet-studio.namirial.com/static/img/namirial-wallet-logo.jpg",
   "company": "Namirial S.p.A.",
   "companyUrl": "https://www.namirial.com",
   "urlWebsite": "https://www.namirial.com/en/wallet/",
@@ -15,14 +16,10 @@
   "portability": false,
   "credentialProfiles": [
     "HAIP",
-    "ICAO DTC",
     "ISO mDL",
-    "JSON-LD Verifiable Credentials with secp256k1",
-    "JWT VC Presentation Profile",
     "SD-JWT VCs (w/ X.509 for Issuers)"
   ],
   "credentialFormats": [
-    "ICAO DTC",
     "JWT-VC",
     "JWT",
     "LDP-VC",
