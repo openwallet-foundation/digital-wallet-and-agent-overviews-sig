@@ -6,8 +6,8 @@
     "atala-prism": {
       "urlWebsite": "https://atalaprism.io/"
     },
-    "credebl": {
-      "urlWebsite": "https://credebl.id/"
+    "bc-wallet": {
+      "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet"
     },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/"
@@ -16,8 +16,8 @@
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
     "dock-wallet": {
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
@@ -38,26 +38,26 @@
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919"
     },
-    "lissi-wallet": {
-      "companyUrl": "https://www.lissi.id/",
-      "urlWebsite": "https://www.lissi.id/for-users"
-    },
     "lissi-eudi-wallet-connector": {
-      "companyUrl": "https://www.lissi.id/",
+      "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
       "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
-      "urlWebApp": "https://www.lissi.id/?r=0#user-flow"
+      "companyUrl": "https://www.lissi.id/"
+    },
+    "lissi-wallet": {
+      "urlWebsite": "https://www.lissi.id/for-users",
+      "companyUrl": "https://www.lissi.id/"
     },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
+    },
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
-    },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
@@ -67,13 +67,13 @@
       "companyUrl": "https://swisssign.com"
     },
     "trisic-id": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app"
     },
     "verida": {
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
     },
     "sowl": {
@@ -82,42 +82,24 @@
     "sphereon-wallet": {
       "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "gataca-studio": {
       "urlWebsite": "https://gataca.io/products/gatacaStudio/"
     },
-    "vidua": {
-      "urlWebsite": "https://vidua.nl/english/"
-    },
     "trisic-platform": {
       "urlWebsite": "https://trinsic.id/platform/"
     },
-    "bc-wallet": {
-      "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet"
+    "vidua": {
+      "urlWebsite": "https://vidua.nl/english/"
     },
     "digidentity-wallet": {
       "companyUrl": "https://digidentity.eu",
       "urlWebsite": "https://digidentity.eu"
-    },
-    "igrant.io-data-wallet": {
-      "urlAppStore": "https://apple.co/2Mz9nJp"
-    },
-    "learner-credential-wallet": {
-      "companyUrl": "https://digitalcredentials.mit.edu/"
-    },
-    "procivis-one-desk": {
-      "urlWebApp": "https://docs.procivis.ch/trial/intro"
-    },
-    "procivis-one-wallet": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.procivis.one.wallet.trial"
-    },
-    "yivi": {
-      "urlWebsite": "https://irma.app/docs/yivi-app/"
     }
   }
 }
