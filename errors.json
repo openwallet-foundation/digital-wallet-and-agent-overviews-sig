@@ -9,22 +9,22 @@
     "bc-wallet": {
       "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet"
     },
-    "anonyome-wallet": {
-      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
+    "dock-wallet": {
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp"
     },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/"
     },
-    "dock-wallet": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368"
+    "anonyome-wallet": {
+      "urlWebsite": "https://sudoplatform.com/identity-wallet/"
     },
     "endorser-mobile": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
     "essif-wallet": {
-      "urlWebApp": "https://wallet.essif.sk/",
-      "urlWebsite": "https://docs.essif.sk/en/home-english/"
+      "urlWebsite": "https://docs.essif.sk/en/home-english/",
+      "urlWebApp": "https://wallet.essif.sk/"
     },
     "eudiplo": {
       "urlWebsite": "https://openwallet-foundation-labs.github.io/eudiplo/main/"
@@ -50,14 +50,14 @@
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
     },
+    "mykeepin": {
+      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
+    },
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet"
-    },
-    "mykeepin": {
-      "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview"
@@ -65,6 +65,9 @@
     "swisssign-wallet": {
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
       "companyUrl": "https://swisssign.com"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "trisic-id": {
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
@@ -82,9 +85,6 @@
     "sphereon-wallet": {
       "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
     },
@@ -97,8 +97,8 @@
     "vidua": {
       "urlWebsite": "https://vidua.nl/english/"
     },
-    "learner-credential-wallet": {
-      "companyUrl": "https://digitalcredentials.mit.edu/"
+    "authbound-wallet": {
+      "downloadSource": "https://github.com/Authbound/eudi-app-android-wallet"
     }
   }
 }
