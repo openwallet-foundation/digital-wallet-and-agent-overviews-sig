@@ -1,0 +1,60 @@
+{
+  "capability": [
+    "holder"
+  ],
+  "operatorModel": [],
+  "executionEnvironment": "edge",
+  "logo": "https://wallet-demo.namirial.com/static/img/namirial-wallet-logo-no-background-.png",
+  "name": "Namirial Wallet",
+  "company": "Namirial S.p.A.",
+  "companyUrl": "https://www.namirial.com",
+  "urlWebsite": "https://www.namirial.com/en/wallet/",
+  "urlAppStore": "https://apps.apple.com/it/app/namirial-wallet/id6739498969",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.namirial.wallet",
+  "openSource": false,
+  "portability": false,
+  "credentialProfiles": [
+    "HAIP",
+    "ICAO DTC",
+    "ISO mDL",
+    "JSON-LD Verifiable Credentials with secp256k1",
+    "JWT VC Presentation Profile",
+    "SD-JWT VCs (w/ X.509 for Issuers)"
+  ],
+  "credentialFormats": [
+    "ICAO DTC",
+    "JWT-VC",
+    "JWT",
+    "LDP-VC",
+    "MDOC",
+    "SD-JWT VC",
+    "SD-JWT",
+    "VCDM 1.1"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    ".well-known/jwt-issuer",
+    "cose key",
+    "did:jwk",
+    "did:key",
+    "did:web",
+    "jwks_uri",
+    "pub key in X.509 cert",
+    "raw public keys (jwk)"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "ECDSA"
+  ],
+  "statusManagements": [
+    "Token Status List (TSL)"
+  ],
+  "trustManagements": [
+    "X.509 certificates"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
