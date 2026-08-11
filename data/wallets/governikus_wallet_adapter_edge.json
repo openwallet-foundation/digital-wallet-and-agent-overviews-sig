@@ -1,0 +1,46 @@
+{
+  "capability": [
+    "issuer",
+    "verifier"
+  ],
+  "executionEnvironment": "edge",
+  "operatorModel": [],
+  "name": "Governikus Wallet Adapter",
+  "logo": "https://www.governikus.de/wp-content/uploads/2022/08/logo-governikus.png",
+  "company": "Governikus",
+  "companyUrl": "https://www.governikus.de",
+  "urlWebsite": "https://www.governikus.de/loesungen/themen/eudi-wallet/",
+  "openSource": false,
+  "license": "German IT Planning Council (Government) and Commercial License (Other Sectors)",
+  "credentialProfiles": [
+    "HAIP",
+    "SD-JWT VCs (w/ X.509 for Issuers)"
+  ],
+  "credentialFormats": [
+    "SD-JWT VC"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    ".well-known/jwt-issuer",
+    "pub key in X.509 cert"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "ECDSA",
+    "EdDSA",
+    "PS",
+    "RSA"
+  ],
+  "statusManagements": [
+    "Token Status List (TSL)"
+  ],
+  "trustManagements": [
+    "Trusted Lists",
+    "X.509 certificates"
+  ],
+  "$schema": "../../schemas/wallet.json"
+}
