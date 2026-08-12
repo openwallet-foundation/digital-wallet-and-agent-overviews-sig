@@ -24,9 +24,7 @@
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
     },
     "eudiplo": {
-      "urlWebsite": "https://openwallet-foundation-labs.github.io/eudiplo/main/",
-      "contact": "https://github.com/openwallet-foundation-labs/eudiplo/issues",
-      "downloadSource": "https://github.com/openwallet-foundation-labs/eudiplo"
+      "urlWebsite": "https://openwallet-foundation-labs.github.io/eudiplo/main/"
     },
     "forkbomb-didroom": {
       "urlAppStore": "https://apps.apple.com/app/6670396049"
@@ -44,8 +42,8 @@
       "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
     },
     "lissi-wallet": {
-      "urlWebsite": "https://www.lissi.id/for-users",
-      "companyUrl": "https://www.lissi.id/"
+      "companyUrl": "https://www.lissi.id/",
+      "urlWebsite": "https://www.lissi.id/for-users"
     },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
@@ -61,13 +59,6 @@
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
     },
-    "mattr-wallet": {
-      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
-      "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "swisssign-wallet": {
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
       "companyUrl": "https://swisssign.com"
@@ -78,13 +69,17 @@
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
       "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/"
     },
-    "sowl": {
-      "urlWebsite": "https://esatus.com/en/digital-identity/"
+    "mattr-wallet": {
+      "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
+      "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243"
     },
     "verida": {
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
       "urlWebsite": "https://www.verida.io/"
+    },
+    "sowl": {
+      "urlWebsite": "https://esatus.com/en/digital-identity/"
     },
     "sphereon-wallet": {
       "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/",
@@ -92,6 +87,9 @@
     },
     "walt.id": {
       "urlWebApp": "https://wallet.walt.id/"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "authenticator": {
       "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409"
@@ -103,32 +101,8 @@
       "companyUrl": "https://digidentity.eu",
       "urlWebsite": "https://digidentity.eu"
     },
-    "dock-certs": {
-      "downloadSource": "https://github.com/orgs/docknetwork/"
-    },
-    "esatus-wallet": {
-      "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html"
-    },
-    "francetitres-franceidentite": {
-      "logo": "https://playground.france-identite.gouv.fr/doc/assets/logo-fin.png"
-    },
-    "gataca-studio": {
-      "urlWebsite": "https://gataca.io/products/gatacaStudio/"
-    },
-    "gataca": {
-      "urlWebsite": "https://gataca.io/products/wallet/"
-    },
     "hightrust.id": {
       "urlWebsite": "https://www.hightrust.id"
-    },
-    "hovi-business-wallet": {
-      "companyUrl": "https://hovi.id"
-    },
-    "hovi-cloud-wallet": {
-      "companyUrl": "https://hovi.id"
-    },
-    "hovi-mobile-wallet": {
-      "companyUrl": "https://hovi.id"
     },
     "igrant.io-data-wallet": {
       "urlAppStore": "https://apple.co/2Mz9nJp"
@@ -184,9 +158,6 @@
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
-    "sovio-wallet": {
-      "urlWebsite": "https://sovio.id/"
-    },
     "talao": {
       "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone"
     },
@@ -210,6 +181,9 @@
     },
     "zada": {
       "urlAppStore": "https://apps.apple.com/us/app/zada-wallet/id1578666669"
+    },
+    "gataca-studio": {
+      "urlWebsite": "https://gataca.io/products/gatacaStudio/"
     }
   }
 }
