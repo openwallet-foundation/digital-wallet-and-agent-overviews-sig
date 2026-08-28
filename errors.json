@@ -3,12 +3,15 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "anonyome-enterprise-wallet": {
-      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/",
-      "companyUrl": "https://www.anonyome.com"
+    "bc-wallet": {
+      "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet"
     },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/",
+      "companyUrl": "https://www.anonyome.com"
+    },
+    "anonyome-enterprise-wallet": {
+      "urlWebsite": "https://sudoplatform.com/verifiable-credentials/",
       "companyUrl": "https://www.anonyome.com"
     },
     "dock-wallet": {
@@ -34,21 +37,21 @@
     "gimly": {
       "urlWebsite": "https://gimly.io/"
     },
+    "holdr": {
+      "urlWebsite": "https://indicio.tech/holdr/"
+    },
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
       "urlWebsite": "https://identry.io/"
     },
     "lissi-eudi-wallet-connector": {
+      "companyUrl": "https://www.lissi.id/",
       "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
-      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
-      "companyUrl": "https://www.lissi.id/"
+      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
     },
     "lissi-wallet": {
       "companyUrl": "https://www.lissi.id/",
       "urlWebsite": "https://www.lissi.id/for-users"
-    },
-    "holdr": {
-      "urlWebsite": "https://indicio.tech/holdr/"
     },
     "orbit-edge-wallet": {
       "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
@@ -82,17 +85,24 @@
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
       "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/"
     },
+    "sowl": {
+      "urlWebsite": "https://esatus.com/en/digital-identity/"
+    },
     "verida": {
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
       "urlWebsite": "https://www.verida.io/"
     },
-    "sowl": {
-      "urlWebsite": "https://esatus.com/en/digital-identity/"
-    },
     "sphereon-wallet": {
       "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/",
       "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
+    "walt.id": {
+      "urlWebApp": "https://wallet.walt.id/",
+      "downloadSource": "https://github.com/walt-id/waltid-identity"
     },
     "altme": {
       "urlWebsite": "https://altme.io/",
@@ -179,9 +189,6 @@
     "namirial-wallet": {
       "companyUrl": "https://www.namirial.com"
     },
-    "nextcert-issuer": {
-      "urlWebsite": "https://nextid.com/nextcert-issuer/"
-    },
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
     },
@@ -196,16 +203,6 @@
       "urlAppStore": "https://selfkey.org/selfkey-wallet-ios-download",
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/"
-    },
-    "sovio-platform": {
-      "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg"
-    },
-    "sovio-wallet": {
-      "companyUrl": "https://www.ayanworks.com",
-      "urlWebsite": "https://sovio.id/"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "talao": {
       "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone"
@@ -222,14 +219,7 @@
       "urlWebsite": "https://vidua.nl/english/"
     },
     "vidwallet": {
-      "urlAppStore": "https://apps.apple.com/si/app/vidwallet/id1554340592",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.validatedid.wallet&hl=en_US&gl=US",
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
-    },
-    "walt.id": {
-      "downloadSource": "https://github.com/walt-id/waltid-identity",
-      "urlWebApp": "https://wallet.walt.id/",
-      "urlWebsite": "https://walt.id/"
     },
     "wwwallet": {
       "downloadSource": "https://github.com/wwWallet",
