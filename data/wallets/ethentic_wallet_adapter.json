@@ -1,0 +1,60 @@
+{
+  "capability": [
+    "issuer",
+    "verifier"
+  ],
+  "operatorModel": [
+    "user-operated",
+    "agent-operable",
+    "autonomous"
+  ],
+  "name": "ethentic Wallet Adapter",
+  "logo": "https://www.ethentic.eu/assets/img/ethentic-registered.png",
+  "company": "ethentic UG (haftungsbeschränkt)",
+  "companyUrl": "https://ethentic.eu",
+  "urlWebsite": "https://ethentic.eu",
+  "urlWebApp": "https://become.ethentic.eu/",
+  "openSource": false,
+  "portability": true,
+  "credentialProfiles": [
+    "HAIP",
+    "ISO mDL",
+    "JWT VC Presentation Profile",
+    "SD-JWT VCs (w/ X.509 for Issuers)",
+    "x.509"
+  ],
+  "credentialFormats": [
+    "JWT-VC",
+    "JWT",
+    "MDOC",
+    "SD-JWT VC",
+    "SD-JWT",
+    "VCDM 1.1",
+    "VCDM 2.0",
+    "x509"
+  ],
+  "issuanceProtocols": [
+    "OpenID4VCI"
+  ],
+  "keyManagements": [
+    ".well-known/jwt-issuer",
+    "pub key in X.509 cert",
+    "raw public keys (jwk)"
+  ],
+  "presentationProtocols": [
+    "OpenID4VP"
+  ],
+  "signingAlgorithms": [
+    "ECDSA",
+    "EdDSA",
+    "PS",
+    "RSA"
+  ],
+  "statusManagements": [
+    "JWT/CWT status list",
+    "Status List 2021",
+    "short-term expiration"
+  ],
+  "trustManagements": [],
+  "$schema": "../../schemas/wallet.json"
+}
