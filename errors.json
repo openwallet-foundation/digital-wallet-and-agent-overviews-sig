@@ -3,9 +3,6 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "bc-wallet": {
-      "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/",
       "companyUrl": "https://www.anonyome.com"
@@ -15,8 +12,8 @@
       "companyUrl": "https://www.anonyome.com"
     },
     "dock-wallet": {
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
       "urlWebsite": "https://www.dock.io/dock-wallet-app"
     },
     "endorser-mobile": {
@@ -45,8 +42,8 @@
       "urlWebsite": "https://identry.io/"
     },
     "lissi-eudi-wallet-connector": {
-      "companyUrl": "https://www.lissi.id/",
       "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
+      "companyUrl": "https://www.lissi.id/",
       "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
     },
     "lissi-wallet": {
@@ -57,36 +54,33 @@
       "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
       "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
     },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
-    },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet",
       "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844"
     },
-    "paradym-wallet": {
-      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet",
-      "urlAppStore": "https://apps.apple.com/nl/app/paradym-wallet/id6449846111?l=en"
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
     },
     "preparese-mobile": {
       "urlWebsite": "https://www.preparese.info/"
+    },
+    "paradym-wallet": {
+      "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet",
+      "urlAppStore": "https://apps.apple.com/nl/app/paradym-wallet/id6449846111?l=en"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
       "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243"
     },
     "swisssign-wallet": {
-      "companyUrl": "https://swisssign.com",
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
+      "companyUrl": "https://swisssign.com"
     },
     "trisic-id": {
-      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
+      "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
       "downloadSource": "https://github.com/trinsic-id/wallet-reference-app",
       "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/"
-    },
-    "sowl": {
-      "urlWebsite": "https://esatus.com/en/digital-identity/"
     },
     "verida": {
       "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
@@ -100,9 +94,8 @@
     "spherity-wallet": {
       "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
-    "walt.id": {
-      "urlWebApp": "https://wallet.walt.id/",
-      "downloadSource": "https://github.com/walt-id/waltid-identity"
+    "sowl": {
+      "urlWebsite": "https://esatus.com/en/digital-identity/"
     },
     "altme": {
       "urlWebsite": "https://altme.io/",
@@ -142,6 +135,11 @@
     },
     "esatus-wallet": {
       "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html"
+    },
+    "ethentic_wallet_adapter": {
+      "companyUrl": "https://ethentic.eu",
+      "urlWebsite": "https://ethentic.eu",
+      "urlWebApp": "https://become.ethentic.eu/"
     },
     "francetitres-franceidentite": {
       "logo": "https://playground.france-identite.gouv.fr/doc/assets/logo-fin.png"
@@ -220,6 +218,11 @@
     },
     "vidwallet": {
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
+    },
+    "walt.id": {
+      "downloadSource": "https://github.com/walt-id/waltid-identity",
+      "urlWebApp": "https://wallet.walt.id/",
+      "urlWebsite": "https://walt.id/"
     },
     "wwwallet": {
       "downloadSource": "https://github.com/wwWallet",
