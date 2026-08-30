@@ -12,8 +12,8 @@
       "companyUrl": "https://www.anonyome.com"
     },
     "dock-wallet": {
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
       "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
       "urlWebsite": "https://www.dock.io/dock-wallet-app"
     },
     "endorser-mobile": {
@@ -42,13 +42,17 @@
       "urlWebsite": "https://identry.io/"
     },
     "lissi-eudi-wallet-connector": {
+      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
       "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
-      "companyUrl": "https://www.lissi.id/",
-      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
+      "companyUrl": "https://www.lissi.id/"
     },
     "lissi-wallet": {
       "companyUrl": "https://www.lissi.id/",
       "urlWebsite": "https://www.lissi.id/for-users"
+    },
+    "namirial-wallet": {
+      "urlAppStore": "https://apps.apple.com/it/app/namirial-wallet/id6739498969",
+      "companyUrl": "https://www.namirial.com"
     },
     "orbit-edge-wallet": {
       "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
@@ -76,6 +80,9 @@
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
       "companyUrl": "https://swisssign.com"
     },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
       "urlAppStore": "https://apps.apple.com/us/app/trinsic-id/id1475160728",
@@ -87,15 +94,12 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
       "urlWebsite": "https://www.verida.io/"
     },
+    "sowl": {
+      "urlWebsite": "https://esatus.com/en/digital-identity/"
+    },
     "sphereon-wallet": {
       "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/",
       "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
-    "sowl": {
-      "urlWebsite": "https://esatus.com/en/digital-identity/"
     },
     "altme": {
       "urlWebsite": "https://altme.io/",
@@ -184,8 +188,8 @@
       "companyUrl": "https://www.namirial.com",
       "urlWebApp": "https://wallet-demo.namirial.com"
     },
-    "namirial-wallet": {
-      "companyUrl": "https://www.namirial.com"
+    "nextcert-issuer": {
+      "urlWebsite": "https://nextid.com/nextcert-issuer/"
     },
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
@@ -212,11 +216,20 @@
       "urlWebApp": "https://try.vidchain.net/demo",
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
+    "vidos-id": {
+      "logo": "https://vidos-id.github.io/static-assets/openwallet_foundation/vidos-logo-onwhite.png",
+      "companyUrl": "https://vidos.id",
+      "urlWebsite": "https://vidos.id",
+      "urlWebApp": "https://vidos.id"
+    },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=nl.vidua.wallet",
       "urlWebsite": "https://vidua.nl/english/"
     },
     "vidwallet": {
+      "urlAppStore": "https://apps.apple.com/si/app/vidwallet/id1554340592",
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.validatedid.wallet&hl=en_US&gl=US",
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     },
     "walt.id": {
