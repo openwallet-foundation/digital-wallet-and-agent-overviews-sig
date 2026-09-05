@@ -20,8 +20,8 @@
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=ch.endorser.mobile"
     },
     "essif-wallet": {
-      "urlWebApp": "https://wallet.essif.sk/",
-      "urlWebsite": "https://docs.essif.sk/en/home-english/"
+      "urlWebsite": "https://docs.essif.sk/en/home-english/",
+      "urlWebApp": "https://wallet.essif.sk/"
     },
     "eudiplo": {
       "urlWebsite": "https://openwallet-foundation-labs.github.io/eudiplo/main/",
@@ -42,42 +42,47 @@
       "urlWebsite": "https://identry.io/"
     },
     "lissi-eudi-wallet-connector": {
+      "companyUrl": "https://www.lissi.id/",
       "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
-      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
-      "companyUrl": "https://www.lissi.id/"
+      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
     },
     "lissi-wallet": {
       "urlWebsite": "https://www.lissi.id/for-users",
       "companyUrl": "https://www.lissi.id/"
     },
-    "orbit-edge-wallet": {
-      "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
-      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
-    },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet",
       "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844"
     },
+    "orbit-edge-wallet": {
+      "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
+      "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
+    },
     "organization-wallet": {
       "urlWebsite": "https://orgwallet.de/en/"
-    },
-    "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/"
     },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet",
       "urlAppStore": "https://apps.apple.com/nl/app/paradym-wallet/id6449846111?l=en"
     },
+    "preparese-mobile": {
+      "urlWebsite": "https://www.preparese.info/"
+    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
       "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    "passivebolt-keyshare": {
+      "urlAppStore": "https://apps.apple.com/us/app/keyshare/id1628825811",
+      "companyUrl": "https://passivebolt.com",
+      "urlWebsite": "https://passivebolt.com"
     },
     "swisssign-wallet": {
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
       "companyUrl": "https://swisssign.com"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
     },
     "sowl": {
       "urlWebsite": "https://esatus.com/en/digital-identity/"
@@ -162,9 +167,6 @@
     "hovi-mobile-wallet": {
       "companyUrl": "https://hovi.id"
     },
-    "icef": {
-      "urlWebsite": "https://nextid.com/"
-    },
     "igrant.io-data-wallet": {
       "urlAppStore": "https://apple.co/2Mz9nJp"
     },
@@ -196,10 +198,6 @@
     "orbit-enterprise": {
       "urlWebsite": "https://northernblock.io/orbit-enterprise/"
     },
-    "passivebolt-keyshare": {
-      "companyUrl": "https://passivebolt.com",
-      "urlWebsite": "https://passivebolt.com"
-    },
     "procivis-one-verifier": {
       "urlAppStore": "https://apps.apple.com/at/app/procivis-one-mobile-verifier/id6648778109"
     },
@@ -219,9 +217,6 @@
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
     "vidos-id": {
-      "logo": "https://vidos-id.github.io/static-assets/openwallet_foundation/vidos-logo-onwhite.png",
-      "companyUrl": "https://vidos.id",
-      "urlWebsite": "https://vidos.id",
       "urlWebApp": "https://vidos.id"
     },
     "vidua": {
