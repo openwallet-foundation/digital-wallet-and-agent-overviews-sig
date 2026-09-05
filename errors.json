@@ -3,17 +3,20 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "anonyome-wallet": {
-      "urlWebsite": "https://sudoplatform.com/identity-wallet/",
-      "companyUrl": "https://www.anonyome.com"
+    "bc-wallet": {
+      "urlWebsite": "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-wallet"
     },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/",
       "companyUrl": "https://www.anonyome.com"
     },
+    "anonyome-wallet": {
+      "urlWebsite": "https://sudoplatform.com/identity-wallet/",
+      "companyUrl": "https://www.anonyome.com"
+    },
     "dock-wallet": {
-      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
+      "urlAppStore": "https://apps.apple.com/ph/app/dock-wallet/id1565227368",
       "urlWebsite": "https://www.dock.io/dock-wallet-app"
     },
     "endorser-mobile": {
@@ -34,43 +37,39 @@
     "gimly": {
       "urlWebsite": "https://gimly.io/"
     },
-    "holdr": {
-      "urlWebsite": "https://indicio.tech/holdr/"
-    },
     "identry": {
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
       "urlWebsite": "https://identry.io/"
     },
+    "holdr": {
+      "urlWebsite": "https://indicio.tech/holdr/"
+    },
     "lissi-eudi-wallet-connector": {
-      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
       "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
-      "companyUrl": "https://www.lissi.id/"
+      "companyUrl": "https://www.lissi.id/",
+      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector"
     },
     "lissi-wallet": {
       "companyUrl": "https://www.lissi.id/",
       "urlWebsite": "https://www.lissi.id/for-users"
     },
-    "namirial-wallet": {
-      "urlAppStore": "https://apps.apple.com/it/app/namirial-wallet/id6739498969",
-      "companyUrl": "https://www.namirial.com"
-    },
     "orbit-edge-wallet": {
       "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
       "urlWebsite": "https://northernblock.io/orbit-edge-wallet/"
+    },
+    "organization-wallet": {
+      "urlWebsite": "https://orgwallet.de/en/"
     },
     "mykeepin": {
       "urlWebsite": "https://metadium.com/Portfolio/DApp/Wallet",
       "urlAppStore": "https://apps.apple.com/kr/app/mykeepin-%EC%BD%94%EC%9D%B8%ED%94%8C%EB%9F%AC%EA%B7%B8-%EB%94%94%EC%A7%80%ED%84%B8-id/id1479166844"
     },
-    "organization-wallet": {
-      "urlWebsite": "https://orgwallet.de/en/"
-    },
-    "preparese-mobile": {
-      "urlWebsite": "https://www.preparese.info/"
-    },
     "paradym-wallet": {
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet",
       "urlAppStore": "https://apps.apple.com/nl/app/paradym-wallet/id6449846111?l=en"
+    },
+    "preparese-mobile": {
+      "urlWebsite": "https://www.preparese.info/"
     },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
@@ -78,10 +77,8 @@
     },
     "swisssign-wallet": {
       "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
-      "companyUrl": "https://swisssign.com"
-    },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+      "companyUrl": "https://swisssign.com",
+      "logo": "https://www.swisssign.com/.resources/swisssign-base/webresources/favicon_SwissSign/apple-touch-icon.png"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -96,10 +93,6 @@
     },
     "sowl": {
       "urlWebsite": "https://esatus.com/en/digital-identity/"
-    },
-    "sphereon-wallet": {
-      "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/",
-      "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet"
     },
     "altme": {
       "urlWebsite": "https://altme.io/",
@@ -188,6 +181,9 @@
       "companyUrl": "https://www.namirial.com",
       "urlWebApp": "https://wallet-demo.namirial.com"
     },
+    "namirial-wallet": {
+      "companyUrl": "https://www.namirial.com"
+    },
     "nextcert-issuer": {
       "urlWebsite": "https://nextid.com/nextcert-issuer/"
     },
@@ -206,7 +202,21 @@
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
+    "sovio-platform": {
+      "urlWebsite": "https://sovio.id/"
+    },
+    "sovio-wallet": {
+      "urlWebsite": "https://sovio.id/"
+    },
+    "sphereon-wallet": {
+      "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet",
+      "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
     "talao": {
+      "downloadSource": "https://github.com/TalaoDAO/talao-wallet",
       "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone"
     },
     "trisic-platform": {
