@@ -3,23 +3,13 @@
     "battery-passport": {
       "stakeholders.0.contact": "https://www.rcsglobal.com/"
     },
-    "blockcerts-wallet": {
-      "urlWebsite": "https://www.blockcerts.org/about.html",
-      "urlAppStore": "https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8"
-    },
     "anonyome-enterprise-wallet": {
       "urlWebsite": "https://sudoplatform.com/verifiable-credentials/",
       "companyUrl": "https://www.anonyome.com"
     },
-    "blockcerts-unversal-verifier": {
-      "urlWebsite": "https://www.blockcerts.org/about.html"
-    },
     "anonyome-wallet": {
       "urlWebsite": "https://sudoplatform.com/identity-wallet/",
       "companyUrl": "https://www.anonyome.com"
-    },
-    "datakeeper": {
-      "urlAppStore": "https://apps.apple.com/nl/app/datakeeper/id1546059184"
     },
     "dock-wallet": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.dockapp",
@@ -32,6 +22,11 @@
     "essif-wallet": {
       "urlWebApp": "https://wallet.essif.sk/",
       "urlWebsite": "https://docs.essif.sk/en/home-english/"
+    },
+    "esatus-wallet": {
+      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.esatus.wallet&hl=de_DE&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+      "urlAppStore": "https://apps.apple.com/us/app/esatus-wallet/id1496769057?itsct=apps_box&itscg=30200",
+      "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html"
     },
     "eudiplo": {
       "urlWebsite": "https://openwallet-foundation-labs.github.io/eudiplo/main/",
@@ -51,14 +46,20 @@
       "urlAppStore": "https://apps.apple.com/us/app/identry/id1609224919",
       "urlWebsite": "https://identry.io/"
     },
+    "izertis-identfy-business-wallet": {
+      "urlWebsite": "https://identfy.es/"
+    },
+    "izertis-identfy": {
+      "urlWebsite": "https://identfy.es/"
+    },
     "lissi-eudi-wallet-connector": {
-      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
       "urlWebApp": "https://www.lissi.id/?r=0#user-flow",
+      "urlWebsite": "https://www.lissi.id/eudi-wallet-connector",
       "companyUrl": "https://www.lissi.id/"
     },
     "lissi-wallet": {
-      "urlWebsite": "https://www.lissi.id/for-users",
-      "companyUrl": "https://www.lissi.id/"
+      "companyUrl": "https://www.lissi.id/",
+      "urlWebsite": "https://www.lissi.id/for-users"
     },
     "orbit-edge-wallet": {
       "urlAppStore": "https://apps.apple.com/us/app/orbit-edge/id1508037063",
@@ -78,24 +79,13 @@
       "urlWebsite": "https://docs.paradym.id/integrating-with-a-holder-wallet/paradym-wallet",
       "urlAppStore": "https://apps.apple.com/nl/app/paradym-wallet/id6449846111?l=en"
     },
+    "swisssign-wallet": {
+      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/",
+      "companyUrl": "https://swisssign.com"
+    },
     "mattr-wallet": {
       "urlWebsite": "https://learn.mattr.global/tutorials/wallets/overview",
       "urlAppStore": "https://apps.apple.com/us/app/mattr-wallet/id1518660243"
-    },
-    "swisssign-wallet": {
-      "companyUrl": "https://swisssign.com",
-      "urlWebsite": "https://www.swisssign.com/en/identities/wallet/"
-    },
-    "sovio-platform": {
-      "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg",
-      "companyUrl": "https://www.ayanworks.com"
-    },
-    "sovio-wallet": {
-      "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg",
-      "companyUrl": "https://www.ayanworks.com"
-    },
-    "sowl": {
-      "urlWebsite": "https://esatus.com/en/digital-identity/"
     },
     "trisic-id": {
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile",
@@ -104,13 +94,37 @@
       "urlWebsite": "https://trinsic.id/an-introduction-to-the-trinsic-wallet/"
     },
     "verida": {
-      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=io.verida.vault",
+      "urlAppStore": "https://apps.apple.com/tr/app/verida-wallet/id1546599632",
       "urlWebsite": "https://www.verida.io/"
+    },
+    "sovio-platform": {
+      "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg",
+      "companyUrl": "https://www.ayanworks.com",
+      "urlWebsite": "https://sovio.id/"
+    },
+    "sovio-wallet": {
+      "companyUrl": "https://www.ayanworks.com",
+      "logo": "https://www.ayanworks.com/assets/Landing%20Page/sovio-Wallet%201.svg"
+    },
+    "sowl": {
+      "urlWebsite": "https://esatus.com/en/digital-identity/"
     },
     "sphereon-wallet": {
       "urlWebsite": "https://sphereon.com/sphereon-products/sphereon-wallet/",
       "downloadSource": "https://github.com/Sphereon-Opensource/ssi-mobile-wallet"
+    },
+    "spherity-wallet": {
+      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
+    },
+    "walt.id": {
+      "urlWebApp": "https://wallet.walt.id/"
+    },
+    "yourd-connect": {
+      "logo": "https://cdn.yourd.xyz/yourDLogo.png"
+    },
+    "yourd-studio": {
+      "logo": "https://cdn.yourd.xyz/yourDLogo.png"
     },
     "altme": {
       "urlWebsite": "https://altme.io/",
@@ -120,13 +134,15 @@
       "urlWebsite": "https://atalaprism.io/"
     },
     "authbound-wallet": {
-      "logo": "https://www.google.com/s2/favicons?domain=authbound.io&sz=128",
       "companyUrl": "https://authbound.io",
       "urlWebsite": "https://authbound.io"
     },
     "authenticator": {
       "urlAppStore": "https://go.microsoft.com/fwlink/p/?linkid=2168643&clcid=0x409",
       "urlGooglePlayStore": "https://go.microsoft.com/fwlink/p/?linkid=2168850&clcid=0x409"
+    },
+    "blockcerts-wallet": {
+      "urlAppStore": "https://itunes.apple.com/us/app/blockcerts-wallet/id1146921514?mt=8"
     },
     "credebl": {
       "logo": "https://docs.credebl.id/docs/~gitbook/image?url=https%3A%2F%2F292774163-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnsdydI5ziLfZ8yT3e0r8%252Fuploads%252Fgit-blob-aebb44e64f372d89665a2642d259467d5bb4a39e%252FGitbook%2520Cover%2520Image.png%3Falt%3Dmedia&width=1248&dpr=2&quality=100&sign=5d2292e3&sv=2"
@@ -142,9 +158,6 @@
     },
     "dock-certs": {
       "downloadSource": "https://github.com/orgs/docknetwork/"
-    },
-    "esatus-wallet": {
-      "urlWebsite": "https://esatus.com/index.html%3Fp=7663&lang=en.html"
     },
     "ethentic_wallet_adapter": {
       "companyUrl": "https://ethentic.eu",
@@ -212,9 +225,6 @@
       "urlGooglePlayStore": "https://selfkey.org/selfkey-wallet-android-download",
       "urlWebsite": "https://selfkey.org/selfkey-wallet/"
     },
-    "spherity-wallet": {
-      "urlWebsite": "https://www.spherity.com/enterprise-identity-wallet"
-    },
     "talao": {
       "urlAppStore": "https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone",
       "urlWebsite": "https://talao.io/"
@@ -226,52 +236,19 @@
       "urlWebApp": "https://try.vidchain.net/demo",
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidcredentials"
     },
-    "vidos-id": {
-      "logo": "https://vidos-id.github.io/static-assets/openwallet_foundation/vidos-logo-onwhite.png",
-      "companyUrl": "https://vidos.id",
-      "urlWebsite": "https://vidos.id",
-      "urlWebApp": "https://vidos.id"
-    },
     "vidua": {
       "urlAppStore": "https://apps.apple.com/en/app/vidua/id6443842104",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=nl.vidua.wallet",
       "urlWebsite": "https://vidua.nl/english/"
     },
     "vidwallet": {
-      "urlAppStore": "https://apps.apple.com/si/app/vidwallet/id1554340592",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.validatedid.wallet&hl=en_US&gl=US",
       "urlWebsite": "https://www.validatedid.com/en/vidchain/vidwallet"
     },
-    "walt.id": {
-      "downloadSource": "https://github.com/walt-id/waltid-identity",
-      "urlWebApp": "https://wallet.walt.id/",
-      "urlWebsite": "https://walt.id/"
-    },
-    "wwwallet": {
-      "downloadSource": "https://github.com/wwWallet",
-      "urlWebApp": "https://demo.wwwallet.org/",
-      "urlWebsite": "https://wwwallet.github.io/wallet-docs/"
-    },
     "yivi": {
-      "downloadSource": "https://github.com/privacybydesign/irmamobile/",
       "urlAppStore": "https://itunes.apple.com/nl/app/irma-authentication/id1294092994",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=org.irmacard.cardemu",
       "urlWebsite": "https://irma.app/docs/yivi-app/"
     },
-    "yourd-connect": {
-      "logo": "https://cdn.yourd.xyz/yourDLogo.png",
-      "companyUrl": "https://www.yourd.xyz",
-      "urlWebsite": "https://www.yourd.xyz/yourd_app"
-    },
-    "yourd-studio": {
-      "logo": "https://cdn.yourd.xyz/yourDLogo.png",
-      "companyUrl": "https://www.yourd.xyz",
-      "urlWebsite": "https://www.yourd.xyz/yourd_studio"
-    },
     "zada": {
-      "downloadSource": "https://github.com/lycheeventures/zada-wallet",
       "urlAppStore": "https://apps.apple.com/us/app/zada-wallet/id1578666669",
-      "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.zadanetwork.wallet",
       "urlWebsite": "https://zada.io/"
     }
   }
