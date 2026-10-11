@@ -1,4 +1,6 @@
 {
+  "logo": "https://wallet-demo.namirial.com/static/img/namirial-wallet-logo-no-background-.png",
   "companyUrl": "https://www.namirial.com",
+  "urlWebsite": "https://www.namirial.com/en/wallet/",
   "urlWebApp": "https://wallet-demo.namirial.com"
 }
