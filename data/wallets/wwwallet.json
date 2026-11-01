@@ -1,3 +1,5 @@
 {
-  "urlWebApp": "https://demo.wwwallet.org/"
+  "downloadSource": "https://github.com/wwWallet",
+  "urlWebApp": "https://demo.wwwallet.org/",
+  "urlWebsite": "https://wwwallet.github.io/wallet-docs/"
 }
