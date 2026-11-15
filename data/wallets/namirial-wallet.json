@@ -1,3 +1,7 @@
 {
-  "companyUrl": "https://www.namirial.com"
+  "logo": "https://wallet-demo.namirial.com/static/img/namirial-wallet-logo-no-background-.png",
+  "companyUrl": "https://www.namirial.com",
+  "urlWebsite": "https://www.namirial.com/en/wallet/",
+  "urlAppStore": "https://apps.apple.com/it/app/namirial-wallet/id6739498969",
+  "urlGooglePlayStore": "https://play.google.com/store/apps/details?id=com.namirial.wallet"
 }
